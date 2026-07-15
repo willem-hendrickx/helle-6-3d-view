@@ -1,0 +1,893 @@
+{
+  "status": "ground_floor_opening_wall_cut_preflight_ready_not_mesh",
+  "purpose": "Source-linked wall-cut preflight for ground-floor openings. It verifies wall-run, height-context, width-candidate and blocker state before any wall boolean/cut geometry is allowed.",
+  "source_files": {
+    "opening_3d_readiness_contract": "blender\\semantic_objects\\ground_floor_opening_3d_readiness_contract.json",
+    "opening_mesh_blocker_matrix": "blender\\semantic_objects\\ground_floor_opening_mesh_blocker_matrix.json",
+    "opening_cut_contract": "blender\\semantic_objects\\ground_floor_opening_cut_contract.json",
+    "opening_next_agent_binding_queue": "blender\\semantic_objects\\ground_floor_opening_next_agent_binding_queue.json"
+  },
+  "opening_count": 17,
+  "cut_permission_counts": {
+    "blocked_not_mesh": 17
+  },
+  "facade_counts": {
+    "rear": 2,
+    "left": 3,
+    "right": 5,
+    "unknown": 5,
+    "front": 2
+  },
+  "unresolved_slot_counts": {
+    "header_or_lintel_height_m": 11,
+    "sill_height_m": 8,
+    "opening_width_m": 9,
+    "opening_height_m": 11,
+    "threshold_level_m": 6,
+    "arch_geometry": 2,
+    "threshold_or_sill_level_m": 1,
+    "bay_subsegment_geometry": 1
+  },
+  "wall_run_reference_count": 62,
+  "mesh_ready_count": 0,
+  "user_validation_needed_now_count": 0,
+  "objects": [
+    {
+      "stable_object_id": "ground_floor:opening_wall_cut_preflight:Y01",
+      "legend_id": "Y01",
+      "label": "panoramisch raam",
+      "opening_type": "fixed_or_operable_window",
+      "facade": "rear",
+      "height_contract_label": "boograam achtergevel",
+      "height_join_confidence": "high",
+      "accepted_wall_run_ids": [
+        "W70",
+        "W71",
+        "W68",
+        "W69"
+      ],
+      "review_wall_run_ids": [],
+      "wall_context_status": "blocked_until_exact_dimension_slots_and_section_top_bottom_rules_are_bound",
+      "plan_width_candidate_m": 2.71,
+      "plan_width_quality_flags": [
+        "detail_facade_crosscheck_required_before_binding"
+      ],
+      "visible_opening_entity_count": 58,
+      "preserve_wall_or_structural_entity_count": 6,
+      "cut_contract_visual_source_count": 46,
+      "cut_contract_preserve_source_count": 18,
+      "required_slot_states": [
+        {
+          "slot": "opening_width_m",
+          "state": "source_bound_candidate_slot_present"
+        },
+        {
+          "slot": "opening_height_m",
+          "state": "source_bound_candidate_slot_present"
+        },
+        {
+          "slot": "sill_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "header_or_lintel_height_m",
+          "state": "missing_source_bound_slot"
+        }
+      ],
+      "unresolved_slots": [
+        "header_or_lintel_height_m",
+        "sill_height_m"
+      ],
+      "next_agent_priority": "P2_review_packaging",
+      "next_agent_action": "Package as later user slot-review candidate; keep mesh export blocked.",
+      "cut_permission": "blocked_not_mesh",
+      "mesh_permission": "blocked_not_mesh",
+      "geometry_permission": "preflight_only_no_wall_boolean_no_opening_mesh"
+    },
+    {
+      "stable_object_id": "ground_floor:opening_wall_cut_preflight:Y02",
+      "legend_id": "Y02",
+      "label": "Raam Salon",
+      "opening_type": "window",
+      "facade": "left",
+      "height_contract_label": "raam linker zijgevel achteraan",
+      "height_join_confidence": "medium",
+      "accepted_wall_run_ids": [
+        "W60",
+        "W62",
+        "W65",
+        "W66",
+        "W67",
+        "W68",
+        "W70"
+      ],
+      "review_wall_run_ids": [],
+      "wall_context_status": "blocked_until_exact_dimension_slots_and_section_top_bottom_rules_are_bound",
+      "plan_width_candidate_m": 1.155,
+      "plan_width_quality_flags": [
+        "detail_facade_crosscheck_required_before_binding"
+      ],
+      "visible_opening_entity_count": 73,
+      "preserve_wall_or_structural_entity_count": 12,
+      "cut_contract_visual_source_count": 67,
+      "cut_contract_preserve_source_count": 18,
+      "required_slot_states": [
+        {
+          "slot": "opening_width_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "opening_height_m",
+          "state": "source_bound_candidate_slot_present"
+        },
+        {
+          "slot": "sill_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "header_or_lintel_height_m",
+          "state": "missing_source_bound_slot"
+        }
+      ],
+      "unresolved_slots": [
+        "header_or_lintel_height_m",
+        "opening_width_m",
+        "sill_height_m"
+      ],
+      "next_agent_priority": "P0_agent_deep_source_binding",
+      "next_agent_action": "Use deeper source seeds to bind unresolved CAD slots before any mesh work.",
+      "cut_permission": "blocked_not_mesh",
+      "mesh_permission": "blocked_not_mesh",
+      "geometry_permission": "preflight_only_no_wall_boolean_no_opening_mesh"
+    },
+    {
+      "stable_object_id": "ground_floor:opening_wall_cut_preflight:Y03",
+      "legend_id": "Y03",
+      "label": "schuifraam",
+      "opening_type": "sliding_glass_door",
+      "facade": "rear",
+      "height_contract_label": "schuifraam achtergevel",
+      "height_join_confidence": "high",
+      "accepted_wall_run_ids": [
+        "W56",
+        "W57",
+        "W58",
+        "W59",
+        "W63",
+        "W64"
+      ],
+      "review_wall_run_ids": [],
+      "wall_context_status": "blocked_until_exact_dimension_slots_and_section_top_bottom_rules_are_bound",
+      "plan_width_candidate_m": 2.68,
+      "plan_width_quality_flags": [
+        "detail_facade_crosscheck_required_before_binding",
+        "door_candidate_width_unusually_large_possible_context"
+      ],
+      "visible_opening_entity_count": 88,
+      "preserve_wall_or_structural_entity_count": 6,
+      "cut_contract_visual_source_count": 74,
+      "cut_contract_preserve_source_count": 20,
+      "required_slot_states": [
+        {
+          "slot": "opening_width_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "opening_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "threshold_level_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "header_or_lintel_height_m",
+          "state": "missing_source_bound_slot"
+        }
+      ],
+      "unresolved_slots": [
+        "header_or_lintel_height_m",
+        "opening_height_m",
+        "opening_width_m",
+        "threshold_level_m"
+      ],
+      "next_agent_priority": "P1_agent_cad_binding",
+      "next_agent_action": "Bind missing slots from original CAD geometry and text evidence; do not infer from preview panels.",
+      "cut_permission": "blocked_not_mesh",
+      "mesh_permission": "blocked_not_mesh",
+      "geometry_permission": "preflight_only_no_wall_boolean_no_opening_mesh"
+    },
+    {
+      "stable_object_id": "ground_floor:opening_wall_cut_preflight:Y04",
+      "legend_id": "Y04",
+      "label": "Raam Hobbyruimte",
+      "opening_type": "window",
+      "facade": "right",
+      "height_contract_label": "raam rechter zijgevel achteraan",
+      "height_join_confidence": "high",
+      "accepted_wall_run_ids": [
+        "W44",
+        "W47",
+        "W49",
+        "W53",
+        "W54",
+        "W55"
+      ],
+      "review_wall_run_ids": [],
+      "wall_context_status": "blocked_until_exact_dimension_slots_and_section_top_bottom_rules_are_bound",
+      "plan_width_candidate_m": 1.14,
+      "plan_width_quality_flags": [
+        "detail_facade_crosscheck_required_before_binding"
+      ],
+      "visible_opening_entity_count": 87,
+      "preserve_wall_or_structural_entity_count": 6,
+      "cut_contract_visual_source_count": 83,
+      "cut_contract_preserve_source_count": 10,
+      "required_slot_states": [
+        {
+          "slot": "opening_width_m",
+          "state": "source_bound_candidate_slot_present"
+        },
+        {
+          "slot": "opening_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "sill_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "header_or_lintel_height_m",
+          "state": "missing_source_bound_slot"
+        }
+      ],
+      "unresolved_slots": [
+        "header_or_lintel_height_m",
+        "opening_height_m",
+        "sill_height_m"
+      ],
+      "next_agent_priority": "P1_agent_cad_binding",
+      "next_agent_action": "Bind missing slots from original CAD geometry and text evidence; do not infer from preview panels.",
+      "cut_permission": "blocked_not_mesh",
+      "mesh_permission": "blocked_not_mesh",
+      "geometry_permission": "preflight_only_no_wall_boolean_no_opening_mesh"
+    },
+    {
+      "stable_object_id": "ground_floor:opening_wall_cut_preflight:Y05",
+      "legend_id": "Y05",
+      "label": "boograam eetkamer",
+      "opening_type": "arched_window",
+      "facade": "left",
+      "height_contract_label": "boograam linker zijgevel",
+      "height_join_confidence": "high",
+      "accepted_wall_run_ids": [
+        "W25",
+        "W51",
+        "W26",
+        "W52"
+      ],
+      "review_wall_run_ids": [],
+      "wall_context_status": "blocked_until_exact_dimension_slots_and_section_top_bottom_rules_are_bound",
+      "plan_width_candidate_m": 2.27,
+      "plan_width_quality_flags": [
+        "detail_facade_crosscheck_required_before_binding"
+      ],
+      "visible_opening_entity_count": 58,
+      "preserve_wall_or_structural_entity_count": 6,
+      "cut_contract_visual_source_count": 44,
+      "cut_contract_preserve_source_count": 20,
+      "required_slot_states": [
+        {
+          "slot": "opening_width_m",
+          "state": "source_bound_candidate_slot_present"
+        },
+        {
+          "slot": "opening_height_m",
+          "state": "source_bound_candidate_slot_present"
+        },
+        {
+          "slot": "arch_geometry",
+          "state": "source_subgeometry_candidate_available_not_bound"
+        },
+        {
+          "slot": "threshold_or_sill_level_m",
+          "state": "missing_source_bound_slot"
+        }
+      ],
+      "unresolved_slots": [
+        "arch_geometry",
+        "threshold_or_sill_level_m"
+      ],
+      "next_agent_priority": "P0_agent_deep_source_binding",
+      "next_agent_action": "Use deeper source seeds to bind unresolved CAD slots before any mesh work.",
+      "cut_permission": "blocked_not_mesh",
+      "mesh_permission": "blocked_not_mesh",
+      "geometry_permission": "preflight_only_no_wall_boolean_no_opening_mesh"
+    },
+    {
+      "stable_object_id": "ground_floor:opening_wall_cut_preflight:Y06",
+      "legend_id": "Y06",
+      "label": "deur inkomhal",
+      "opening_type": "interior_door",
+      "facade": "unknown",
+      "height_contract_label": null,
+      "height_join_confidence": "not_facade_opening",
+      "accepted_wall_run_ids": [],
+      "review_wall_run_ids": [],
+      "wall_context_status": "blocked",
+      "plan_width_candidate_m": 1.39,
+      "plan_width_quality_flags": [
+        "detail_facade_crosscheck_required_before_binding"
+      ],
+      "visible_opening_entity_count": 40,
+      "preserve_wall_or_structural_entity_count": 5,
+      "cut_contract_visual_source_count": 36,
+      "cut_contract_preserve_source_count": 8,
+      "required_slot_states": [
+        {
+          "slot": "opening_width_m",
+          "state": "source_bound_candidate_slot_present"
+        },
+        {
+          "slot": "opening_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "threshold_level_m",
+          "state": "missing_source_bound_slot"
+        }
+      ],
+      "unresolved_slots": [
+        "opening_height_m",
+        "threshold_level_m"
+      ],
+      "next_agent_priority": "P1_agent_cad_binding",
+      "next_agent_action": "Bind missing slots from original CAD geometry and text evidence; do not infer from preview panels.",
+      "cut_permission": "blocked_not_mesh",
+      "mesh_permission": "blocked_not_mesh",
+      "geometry_permission": "preflight_only_no_wall_boolean_no_opening_mesh"
+    },
+    {
+      "stable_object_id": "ground_floor:opening_wall_cut_preflight:Y07",
+      "legend_id": "Y07",
+      "label": "deur WC1",
+      "opening_type": "interior_door",
+      "facade": "unknown",
+      "height_contract_label": null,
+      "height_join_confidence": "not_facade_opening",
+      "accepted_wall_run_ids": [],
+      "review_wall_run_ids": [],
+      "wall_context_status": "blocked",
+      "plan_width_candidate_m": 1.15,
+      "plan_width_quality_flags": [
+        "detail_facade_crosscheck_required_before_binding"
+      ],
+      "visible_opening_entity_count": 67,
+      "preserve_wall_or_structural_entity_count": 11,
+      "cut_contract_visual_source_count": 64,
+      "cut_contract_preserve_source_count": 14,
+      "required_slot_states": [
+        {
+          "slot": "opening_width_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "opening_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "threshold_level_m",
+          "state": "missing_source_bound_slot"
+        }
+      ],
+      "unresolved_slots": [
+        "opening_height_m",
+        "opening_width_m",
+        "threshold_level_m"
+      ],
+      "next_agent_priority": "P1_agent_cad_binding",
+      "next_agent_action": "Bind missing slots from original CAD geometry and text evidence; do not infer from preview panels.",
+      "cut_permission": "blocked_not_mesh",
+      "mesh_permission": "blocked_not_mesh",
+      "geometry_permission": "preflight_only_no_wall_boolean_no_opening_mesh"
+    },
+    {
+      "stable_object_id": "ground_floor:opening_wall_cut_preflight:Y08",
+      "legend_id": "Y08",
+      "label": "voordeur",
+      "opening_type": "exterior_door",
+      "facade": "right",
+      "height_contract_label": "deur rechter zijgevel",
+      "height_join_confidence": "high",
+      "accepted_wall_run_ids": [
+        "W35",
+        "W41",
+        "W36",
+        "W42",
+        "W43",
+        "W45",
+        "W46",
+        "W47"
+      ],
+      "review_wall_run_ids": [],
+      "wall_context_status": "blocked_until_exact_dimension_slots_and_section_top_bottom_rules_are_bound",
+      "plan_width_candidate_m": null,
+      "plan_width_quality_flags": [],
+      "visible_opening_entity_count": 82,
+      "preserve_wall_or_structural_entity_count": 21,
+      "cut_contract_visual_source_count": 79,
+      "cut_contract_preserve_source_count": 24,
+      "required_slot_states": [
+        {
+          "slot": "opening_width_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "opening_height_m",
+          "state": "source_bound_candidate_slot_present"
+        },
+        {
+          "slot": "threshold_level_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "header_or_lintel_height_m",
+          "state": "missing_source_bound_slot"
+        }
+      ],
+      "unresolved_slots": [
+        "header_or_lintel_height_m",
+        "opening_width_m",
+        "threshold_level_m"
+      ],
+      "next_agent_priority": "P0_agent_deep_source_binding",
+      "next_agent_action": "Use deeper source seeds to bind unresolved CAD slots before any mesh work.",
+      "cut_permission": "blocked_not_mesh",
+      "mesh_permission": "blocked_not_mesh",
+      "geometry_permission": "preflight_only_no_wall_boolean_no_opening_mesh"
+    },
+    {
+      "stable_object_id": "ground_floor:opening_wall_cut_preflight:Y09",
+      "legend_id": "Y09",
+      "label": "raam WC1",
+      "opening_type": "window",
+      "facade": "right",
+      "height_contract_label": "raam WC1 rechter zijgevel",
+      "height_join_confidence": "high",
+      "accepted_wall_run_ids": [
+        "W27",
+        "W35",
+        "W28",
+        "W36"
+      ],
+      "review_wall_run_ids": [],
+      "wall_context_status": "blocked_until_exact_dimension_slots_and_section_top_bottom_rules_are_bound",
+      "plan_width_candidate_m": 0.863,
+      "plan_width_quality_flags": [
+        "detail_facade_crosscheck_required_before_binding"
+      ],
+      "visible_opening_entity_count": 89,
+      "preserve_wall_or_structural_entity_count": 9,
+      "cut_contract_visual_source_count": 84,
+      "cut_contract_preserve_source_count": 14,
+      "required_slot_states": [
+        {
+          "slot": "opening_width_m",
+          "state": "source_bound_candidate_slot_present"
+        },
+        {
+          "slot": "opening_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "sill_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "header_or_lintel_height_m",
+          "state": "missing_source_bound_slot"
+        }
+      ],
+      "unresolved_slots": [
+        "header_or_lintel_height_m",
+        "opening_height_m",
+        "sill_height_m"
+      ],
+      "next_agent_priority": "P1_agent_cad_binding",
+      "next_agent_action": "Bind missing slots from original CAD geometry and text evidence; do not infer from preview panels.",
+      "cut_permission": "blocked_not_mesh",
+      "mesh_permission": "blocked_not_mesh",
+      "geometry_permission": "preflight_only_no_wall_boolean_no_opening_mesh"
+    },
+    {
+      "stable_object_id": "ground_floor:opening_wall_cut_preflight:Y10",
+      "legend_id": "Y10",
+      "label": "kastdeur berging (ingebouwde kast)",
+      "opening_type": "built_in_cabinet_door",
+      "facade": "unknown",
+      "height_contract_label": null,
+      "height_join_confidence": "not_facade_opening",
+      "accepted_wall_run_ids": [],
+      "review_wall_run_ids": [],
+      "wall_context_status": "blocked",
+      "plan_width_candidate_m": null,
+      "plan_width_quality_flags": [],
+      "visible_opening_entity_count": 0,
+      "preserve_wall_or_structural_entity_count": 8,
+      "cut_contract_visual_source_count": 0,
+      "cut_contract_preserve_source_count": 8,
+      "required_slot_states": [],
+      "unresolved_slots": [],
+      "next_agent_priority": "P2_review_packaging",
+      "next_agent_action": "Package as later user slot-review candidate; keep mesh export blocked.",
+      "cut_permission": "blocked_not_mesh",
+      "mesh_permission": "blocked_not_mesh",
+      "geometry_permission": "preflight_only_no_wall_boolean_no_opening_mesh"
+    },
+    {
+      "stable_object_id": "ground_floor:opening_wall_cut_preflight:Y11",
+      "legend_id": "Y11",
+      "label": "raam berging",
+      "opening_type": "window",
+      "facade": "right",
+      "height_contract_label": "raam berging rechter zijgevel",
+      "height_join_confidence": "high",
+      "accepted_wall_run_ids": [
+        "W23",
+        "W27",
+        "W21",
+        "W24",
+        "W28"
+      ],
+      "review_wall_run_ids": [],
+      "wall_context_status": "blocked_until_exact_dimension_slots_and_section_top_bottom_rules_are_bound",
+      "plan_width_candidate_m": null,
+      "plan_width_quality_flags": [],
+      "visible_opening_entity_count": 75,
+      "preserve_wall_or_structural_entity_count": 9,
+      "cut_contract_visual_source_count": 70,
+      "cut_contract_preserve_source_count": 14,
+      "required_slot_states": [
+        {
+          "slot": "opening_width_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "opening_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "sill_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "header_or_lintel_height_m",
+          "state": "missing_source_bound_slot"
+        }
+      ],
+      "unresolved_slots": [
+        "header_or_lintel_height_m",
+        "opening_height_m",
+        "opening_width_m",
+        "sill_height_m"
+      ],
+      "next_agent_priority": "P1_agent_cad_binding",
+      "next_agent_action": "Bind missing slots from original CAD geometry and text evidence; do not infer from preview panels.",
+      "cut_permission": "blocked_not_mesh",
+      "mesh_permission": "blocked_not_mesh",
+      "geometry_permission": "preflight_only_no_wall_boolean_no_opening_mesh"
+    },
+    {
+      "stable_object_id": "ground_floor:opening_wall_cut_preflight:Y12",
+      "legend_id": "Y12",
+      "label": "raam keuken",
+      "opening_type": "window",
+      "facade": "left",
+      "height_contract_label": "raam linker zijgevel vooraan",
+      "height_join_confidence": "high",
+      "accepted_wall_run_ids": [
+        "W04",
+        "W25",
+        "W12",
+        "W26"
+      ],
+      "review_wall_run_ids": [],
+      "wall_context_status": "blocked_until_exact_dimension_slots_and_section_top_bottom_rules_are_bound",
+      "plan_width_candidate_m": null,
+      "plan_width_quality_flags": [],
+      "visible_opening_entity_count": 74,
+      "preserve_wall_or_structural_entity_count": 6,
+      "cut_contract_visual_source_count": 56,
+      "cut_contract_preserve_source_count": 24,
+      "required_slot_states": [
+        {
+          "slot": "opening_width_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "opening_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "sill_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "header_or_lintel_height_m",
+          "state": "missing_source_bound_slot"
+        }
+      ],
+      "unresolved_slots": [
+        "header_or_lintel_height_m",
+        "opening_height_m",
+        "opening_width_m",
+        "sill_height_m"
+      ],
+      "next_agent_priority": "P0_agent_deep_source_binding",
+      "next_agent_action": "Use deeper source seeds to bind unresolved CAD slots before any mesh work.",
+      "cut_permission": "blocked_not_mesh",
+      "mesh_permission": "blocked_not_mesh",
+      "geometry_permission": "preflight_only_no_wall_boolean_no_opening_mesh"
+    },
+    {
+      "stable_object_id": "ground_floor:opening_wall_cut_preflight:Y13",
+      "legend_id": "Y13",
+      "label": "raam bureau Oost",
+      "opening_type": "window",
+      "facade": "right",
+      "height_contract_label": "raam rechter zijgevel vooraan",
+      "height_join_confidence": "high",
+      "accepted_wall_run_ids": [
+        "W05",
+        "W11",
+        "W13",
+        "W17",
+        "W18",
+        "W19"
+      ],
+      "review_wall_run_ids": [],
+      "wall_context_status": "blocked_until_exact_dimension_slots_and_section_top_bottom_rules_are_bound",
+      "plan_width_candidate_m": 1.14,
+      "plan_width_quality_flags": [
+        "detail_facade_crosscheck_required_before_binding"
+      ],
+      "visible_opening_entity_count": 87,
+      "preserve_wall_or_structural_entity_count": 6,
+      "cut_contract_visual_source_count": 83,
+      "cut_contract_preserve_source_count": 10,
+      "required_slot_states": [
+        {
+          "slot": "opening_width_m",
+          "state": "source_bound_candidate_slot_present"
+        },
+        {
+          "slot": "opening_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "sill_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "header_or_lintel_height_m",
+          "state": "missing_source_bound_slot"
+        }
+      ],
+      "unresolved_slots": [
+        "header_or_lintel_height_m",
+        "opening_height_m",
+        "sill_height_m"
+      ],
+      "next_agent_priority": "P1_agent_cad_binding",
+      "next_agent_action": "Bind missing slots from original CAD geometry and text evidence; do not infer from preview panels.",
+      "cut_permission": "blocked_not_mesh",
+      "mesh_permission": "blocked_not_mesh",
+      "geometry_permission": "preflight_only_no_wall_boolean_no_opening_mesh"
+    },
+    {
+      "stable_object_id": "ground_floor:opening_wall_cut_preflight:Y14",
+      "legend_id": "Y14",
+      "label": "deur bureau",
+      "opening_type": "interior_door",
+      "facade": "unknown",
+      "height_contract_label": null,
+      "height_join_confidence": "not_facade_opening",
+      "accepted_wall_run_ids": [],
+      "review_wall_run_ids": [],
+      "wall_context_status": "blocked",
+      "plan_width_candidate_m": 0.956,
+      "plan_width_quality_flags": [
+        "detail_facade_crosscheck_required_before_binding"
+      ],
+      "visible_opening_entity_count": 33,
+      "preserve_wall_or_structural_entity_count": 8,
+      "cut_contract_visual_source_count": 30,
+      "cut_contract_preserve_source_count": 11,
+      "required_slot_states": [
+        {
+          "slot": "opening_width_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "opening_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "threshold_level_m",
+          "state": "missing_source_bound_slot"
+        }
+      ],
+      "unresolved_slots": [
+        "opening_height_m",
+        "opening_width_m",
+        "threshold_level_m"
+      ],
+      "next_agent_priority": "P1_agent_cad_binding",
+      "next_agent_action": "Bind missing slots from original CAD geometry and text evidence; do not infer from preview panels.",
+      "cut_permission": "blocked_not_mesh",
+      "mesh_permission": "blocked_not_mesh",
+      "geometry_permission": "preflight_only_no_wall_boolean_no_opening_mesh"
+    },
+    {
+      "stable_object_id": "ground_floor:opening_wall_cut_preflight:Y15",
+      "legend_id": "Y15",
+      "label": "raam bureau Zuid",
+      "opening_type": "window",
+      "facade": "front",
+      "height_contract_label": "raam voorgevel gelijkvloers",
+      "height_join_confidence": "high",
+      "accepted_wall_run_ids": [
+        "W09",
+        "W10",
+        "W02",
+        "W03"
+      ],
+      "review_wall_run_ids": [],
+      "wall_context_status": "blocked_until_exact_dimension_slots_and_section_top_bottom_rules_are_bound",
+      "plan_width_candidate_m": 1.14,
+      "plan_width_quality_flags": [
+        "detail_facade_crosscheck_required_before_binding"
+      ],
+      "visible_opening_entity_count": 96,
+      "preserve_wall_or_structural_entity_count": 6,
+      "cut_contract_visual_source_count": 84,
+      "cut_contract_preserve_source_count": 18,
+      "required_slot_states": [
+        {
+          "slot": "opening_width_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "opening_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "sill_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "header_or_lintel_height_m",
+          "state": "missing_source_bound_slot"
+        }
+      ],
+      "unresolved_slots": [
+        "header_or_lintel_height_m",
+        "opening_height_m",
+        "opening_width_m",
+        "sill_height_m"
+      ],
+      "next_agent_priority": "P0_agent_deep_source_binding",
+      "next_agent_action": "Use deeper source seeds to bind unresolved CAD slots before any mesh work.",
+      "cut_permission": "blocked_not_mesh",
+      "mesh_permission": "blocked_not_mesh",
+      "geometry_permission": "preflight_only_no_wall_boolean_no_opening_mesh"
+    },
+    {
+      "stable_object_id": "ground_floor:opening_wall_cut_preflight:Y16",
+      "legend_id": "Y16",
+      "label": "rondboog",
+      "opening_type": "arched_free_opening",
+      "facade": "unknown",
+      "height_contract_label": null,
+      "height_join_confidence": "not_facade_opening",
+      "accepted_wall_run_ids": [],
+      "review_wall_run_ids": [],
+      "wall_context_status": "blocked",
+      "plan_width_candidate_m": null,
+      "plan_width_quality_flags": [],
+      "visible_opening_entity_count": 8,
+      "preserve_wall_or_structural_entity_count": 2,
+      "cut_contract_visual_source_count": 8,
+      "cut_contract_preserve_source_count": 2,
+      "required_slot_states": [
+        {
+          "slot": "opening_width_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "opening_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "arch_geometry",
+          "state": "missing_source_bound_slot"
+        }
+      ],
+      "unresolved_slots": [
+        "arch_geometry",
+        "opening_height_m",
+        "opening_width_m"
+      ],
+      "next_agent_priority": "P2_review_packaging",
+      "next_agent_action": "Package as later user slot-review candidate; keep mesh export blocked.",
+      "cut_permission": "blocked_not_mesh",
+      "mesh_permission": "blocked_not_mesh",
+      "geometry_permission": "preflight_only_no_wall_boolean_no_opening_mesh"
+    },
+    {
+      "stable_object_id": "ground_floor:opening_wall_cut_preflight:Y17",
+      "legend_id": "Y17",
+      "label": "erker inclusief raamdeur",
+      "opening_type": "bay_window_group_with_operable_door",
+      "facade": "front",
+      "height_contract_label": "erker voorgevel",
+      "height_join_confidence": "high",
+      "accepted_wall_run_ids": [
+        "W02",
+        "W06",
+        "W07",
+        "W09"
+      ],
+      "review_wall_run_ids": [],
+      "wall_context_status": "blocked_until_exact_dimension_slots_and_section_top_bottom_rules_are_bound",
+      "plan_width_candidate_m": 0.956,
+      "plan_width_quality_flags": [
+        "detail_facade_crosscheck_required_before_binding",
+        "bay_window_group_width_too_small_likely_single_leaf_only"
+      ],
+      "visible_opening_entity_count": 118,
+      "preserve_wall_or_structural_entity_count": 19,
+      "cut_contract_visual_source_count": 111,
+      "cut_contract_preserve_source_count": 26,
+      "required_slot_states": [
+        {
+          "slot": "opening_width_m",
+          "state": "source_bound_candidate_slot_present"
+        },
+        {
+          "slot": "opening_height_m",
+          "state": "source_bound_candidate_slot_present"
+        },
+        {
+          "slot": "threshold_level_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "bay_subsegment_geometry",
+          "state": "source_subgeometry_candidate_available_not_bound"
+        },
+        {
+          "slot": "header_or_lintel_height_m",
+          "state": "missing_source_bound_slot"
+        }
+      ],
+      "unresolved_slots": [
+        "bay_subsegment_geometry",
+        "header_or_lintel_height_m",
+        "threshold_level_m"
+      ],
+      "next_agent_priority": "P0_agent_deep_source_binding",
+      "next_agent_action": "Use deeper source seeds to bind unresolved CAD slots before any mesh work.",
+      "cut_permission": "blocked_not_mesh",
+      "mesh_permission": "blocked_not_mesh",
+      "geometry_permission": "preflight_only_no_wall_boolean_no_opening_mesh"
+    }
+  ],
+  "rules": [
+    "This preflight does not cut walls and does not create opening mesh.",
+    "A wall cut requires source-bound wall run, width, height, sill or threshold, header and role-separated frame/glass/door context.",
+    "Visible opening entities and wall/structure entities remain separate in metadata.",
+    "Concrete columns and structural wall pieces must stay preserved unless explicitly classified as an opening void."
+  ],
+  "mesh_permission": "blocked_not_mesh"
+}

@@ -1,0 +1,206 @@
+{
+  "status": "full_validation_list_ready",
+  "purpose": "One user-facing validation list after the latest CAD-first continuation pass. User validates visual/source logic only; agent validates CAD IDs and technical bindings.",
+  "source_files": [
+    "blender\\semantic_objects\\validation_after_current_pass.json",
+    "blender\\semantic_objects\\ground_floor_opening_current_readiness_rollup.json",
+    "blender\\semantic_objects\\visible_site_material_backlog.json",
+    "blender\\semantic_objects\\room_editable_object_contract.json",
+    "blender\\semantic_objects\\ground_floor_opening_component_export_manifest.json",
+    "blender\\semantic_objects\\ground_floor_opening_material_backlog.json",
+    "blender\\semantic_objects\\ground_floor_opening_full_review_atlas.json",
+    "blender\\semantic_objects\\user_validation_response_sheet.json",
+    "blender\\semantic_objects\\ground_floor_opening_downstream_safety_gate.json",
+    "blender\\semantic_objects\\downstream_next_promotion_work_order.json",
+    "blender\\semantic_objects\\downstream_3d_handoff_contract.json"
+  ],
+  "summary": {
+    "must_validate_count": 3,
+    "spotcheck_count": 1,
+    "metadata_spotcheck_count": 0,
+    "agent_only_count": 6,
+    "no_user_validation_opening_count": 11,
+    "opening_count": 17,
+    "opening_export_component_slots": 141,
+    "opening_material_backlog_components": 67,
+    "opening_full_review_atlas_openings": 17,
+    "user_validation_response_sheet_items": 4,
+    "room_editable_slots": 90,
+    "site_material_backlog_objects": 26,
+    "safety_gate_failed_count": 0,
+    "promotion_phase_count": 6,
+    "handoff_batch_count": 7,
+    "final_mesh_ready_count": 0
+  },
+  "validate_now": [
+    {
+      "id": "VAL-VIEWER-3D",
+      "title": "3D viewer visueel controleren",
+      "priority": "must_validate",
+      "direct_link": "http://127.0.0.1:5178/?fresh=validation-after-pass",
+      "check": "Controleer alleen het visuele 3D-resultaat: perceel, schaal, orientatie, hoogtegevoel en of er geen storende oude onderlaag of zwarte/lege view is.",
+      "blocking": true,
+      "owner": "user_visual_validation"
+    },
+    {
+      "id": "VAL-OPENING-FULL-ATLAS",
+      "title": "Opening-atlas visueel controleren",
+      "priority": "must_validate",
+      "direct_link": "http://127.0.0.1:5178/assets/cad-truth/ground-floor-opening-full-review-atlas.html",
+      "check": "Controleer alleen of de zichtbare openingbeelden lijken op de plannen. Y05 en Y17 staan bewust gemarkeerd als agent-correctie en hoeven nu niet opnieuw gevalideerd te worden.",
+      "blocking": true,
+      "owner": "user_visual_validation"
+    },
+    {
+      "id": "VAL-RESPONSE-SHEET",
+      "title": "Antwoordblad invullen indien nodig",
+      "priority": "must_validate",
+      "direct_link": "http://127.0.0.1:5178/assets/cad-truth/user-validation-response-sheet.html",
+      "check": "Gebruik dit alleen om opmerkingen te verzamelen. Het blad bevat directe links en invulvelden; geen CAD-ID's of technische tabellen nodig.",
+      "blocking": true,
+      "owner": "user_visual_validation"
+    }
+  ],
+  "spotcheck": [
+    {
+      "id": "VAL-PROFILES",
+      "title": "Complexe profielen alleen indien nuttig",
+      "priority": "spotcheck",
+      "direct_link": "http://127.0.0.1:5178/assets/cad-truth/ground-floor-opening-profile-review-candidates.html",
+      "check": "Optioneel: bekijk alleen boogramen/rondboog/erkerprofielen als het visuele atlasbeeld onduidelijk is. Geen technische CAD-ID validatie.",
+      "blocking": false,
+      "owner": "user_visual_validation"
+    }
+  ],
+  "metadata_spotcheck": [],
+  "agent_only": [
+    {
+      "id": "AGENT-SAFETY-GATE",
+      "title": "Opening downstream safety gate",
+      "priority": "agent_only",
+      "direct_link": "http://127.0.0.1:5178/assets/cad-truth/ground-floor-opening-downstream-safety-gate.html",
+      "check": "Agentcontrole: blokkeert final mesh/export zolang CAD-slots of componentgeometrie ontbreken.",
+      "blocking": false,
+      "owner": "agent_check"
+    },
+    {
+      "id": "AGENT-WORK-ORDER",
+      "title": "Downstream next promotion work order",
+      "priority": "agent_only",
+      "direct_link": "http://127.0.0.1:5178/assets/cad-truth/downstream-next-promotion-work-order.html",
+      "check": "Agentcontrole: bewaakt de volgorde site -> muren -> openingen -> kamers -> dak -> export.",
+      "blocking": false,
+      "owner": "agent_check"
+    },
+    {
+      "id": "AGENT-BLENDER-STAGE",
+      "title": "Blender source-linked stage",
+      "priority": "agent_only",
+      "direct_link": "http://127.0.0.1:5178/assets/cad-truth/blender-source-linked-stage.html",
+      "check": "Agentcontrole: Blender-staging met metadata en source refs, nog geen finale export.",
+      "blocking": false,
+      "owner": "agent_check"
+    },
+    {
+      "id": "AGENT-HANDOFF",
+      "title": "Downstream 3D handoff contract",
+      "priority": "agent_only",
+      "direct_link": "http://127.0.0.1:5178/assets/cad-truth/downstream-3d-handoff-contract.html",
+      "check": "Agentcontrole: batches, objectnamen en custom properties voor latere Blender/Twinmotion/Unreal.",
+      "blocking": false,
+      "owner": "agent_check"
+    },
+    {
+      "id": "AGENT-REMAINING-OPENING-BINDING",
+      "title": "Remaining opening CAD-binding work order",
+      "priority": "agent_only",
+      "direct_link": "http://127.0.0.1:5178/assets/cad-truth/ground-floor-opening-remaining-binding-work-order.html",
+      "check": "Agentwerk voor de resterende missing/pending slots per opening. Jij hoeft dit niet te valideren, maar het toont concreet wat nog opgelost wordt voordat 3D-cuts mogen.",
+      "blocking": false,
+      "owner": "agent_check"
+    },
+    {
+      "id": "AGENT-PRE-VALIDATION-QA",
+      "title": "Pre-validation QA audit",
+      "priority": "agent_only",
+      "direct_link": "http://127.0.0.1:5178/assets/cad-truth/pre-validation-qa-audit.html",
+      "check": "Automatische check op opening coverage, lokale links/anchors, safety gate en onverwachte mesh/export/render-ready counters.",
+      "blocking": false,
+      "owner": "agent_check"
+    }
+  ],
+  "no_user_validation_openings": [
+    {
+      "legend_id": "Y03",
+      "label": "schuifraam",
+      "direct_link": "http://127.0.0.1:5178/assets/cad-truth/ground-floor-opening-component-detail-board.html#Y03",
+      "reason": "Nog niet nodig om te valideren; eerst moeten ontbrekende CAD-slots technisch gebonden worden."
+    },
+    {
+      "legend_id": "Y04",
+      "label": "Raam Hobbyruimte",
+      "direct_link": "http://127.0.0.1:5178/assets/cad-truth/ground-floor-opening-component-detail-board.html#Y04",
+      "reason": "Nog niet nodig om te valideren; eerst moeten ontbrekende CAD-slots technisch gebonden worden."
+    },
+    {
+      "legend_id": "Y06",
+      "label": "deur inkomhal",
+      "direct_link": "http://127.0.0.1:5178/assets/cad-truth/ground-floor-opening-component-detail-board.html#Y06",
+      "reason": "Nog niet nodig om te valideren; eerst moeten ontbrekende CAD-slots technisch gebonden worden."
+    },
+    {
+      "legend_id": "Y07",
+      "label": "deur WC1",
+      "direct_link": "http://127.0.0.1:5178/assets/cad-truth/ground-floor-opening-component-detail-board.html#Y07",
+      "reason": "Nog niet nodig om te valideren; eerst moeten ontbrekende CAD-slots technisch gebonden worden."
+    },
+    {
+      "legend_id": "Y08",
+      "label": "voordeur",
+      "direct_link": "http://127.0.0.1:5178/assets/cad-truth/ground-floor-opening-component-detail-board.html#Y08",
+      "reason": "Nog niet nodig om te valideren; eerst moeten ontbrekende CAD-slots technisch gebonden worden."
+    },
+    {
+      "legend_id": "Y09",
+      "label": "raam WC1",
+      "direct_link": "http://127.0.0.1:5178/assets/cad-truth/ground-floor-opening-component-detail-board.html#Y09",
+      "reason": "Nog niet nodig om te valideren; eerst moeten ontbrekende CAD-slots technisch gebonden worden."
+    },
+    {
+      "legend_id": "Y11",
+      "label": "raam berging",
+      "direct_link": "http://127.0.0.1:5178/assets/cad-truth/ground-floor-opening-component-detail-board.html#Y11",
+      "reason": "Nog niet nodig om te valideren; eerst moeten ontbrekende CAD-slots technisch gebonden worden."
+    },
+    {
+      "legend_id": "Y12",
+      "label": "raam keuken",
+      "direct_link": "http://127.0.0.1:5178/assets/cad-truth/ground-floor-opening-component-detail-board.html#Y12",
+      "reason": "Nog niet nodig om te valideren; eerst moeten ontbrekende CAD-slots technisch gebonden worden."
+    },
+    {
+      "legend_id": "Y13",
+      "label": "raam bureau Oost",
+      "direct_link": "http://127.0.0.1:5178/assets/cad-truth/ground-floor-opening-component-detail-board.html#Y13",
+      "reason": "Nog niet nodig om te valideren; eerst moeten ontbrekende CAD-slots technisch gebonden worden."
+    },
+    {
+      "legend_id": "Y14",
+      "label": "deur bureau",
+      "direct_link": "http://127.0.0.1:5178/assets/cad-truth/ground-floor-opening-component-detail-board.html#Y14",
+      "reason": "Nog niet nodig om te valideren; eerst moeten ontbrekende CAD-slots technisch gebonden worden."
+    },
+    {
+      "legend_id": "Y15",
+      "label": "raam bureau Zuid",
+      "direct_link": "http://127.0.0.1:5178/assets/cad-truth/ground-floor-opening-component-detail-board.html#Y15",
+      "reason": "Nog niet nodig om te valideren; eerst moeten ontbrekende CAD-slots technisch gebonden worden."
+    }
+  ],
+  "rules": [
+    "User never has to validate CAD entity numbers.",
+    "Do not promote abstract boxes to mesh.",
+    "All future Blender/Twinmotion/Unreal objects must keep stable object names and CAD/PDF source refs.",
+    "Colors in QA boards are markers/previews, not final materials."
+  ]
+}

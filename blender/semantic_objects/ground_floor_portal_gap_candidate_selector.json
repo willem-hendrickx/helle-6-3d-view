@@ -1,0 +1,2890 @@
+{
+  "status": "ground_floor_portal_gap_candidate_selector_ready_agent_side_not_bound_not_mesh",
+  "purpose": "Ranks exact CAD wall-run gap candidates for walkable ground-floor openings using source overlaps, topology, wall-cut context and width evidence, without accepting any route or mesh.",
+  "source_files": {
+    "ground_floor_portal_gap_edge_narrowing_work_order": "blender\\semantic_objects\\ground_floor_portal_gap_edge_narrowing_work_order.json",
+    "ground_floor_opening_wall_cut_alignment_contract": "blender\\semantic_objects\\ground_floor_opening_wall_cut_alignment_contract.json",
+    "ground_floor_opening_cutline_narrowing_workbench": "blender\\semantic_objects\\ground_floor_opening_cutline_narrowing_workbench.json",
+    "ground_floor_opening_width_narrowed_candidates": "blender\\semantic_objects\\ground_floor_opening_width_narrowed_candidates.json",
+    "ground_floor_room_portal_candidate_contract": "blender\\semantic_objects\\ground_floor_room_portal_candidate_contract.json"
+  },
+  "portal_count": 7,
+  "selector_status_counts": {
+    "ranked_but_tied_wall_runs_need_exact_gap_source_split_not_bound": 6,
+    "single_top_ranked_wall_run_candidate_needs_exact_cutline_threshold_review_not_bound": 1
+  },
+  "ranked_wall_run_total": 51,
+  "user_validation_needed_now_count": 0,
+  "final_bound_candidate_count": 0,
+  "walkable_ready_count": 0,
+  "mesh_ready_candidate_count": 0,
+  "objects": [
+    {
+      "stable_object_id": "ground_floor:portal_gap_candidate_selector:Y03",
+      "legend_id": "Y03",
+      "display_label": "schuifraam",
+      "portal_kind": "exterior_access_candidate",
+      "source_narrowing_status": "single_portal_candidate_many_wall_runs_needs_gap_edge_narrowing_not_bound",
+      "opening_wall_cut_alignment_status": "source_overlap_ready_recessed_or_interior_side_hint_needs_agent_review_before_cut",
+      "accepted_wall_run_ids": [
+        "W56",
+        "W57",
+        "W58",
+        "W59",
+        "W63",
+        "W64"
+      ],
+      "expected_side_hint": "rear_north_garden_side",
+      "cutline_best_candidate_source_entity_ids": [
+        "ground_floor_plan:0675",
+        "ground_floor_plan:0718"
+      ],
+      "narrowed_width_candidate_m": null,
+      "selector_status": "single_top_ranked_wall_run_candidate_needs_exact_cutline_threshold_review_not_bound",
+      "candidate_packet_count": 1,
+      "ranked_wall_run_count": 6,
+      "top_score": 16,
+      "top_wall_run_ids": [
+        "W57"
+      ],
+      "selector_packets": [
+        {
+          "candidate_id": "Y03:inside_room:RS006",
+          "candidate_kind": "exterior_inside_room",
+          "candidate_room_label": "Eetplaats",
+          "expected_room_seed_ids": [
+            "RS006"
+          ],
+          "expected_room_source_ids": [
+            "ground_floor_plan:0663",
+            "ground_floor_plan:0664",
+            "ground_floor_plan:0666",
+            "ground_floor_plan:0667",
+            "ground_floor_plan:0669",
+            "ground_floor_plan:0670",
+            "ground_floor_plan:1142"
+          ],
+          "ranked_wall_runs": [
+            {
+              "wall_run_id": "W57",
+              "score": 16,
+              "source_entity_ids": [
+                "ground_floor_plan:0670",
+                "ground_floor_plan:1142"
+              ],
+              "graph_edge_ids": [
+                "E00301",
+                "E00302",
+                "E00303",
+                "E00304",
+                "E00305",
+                "E00306",
+                "E00307",
+                "E00308"
+              ],
+              "graph_edge_count": 8,
+              "edge_length_total_m": 3.32,
+              "opening_link_kinds": [
+                "direct"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [
+                "RS006"
+              ],
+              "expected_room_seed_ids": [
+                "RS006"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:0670",
+                "ground_floor_plan:1142"
+              ],
+              "room_seed_overlap": [
+                "RS006"
+              ],
+              "expected_side_hint": "rear_north_garden_side",
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "wall run is in opening wall-cut alignment accepted context",
+                "direct opening-wall link",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence",
+                "wall run carries candidate room seed link"
+              ],
+              "risk_flags": [
+                "wall side hint does not exactly match opening alignment side"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 1
+            },
+            {
+              "wall_run_id": "W56",
+              "score": 14,
+              "source_entity_ids": [
+                "ground_floor_plan:0669"
+              ],
+              "graph_edge_ids": [
+                "E00297",
+                "E00298",
+                "E00299",
+                "E00300"
+              ],
+              "graph_edge_count": 4,
+              "edge_length_total_m": 0.74,
+              "opening_link_kinds": [
+                "direct"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [
+                "RS006"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:0669"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": "rear_north_garden_side",
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "wall run is in opening wall-cut alignment accepted context",
+                "direct opening-wall link",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence"
+              ],
+              "risk_flags": [
+                "wall side hint does not exactly match opening alignment side"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 2
+            },
+            {
+              "wall_run_id": "W58",
+              "score": 14,
+              "source_entity_ids": [
+                "ground_floor_plan:0666"
+              ],
+              "graph_edge_ids": [
+                "E00309",
+                "E00310",
+                "E00311",
+                "E00312",
+                "E00313"
+              ],
+              "graph_edge_count": 5,
+              "edge_length_total_m": 0.98,
+              "opening_link_kinds": [
+                "direct"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [
+                "RS006"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:0666"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": "rear_north_garden_side",
+              "side_hint_not_geometry": [
+                "left_west_side"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "wall run is in opening wall-cut alignment accepted context",
+                "direct opening-wall link",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence"
+              ],
+              "risk_flags": [
+                "wall side hint does not exactly match opening alignment side"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 3
+            },
+            {
+              "wall_run_id": "W59",
+              "score": 14,
+              "source_entity_ids": [
+                "ground_floor_plan:0667"
+              ],
+              "graph_edge_ids": [
+                "E00314",
+                "E00315",
+                "E00316",
+                "E00317",
+                "E00318"
+              ],
+              "graph_edge_count": 5,
+              "edge_length_total_m": 1.76,
+              "opening_link_kinds": [
+                "direct"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [
+                "RS006"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:0667"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": "rear_north_garden_side",
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "wall run is in opening wall-cut alignment accepted context",
+                "direct opening-wall link",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence"
+              ],
+              "risk_flags": [
+                "wall side hint does not exactly match opening alignment side"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 4
+            },
+            {
+              "wall_run_id": "W63",
+              "score": 14,
+              "source_entity_ids": [
+                "ground_floor_plan:0663"
+              ],
+              "graph_edge_ids": [
+                "E00332",
+                "E00333",
+                "E00334",
+                "E00335"
+              ],
+              "graph_edge_count": 4,
+              "edge_length_total_m": 1.3,
+              "opening_link_kinds": [
+                "direct"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [
+                "RS006"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:0663"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": "rear_north_garden_side",
+              "side_hint_not_geometry": [
+                "left_west_side"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "wall run is in opening wall-cut alignment accepted context",
+                "direct opening-wall link",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence"
+              ],
+              "risk_flags": [
+                "wall side hint does not exactly match opening alignment side"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 5
+            },
+            {
+              "wall_run_id": "W64",
+              "score": 14,
+              "source_entity_ids": [
+                "ground_floor_plan:0664"
+              ],
+              "graph_edge_ids": [
+                "E00336",
+                "E00337",
+                "E00338",
+                "E00339"
+              ],
+              "graph_edge_count": 4,
+              "edge_length_total_m": 1.5,
+              "opening_link_kinds": [
+                "direct"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [
+                "RS006"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:0664"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": "rear_north_garden_side",
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "wall run is in opening wall-cut alignment accepted context",
+                "direct opening-wall link",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence"
+              ],
+              "risk_flags": [
+                "wall side hint does not exactly match opening alignment side"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 6
+            }
+          ],
+          "top_wall_run_ids": [
+            "W57"
+          ],
+          "packet_status": "single_top_ranked_wall_run_candidate_needs_exact_cutline_threshold_review_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "final_bound": false,
+      "walkable_ready": false,
+      "mesh_ready": false,
+      "mesh_permission": "blocked_not_mesh",
+      "next_agent_tasks": [
+        "Use this ranking only to decide the next exact CAD source split to inspect.",
+        "Do not accept a portal gap until the chosen wall run, cutline, threshold and room sides are all exact-bound.",
+        "Do not generate walk-through route or mesh from selector rankings."
+      ]
+    },
+    {
+      "stable_object_id": "ground_floor:portal_gap_candidate_selector:Y06",
+      "legend_id": "Y06",
+      "display_label": "deur inkomhal",
+      "portal_kind": "room_portal_candidate",
+      "source_narrowing_status": "single_portal_candidate_many_wall_runs_needs_gap_edge_narrowing_not_bound",
+      "opening_wall_cut_alignment_status": "no_wall_run_binding_for_this_opening",
+      "accepted_wall_run_ids": [],
+      "expected_side_hint": null,
+      "cutline_best_candidate_source_entity_ids": [
+        "ground_floor_plan:0866",
+        "ground_floor_plan:0867"
+      ],
+      "narrowed_width_candidate_m": 1.4,
+      "selector_status": "ranked_but_tied_wall_runs_need_exact_gap_source_split_not_bound",
+      "candidate_packet_count": 1,
+      "ranked_wall_run_count": 5,
+      "top_score": 6,
+      "top_wall_run_ids": [
+        "W31",
+        "W33",
+        "W38",
+        "W39",
+        "W40"
+      ],
+      "selector_packets": [
+        {
+          "candidate_id": "Y06:room_pair:01",
+          "candidate_kind": "room_pair",
+          "candidate_room_label": "Inkom/vestiaire<->Wasberging",
+          "expected_room_seed_ids": [
+            "RS001",
+            "RS003"
+          ],
+          "expected_room_source_ids": [
+            "ground_floor_plan:0864",
+            "ground_floor_plan:0865",
+            "ground_floor_plan:0876",
+            "ground_floor_plan:1021",
+            "ground_floor_plan:1084",
+            "ground_floor_plan:1933"
+          ],
+          "ranked_wall_runs": [
+            {
+              "wall_run_id": "W31",
+              "score": 6,
+              "source_entity_ids": [
+                "ground_floor_plan:1084"
+              ],
+              "graph_edge_ids": [
+                "E00163",
+                "E00164",
+                "E00165",
+                "E00166"
+              ],
+              "graph_edge_count": 4,
+              "edge_length_total_m": 3.5562,
+              "opening_link_kinds": [
+                "candidate"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [
+                "RS001",
+                "RS003"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:1084"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": null,
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": 1.4,
+              "width_delta_m": 2.1562,
+              "evidence_notes": [
+                "candidate opening-wall link only",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence"
+              ],
+              "risk_flags": [
+                "opening-wall link is candidate-only",
+                "wall-run edge length differs from narrowed width candidate; keep as weak evidence only"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 1
+            },
+            {
+              "wall_run_id": "W33",
+              "score": 6,
+              "source_entity_ids": [
+                "ground_floor_plan:1933"
+              ],
+              "graph_edge_ids": [
+                "E00171",
+                "E00172",
+                "E00173",
+                "E00174"
+              ],
+              "graph_edge_count": 4,
+              "edge_length_total_m": 2.0762,
+              "opening_link_kinds": [
+                "candidate"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [
+                "RS001",
+                "RS003"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:1933"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": null,
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": 1.4,
+              "width_delta_m": 0.6762,
+              "evidence_notes": [
+                "candidate opening-wall link only",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence"
+              ],
+              "risk_flags": [
+                "opening-wall link is candidate-only"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 2
+            },
+            {
+              "wall_run_id": "W38",
+              "score": 6,
+              "source_entity_ids": [
+                "ground_floor_plan:1021"
+              ],
+              "graph_edge_ids": [
+                "E00197",
+                "E00198",
+                "E00199",
+                "E00200"
+              ],
+              "graph_edge_count": 4,
+              "edge_length_total_m": 1.9136,
+              "opening_link_kinds": [
+                "candidate"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [
+                "RS001",
+                "RS003"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:1021"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": null,
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": 1.4,
+              "width_delta_m": 0.5136,
+              "evidence_notes": [
+                "candidate opening-wall link only",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence"
+              ],
+              "risk_flags": [
+                "opening-wall link is candidate-only"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 3
+            },
+            {
+              "wall_run_id": "W39",
+              "score": 6,
+              "source_entity_ids": [
+                "ground_floor_plan:0864"
+              ],
+              "graph_edge_ids": [
+                "E00201",
+                "E00202",
+                "E00203",
+                "E00204"
+              ],
+              "graph_edge_count": 4,
+              "edge_length_total_m": 0.68,
+              "opening_link_kinds": [
+                "candidate"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [
+                "RS001",
+                "RS003"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:0864"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": null,
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": 1.4,
+              "width_delta_m": 0.72,
+              "evidence_notes": [
+                "candidate opening-wall link only",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence"
+              ],
+              "risk_flags": [
+                "opening-wall link is candidate-only"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 4
+            },
+            {
+              "wall_run_id": "W40",
+              "score": 6,
+              "source_entity_ids": [
+                "ground_floor_plan:0865",
+                "ground_floor_plan:0876"
+              ],
+              "graph_edge_ids": [
+                "E00205",
+                "E00206",
+                "E00207",
+                "E00208",
+                "E00209",
+                "E00210",
+                "E00211",
+                "E00212"
+              ],
+              "graph_edge_count": 8,
+              "edge_length_total_m": 2.3438,
+              "opening_link_kinds": [
+                "candidate"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [
+                "RS001",
+                "RS003"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:0865",
+                "ground_floor_plan:0876"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": null,
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": 1.4,
+              "width_delta_m": 0.9438,
+              "evidence_notes": [
+                "candidate opening-wall link only",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence"
+              ],
+              "risk_flags": [
+                "opening-wall link is candidate-only",
+                "wall-run edge length differs from narrowed width candidate; keep as weak evidence only"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 5
+            }
+          ],
+          "top_wall_run_ids": [
+            "W31",
+            "W33",
+            "W38",
+            "W39",
+            "W40"
+          ],
+          "packet_status": "ranked_but_tied_wall_runs_need_exact_gap_source_split_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "final_bound": false,
+      "walkable_ready": false,
+      "mesh_ready": false,
+      "mesh_permission": "blocked_not_mesh",
+      "next_agent_tasks": [
+        "Use this ranking only to decide the next exact CAD source split to inspect.",
+        "Do not accept a portal gap until the chosen wall run, cutline, threshold and room sides are all exact-bound.",
+        "Do not generate walk-through route or mesh from selector rankings."
+      ]
+    },
+    {
+      "stable_object_id": "ground_floor:portal_gap_candidate_selector:Y07",
+      "legend_id": "Y07",
+      "display_label": "deur WC1",
+      "portal_kind": "room_portal_candidate",
+      "source_narrowing_status": "multiple_portal_candidates_need_pair_and_wall_run_disambiguation",
+      "opening_wall_cut_alignment_status": "no_wall_run_binding_for_this_opening",
+      "accepted_wall_run_ids": [],
+      "expected_side_hint": null,
+      "cutline_best_candidate_source_entity_ids": [
+        "ground_floor_plan:0124"
+      ],
+      "narrowed_width_candidate_m": null,
+      "selector_status": "ranked_but_tied_wall_runs_need_exact_gap_source_split_not_bound",
+      "candidate_packet_count": 3,
+      "ranked_wall_run_count": 15,
+      "top_score": 8,
+      "top_wall_run_ids": [
+        "W30",
+        "W36"
+      ],
+      "selector_packets": [
+        {
+          "candidate_id": "Y07:room_pair:01",
+          "candidate_kind": "room_pair",
+          "candidate_room_label": "Inkom/vestiaire<->Wasberging",
+          "expected_room_seed_ids": [
+            "RS001",
+            "RS003"
+          ],
+          "expected_room_source_ids": [
+            "ground_floor_plan:0054",
+            "ground_floor_plan:0055",
+            "ground_floor_plan:0062",
+            "ground_floor_plan:0063",
+            "ground_floor_plan:0066",
+            "ground_floor_plan:0067",
+            "ground_floor_plan:1077"
+          ],
+          "ranked_wall_runs": [
+            {
+              "wall_run_id": "W30",
+              "score": 8,
+              "source_entity_ids": [
+                "ground_floor_plan:1077"
+              ],
+              "graph_edge_ids": [
+                "E00159",
+                "E00160",
+                "E00161",
+                "E00162"
+              ],
+              "graph_edge_count": 4,
+              "edge_length_total_m": 4.16,
+              "opening_link_kinds": [
+                "candidate"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [
+                "RS003"
+              ],
+              "expected_room_seed_ids": [
+                "RS001",
+                "RS003"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:1077"
+              ],
+              "room_seed_overlap": [
+                "RS003"
+              ],
+              "expected_side_hint": null,
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "candidate opening-wall link only",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence",
+                "wall run carries candidate room seed link"
+              ],
+              "risk_flags": [
+                "opening-wall link is candidate-only"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 1
+            },
+            {
+              "wall_run_id": "W35",
+              "score": 6,
+              "source_entity_ids": [
+                "ground_floor_plan:0054",
+                "ground_floor_plan:0063"
+              ],
+              "graph_edge_ids": [
+                "E00179",
+                "E00180",
+                "E00181",
+                "E00182",
+                "E00183",
+                "E00184",
+                "E00185",
+                "E00186",
+                "E00187",
+                "E00188"
+              ],
+              "graph_edge_count": 10,
+              "edge_length_total_m": 2.5556,
+              "opening_link_kinds": [
+                "candidate"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [
+                "RS001",
+                "RS003"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:0054",
+                "ground_floor_plan:0063"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": null,
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "candidate opening-wall link only",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence"
+              ],
+              "risk_flags": [
+                "opening-wall link is candidate-only"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 2
+            },
+            {
+              "wall_run_id": "W36",
+              "score": 6,
+              "source_entity_ids": [
+                "ground_floor_plan:0067"
+              ],
+              "graph_edge_ids": [
+                "E00189",
+                "E00190",
+                "E00191",
+                "E00192"
+              ],
+              "graph_edge_count": 4,
+              "edge_length_total_m": 1.2878,
+              "opening_link_kinds": [
+                "candidate"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [
+                "RS002"
+              ],
+              "expected_room_seed_ids": [
+                "RS001",
+                "RS003"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:0067"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": null,
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "candidate opening-wall link only",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence"
+              ],
+              "risk_flags": [
+                "opening-wall link is candidate-only"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 3
+            },
+            {
+              "wall_run_id": "W41",
+              "score": 6,
+              "source_entity_ids": [
+                "ground_floor_plan:0055",
+                "ground_floor_plan:0062"
+              ],
+              "graph_edge_ids": [
+                "E00213",
+                "E00214",
+                "E00215",
+                "E00216",
+                "E00217",
+                "E00218",
+                "E00219",
+                "E00220",
+                "E00221"
+              ],
+              "graph_edge_count": 9,
+              "edge_length_total_m": 1.8844,
+              "opening_link_kinds": [
+                "candidate"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [
+                "RS001",
+                "RS003"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:0055",
+                "ground_floor_plan:0062"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": null,
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "candidate opening-wall link only",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence"
+              ],
+              "risk_flags": [
+                "opening-wall link is candidate-only"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 4
+            },
+            {
+              "wall_run_id": "W42",
+              "score": 6,
+              "source_entity_ids": [
+                "ground_floor_plan:0066"
+              ],
+              "graph_edge_ids": [
+                "E00222",
+                "E00223",
+                "E00224",
+                "E00225"
+              ],
+              "graph_edge_count": 4,
+              "edge_length_total_m": 1.3522,
+              "opening_link_kinds": [
+                "candidate"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [
+                "RS001",
+                "RS003"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:0066"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": null,
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "candidate opening-wall link only",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence"
+              ],
+              "risk_flags": [
+                "opening-wall link is candidate-only"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 5
+            }
+          ],
+          "top_wall_run_ids": [
+            "W30"
+          ],
+          "packet_status": "single_top_ranked_wall_run_candidate_needs_exact_cutline_threshold_review_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "candidate_id": "Y07:room_pair:02",
+          "candidate_kind": "room_pair",
+          "candidate_room_label": "Inkom/vestiaire<->Wc1",
+          "expected_room_seed_ids": [
+            "RS001",
+            "RS002"
+          ],
+          "expected_room_source_ids": [
+            "ground_floor_plan:0054",
+            "ground_floor_plan:0055",
+            "ground_floor_plan:0062",
+            "ground_floor_plan:0063",
+            "ground_floor_plan:0066",
+            "ground_floor_plan:0067",
+            "ground_floor_plan:1077"
+          ],
+          "ranked_wall_runs": [
+            {
+              "wall_run_id": "W36",
+              "score": 8,
+              "source_entity_ids": [
+                "ground_floor_plan:0067"
+              ],
+              "graph_edge_ids": [
+                "E00189",
+                "E00190",
+                "E00191",
+                "E00192"
+              ],
+              "graph_edge_count": 4,
+              "edge_length_total_m": 1.2878,
+              "opening_link_kinds": [
+                "candidate"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [
+                "RS002"
+              ],
+              "expected_room_seed_ids": [
+                "RS001",
+                "RS002"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:0067"
+              ],
+              "room_seed_overlap": [
+                "RS002"
+              ],
+              "expected_side_hint": null,
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "candidate opening-wall link only",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence",
+                "wall run carries candidate room seed link"
+              ],
+              "risk_flags": [
+                "opening-wall link is candidate-only"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 1
+            },
+            {
+              "wall_run_id": "W30",
+              "score": 6,
+              "source_entity_ids": [
+                "ground_floor_plan:1077"
+              ],
+              "graph_edge_ids": [
+                "E00159",
+                "E00160",
+                "E00161",
+                "E00162"
+              ],
+              "graph_edge_count": 4,
+              "edge_length_total_m": 4.16,
+              "opening_link_kinds": [
+                "candidate"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [
+                "RS003"
+              ],
+              "expected_room_seed_ids": [
+                "RS001",
+                "RS002"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:1077"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": null,
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "candidate opening-wall link only",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence"
+              ],
+              "risk_flags": [
+                "opening-wall link is candidate-only"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 2
+            },
+            {
+              "wall_run_id": "W35",
+              "score": 6,
+              "source_entity_ids": [
+                "ground_floor_plan:0054",
+                "ground_floor_plan:0063"
+              ],
+              "graph_edge_ids": [
+                "E00179",
+                "E00180",
+                "E00181",
+                "E00182",
+                "E00183",
+                "E00184",
+                "E00185",
+                "E00186",
+                "E00187",
+                "E00188"
+              ],
+              "graph_edge_count": 10,
+              "edge_length_total_m": 2.5556,
+              "opening_link_kinds": [
+                "candidate"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [
+                "RS001",
+                "RS002"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:0054",
+                "ground_floor_plan:0063"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": null,
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "candidate opening-wall link only",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence"
+              ],
+              "risk_flags": [
+                "opening-wall link is candidate-only"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 3
+            },
+            {
+              "wall_run_id": "W41",
+              "score": 6,
+              "source_entity_ids": [
+                "ground_floor_plan:0055",
+                "ground_floor_plan:0062"
+              ],
+              "graph_edge_ids": [
+                "E00213",
+                "E00214",
+                "E00215",
+                "E00216",
+                "E00217",
+                "E00218",
+                "E00219",
+                "E00220",
+                "E00221"
+              ],
+              "graph_edge_count": 9,
+              "edge_length_total_m": 1.8844,
+              "opening_link_kinds": [
+                "candidate"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [
+                "RS001",
+                "RS002"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:0055",
+                "ground_floor_plan:0062"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": null,
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "candidate opening-wall link only",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence"
+              ],
+              "risk_flags": [
+                "opening-wall link is candidate-only"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 4
+            },
+            {
+              "wall_run_id": "W42",
+              "score": 6,
+              "source_entity_ids": [
+                "ground_floor_plan:0066"
+              ],
+              "graph_edge_ids": [
+                "E00222",
+                "E00223",
+                "E00224",
+                "E00225"
+              ],
+              "graph_edge_count": 4,
+              "edge_length_total_m": 1.3522,
+              "opening_link_kinds": [
+                "candidate"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [
+                "RS001",
+                "RS002"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:0066"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": null,
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "candidate opening-wall link only",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence"
+              ],
+              "risk_flags": [
+                "opening-wall link is candidate-only"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 5
+            }
+          ],
+          "top_wall_run_ids": [
+            "W36"
+          ],
+          "packet_status": "single_top_ranked_wall_run_candidate_needs_exact_cutline_threshold_review_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "candidate_id": "Y07:room_pair:03",
+          "candidate_kind": "room_pair",
+          "candidate_room_label": "Wasberging<->Wc1",
+          "expected_room_seed_ids": [
+            "RS002",
+            "RS003"
+          ],
+          "expected_room_source_ids": [
+            "ground_floor_plan:0054",
+            "ground_floor_plan:0055",
+            "ground_floor_plan:0062",
+            "ground_floor_plan:0063",
+            "ground_floor_plan:0066",
+            "ground_floor_plan:0067",
+            "ground_floor_plan:1077"
+          ],
+          "ranked_wall_runs": [
+            {
+              "wall_run_id": "W30",
+              "score": 8,
+              "source_entity_ids": [
+                "ground_floor_plan:1077"
+              ],
+              "graph_edge_ids": [
+                "E00159",
+                "E00160",
+                "E00161",
+                "E00162"
+              ],
+              "graph_edge_count": 4,
+              "edge_length_total_m": 4.16,
+              "opening_link_kinds": [
+                "candidate"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [
+                "RS003"
+              ],
+              "expected_room_seed_ids": [
+                "RS002",
+                "RS003"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:1077"
+              ],
+              "room_seed_overlap": [
+                "RS003"
+              ],
+              "expected_side_hint": null,
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "candidate opening-wall link only",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence",
+                "wall run carries candidate room seed link"
+              ],
+              "risk_flags": [
+                "opening-wall link is candidate-only"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 1
+            },
+            {
+              "wall_run_id": "W36",
+              "score": 8,
+              "source_entity_ids": [
+                "ground_floor_plan:0067"
+              ],
+              "graph_edge_ids": [
+                "E00189",
+                "E00190",
+                "E00191",
+                "E00192"
+              ],
+              "graph_edge_count": 4,
+              "edge_length_total_m": 1.2878,
+              "opening_link_kinds": [
+                "candidate"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [
+                "RS002"
+              ],
+              "expected_room_seed_ids": [
+                "RS002",
+                "RS003"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:0067"
+              ],
+              "room_seed_overlap": [
+                "RS002"
+              ],
+              "expected_side_hint": null,
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "candidate opening-wall link only",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence",
+                "wall run carries candidate room seed link"
+              ],
+              "risk_flags": [
+                "opening-wall link is candidate-only"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 2
+            },
+            {
+              "wall_run_id": "W35",
+              "score": 6,
+              "source_entity_ids": [
+                "ground_floor_plan:0054",
+                "ground_floor_plan:0063"
+              ],
+              "graph_edge_ids": [
+                "E00179",
+                "E00180",
+                "E00181",
+                "E00182",
+                "E00183",
+                "E00184",
+                "E00185",
+                "E00186",
+                "E00187",
+                "E00188"
+              ],
+              "graph_edge_count": 10,
+              "edge_length_total_m": 2.5556,
+              "opening_link_kinds": [
+                "candidate"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [
+                "RS002",
+                "RS003"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:0054",
+                "ground_floor_plan:0063"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": null,
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "candidate opening-wall link only",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence"
+              ],
+              "risk_flags": [
+                "opening-wall link is candidate-only"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 3
+            },
+            {
+              "wall_run_id": "W41",
+              "score": 6,
+              "source_entity_ids": [
+                "ground_floor_plan:0055",
+                "ground_floor_plan:0062"
+              ],
+              "graph_edge_ids": [
+                "E00213",
+                "E00214",
+                "E00215",
+                "E00216",
+                "E00217",
+                "E00218",
+                "E00219",
+                "E00220",
+                "E00221"
+              ],
+              "graph_edge_count": 9,
+              "edge_length_total_m": 1.8844,
+              "opening_link_kinds": [
+                "candidate"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [
+                "RS002",
+                "RS003"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:0055",
+                "ground_floor_plan:0062"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": null,
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "candidate opening-wall link only",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence"
+              ],
+              "risk_flags": [
+                "opening-wall link is candidate-only"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 4
+            },
+            {
+              "wall_run_id": "W42",
+              "score": 6,
+              "source_entity_ids": [
+                "ground_floor_plan:0066"
+              ],
+              "graph_edge_ids": [
+                "E00222",
+                "E00223",
+                "E00224",
+                "E00225"
+              ],
+              "graph_edge_count": 4,
+              "edge_length_total_m": 1.3522,
+              "opening_link_kinds": [
+                "candidate"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [
+                "RS002",
+                "RS003"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:0066"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": null,
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "candidate opening-wall link only",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence"
+              ],
+              "risk_flags": [
+                "opening-wall link is candidate-only"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 5
+            }
+          ],
+          "top_wall_run_ids": [
+            "W30",
+            "W36"
+          ],
+          "packet_status": "ranked_but_tied_wall_runs_need_exact_gap_source_split_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "final_bound": false,
+      "walkable_ready": false,
+      "mesh_ready": false,
+      "mesh_permission": "blocked_not_mesh",
+      "next_agent_tasks": [
+        "Use this ranking only to decide the next exact CAD source split to inspect.",
+        "Do not accept a portal gap until the chosen wall run, cutline, threshold and room sides are all exact-bound.",
+        "Do not generate walk-through route or mesh from selector rankings."
+      ]
+    },
+    {
+      "stable_object_id": "ground_floor:portal_gap_candidate_selector:Y08",
+      "legend_id": "Y08",
+      "display_label": "voordeur",
+      "portal_kind": "exterior_access_candidate",
+      "source_narrowing_status": "multiple_portal_candidates_need_pair_and_wall_run_disambiguation",
+      "opening_wall_cut_alignment_status": "source_overlap_wall_context_ready_cut_blocked_by_dimensions",
+      "accepted_wall_run_ids": [
+        "W35",
+        "W36",
+        "W41",
+        "W42",
+        "W43",
+        "W45",
+        "W46",
+        "W47"
+      ],
+      "expected_side_hint": "right_east_side",
+      "cutline_best_candidate_source_entity_ids": [
+        "ground_floor_plan:0077",
+        "ground_floor_plan:0086"
+      ],
+      "narrowed_width_candidate_m": null,
+      "selector_status": "ranked_but_tied_wall_runs_need_exact_gap_source_split_not_bound",
+      "candidate_packet_count": 2,
+      "ranked_wall_run_count": 16,
+      "top_score": 16,
+      "top_wall_run_ids": [
+        "W36",
+        "W43",
+        "W45",
+        "W47"
+      ],
+      "selector_packets": [
+        {
+          "candidate_id": "Y08:inside_room:RS001",
+          "candidate_kind": "exterior_inside_room",
+          "candidate_room_label": "Inkom/vestiaire",
+          "expected_room_seed_ids": [
+            "RS001"
+          ],
+          "expected_room_source_ids": [
+            "ground_floor_plan:0054",
+            "ground_floor_plan:0055",
+            "ground_floor_plan:0062",
+            "ground_floor_plan:0063",
+            "ground_floor_plan:0066",
+            "ground_floor_plan:0067",
+            "ground_floor_plan:0843",
+            "ground_floor_plan:0845",
+            "ground_floor_plan:0847",
+            "ground_floor_plan:0905"
+          ],
+          "ranked_wall_runs": [
+            {
+              "wall_run_id": "W43",
+              "score": 16,
+              "source_entity_ids": [
+                "ground_floor_plan:0843"
+              ],
+              "graph_edge_ids": [
+                "E00226",
+                "E00227",
+                "E00228",
+                "E00229"
+              ],
+              "graph_edge_count": 4,
+              "edge_length_total_m": 0.88,
+              "opening_link_kinds": [
+                "direct"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [
+                "RS001"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:0843"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": "right_east_side",
+              "side_hint_not_geometry": [
+                "right_east_side"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "wall run is in opening wall-cut alignment accepted context",
+                "direct opening-wall link",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence",
+                "wall side hint matches opening alignment side"
+              ],
+              "risk_flags": [],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 1
+            },
+            {
+              "wall_run_id": "W45",
+              "score": 16,
+              "source_entity_ids": [
+                "ground_floor_plan:0845"
+              ],
+              "graph_edge_ids": [
+                "E00234",
+                "E00235",
+                "E00236",
+                "E00237"
+              ],
+              "graph_edge_count": 4,
+              "edge_length_total_m": 0.88,
+              "opening_link_kinds": [
+                "direct"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [
+                "RS001"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:0845"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": "right_east_side",
+              "side_hint_not_geometry": [
+                "right_east_side"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "wall run is in opening wall-cut alignment accepted context",
+                "direct opening-wall link",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence",
+                "wall side hint matches opening alignment side"
+              ],
+              "risk_flags": [],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 2
+            },
+            {
+              "wall_run_id": "W47",
+              "score": 16,
+              "source_entity_ids": [
+                "ground_floor_plan:0905"
+              ],
+              "graph_edge_ids": [
+                "E00242",
+                "E00243",
+                "E00244",
+                "E00245",
+                "E00246"
+              ],
+              "graph_edge_count": 5,
+              "edge_length_total_m": 1.86,
+              "opening_link_kinds": [
+                "direct"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [
+                "RS001"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:0905"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": "right_east_side",
+              "side_hint_not_geometry": [
+                "right_east_side"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "wall run is in opening wall-cut alignment accepted context",
+                "direct opening-wall link",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence",
+                "wall side hint matches opening alignment side"
+              ],
+              "risk_flags": [],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 3
+            },
+            {
+              "wall_run_id": "W35",
+              "score": 14,
+              "source_entity_ids": [
+                "ground_floor_plan:0054",
+                "ground_floor_plan:0063"
+              ],
+              "graph_edge_ids": [
+                "E00179",
+                "E00180",
+                "E00181",
+                "E00182",
+                "E00183",
+                "E00184",
+                "E00185",
+                "E00186",
+                "E00187",
+                "E00188"
+              ],
+              "graph_edge_count": 10,
+              "edge_length_total_m": 2.5556,
+              "opening_link_kinds": [
+                "direct"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [
+                "RS001"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:0054",
+                "ground_floor_plan:0063"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": "right_east_side",
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "wall run is in opening wall-cut alignment accepted context",
+                "direct opening-wall link",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence"
+              ],
+              "risk_flags": [
+                "wall side hint does not exactly match opening alignment side"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 4
+            },
+            {
+              "wall_run_id": "W36",
+              "score": 14,
+              "source_entity_ids": [
+                "ground_floor_plan:0067"
+              ],
+              "graph_edge_ids": [
+                "E00189",
+                "E00190",
+                "E00191",
+                "E00192"
+              ],
+              "graph_edge_count": 4,
+              "edge_length_total_m": 1.2878,
+              "opening_link_kinds": [
+                "direct"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [
+                "RS002"
+              ],
+              "expected_room_seed_ids": [
+                "RS001"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:0067"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": "right_east_side",
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "wall run is in opening wall-cut alignment accepted context",
+                "direct opening-wall link",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence"
+              ],
+              "risk_flags": [
+                "wall side hint does not exactly match opening alignment side"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 5
+            },
+            {
+              "wall_run_id": "W41",
+              "score": 14,
+              "source_entity_ids": [
+                "ground_floor_plan:0055",
+                "ground_floor_plan:0062"
+              ],
+              "graph_edge_ids": [
+                "E00213",
+                "E00214",
+                "E00215",
+                "E00216",
+                "E00217",
+                "E00218",
+                "E00219",
+                "E00220",
+                "E00221"
+              ],
+              "graph_edge_count": 9,
+              "edge_length_total_m": 1.8844,
+              "opening_link_kinds": [
+                "direct"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [
+                "RS001"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:0055",
+                "ground_floor_plan:0062"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": "right_east_side",
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "wall run is in opening wall-cut alignment accepted context",
+                "direct opening-wall link",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence"
+              ],
+              "risk_flags": [
+                "wall side hint does not exactly match opening alignment side"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 6
+            },
+            {
+              "wall_run_id": "W42",
+              "score": 14,
+              "source_entity_ids": [
+                "ground_floor_plan:0066"
+              ],
+              "graph_edge_ids": [
+                "E00222",
+                "E00223",
+                "E00224",
+                "E00225"
+              ],
+              "graph_edge_count": 4,
+              "edge_length_total_m": 1.3522,
+              "opening_link_kinds": [
+                "direct"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [
+                "RS001"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:0066"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": "right_east_side",
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "wall run is in opening wall-cut alignment accepted context",
+                "direct opening-wall link",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence"
+              ],
+              "risk_flags": [
+                "wall side hint does not exactly match opening alignment side"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 7
+            },
+            {
+              "wall_run_id": "W46",
+              "score": 14,
+              "source_entity_ids": [
+                "ground_floor_plan:0847"
+              ],
+              "graph_edge_ids": [
+                "E00238",
+                "E00239",
+                "E00240",
+                "E00241"
+              ],
+              "graph_edge_count": 4,
+              "edge_length_total_m": 0.88,
+              "opening_link_kinds": [
+                "direct"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [
+                "RS001"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:0847"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": "right_east_side",
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "wall run is in opening wall-cut alignment accepted context",
+                "direct opening-wall link",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence"
+              ],
+              "risk_flags": [
+                "wall side hint does not exactly match opening alignment side"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 8
+            }
+          ],
+          "top_wall_run_ids": [
+            "W43",
+            "W45",
+            "W47"
+          ],
+          "packet_status": "ranked_but_tied_wall_runs_need_exact_gap_source_split_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "candidate_id": "Y08:inside_room:RS002",
+          "candidate_kind": "exterior_inside_room",
+          "candidate_room_label": "Wc1",
+          "expected_room_seed_ids": [
+            "RS002"
+          ],
+          "expected_room_source_ids": [
+            "ground_floor_plan:0054",
+            "ground_floor_plan:0055",
+            "ground_floor_plan:0062",
+            "ground_floor_plan:0063",
+            "ground_floor_plan:0066",
+            "ground_floor_plan:0067",
+            "ground_floor_plan:0843",
+            "ground_floor_plan:0845",
+            "ground_floor_plan:0847",
+            "ground_floor_plan:0905"
+          ],
+          "ranked_wall_runs": [
+            {
+              "wall_run_id": "W36",
+              "score": 16,
+              "source_entity_ids": [
+                "ground_floor_plan:0067"
+              ],
+              "graph_edge_ids": [
+                "E00189",
+                "E00190",
+                "E00191",
+                "E00192"
+              ],
+              "graph_edge_count": 4,
+              "edge_length_total_m": 1.2878,
+              "opening_link_kinds": [
+                "direct"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [
+                "RS002"
+              ],
+              "expected_room_seed_ids": [
+                "RS002"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:0067"
+              ],
+              "room_seed_overlap": [
+                "RS002"
+              ],
+              "expected_side_hint": "right_east_side",
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "wall run is in opening wall-cut alignment accepted context",
+                "direct opening-wall link",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence",
+                "wall run carries candidate room seed link"
+              ],
+              "risk_flags": [
+                "wall side hint does not exactly match opening alignment side"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 1
+            },
+            {
+              "wall_run_id": "W43",
+              "score": 16,
+              "source_entity_ids": [
+                "ground_floor_plan:0843"
+              ],
+              "graph_edge_ids": [
+                "E00226",
+                "E00227",
+                "E00228",
+                "E00229"
+              ],
+              "graph_edge_count": 4,
+              "edge_length_total_m": 0.88,
+              "opening_link_kinds": [
+                "direct"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [
+                "RS002"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:0843"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": "right_east_side",
+              "side_hint_not_geometry": [
+                "right_east_side"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "wall run is in opening wall-cut alignment accepted context",
+                "direct opening-wall link",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence",
+                "wall side hint matches opening alignment side"
+              ],
+              "risk_flags": [],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 2
+            },
+            {
+              "wall_run_id": "W45",
+              "score": 16,
+              "source_entity_ids": [
+                "ground_floor_plan:0845"
+              ],
+              "graph_edge_ids": [
+                "E00234",
+                "E00235",
+                "E00236",
+                "E00237"
+              ],
+              "graph_edge_count": 4,
+              "edge_length_total_m": 0.88,
+              "opening_link_kinds": [
+                "direct"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [
+                "RS002"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:0845"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": "right_east_side",
+              "side_hint_not_geometry": [
+                "right_east_side"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "wall run is in opening wall-cut alignment accepted context",
+                "direct opening-wall link",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence",
+                "wall side hint matches opening alignment side"
+              ],
+              "risk_flags": [],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 3
+            },
+            {
+              "wall_run_id": "W47",
+              "score": 16,
+              "source_entity_ids": [
+                "ground_floor_plan:0905"
+              ],
+              "graph_edge_ids": [
+                "E00242",
+                "E00243",
+                "E00244",
+                "E00245",
+                "E00246"
+              ],
+              "graph_edge_count": 5,
+              "edge_length_total_m": 1.86,
+              "opening_link_kinds": [
+                "direct"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [
+                "RS002"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:0905"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": "right_east_side",
+              "side_hint_not_geometry": [
+                "right_east_side"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "wall run is in opening wall-cut alignment accepted context",
+                "direct opening-wall link",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence",
+                "wall side hint matches opening alignment side"
+              ],
+              "risk_flags": [],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 4
+            },
+            {
+              "wall_run_id": "W35",
+              "score": 14,
+              "source_entity_ids": [
+                "ground_floor_plan:0054",
+                "ground_floor_plan:0063"
+              ],
+              "graph_edge_ids": [
+                "E00179",
+                "E00180",
+                "E00181",
+                "E00182",
+                "E00183",
+                "E00184",
+                "E00185",
+                "E00186",
+                "E00187",
+                "E00188"
+              ],
+              "graph_edge_count": 10,
+              "edge_length_total_m": 2.5556,
+              "opening_link_kinds": [
+                "direct"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [
+                "RS002"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:0054",
+                "ground_floor_plan:0063"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": "right_east_side",
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "wall run is in opening wall-cut alignment accepted context",
+                "direct opening-wall link",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence"
+              ],
+              "risk_flags": [
+                "wall side hint does not exactly match opening alignment side"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 5
+            },
+            {
+              "wall_run_id": "W41",
+              "score": 14,
+              "source_entity_ids": [
+                "ground_floor_plan:0055",
+                "ground_floor_plan:0062"
+              ],
+              "graph_edge_ids": [
+                "E00213",
+                "E00214",
+                "E00215",
+                "E00216",
+                "E00217",
+                "E00218",
+                "E00219",
+                "E00220",
+                "E00221"
+              ],
+              "graph_edge_count": 9,
+              "edge_length_total_m": 1.8844,
+              "opening_link_kinds": [
+                "direct"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [
+                "RS002"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:0055",
+                "ground_floor_plan:0062"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": "right_east_side",
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "wall run is in opening wall-cut alignment accepted context",
+                "direct opening-wall link",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence"
+              ],
+              "risk_flags": [
+                "wall side hint does not exactly match opening alignment side"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 6
+            },
+            {
+              "wall_run_id": "W42",
+              "score": 14,
+              "source_entity_ids": [
+                "ground_floor_plan:0066"
+              ],
+              "graph_edge_ids": [
+                "E00222",
+                "E00223",
+                "E00224",
+                "E00225"
+              ],
+              "graph_edge_count": 4,
+              "edge_length_total_m": 1.3522,
+              "opening_link_kinds": [
+                "direct"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [
+                "RS002"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:0066"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": "right_east_side",
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "wall run is in opening wall-cut alignment accepted context",
+                "direct opening-wall link",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence"
+              ],
+              "risk_flags": [
+                "wall side hint does not exactly match opening alignment side"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 7
+            },
+            {
+              "wall_run_id": "W46",
+              "score": 14,
+              "source_entity_ids": [
+                "ground_floor_plan:0847"
+              ],
+              "graph_edge_ids": [
+                "E00238",
+                "E00239",
+                "E00240",
+                "E00241"
+              ],
+              "graph_edge_count": 4,
+              "edge_length_total_m": 0.88,
+              "opening_link_kinds": [
+                "direct"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [
+                "RS002"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:0847"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": "right_east_side",
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "wall run is in opening wall-cut alignment accepted context",
+                "direct opening-wall link",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence"
+              ],
+              "risk_flags": [
+                "wall side hint does not exactly match opening alignment side"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 8
+            }
+          ],
+          "top_wall_run_ids": [
+            "W36",
+            "W43",
+            "W45",
+            "W47"
+          ],
+          "packet_status": "ranked_but_tied_wall_runs_need_exact_gap_source_split_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "final_bound": false,
+      "walkable_ready": false,
+      "mesh_ready": false,
+      "mesh_permission": "blocked_not_mesh",
+      "next_agent_tasks": [
+        "Use this ranking only to decide the next exact CAD source split to inspect.",
+        "Do not accept a portal gap until the chosen wall run, cutline, threshold and room sides are all exact-bound.",
+        "Do not generate walk-through route or mesh from selector rankings."
+      ]
+    },
+    {
+      "stable_object_id": "ground_floor:portal_gap_candidate_selector:Y14",
+      "legend_id": "Y14",
+      "display_label": "deur bureau",
+      "portal_kind": "room_portal_candidate",
+      "source_narrowing_status": "blocked_no_gap_wall_run_candidates",
+      "opening_wall_cut_alignment_status": "no_wall_run_binding_for_this_opening",
+      "accepted_wall_run_ids": [],
+      "expected_side_hint": null,
+      "cutline_best_candidate_source_entity_ids": [
+        "ground_floor_plan:1385"
+      ],
+      "narrowed_width_candidate_m": null,
+      "selector_status": "ranked_but_tied_wall_runs_need_exact_gap_source_split_not_bound",
+      "candidate_packet_count": 1,
+      "ranked_wall_run_count": 3,
+      "top_score": 1,
+      "top_wall_run_ids": [
+        "W09",
+        "W14",
+        "W16"
+      ],
+      "selector_packets": [
+        {
+          "candidate_id": "Y14:wall_context_fallback:01",
+          "candidate_kind": "wall_context_fallback_missing_exact_room_side",
+          "candidate_room_label": "missing exact room-side evidence",
+          "expected_room_seed_ids": [],
+          "expected_room_source_ids": [],
+          "ranked_wall_runs": [
+            {
+              "wall_run_id": "W09",
+              "score": 1,
+              "source_entity_ids": [
+                "ground_floor_plan:1153",
+                "ground_floor_plan:1157"
+              ],
+              "graph_edge_ids": [],
+              "graph_edge_count": 0,
+              "edge_length_total_m": null,
+              "opening_link_kinds": [
+                "candidate"
+              ],
+              "topology_run_present": false,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [],
+              "room_source_ref_overlap": [],
+              "room_seed_overlap": [],
+              "expected_side_hint": null,
+              "side_hint_not_geometry": [
+                "front_south_or_street_side"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "candidate opening-wall link only"
+              ],
+              "risk_flags": [
+                "opening-wall link is candidate-only",
+                "topology gap run is missing"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 1,
+              "fallback_source": "room_portal_candidate_or_opening_wall_cut_alignment"
+            },
+            {
+              "wall_run_id": "W14",
+              "score": 1,
+              "source_entity_ids": [
+                "ground_floor_plan:1380"
+              ],
+              "graph_edge_ids": [],
+              "graph_edge_count": 0,
+              "edge_length_total_m": null,
+              "opening_link_kinds": [
+                "candidate"
+              ],
+              "topology_run_present": false,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [],
+              "room_source_ref_overlap": [],
+              "room_seed_overlap": [],
+              "expected_side_hint": null,
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "candidate opening-wall link only"
+              ],
+              "risk_flags": [
+                "opening-wall link is candidate-only",
+                "topology gap run is missing"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 2,
+              "fallback_source": "room_portal_candidate_or_opening_wall_cut_alignment"
+            },
+            {
+              "wall_run_id": "W16",
+              "score": 1,
+              "source_entity_ids": [
+                "ground_floor_plan:1057"
+              ],
+              "graph_edge_ids": [],
+              "graph_edge_count": 0,
+              "edge_length_total_m": null,
+              "opening_link_kinds": [
+                "candidate"
+              ],
+              "topology_run_present": false,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [],
+              "room_source_ref_overlap": [],
+              "room_seed_overlap": [],
+              "expected_side_hint": null,
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "candidate opening-wall link only"
+              ],
+              "risk_flags": [
+                "opening-wall link is candidate-only",
+                "topology gap run is missing"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 3,
+              "fallback_source": "room_portal_candidate_or_opening_wall_cut_alignment"
+            }
+          ],
+          "top_wall_run_ids": [
+            "W09",
+            "W14",
+            "W16"
+          ],
+          "packet_status": "ranked_but_tied_wall_runs_need_exact_gap_source_split_not_bound",
+          "fallback_reason": "gap pair candidates were blocked, but exact wall context exists and is preserved for agent-side source recovery",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "final_bound": false,
+      "walkable_ready": false,
+      "mesh_ready": false,
+      "mesh_permission": "blocked_not_mesh",
+      "next_agent_tasks": [
+        "Use this ranking only to decide the next exact CAD source split to inspect.",
+        "Do not accept a portal gap until the chosen wall run, cutline, threshold and room sides are all exact-bound.",
+        "Do not generate walk-through route or mesh from selector rankings."
+      ]
+    },
+    {
+      "stable_object_id": "ground_floor:portal_gap_candidate_selector:Y16",
+      "legend_id": "Y16",
+      "display_label": "rondboog",
+      "portal_kind": "room_portal_candidate",
+      "source_narrowing_status": "single_portal_candidate_limited_wall_runs_ready_for_exact_gap_selection_not_bound",
+      "opening_wall_cut_alignment_status": "no_wall_run_binding_for_this_opening",
+      "accepted_wall_run_ids": [],
+      "expected_side_hint": null,
+      "cutline_best_candidate_source_entity_ids": [
+        "ground_floor_plan:1058"
+      ],
+      "narrowed_width_candidate_m": null,
+      "selector_status": "ranked_but_tied_wall_runs_need_exact_gap_source_split_not_bound",
+      "candidate_packet_count": 1,
+      "ranked_wall_run_count": 2,
+      "top_score": 6,
+      "top_wall_run_ids": [
+        "W15",
+        "W16"
+      ],
+      "selector_packets": [
+        {
+          "candidate_id": "Y16:room_pair:01",
+          "candidate_kind": "room_pair",
+          "candidate_room_label": "Keuken<->Sunroom",
+          "expected_room_seed_ids": [
+            "RS005",
+            "RS054"
+          ],
+          "expected_room_source_ids": [
+            "ground_floor_plan:1056",
+            "ground_floor_plan:1057"
+          ],
+          "ranked_wall_runs": [
+            {
+              "wall_run_id": "W15",
+              "score": 6,
+              "source_entity_ids": [
+                "ground_floor_plan:1056"
+              ],
+              "graph_edge_ids": [
+                "E00077",
+                "E00078",
+                "E00079",
+                "E00080"
+              ],
+              "graph_edge_count": 4,
+              "edge_length_total_m": 1.82,
+              "opening_link_kinds": [
+                "candidate"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [
+                "RS005",
+                "RS054"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:1056"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": null,
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "candidate opening-wall link only",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence"
+              ],
+              "risk_flags": [
+                "opening-wall link is candidate-only"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 1
+            },
+            {
+              "wall_run_id": "W16",
+              "score": 6,
+              "source_entity_ids": [
+                "ground_floor_plan:1057"
+              ],
+              "graph_edge_ids": [
+                "E00081",
+                "E00082",
+                "E00083",
+                "E00084"
+              ],
+              "graph_edge_count": 4,
+              "edge_length_total_m": 1.8,
+              "opening_link_kinds": [
+                "candidate"
+              ],
+              "topology_run_present": true,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [
+                "RS005",
+                "RS054"
+              ],
+              "room_source_ref_overlap": [
+                "ground_floor_plan:1057"
+              ],
+              "room_seed_overlap": [],
+              "expected_side_hint": null,
+              "side_hint_not_geometry": [
+                "interior_or_recessed_exterior_run"
+              ],
+              "narrowed_width_candidate_m": null,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "candidate opening-wall link only",
+                "topology gap run is present",
+                "wall run shares source refs with candidate room-side evidence"
+              ],
+              "risk_flags": [
+                "opening-wall link is candidate-only"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 2
+            }
+          ],
+          "top_wall_run_ids": [
+            "W15",
+            "W16"
+          ],
+          "packet_status": "ranked_but_tied_wall_runs_need_exact_gap_source_split_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "final_bound": false,
+      "walkable_ready": false,
+      "mesh_ready": false,
+      "mesh_permission": "blocked_not_mesh",
+      "next_agent_tasks": [
+        "Use this ranking only to decide the next exact CAD source split to inspect.",
+        "Do not accept a portal gap until the chosen wall run, cutline, threshold and room sides are all exact-bound.",
+        "Do not generate walk-through route or mesh from selector rankings."
+      ]
+    },
+    {
+      "stable_object_id": "ground_floor:portal_gap_candidate_selector:Y17",
+      "legend_id": "Y17",
+      "display_label": "erker inclusief raamdeur",
+      "portal_kind": "exterior_access_candidate",
+      "source_narrowing_status": "blocked_no_gap_wall_run_candidates",
+      "opening_wall_cut_alignment_status": "source_overlap_wall_context_ready_cut_blocked_by_dimensions",
+      "accepted_wall_run_ids": [
+        "W02",
+        "W06",
+        "W07",
+        "W09"
+      ],
+      "expected_side_hint": "front_south_or_street_side",
+      "cutline_best_candidate_source_entity_ids": [
+        "ground_floor_plan:1314",
+        "ground_floor_plan:1334"
+      ],
+      "narrowed_width_candidate_m": 3.2501,
+      "selector_status": "ranked_but_tied_wall_runs_need_exact_gap_source_split_not_bound",
+      "candidate_packet_count": 1,
+      "ranked_wall_run_count": 4,
+      "top_score": 11,
+      "top_wall_run_ids": [
+        "W02",
+        "W06",
+        "W07",
+        "W09"
+      ],
+      "selector_packets": [
+        {
+          "candidate_id": "Y17:wall_context_fallback:01",
+          "candidate_kind": "wall_context_fallback_missing_exact_room_side",
+          "candidate_room_label": "missing exact room-side evidence",
+          "expected_room_seed_ids": [],
+          "expected_room_source_ids": [],
+          "ranked_wall_runs": [
+            {
+              "wall_run_id": "W02",
+              "score": 11,
+              "source_entity_ids": [
+                "ground_floor_plan:1150"
+              ],
+              "graph_edge_ids": [],
+              "graph_edge_count": 0,
+              "edge_length_total_m": null,
+              "opening_link_kinds": [
+                "direct"
+              ],
+              "topology_run_present": false,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [],
+              "room_source_ref_overlap": [],
+              "room_seed_overlap": [],
+              "expected_side_hint": "front_south_or_street_side",
+              "side_hint_not_geometry": [
+                "front_south_or_street_side"
+              ],
+              "narrowed_width_candidate_m": 3.2501,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "wall run is in opening wall-cut alignment accepted context",
+                "direct opening-wall link",
+                "wall side hint matches opening alignment side"
+              ],
+              "risk_flags": [
+                "topology gap run is missing"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 1,
+              "fallback_source": "room_portal_candidate_or_opening_wall_cut_alignment"
+            },
+            {
+              "wall_run_id": "W06",
+              "score": 11,
+              "source_entity_ids": [
+                "ground_floor_plan:1264"
+              ],
+              "graph_edge_ids": [],
+              "graph_edge_count": 0,
+              "edge_length_total_m": null,
+              "opening_link_kinds": [
+                "direct"
+              ],
+              "topology_run_present": false,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [],
+              "room_source_ref_overlap": [],
+              "room_seed_overlap": [],
+              "expected_side_hint": "front_south_or_street_side",
+              "side_hint_not_geometry": [
+                "front_south_or_street_side"
+              ],
+              "narrowed_width_candidate_m": 3.2501,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "wall run is in opening wall-cut alignment accepted context",
+                "direct opening-wall link",
+                "wall side hint matches opening alignment side"
+              ],
+              "risk_flags": [
+                "topology gap run is missing"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 2,
+              "fallback_source": "room_portal_candidate_or_opening_wall_cut_alignment"
+            },
+            {
+              "wall_run_id": "W07",
+              "score": 11,
+              "source_entity_ids": [
+                "ground_floor_plan:1340"
+              ],
+              "graph_edge_ids": [],
+              "graph_edge_count": 0,
+              "edge_length_total_m": null,
+              "opening_link_kinds": [
+                "direct"
+              ],
+              "topology_run_present": false,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [],
+              "room_source_ref_overlap": [],
+              "room_seed_overlap": [],
+              "expected_side_hint": "front_south_or_street_side",
+              "side_hint_not_geometry": [
+                "front_south_or_street_side"
+              ],
+              "narrowed_width_candidate_m": 3.2501,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "wall run is in opening wall-cut alignment accepted context",
+                "direct opening-wall link",
+                "wall side hint matches opening alignment side"
+              ],
+              "risk_flags": [
+                "topology gap run is missing"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 3,
+              "fallback_source": "room_portal_candidate_or_opening_wall_cut_alignment"
+            },
+            {
+              "wall_run_id": "W09",
+              "score": 11,
+              "source_entity_ids": [
+                "ground_floor_plan:1153",
+                "ground_floor_plan:1157"
+              ],
+              "graph_edge_ids": [],
+              "graph_edge_count": 0,
+              "edge_length_total_m": null,
+              "opening_link_kinds": [
+                "direct"
+              ],
+              "topology_run_present": false,
+              "candidate_room_seed_ids": [],
+              "expected_room_seed_ids": [],
+              "room_source_ref_overlap": [],
+              "room_seed_overlap": [],
+              "expected_side_hint": "front_south_or_street_side",
+              "side_hint_not_geometry": [
+                "front_south_or_street_side"
+              ],
+              "narrowed_width_candidate_m": 3.2501,
+              "width_delta_m": null,
+              "evidence_notes": [
+                "wall run is in opening wall-cut alignment accepted context",
+                "direct opening-wall link",
+                "wall side hint matches opening alignment side"
+              ],
+              "risk_flags": [
+                "topology gap run is missing"
+              ],
+              "selection_status": "ranked_wall_run_candidate_not_bound",
+              "mesh_permission": "blocked_not_mesh",
+              "rank": 4,
+              "fallback_source": "room_portal_candidate_or_opening_wall_cut_alignment"
+            }
+          ],
+          "top_wall_run_ids": [
+            "W02",
+            "W06",
+            "W07",
+            "W09"
+          ],
+          "packet_status": "ranked_but_tied_wall_runs_need_exact_gap_source_split_not_bound",
+          "fallback_reason": "gap pair candidates were blocked, but exact wall context exists and is preserved for agent-side source recovery",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "final_bound": false,
+      "walkable_ready": false,
+      "mesh_ready": false,
+      "mesh_permission": "blocked_not_mesh",
+      "next_agent_tasks": [
+        "Use this ranking only to decide the next exact CAD source split to inspect.",
+        "Do not accept a portal gap until the chosen wall run, cutline, threshold and room sides are all exact-bound.",
+        "Do not generate walk-through route or mesh from selector rankings."
+      ]
+    }
+  ],
+  "rules": [
+    "Ranking is not a binding decision.",
+    "No wall run is accepted unless exact wall gap, cutline, room sides and threshold evidence agree.",
+    "No route, room mesh or opening cut may be generated from this selector."
+  ],
+  "mesh_ready_for_final_world": false,
+  "mesh_permission": "blocked_not_mesh"
+}

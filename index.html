@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Helle 6 CAD-First Reconstruction</title>
+    <link rel="icon" href="data:," />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "./node_modules/three/build/three.module.js",
+          "three/addons/": "./node_modules/three/examples/jsm/"
+        }
+      }
+    </script>
+    <script type="module" crossorigin src="./assets/main-CwHFwHRR.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill-CSRv37U6.js">
+    <link rel="stylesheet" crossorigin href="./assets/main-Dg3v_TWp.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="viewer">
+        <canvas id="scene" width="1280" height="720" aria-label="Walkable 3D house scene"></canvas>
+        <div id="webglFallback" class="webgl-fallback" hidden>
+          <img
+            src="./assets/ground-complete-canvas-BixJ9gd-.png"
+            alt="Laatste technische 3D-opname van huis en perceel"
+          />
+          <div class="webgl-fallback-message" role="status">
+            <strong>Interactieve 3D tijdelijk niet beschikbaar</strong>
+            <span data-webgl-status>Edge kon in deze tab geen 3D-context starten. Dit vereist niet noodzakelijk een gewijzigde instelling; probeer de tab opnieuw te laden.</span>
+            <button id="retryWebglButton" type="button">3D opnieuw laden</button>
+          </div>
+        </div>
+        <div class="crosshair"></div>
+        <div class="topbar">
+          <div>
+            <strong>Helle 6</strong>
+            <span id="locationLabel">CAD-first reset</span>
+          </div>
+          <div class="view-actions" role="group" aria-label="View controls">
+            <a class="qa-link" href="./assets/cad-truth/visible-site-mesh-preview.png" target="_blank" rel="noreferrer">Bronplan</a>
+            <button id="walkModeButton" type="button" title="Rondlopen in het huis">Rondlopen</button>
+            <button id="detailsButton" type="button" aria-controls="validationDetails" aria-expanded="false">Details</button>
+            <button id="resetButton" type="button">Reset</button>
+          </div>
+          <div class="floor-tabs" role="group" aria-label="Floor selection">
+            <button data-floor="model" class="active">Volledig 3D</button>
+            <button data-floor="parcel">Terrein</button>
+            <button data-floor="ground">Gelijkvloers</button>
+            <button data-floor="first">Verdieping</button>
+          </div>
+        </div>
+        <div class="hud">
+            <span>Exact CAD-terrein en bouwlagen op ware meterschaal</span>
+            <span>Ramen, deuren, kamers en materialen blijven afzonderlijk bewerkbaar</span>
+        </div>
+      </section>
+      <aside id="validationDetails" class="panel">
+        <button id="detailsCloseButton" class="panel-close" type="button" title="Sluiten" aria-label="Details sluiten">&times;</button>
+        <div class="panel-block">
+          <h1>CAD-first reconstruction</h1>
+          <p>
+            The previous 3D models are no longer used as a basis. This view now loads the first source-linked
+            site mesh on a neutral white floor. CAD/PDF underlays stay in the QA views only.
+          </p>
+        </div>
+        <div class="panel-block">
+          <h2>Plan source facts</h2>
+          <dl>
+            <div><dt>CAD</dt><dd>24/24 inserts exported as truth layers</dd></div>
+            <div><dt>Entities</dt><dd>25,110 CAD entities preserved</dd></div>
+            <div><dt>3D status</dt><dd>Perceel, gelijkvloers, verdieping, beide trappen en brongebonden dak-shell geïntegreerd</dd></div>
+            <div><dt>Rule</dt><dd>No final geometry from cubes, bounding boxes or projected openings</dd></div>
+          </dl>
+        </div>
+        <div class="panel-block">
+          <h2>CAD-first status</h2>
+          <div id="roomList" class="room-list"></div>
+        </div>
+        <div class="panel-block">
+          <h2>Bouwstatus</h2>
+          <div id="roadmapList" class="roadmap-list"></div>
+        </div>
+        <div class="panel-block">
+          <h2>Site mesh preview</h2>
+          <a id="planLink" href="./assets/cad-truth/visible-site-mesh-preview.png" target="_blank" rel="noreferrer">
+            <img id="planCrop" class="plan-crop" src="./assets/visible-site-mesh-preview-BWEi_NNg.png" alt="Visible site mesh preview generated from the validated V-scope" />
+          </a>
+        </div>
+        <div class="panel-block">
+          <h2>Next build rule</h2>
+          <p>
+            The next architectural model must be generated from CAD entity loops with source role, layer and entity IDs
+            attached to every selectable wall, opening, roof and interior object.
+          </p>
+        </div>
+      </aside>
+    </main>
+
+  </body>
+</html>

@@ -1,0 +1,273 @@
+{
+  "status": "three_d_promotion_readiness_matrix_ready",
+  "purpose": "Single CAD-first gate for deciding what may become preview mesh, final mesh, editable objects, materials or walk-through data.",
+  "source_files": {
+    "visible_site_mesh": "blender\\site_mesh\\visible_site_mesh.json",
+    "ground_floor_architectural_shell_contract": "blender\\semantic_objects\\ground_floor_architectural_shell_contract.json",
+    "first_floor_wall_source_contract": "blender\\semantic_objects\\first_floor_wall_source_contract.json",
+    "ground_floor_opening_mesh_blocker_matrix": "blender\\semantic_objects\\ground_floor_opening_mesh_blocker_matrix.json",
+    "ground_floor_opening_source_bound_metric_slot_register": "blender\\semantic_objects\\ground_floor_opening_source_bound_metric_slot_register.json",
+    "first_floor_opening_mesh_blocker_matrix": "blender\\semantic_objects\\first_floor_opening_mesh_blocker_matrix.json",
+    "room_mesh_blocker_matrix": "blender\\semantic_objects\\room_mesh_blocker_matrix.json",
+    "ground_floor_room_boundary_binding_work_order": "blender\\semantic_objects\\ground_floor_room_boundary_binding_work_order.json",
+    "first_floor_room_boundary_binding_work_order": "blender\\semantic_objects\\first_floor_room_boundary_binding_work_order.json",
+    "roof_mesh_blocker_matrix": "blender\\semantic_objects\\roof_mesh_blocker_matrix.json",
+    "building_material_source_contract": "blender\\semantic_objects\\building_material_source_contract.json",
+    "source_basing_audit": "blender\\source_basing_audit.json"
+  },
+  "source_audit_status": "source_qa_pass_final_3d_blocked",
+  "preview_allowed_item_count": 1,
+  "blocked_final_mesh_item_count": 6,
+  "final_mesh_ready_item_count": 0,
+  "walkthrough_ready_item_count": 0,
+  "items": [
+    {
+      "item_id": "PROMOTE-001",
+      "label": "Validated parcel, garden, hardscape and neighbour context preview",
+      "source_files": [
+        "blender\\site_mesh\\visible_site_mesh.json"
+      ],
+      "promotion_status": "preview_allowed_source_linked_not_final_photorealistic",
+      "current_permission": "May be used as low-detail source-linked site preview; not final landscape detailing.",
+      "evidence": {
+        "site_mesh_status": "visible_site_source_linked_mesh_preview_generated_not_final_photorealistic_world",
+        "object_count": 26,
+        "ready_non_house_object_count": 25,
+        "total_vertices": 8760,
+        "total_faces": 4611,
+        "object_type_counts": {
+          "house_shell": 1,
+          "parcel_boundary_control": 1,
+          "garden_terrain_surface": 1,
+          "owner_outbuilding_garden_shed": 1,
+          "lowered_zone_surface": 1,
+          "wadi_surface": 1,
+          "existing_tree": 2,
+          "ditch_context": 1,
+          "mechanical_outdoor_unit": 2,
+          "driveway_front_part": 1,
+          "cart_track": 1,
+          "driveway_entry_part": 1,
+          "rear_side_terrace": 1,
+          "rear_path": 1,
+          "left_rear_path": 1,
+          "bay_window_terrace": 1,
+          "street_context": 1,
+          "neighbour_outbuilding_context": 4,
+          "neighbour_building_context": 2,
+          "neighbour_tree_context": 1
+        }
+      },
+      "blockers": [
+        "photorealistic material/plant detailing not assigned",
+        "terrain heights and garden grading are still schematic except validated lowered zone/wadi/ditch context"
+      ],
+      "allowed_next_action": "Keep as reference-linked exterior context while exact house shell is built from CAD details.",
+      "mesh_permission": "preview_only"
+    },
+    {
+      "item_id": "PROMOTE-002",
+      "label": "Main house placeholder footprint in site preview",
+      "source_files": [
+        "blender\\site_mesh\\visible_site_mesh.json",
+        "blender\\semantic_objects\\ground_floor_architectural_shell_contract.json"
+      ],
+      "promotion_status": "blocked_from_final_house_shell",
+      "current_permission": "Only position placeholder; do not use as real wall/roof/opening mesh.",
+      "evidence": {
+        "blocked_house_placeholder_count": 1,
+        "ground_shell_status": "ground_floor_architectural_shell_contract_ready_not_mesh",
+        "ground_wall_segment_count": 88,
+        "readiness_gates": [
+          {
+            "id": "GATE-01",
+            "name": "wall vertical extents",
+            "status": "blocked",
+            "reason": "Ground-floor plan gives wall footprint only; wall top/base levels must come from sections/elevations."
+          },
+          {
+            "id": "GATE-02",
+            "name": "exterior opening metric dimensions",
+            "status": "blocked",
+            "reason": "0 exact dimension slots are bound; do not cut windows/doors from boxes or marker locations."
+          },
+          {
+            "id": "GATE-03",
+            "name": "one-facade proof mesh",
+            "status": "blocked",
+            "reason": "Only allowed after GATE-01 and at least one facade's exact opening slots are validated."
+          }
+        ]
+      },
+      "blockers": [
+        "wall vertical extents not promoted",
+        "opening cuts not exact-bound",
+        "roof/level/material roles not joined into final shell"
+      ],
+      "allowed_next_action": "Use ground-floor wall/source contracts and elevation/section constraints, not the site placeholder, for real shell generation.",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "item_id": "PROMOTE-003",
+      "label": "Ground-floor openings and wall cuts",
+      "source_files": [
+        "blender\\semantic_objects\\ground_floor_opening_mesh_blocker_matrix.json",
+        "blender\\semantic_objects\\ground_floor_opening_source_bound_metric_slot_register.json"
+      ],
+      "promotion_status": "blocked_until_required_metric_slots_are_bound",
+      "current_permission": "CAD refs and some metric candidates may be reviewed; no wall cuts/frames/glass/doors yet.",
+      "evidence": {
+        "opening_count": 17,
+        "mesh_ready_opening_count": 0,
+        "blocked_opening_count": 17,
+        "source_bound_metric_slot_count": 34,
+        "source_bound_metric_slot_opening_count": 12,
+        "source_bound_metric_slot_counts": {
+          "arch_geometry": 2,
+          "bay_subsegment_geometry": 1,
+          "glazing_subdivision": 8,
+          "header_or_lintel_height_m": 1,
+          "opening_height_m": 9,
+          "opening_width_m": 12,
+          "sill_height_m": 1
+        },
+        "source_bound_metric_slots_final_bound": 0,
+        "source_bound_metric_slots_mesh_ready": 0
+      },
+      "blockers": [
+        "some required width/sill/header slots remain missing",
+        "visual subparts must be split from wall/structure context",
+        "final wall cut alignment still blocked"
+      ],
+      "allowed_next_action": "Continue exact slot binding per Y opening before generating frame/glass/door meshes.",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "item_id": "PROMOTE-004",
+      "label": "First-floor wall and opening source",
+      "source_files": [
+        "blender\\semantic_objects\\first_floor_wall_source_contract.json",
+        "blender\\semantic_objects\\first_floor_opening_mesh_blocker_matrix.json"
+      ],
+      "promotion_status": "blocked_until_exact_opening_identity_and_wall_cut_refs_are_bound",
+      "current_permission": "First-floor wall loops and opening evidence are source packets only.",
+      "evidence": {
+        "wall_source_loop_count": 84,
+        "wall_mesh_ready_count": 0,
+        "opening_packet_count": 56,
+        "opening_mesh_ready_packet_count": 0,
+        "opening_blocked_packet_count": 56,
+        "opening_blocker_counts": {
+          "exact_opening_identity_not_selected_from_original_cad": 56,
+          "exact_wall_cut_or_void_source_refs_missing": 56,
+          "final_mesh_blocked_until_all_first_floor_slots_are_exact_source_bound": 56,
+          "frame_glass_sill_threshold_context_split_missing": 56,
+          "no_metric_slot_proposals_available_for_this_packet": 23,
+          "required_metric_slots_not_exact_bound": 56,
+          "room_or_facade_side_context_not_exact_confirmed": 56,
+          "some_metric_proposals_blocked_as_context_or_wrong_role": 26,
+          "some_metric_proposals_need_exact_agent_review": 17
+        }
+      },
+      "blockers": [
+        "first-floor opening identity not selected from original CAD",
+        "exact wall cut/void source refs missing",
+        "frame/glass/sill/header slots missing"
+      ],
+      "allowed_next_action": "Resolve first-floor opening identity and metric slots before any upper-floor wall cuts.",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "item_id": "PROMOTE-005",
+      "label": "Room boundaries and walkthrough graph",
+      "source_files": [
+        "blender\\semantic_objects\\room_mesh_blocker_matrix.json",
+        "blender\\semantic_objects\\ground_floor_room_boundary_binding_work_order.json",
+        "blender\\semantic_objects\\first_floor_room_boundary_binding_work_order.json"
+      ],
+      "promotion_status": "blocked_until_closed_room_cycles_and_portal_gaps_are_exact_bound",
+      "current_permission": "Rooms remain editable metadata, not floor slabs or walkable volumes.",
+      "evidence": {
+        "room_count": 15,
+        "blocked_room_count": 15,
+        "mesh_ready_room_count": 0,
+        "ground_floor_room_priorities": {
+          "P1_four_side_room_with_portal_gap_resolution": 3,
+          "P2_four_side_room_needs_closed_cycle_selection": 1,
+          "P3_partial_room_with_portal_adjacency_hint": 2,
+          "P4_sparse_room_boundary_context_preserve_only": 2
+        },
+        "first_floor_room_priorities": {
+          "P1_closed_cycle_with_portal_gap_resolution": 4,
+          "P4_portal_candidates_need_room_cycle_completion": 1,
+          "P5_preserve_context_until_more_exact_boundary_evidence": 2
+        },
+        "ground_floor_linked_walkable_portal_candidates": 10,
+        "first_floor_linked_portal_candidate_refs": 7
+      },
+      "blockers": [
+        "closed CAD room cycles are candidates, not accepted room polygons",
+        "door/portal gaps are not exact-bound",
+        "floor levels and finishes are not bound per room"
+      ],
+      "allowed_next_action": "Bind room cycles and portal gaps before generating floor slabs, room volumes or walk-through routing.",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "item_id": "PROMOTE-006",
+      "label": "Roof planes and roof build-up",
+      "source_files": [
+        "blender\\semantic_objects\\roof_mesh_blocker_matrix.json"
+      ],
+      "promotion_status": "blocked_until_plane_edges_slopes_levels_materials_are_exact_bound",
+      "current_permission": "Roof source planes are candidates only.",
+      "evidence": {
+        "roof_plane_count": 2,
+        "blocked_roof_plane_count": 2,
+        "mesh_ready_roof_plane_count": 0,
+        "blocker_counts": {
+          "eave_ridge_verge_overhang_roles_not_exact_bound": 2,
+          "final_roof_mesh_blocked_until_plane_edge_slope_level_material_roles_are_exact_source_bound": 2,
+          "roof_edge_levels_not_bound_to_this_plane": 2,
+          "roof_material_not_bound_to_this_plane": 2,
+          "roof_slope_not_bound_to_this_plane": 2,
+          "roof_thickness_and_build_up_not_bound_to_this_plane": 2
+        }
+      },
+      "blockers": [
+        "roof slope not bound per plane",
+        "roof edge levels/eaves/ridges/verges not exact-bound",
+        "roof material/build-up not assigned to exact surfaces"
+      ],
+      "allowed_next_action": "Bind roof plane slope/edge/level/material refs from roof plan, elevations and sections before roof mesh.",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "item_id": "PROMOTE-007",
+      "label": "Render materials and opening component metadata",
+      "source_files": [
+        "blender\\semantic_objects\\building_material_source_contract.json"
+      ],
+      "promotion_status": "blocked_until_target_geometry_surfaces_exist",
+      "current_permission": "Material/source labels are preserved as metadata; no render assignment to missing geometry.",
+      "evidence": {
+        "material_slot_count": 6,
+        "opening_component_metadata_slot_count": 44,
+        "blocked_context_metadata_count": 104,
+        "geometry_assignment_ready_count": 0
+      },
+      "blockers": [
+        "exact target surfaces for walls, roof, plinth, windows and doors do not exist yet",
+        "context notes must not be misused as geometry or materials"
+      ],
+      "allowed_next_action": "Keep material labels as popup/edit metadata until exact CAD-bound geometry surfaces are promoted.",
+      "mesh_permission": "blocked_not_mesh"
+    }
+  ],
+  "rules": [
+    "Never promote old cube/placeholder geometry to final house geometry.",
+    "A source-linked preview mesh is not a final photorealistic object.",
+    "Final wall, roof, opening, room and material meshes require exact CAD source ids and completed blockers.",
+    "Text labels remain hidden metadata/popups unless explicitly enabled for QA."
+  ]
+}

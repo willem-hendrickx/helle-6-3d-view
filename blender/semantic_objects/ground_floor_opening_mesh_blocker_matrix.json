@@ -1,0 +1,1239 @@
+{
+  "status": "ground_floor_opening_mesh_blocker_matrix_ready_not_mesh",
+  "purpose": "Per-opening blocker matrix before any CAD-sourced opening can become a 3D wall cut.",
+  "source_files": {
+    "opening_inspector_payload": "C:\\Users\\hendriw\\OneDrive\\Codex Projects\\Helle 6 3D v1\\blender\\semantic_objects\\ground_floor_opening_inspector_payload.json",
+    "metric_slot_bindings": "C:\\Users\\hendriw\\OneDrive\\Codex Projects\\Helle 6 3D v1\\blender\\semantic_objects\\ground_floor_opening_metric_slot_bindings.json",
+    "width_narrowed_candidates": "C:\\Users\\hendriw\\OneDrive\\Codex Projects\\Helle 6 3D v1\\blender\\semantic_objects\\ground_floor_opening_width_narrowed_candidates.json",
+    "width_proposal_safety_audit": "C:\\Users\\hendriw\\OneDrive\\Codex Projects\\Helle 6 3D v1\\blender\\semantic_objects\\ground_floor_opening_width_proposal_safety_audit.json",
+    "vertical_slot_candidate_selector": "C:\\Users\\hendriw\\OneDrive\\Codex Projects\\Helle 6 3D v1\\blender\\semantic_objects\\ground_floor_opening_vertical_slot_candidate_selector.json",
+    "vertical_selector_safety_audit": "C:\\Users\\hendriw\\OneDrive\\Codex Projects\\Helle 6 3D v1\\blender\\semantic_objects\\ground_floor_opening_vertical_selector_safety_audit.json",
+    "cut_contract": "C:\\Users\\hendriw\\OneDrive\\Codex Projects\\Helle 6 3D v1\\blender\\semantic_objects\\ground_floor_opening_cut_contract.json",
+    "subgeometry_slot_candidates": "C:\\Users\\hendriw\\OneDrive\\Codex Projects\\Helle 6 3D v1\\blender\\semantic_objects\\ground_floor_opening_subgeometry_slot_candidates.json",
+    "non_wall_cut_exceptions": "C:\\Users\\hendriw\\OneDrive\\Codex Projects\\Helle 6 3D v1\\blender\\semantic_objects\\ground_floor_opening_non_wall_cut_exception_contract.json"
+  },
+  "opening_count": 17,
+  "non_wall_cut_exception_count": 1,
+  "mesh_ready_opening_count": 0,
+  "subgeometry_candidate_available_not_bound_count": 2,
+  "objects": [
+    {
+      "stable_object_id": "ground_floor:opening_mesh_blocker:Y01",
+      "legend_id": "Y01",
+      "display_label": "panoramisch raam",
+      "opening_type": "fixed_or_operable_window",
+      "non_wall_cut_exception": false,
+      "exception_family": null,
+      "wall_cut_requirement": "required_when_metric_slots_bound",
+      "required_slot_hints": [
+        "opening_width_m",
+        "opening_height_m",
+        "sill_height_m",
+        "header_or_lintel_height_m"
+      ],
+      "source_bound_candidate_metric_slots": [
+        {
+          "slot": "opening_height_m",
+          "subrole": "arched_opening_total_height_to_highest_point",
+          "value_m": 3.7,
+          "numeric_source_entity_id": "front_elevation:1668",
+          "dimension_line_source_entity_id": "front_elevation:1486",
+          "status": "source_dimension_chain_bound_to_metric_slot_candidate_not_mesh"
+        },
+        {
+          "slot": "glazing_subdivision",
+          "subrole": "rectangular_lower_part_height_in_arched_opening",
+          "value_m": 2.33,
+          "numeric_source_entity_id": "front_elevation:1694",
+          "dimension_line_source_entity_id": "front_elevation:1617",
+          "status": "source_dimension_chain_bound_to_metric_slot_candidate_not_mesh"
+        },
+        {
+          "slot": "glazing_subdivision",
+          "subrole": "arched_head_rise_or_upper_visual_part",
+          "value_m": 1.37,
+          "numeric_source_entity_id": "front_elevation:1695",
+          "dimension_line_source_entity_id": "front_elevation:1621",
+          "status": "source_dimension_chain_bound_to_metric_slot_candidate_not_mesh"
+        }
+      ],
+      "width_candidate": {
+        "slot": "opening_width_m",
+        "value_m": 2.65,
+        "plan_width_extent_m": 2.65,
+        "cad_text_value_m": 2.65,
+        "delta_m": 0.0,
+        "coordinate_source_entity_ids": [
+          "ground_floor_plan:2294",
+          "ground_floor_plan:0624",
+          "ground_floor_plan:0629",
+          "ground_floor_plan:0631"
+        ],
+        "dimension_text_source_entity_ids": [
+          "ground_floor_plan:2739"
+        ],
+        "semantic_role": "overall_opening_width_candidate",
+        "eligible_for_opening_width_slot": true,
+        "source_system": "ground_floor_plan_dimension_line_text_pair",
+        "dimension_line_source_entity_id": "ground_floor_plan:2294",
+        "matched_plan_width_candidate": {
+          "matched_plan_width_extent_m": 2.71,
+          "matched_plan_width_decision": "candidate_plan_width_span_needs_detail_confirmation",
+          "matched_plan_width_confidence": "medium",
+          "matched_plan_width_source_entity_ids": [
+            "ground_floor_plan:0624",
+            "ground_floor_plan:0629",
+            "ground_floor_plan:0631"
+          ],
+          "matched_plan_width_delta_m": 0.06,
+          "matched_plan_width_orientation": "horizontal_plan_line",
+          "matched_plan_width_orientation_matches_dimension_line": true,
+          "matched_plan_width_requires_wall_orientation_confirmation": false
+        },
+        "status": "strong_plan_dimension_width_proposal_not_final_mesh",
+        "safety_status": "safe_to_keep_as_strong_candidate_not_final_mesh"
+      },
+      "vertical_selector_top_candidate": null,
+      "source_subgeometry_slot_candidates": [],
+      "candidate_available_not_bound_slot_hints": [],
+      "required_slot_resolution_status": [
+        {
+          "slot": "opening_width_m",
+          "state": "source_bound_candidate_slot_present"
+        },
+        {
+          "slot": "opening_height_m",
+          "state": "source_bound_candidate_slot_present"
+        },
+        {
+          "slot": "sill_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "header_or_lintel_height_m",
+          "state": "missing_source_bound_slot"
+        }
+      ],
+      "missing_required_slot_hints": [
+        "sill_height_m",
+        "header_or_lintel_height_m"
+      ],
+      "visual_opening_detail_source_count": 46,
+      "wall_or_structure_source_count": 18,
+      "mesh_permission": "blocked_not_mesh",
+      "blockers": [
+        "required_metric_slots_missing",
+        "final_mesh_blocked_until_all_slots_source_bound_and_reviewed"
+      ]
+    },
+    {
+      "stable_object_id": "ground_floor:opening_mesh_blocker:Y02",
+      "legend_id": "Y02",
+      "display_label": "Raam Salon",
+      "opening_type": "window",
+      "non_wall_cut_exception": false,
+      "exception_family": null,
+      "wall_cut_requirement": "required_when_metric_slots_bound",
+      "required_slot_hints": [
+        "opening_width_m",
+        "opening_height_m",
+        "sill_height_m",
+        "header_or_lintel_height_m"
+      ],
+      "source_bound_candidate_metric_slots": [
+        {
+          "slot": "opening_height_m",
+          "subrole": "clear_opening_height",
+          "value_m": 2.3,
+          "numeric_source_entity_id": "right_elevation:1842",
+          "dimension_line_source_entity_id": "right_elevation:1697",
+          "status": "source_dimension_chain_bound_to_metric_slot_candidate_not_mesh"
+        }
+      ],
+      "width_candidate": null,
+      "vertical_selector_top_candidate": {
+        "derived_opening_height_m": 2.29,
+        "selector_score": 9,
+        "selector_reasons": [
+          "sill_or_threshold_range",
+          "opening_height_range",
+          "matches_known_height"
+        ],
+        "threshold_or_sill_source_entity_id": "right_elevation:1859",
+        "header_or_lintel_source_entity_id": "right_elevation:1842",
+        "status": "selector_candidate_not_bound",
+        "safety_status": "safe_to_keep_as_vertical_candidate_not_final_mesh"
+      },
+      "source_subgeometry_slot_candidates": [],
+      "candidate_available_not_bound_slot_hints": [],
+      "required_slot_resolution_status": [
+        {
+          "slot": "opening_width_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "opening_height_m",
+          "state": "source_bound_candidate_slot_present"
+        },
+        {
+          "slot": "sill_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "header_or_lintel_height_m",
+          "state": "missing_source_bound_slot"
+        }
+      ],
+      "missing_required_slot_hints": [
+        "opening_width_m",
+        "sill_height_m",
+        "header_or_lintel_height_m"
+      ],
+      "visual_opening_detail_source_count": 67,
+      "wall_or_structure_source_count": 18,
+      "mesh_permission": "blocked_not_mesh",
+      "blockers": [
+        "required_metric_slots_missing",
+        "final_mesh_blocked_until_all_slots_source_bound_and_reviewed"
+      ]
+    },
+    {
+      "stable_object_id": "ground_floor:opening_mesh_blocker:Y03",
+      "legend_id": "Y03",
+      "display_label": "schuifraam",
+      "opening_type": "sliding_glass_door",
+      "non_wall_cut_exception": false,
+      "exception_family": null,
+      "wall_cut_requirement": "required_when_metric_slots_bound",
+      "required_slot_hints": [
+        "opening_width_m",
+        "opening_height_m",
+        "threshold_level_m",
+        "header_or_lintel_height_m"
+      ],
+      "source_bound_candidate_metric_slots": [],
+      "width_candidate": null,
+      "vertical_selector_top_candidate": null,
+      "source_subgeometry_slot_candidates": [],
+      "candidate_available_not_bound_slot_hints": [],
+      "required_slot_resolution_status": [
+        {
+          "slot": "opening_width_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "opening_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "threshold_level_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "header_or_lintel_height_m",
+          "state": "missing_source_bound_slot"
+        }
+      ],
+      "missing_required_slot_hints": [
+        "opening_width_m",
+        "opening_height_m",
+        "threshold_level_m",
+        "header_or_lintel_height_m"
+      ],
+      "visual_opening_detail_source_count": 74,
+      "wall_or_structure_source_count": 20,
+      "mesh_permission": "blocked_not_mesh",
+      "blockers": [
+        "required_metric_slots_missing",
+        "final_mesh_blocked_until_all_slots_source_bound_and_reviewed"
+      ]
+    },
+    {
+      "stable_object_id": "ground_floor:opening_mesh_blocker:Y04",
+      "legend_id": "Y04",
+      "display_label": "Raam Hobbyruimte",
+      "opening_type": "window",
+      "non_wall_cut_exception": false,
+      "exception_family": null,
+      "wall_cut_requirement": "required_when_metric_slots_bound",
+      "required_slot_hints": [
+        "opening_width_m",
+        "opening_height_m",
+        "sill_height_m",
+        "header_or_lintel_height_m"
+      ],
+      "source_bound_candidate_metric_slots": [],
+      "width_candidate": {
+        "slot": "opening_width_m",
+        "value_m": 1.22,
+        "plan_width_extent_m": 1.22,
+        "cad_text_value_m": 1.22,
+        "delta_m": 0.0,
+        "coordinate_source_entity_ids": [
+          "ground_floor_plan:2249",
+          "ground_floor_plan:0943",
+          "ground_floor_plan:0948",
+          "ground_floor_plan:0949",
+          "ground_floor_plan:0955",
+          "ground_floor_plan:0958",
+          "ground_floor_plan:0963",
+          "ground_floor_plan:0965",
+          "ground_floor_plan:0966",
+          "ground_floor_plan:0972",
+          "ground_floor_plan:0975"
+        ],
+        "dimension_text_source_entity_ids": [
+          "ground_floor_plan:2728"
+        ],
+        "semantic_role": "overall_opening_width_candidate",
+        "eligible_for_opening_width_slot": true,
+        "source_system": "ground_floor_plan_dimension_line_text_pair",
+        "dimension_line_source_entity_id": "ground_floor_plan:2249",
+        "matched_plan_width_candidate": {
+          "matched_plan_width_extent_m": 1.28,
+          "matched_plan_width_decision": "candidate_plan_width_span_needs_detail_confirmation",
+          "matched_plan_width_confidence": "medium",
+          "matched_plan_width_source_entity_ids": [
+            "ground_floor_plan:0943",
+            "ground_floor_plan:0948",
+            "ground_floor_plan:0949",
+            "ground_floor_plan:0955",
+            "ground_floor_plan:0958",
+            "ground_floor_plan:0963",
+            "ground_floor_plan:0965",
+            "ground_floor_plan:0966",
+            "ground_floor_plan:0972",
+            "ground_floor_plan:0975"
+          ],
+          "matched_plan_width_delta_m": 0.06,
+          "matched_plan_width_orientation": "vertical_plan_line",
+          "matched_plan_width_orientation_matches_dimension_line": true,
+          "matched_plan_width_requires_wall_orientation_confirmation": false
+        },
+        "status": "strong_plan_dimension_width_proposal_not_final_mesh",
+        "safety_status": "safe_to_keep_as_strong_candidate_not_final_mesh"
+      },
+      "vertical_selector_top_candidate": null,
+      "source_subgeometry_slot_candidates": [],
+      "candidate_available_not_bound_slot_hints": [],
+      "required_slot_resolution_status": [
+        {
+          "slot": "opening_width_m",
+          "state": "source_bound_candidate_slot_present"
+        },
+        {
+          "slot": "opening_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "sill_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "header_or_lintel_height_m",
+          "state": "missing_source_bound_slot"
+        }
+      ],
+      "missing_required_slot_hints": [
+        "opening_height_m",
+        "sill_height_m",
+        "header_or_lintel_height_m"
+      ],
+      "visual_opening_detail_source_count": 83,
+      "wall_or_structure_source_count": 10,
+      "mesh_permission": "blocked_not_mesh",
+      "blockers": [
+        "required_metric_slots_missing",
+        "final_mesh_blocked_until_all_slots_source_bound_and_reviewed"
+      ]
+    },
+    {
+      "stable_object_id": "ground_floor:opening_mesh_blocker:Y05",
+      "legend_id": "Y05",
+      "display_label": "boograam eetkamer",
+      "opening_type": "arched_window",
+      "non_wall_cut_exception": false,
+      "exception_family": null,
+      "wall_cut_requirement": "required_when_metric_slots_bound",
+      "required_slot_hints": [
+        "opening_width_m",
+        "opening_height_m",
+        "arch_geometry",
+        "threshold_or_sill_level_m"
+      ],
+      "source_bound_candidate_metric_slots": [
+        {
+          "slot": "opening_height_m",
+          "subrole": "clear_opening_height",
+          "value_m": 2.66,
+          "numeric_source_entity_id": "right_elevation:1841",
+          "dimension_line_source_entity_id": "right_elevation:1690",
+          "status": "source_dimension_chain_bound_to_metric_slot_candidate_not_mesh"
+        }
+      ],
+      "width_candidate": {
+        "slot": "opening_width_m",
+        "value_m": 2.21,
+        "plan_width_extent_m": 2.21,
+        "cad_text_value_m": 2.21,
+        "delta_m": 0.0,
+        "coordinate_source_entity_ids": [
+          "ground_floor_plan:2174",
+          "ground_floor_plan:0475",
+          "ground_floor_plan:0480",
+          "ground_floor_plan:0482"
+        ],
+        "dimension_text_source_entity_ids": [
+          "ground_floor_plan:2707"
+        ],
+        "semantic_role": "overall_opening_width_candidate",
+        "eligible_for_opening_width_slot": true,
+        "source_system": "ground_floor_plan_dimension_line_text_pair",
+        "dimension_line_source_entity_id": "ground_floor_plan:2174",
+        "matched_plan_width_candidate": {
+          "matched_plan_width_extent_m": 2.27,
+          "matched_plan_width_decision": "candidate_plan_width_span_needs_detail_confirmation",
+          "matched_plan_width_confidence": "medium",
+          "matched_plan_width_source_entity_ids": [
+            "ground_floor_plan:0475",
+            "ground_floor_plan:0480",
+            "ground_floor_plan:0482"
+          ],
+          "matched_plan_width_delta_m": 0.06,
+          "matched_plan_width_orientation": "vertical_plan_line",
+          "matched_plan_width_orientation_matches_dimension_line": true,
+          "matched_plan_width_requires_wall_orientation_confirmation": false
+        },
+        "status": "strong_plan_dimension_width_proposal_not_final_mesh",
+        "safety_status": "safe_to_keep_as_strong_candidate_not_final_mesh"
+      },
+      "vertical_selector_top_candidate": {
+        "derived_opening_height_m": 2.65,
+        "selector_score": 8,
+        "selector_reasons": [
+          "sill_or_threshold_range",
+          "opening_height_range",
+          "matches_known_height",
+          "header_may_be_storey_context"
+        ],
+        "threshold_or_sill_source_entity_id": "right_elevation:1859",
+        "header_or_lintel_source_entity_id": "right_elevation:1841",
+        "status": "selector_candidate_not_bound",
+        "safety_status": "safe_to_keep_as_vertical_candidate_not_final_mesh"
+      },
+      "source_subgeometry_slot_candidates": [
+        {
+          "slot": "arch_geometry",
+          "candidate_status": "source_cad_arch_geometry_candidate_ready_not_bound_not_mesh",
+          "source_subpart_id": "ground_floor:opening_arch_bay_subpart:Y05",
+          "source_entity_count": 57,
+          "bound_to_slot": false,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "candidate_available_not_bound_slot_hints": [
+        "arch_geometry"
+      ],
+      "required_slot_resolution_status": [
+        {
+          "slot": "opening_width_m",
+          "state": "source_bound_candidate_slot_present"
+        },
+        {
+          "slot": "opening_height_m",
+          "state": "source_bound_candidate_slot_present"
+        },
+        {
+          "slot": "arch_geometry",
+          "state": "source_subgeometry_candidate_available_not_bound"
+        },
+        {
+          "slot": "threshold_or_sill_level_m",
+          "state": "missing_source_bound_slot"
+        }
+      ],
+      "missing_required_slot_hints": [
+        "arch_geometry",
+        "threshold_or_sill_level_m"
+      ],
+      "visual_opening_detail_source_count": 44,
+      "wall_or_structure_source_count": 20,
+      "mesh_permission": "blocked_not_mesh",
+      "blockers": [
+        "required_metric_slots_missing",
+        "subgeometry_candidate_available_but_not_bound",
+        "final_mesh_blocked_until_all_slots_source_bound_and_reviewed"
+      ]
+    },
+    {
+      "stable_object_id": "ground_floor:opening_mesh_blocker:Y06",
+      "legend_id": "Y06",
+      "display_label": "deur inkomhal",
+      "opening_type": "interior_door",
+      "non_wall_cut_exception": false,
+      "exception_family": null,
+      "wall_cut_requirement": "required_when_metric_slots_bound",
+      "required_slot_hints": [
+        "opening_width_m",
+        "opening_height_m",
+        "threshold_level_m"
+      ],
+      "source_bound_candidate_metric_slots": [],
+      "width_candidate": {
+        "slot": "opening_width_m",
+        "value_m": 1.4,
+        "plan_width_extent_m": 1.4,
+        "cad_text_value_m": 1.4,
+        "delta_m": 0.0,
+        "coordinate_source_entity_ids": [
+          "ground_floor_plan:2337",
+          "ground_floor_plan:0889",
+          "ground_floor_plan:0893"
+        ],
+        "dimension_text_source_entity_ids": [
+          "ground_floor_plan:2748"
+        ],
+        "semantic_role": "overall_opening_width_candidate",
+        "eligible_for_opening_width_slot": true,
+        "source_system": "ground_floor_plan_dimension_line_text_pair",
+        "dimension_line_source_entity_id": "ground_floor_plan:2337",
+        "matched_plan_width_candidate": {
+          "matched_plan_width_extent_m": 1.39,
+          "matched_plan_width_decision": "candidate_plan_width_span_needs_detail_confirmation",
+          "matched_plan_width_confidence": "medium",
+          "matched_plan_width_source_entity_ids": [
+            "ground_floor_plan:0889",
+            "ground_floor_plan:0893"
+          ],
+          "matched_plan_width_delta_m": 0.01,
+          "matched_plan_width_orientation": "vertical_plan_line",
+          "matched_plan_width_orientation_matches_dimension_line": true,
+          "matched_plan_width_requires_wall_orientation_confirmation": false
+        },
+        "status": "strong_plan_dimension_width_proposal_not_final_mesh",
+        "safety_status": "safe_to_keep_as_strong_candidate_not_final_mesh"
+      },
+      "vertical_selector_top_candidate": null,
+      "source_subgeometry_slot_candidates": [],
+      "candidate_available_not_bound_slot_hints": [],
+      "required_slot_resolution_status": [
+        {
+          "slot": "opening_width_m",
+          "state": "source_bound_candidate_slot_present"
+        },
+        {
+          "slot": "opening_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "threshold_level_m",
+          "state": "missing_source_bound_slot"
+        }
+      ],
+      "missing_required_slot_hints": [
+        "opening_height_m",
+        "threshold_level_m"
+      ],
+      "visual_opening_detail_source_count": 36,
+      "wall_or_structure_source_count": 8,
+      "mesh_permission": "blocked_not_mesh",
+      "blockers": [
+        "required_metric_slots_missing",
+        "final_mesh_blocked_until_all_slots_source_bound_and_reviewed"
+      ]
+    },
+    {
+      "stable_object_id": "ground_floor:opening_mesh_blocker:Y07",
+      "legend_id": "Y07",
+      "display_label": "deur WC1",
+      "opening_type": "interior_door",
+      "non_wall_cut_exception": false,
+      "exception_family": null,
+      "wall_cut_requirement": "required_when_metric_slots_bound",
+      "required_slot_hints": [
+        "opening_width_m",
+        "opening_height_m",
+        "threshold_level_m"
+      ],
+      "source_bound_candidate_metric_slots": [],
+      "width_candidate": null,
+      "vertical_selector_top_candidate": null,
+      "source_subgeometry_slot_candidates": [],
+      "candidate_available_not_bound_slot_hints": [],
+      "required_slot_resolution_status": [
+        {
+          "slot": "opening_width_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "opening_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "threshold_level_m",
+          "state": "missing_source_bound_slot"
+        }
+      ],
+      "missing_required_slot_hints": [
+        "opening_width_m",
+        "opening_height_m",
+        "threshold_level_m"
+      ],
+      "visual_opening_detail_source_count": 64,
+      "wall_or_structure_source_count": 14,
+      "mesh_permission": "blocked_not_mesh",
+      "blockers": [
+        "required_metric_slots_missing",
+        "final_mesh_blocked_until_all_slots_source_bound_and_reviewed"
+      ]
+    },
+    {
+      "stable_object_id": "ground_floor:opening_mesh_blocker:Y08",
+      "legend_id": "Y08",
+      "display_label": "voordeur",
+      "opening_type": "exterior_door",
+      "non_wall_cut_exception": false,
+      "exception_family": null,
+      "wall_cut_requirement": "required_when_metric_slots_bound",
+      "required_slot_hints": [
+        "opening_width_m",
+        "opening_height_m",
+        "threshold_level_m",
+        "header_or_lintel_height_m"
+      ],
+      "source_bound_candidate_metric_slots": [
+        {
+          "slot": "opening_height_m",
+          "subrole": "clear_opening_height",
+          "value_m": 2.1,
+          "numeric_source_entity_id": "rear_elevation:1756",
+          "dimension_line_source_entity_id": "rear_elevation:1665",
+          "status": "source_dimension_chain_bound_to_metric_slot_candidate_not_mesh"
+        }
+      ],
+      "width_candidate": null,
+      "vertical_selector_top_candidate": {
+        "derived_opening_height_m": 2.09,
+        "selector_score": 9,
+        "selector_reasons": [
+          "sill_or_threshold_range",
+          "opening_height_range",
+          "matches_known_height"
+        ],
+        "threshold_or_sill_source_entity_id": "rear_elevation:1744",
+        "header_or_lintel_source_entity_id": "rear_elevation:1756",
+        "status": "selector_candidate_not_bound",
+        "safety_status": "safe_to_keep_as_vertical_candidate_not_final_mesh"
+      },
+      "source_subgeometry_slot_candidates": [],
+      "candidate_available_not_bound_slot_hints": [],
+      "required_slot_resolution_status": [
+        {
+          "slot": "opening_width_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "opening_height_m",
+          "state": "source_bound_candidate_slot_present"
+        },
+        {
+          "slot": "threshold_level_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "header_or_lintel_height_m",
+          "state": "missing_source_bound_slot"
+        }
+      ],
+      "missing_required_slot_hints": [
+        "opening_width_m",
+        "threshold_level_m",
+        "header_or_lintel_height_m"
+      ],
+      "visual_opening_detail_source_count": 79,
+      "wall_or_structure_source_count": 24,
+      "mesh_permission": "blocked_not_mesh",
+      "blockers": [
+        "required_metric_slots_missing",
+        "final_mesh_blocked_until_all_slots_source_bound_and_reviewed"
+      ]
+    },
+    {
+      "stable_object_id": "ground_floor:opening_mesh_blocker:Y09",
+      "legend_id": "Y09",
+      "display_label": "raam WC1",
+      "opening_type": "window",
+      "non_wall_cut_exception": false,
+      "exception_family": null,
+      "wall_cut_requirement": "required_when_metric_slots_bound",
+      "required_slot_hints": [
+        "opening_width_m",
+        "opening_height_m",
+        "sill_height_m",
+        "header_or_lintel_height_m"
+      ],
+      "source_bound_candidate_metric_slots": [],
+      "width_candidate": {
+        "slot": "opening_width_m",
+        "value_m": 0.816,
+        "plan_width_extent_m": 0.816,
+        "cad_text_value_m": 0.8,
+        "delta_m": 0.016,
+        "coordinate_source_entity_ids": [
+          "ground_floor_plan:1096",
+          "ground_floor_plan:1103",
+          "ground_floor_plan:1107"
+        ],
+        "dimension_text_source_entity_ids": [
+          "rear_elevation:1736"
+        ],
+        "semantic_role": "overall_opening_width_candidate",
+        "eligible_for_opening_width_slot": true,
+        "source_system": "facade_dimension_text_to_plan_width_crosscheck",
+        "dimension_line_source_entity_id": null,
+        "matched_plan_width_candidate": null,
+        "status": "strong_width_binding_proposal_not_final_mesh",
+        "safety_status": "safe_to_keep_as_strong_candidate_not_final_mesh"
+      },
+      "vertical_selector_top_candidate": null,
+      "source_subgeometry_slot_candidates": [],
+      "candidate_available_not_bound_slot_hints": [],
+      "required_slot_resolution_status": [
+        {
+          "slot": "opening_width_m",
+          "state": "source_bound_candidate_slot_present"
+        },
+        {
+          "slot": "opening_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "sill_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "header_or_lintel_height_m",
+          "state": "missing_source_bound_slot"
+        }
+      ],
+      "missing_required_slot_hints": [
+        "opening_height_m",
+        "sill_height_m",
+        "header_or_lintel_height_m"
+      ],
+      "visual_opening_detail_source_count": 84,
+      "wall_or_structure_source_count": 14,
+      "mesh_permission": "blocked_not_mesh",
+      "blockers": [
+        "required_metric_slots_missing",
+        "final_mesh_blocked_until_all_slots_source_bound_and_reviewed"
+      ]
+    },
+    {
+      "stable_object_id": "ground_floor:opening_mesh_blocker:Y10",
+      "legend_id": "Y10",
+      "display_label": "kastdeur berging (ingebouwde kast)",
+      "opening_type": "built_in_cabinet_door",
+      "non_wall_cut_exception": true,
+      "exception_family": "built_in_cabinet_door",
+      "wall_cut_requirement": "not_applicable_do_not_block_wall_cut_pipeline",
+      "required_slot_hints": [],
+      "source_bound_candidate_metric_slots": [],
+      "width_candidate": null,
+      "vertical_selector_top_candidate": null,
+      "source_subgeometry_slot_candidates": [],
+      "candidate_available_not_bound_slot_hints": [],
+      "required_slot_resolution_status": [],
+      "missing_required_slot_hints": [],
+      "visual_opening_detail_source_count": 0,
+      "wall_or_structure_source_count": 8,
+      "mesh_permission": "blocked_not_mesh",
+      "blockers": [
+        "non_wall_cut_exception_preserved_as_editable_interior_object",
+        "not_applicable_to_wall_cut_mesh"
+      ]
+    },
+    {
+      "stable_object_id": "ground_floor:opening_mesh_blocker:Y11",
+      "legend_id": "Y11",
+      "display_label": "raam berging",
+      "opening_type": "window",
+      "non_wall_cut_exception": false,
+      "exception_family": null,
+      "wall_cut_requirement": "required_when_metric_slots_bound",
+      "required_slot_hints": [
+        "opening_width_m",
+        "opening_height_m",
+        "sill_height_m",
+        "header_or_lintel_height_m"
+      ],
+      "source_bound_candidate_metric_slots": [],
+      "width_candidate": null,
+      "vertical_selector_top_candidate": null,
+      "source_subgeometry_slot_candidates": [],
+      "candidate_available_not_bound_slot_hints": [],
+      "required_slot_resolution_status": [
+        {
+          "slot": "opening_width_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "opening_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "sill_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "header_or_lintel_height_m",
+          "state": "missing_source_bound_slot"
+        }
+      ],
+      "missing_required_slot_hints": [
+        "opening_width_m",
+        "opening_height_m",
+        "sill_height_m",
+        "header_or_lintel_height_m"
+      ],
+      "visual_opening_detail_source_count": 70,
+      "wall_or_structure_source_count": 14,
+      "mesh_permission": "blocked_not_mesh",
+      "blockers": [
+        "required_metric_slots_missing",
+        "final_mesh_blocked_until_all_slots_source_bound_and_reviewed"
+      ]
+    },
+    {
+      "stable_object_id": "ground_floor:opening_mesh_blocker:Y12",
+      "legend_id": "Y12",
+      "display_label": "raam keuken",
+      "opening_type": "window",
+      "non_wall_cut_exception": false,
+      "exception_family": null,
+      "wall_cut_requirement": "required_when_metric_slots_bound",
+      "required_slot_hints": [
+        "opening_width_m",
+        "opening_height_m",
+        "sill_height_m",
+        "header_or_lintel_height_m"
+      ],
+      "source_bound_candidate_metric_slots": [],
+      "width_candidate": null,
+      "vertical_selector_top_candidate": null,
+      "source_subgeometry_slot_candidates": [],
+      "candidate_available_not_bound_slot_hints": [],
+      "required_slot_resolution_status": [
+        {
+          "slot": "opening_width_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "opening_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "sill_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "header_or_lintel_height_m",
+          "state": "missing_source_bound_slot"
+        }
+      ],
+      "missing_required_slot_hints": [
+        "opening_width_m",
+        "opening_height_m",
+        "sill_height_m",
+        "header_or_lintel_height_m"
+      ],
+      "visual_opening_detail_source_count": 56,
+      "wall_or_structure_source_count": 24,
+      "mesh_permission": "blocked_not_mesh",
+      "blockers": [
+        "required_metric_slots_missing",
+        "final_mesh_blocked_until_all_slots_source_bound_and_reviewed"
+      ]
+    },
+    {
+      "stable_object_id": "ground_floor:opening_mesh_blocker:Y13",
+      "legend_id": "Y13",
+      "display_label": "raam bureau Oost",
+      "opening_type": "window",
+      "non_wall_cut_exception": false,
+      "exception_family": null,
+      "wall_cut_requirement": "required_when_metric_slots_bound",
+      "required_slot_hints": [
+        "opening_width_m",
+        "opening_height_m",
+        "sill_height_m",
+        "header_or_lintel_height_m"
+      ],
+      "source_bound_candidate_metric_slots": [],
+      "width_candidate": {
+        "slot": "opening_width_m",
+        "value_m": 1.22,
+        "plan_width_extent_m": 1.22,
+        "cad_text_value_m": 1.22,
+        "delta_m": 0.0,
+        "coordinate_source_entity_ids": [
+          "ground_floor_plan:2219",
+          "ground_floor_plan:1877",
+          "ground_floor_plan:1882",
+          "ground_floor_plan:1883",
+          "ground_floor_plan:1889",
+          "ground_floor_plan:1892",
+          "ground_floor_plan:1897",
+          "ground_floor_plan:1899",
+          "ground_floor_plan:1900",
+          "ground_floor_plan:1906",
+          "ground_floor_plan:1909"
+        ],
+        "dimension_text_source_entity_ids": [
+          "ground_floor_plan:2718"
+        ],
+        "semantic_role": "overall_opening_width_candidate",
+        "eligible_for_opening_width_slot": true,
+        "source_system": "ground_floor_plan_dimension_line_text_pair",
+        "dimension_line_source_entity_id": "ground_floor_plan:2219",
+        "matched_plan_width_candidate": {
+          "matched_plan_width_extent_m": 1.28,
+          "matched_plan_width_decision": "candidate_plan_width_span_needs_detail_confirmation",
+          "matched_plan_width_confidence": "medium",
+          "matched_plan_width_source_entity_ids": [
+            "ground_floor_plan:1877",
+            "ground_floor_plan:1882",
+            "ground_floor_plan:1883",
+            "ground_floor_plan:1889",
+            "ground_floor_plan:1892",
+            "ground_floor_plan:1897",
+            "ground_floor_plan:1899",
+            "ground_floor_plan:1900",
+            "ground_floor_plan:1906",
+            "ground_floor_plan:1909"
+          ],
+          "matched_plan_width_delta_m": 0.06,
+          "matched_plan_width_orientation": "vertical_plan_line",
+          "matched_plan_width_orientation_matches_dimension_line": true,
+          "matched_plan_width_requires_wall_orientation_confirmation": false
+        },
+        "status": "strong_plan_dimension_width_proposal_not_final_mesh",
+        "safety_status": "safe_to_keep_as_strong_candidate_not_final_mesh"
+      },
+      "vertical_selector_top_candidate": null,
+      "source_subgeometry_slot_candidates": [],
+      "candidate_available_not_bound_slot_hints": [],
+      "required_slot_resolution_status": [
+        {
+          "slot": "opening_width_m",
+          "state": "source_bound_candidate_slot_present"
+        },
+        {
+          "slot": "opening_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "sill_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "header_or_lintel_height_m",
+          "state": "missing_source_bound_slot"
+        }
+      ],
+      "missing_required_slot_hints": [
+        "opening_height_m",
+        "sill_height_m",
+        "header_or_lintel_height_m"
+      ],
+      "visual_opening_detail_source_count": 83,
+      "wall_or_structure_source_count": 10,
+      "mesh_permission": "blocked_not_mesh",
+      "blockers": [
+        "required_metric_slots_missing",
+        "final_mesh_blocked_until_all_slots_source_bound_and_reviewed"
+      ]
+    },
+    {
+      "stable_object_id": "ground_floor:opening_mesh_blocker:Y14",
+      "legend_id": "Y14",
+      "display_label": "deur bureau",
+      "opening_type": "interior_door",
+      "non_wall_cut_exception": false,
+      "exception_family": null,
+      "wall_cut_requirement": "required_when_metric_slots_bound",
+      "required_slot_hints": [
+        "opening_width_m",
+        "opening_height_m",
+        "threshold_level_m"
+      ],
+      "source_bound_candidate_metric_slots": [],
+      "width_candidate": null,
+      "vertical_selector_top_candidate": null,
+      "source_subgeometry_slot_candidates": [],
+      "candidate_available_not_bound_slot_hints": [],
+      "required_slot_resolution_status": [
+        {
+          "slot": "opening_width_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "opening_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "threshold_level_m",
+          "state": "missing_source_bound_slot"
+        }
+      ],
+      "missing_required_slot_hints": [
+        "opening_width_m",
+        "opening_height_m",
+        "threshold_level_m"
+      ],
+      "visual_opening_detail_source_count": 30,
+      "wall_or_structure_source_count": 11,
+      "mesh_permission": "blocked_not_mesh",
+      "blockers": [
+        "required_metric_slots_missing",
+        "final_mesh_blocked_until_all_slots_source_bound_and_reviewed"
+      ]
+    },
+    {
+      "stable_object_id": "ground_floor:opening_mesh_blocker:Y15",
+      "legend_id": "Y15",
+      "display_label": "raam bureau Zuid",
+      "opening_type": "window",
+      "non_wall_cut_exception": false,
+      "exception_family": null,
+      "wall_cut_requirement": "required_when_metric_slots_bound",
+      "required_slot_hints": [
+        "opening_width_m",
+        "opening_height_m",
+        "sill_height_m",
+        "header_or_lintel_height_m"
+      ],
+      "source_bound_candidate_metric_slots": [],
+      "width_candidate": null,
+      "vertical_selector_top_candidate": null,
+      "source_subgeometry_slot_candidates": [],
+      "candidate_available_not_bound_slot_hints": [],
+      "required_slot_resolution_status": [
+        {
+          "slot": "opening_width_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "opening_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "sill_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "header_or_lintel_height_m",
+          "state": "missing_source_bound_slot"
+        }
+      ],
+      "missing_required_slot_hints": [
+        "opening_width_m",
+        "opening_height_m",
+        "sill_height_m",
+        "header_or_lintel_height_m"
+      ],
+      "visual_opening_detail_source_count": 84,
+      "wall_or_structure_source_count": 18,
+      "mesh_permission": "blocked_not_mesh",
+      "blockers": [
+        "required_metric_slots_missing",
+        "final_mesh_blocked_until_all_slots_source_bound_and_reviewed"
+      ]
+    },
+    {
+      "stable_object_id": "ground_floor:opening_mesh_blocker:Y16",
+      "legend_id": "Y16",
+      "display_label": "rondboog",
+      "opening_type": "arched_free_opening",
+      "non_wall_cut_exception": false,
+      "exception_family": null,
+      "wall_cut_requirement": "required_when_metric_slots_bound",
+      "required_slot_hints": [
+        "opening_width_m",
+        "opening_height_m",
+        "arch_geometry"
+      ],
+      "source_bound_candidate_metric_slots": [],
+      "width_candidate": null,
+      "vertical_selector_top_candidate": null,
+      "source_subgeometry_slot_candidates": [],
+      "candidate_available_not_bound_slot_hints": [],
+      "required_slot_resolution_status": [
+        {
+          "slot": "opening_width_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "opening_height_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "arch_geometry",
+          "state": "missing_source_bound_slot"
+        }
+      ],
+      "missing_required_slot_hints": [
+        "opening_width_m",
+        "opening_height_m",
+        "arch_geometry"
+      ],
+      "visual_opening_detail_source_count": 8,
+      "wall_or_structure_source_count": 2,
+      "mesh_permission": "blocked_not_mesh",
+      "blockers": [
+        "required_metric_slots_missing",
+        "final_mesh_blocked_until_all_slots_source_bound_and_reviewed"
+      ]
+    },
+    {
+      "stable_object_id": "ground_floor:opening_mesh_blocker:Y17",
+      "legend_id": "Y17",
+      "display_label": "erker inclusief raamdeur",
+      "opening_type": "bay_window_group_with_operable_door",
+      "non_wall_cut_exception": false,
+      "exception_family": null,
+      "wall_cut_requirement": "required_when_metric_slots_bound",
+      "required_slot_hints": [
+        "opening_width_m",
+        "opening_height_m",
+        "threshold_level_m",
+        "bay_subsegment_geometry",
+        "header_or_lintel_height_m"
+      ],
+      "source_bound_candidate_metric_slots": [
+        {
+          "slot": "opening_height_m",
+          "subrole": "clear_opening_height",
+          "value_m": 2.55,
+          "numeric_source_entity_id": "left_elevation:1495",
+          "dimension_line_source_entity_id": "left_elevation:1430",
+          "status": "source_dimension_chain_bound_to_metric_slot_candidate_not_mesh"
+        }
+      ],
+      "width_candidate": {
+        "slot": "opening_width_m",
+        "value_m": 3.2501,
+        "plan_width_extent_m": 3.2501,
+        "cad_text_value_m": 3.25,
+        "delta_m": 0.0001,
+        "coordinate_source_entity_ids": [
+          "ground_floor_plan:2123",
+          "ground_floor_plan:1309",
+          "ground_floor_plan:1310",
+          "ground_floor_plan:1311",
+          "ground_floor_plan:1316",
+          "ground_floor_plan:1320",
+          "ground_floor_plan:1321",
+          "ground_floor_plan:1326",
+          "ground_floor_plan:1329",
+          "ground_floor_plan:1330",
+          "ground_floor_plan:1333",
+          "ground_floor_plan:1336"
+        ],
+        "dimension_text_source_entity_ids": [
+          "ground_floor_plan:2694"
+        ],
+        "semantic_role": "overall_bay_opening_width_candidate",
+        "eligible_for_opening_width_slot": true,
+        "source_system": "ground_floor_plan_dimension_line_text_pair",
+        "dimension_line_source_entity_id": "ground_floor_plan:2123",
+        "matched_plan_width_candidate": {
+          "matched_plan_width_extent_m": 3.1755,
+          "matched_plan_width_decision": "candidate_plan_width_span_needs_detail_confirmation",
+          "matched_plan_width_confidence": "medium",
+          "matched_plan_width_source_entity_ids": [
+            "ground_floor_plan:1309",
+            "ground_floor_plan:1310",
+            "ground_floor_plan:1311",
+            "ground_floor_plan:1316",
+            "ground_floor_plan:1320",
+            "ground_floor_plan:1321",
+            "ground_floor_plan:1326",
+            "ground_floor_plan:1329",
+            "ground_floor_plan:1330",
+            "ground_floor_plan:1333",
+            "ground_floor_plan:1336"
+          ],
+          "matched_plan_width_delta_m": 0.0745,
+          "matched_plan_width_orientation": "horizontal_plan_line",
+          "matched_plan_width_orientation_matches_dimension_line": true,
+          "matched_plan_width_requires_wall_orientation_confirmation": false
+        },
+        "status": "strong_plan_dimension_width_proposal_not_final_mesh",
+        "safety_status": "safe_to_keep_as_strong_candidate_not_final_mesh"
+      },
+      "vertical_selector_top_candidate": {
+        "derived_opening_height_m": 2.54,
+        "selector_score": 8,
+        "selector_reasons": [
+          "sill_or_threshold_range",
+          "opening_height_range",
+          "matches_known_height",
+          "header_may_be_storey_context"
+        ],
+        "threshold_or_sill_source_entity_id": "left_elevation:1472",
+        "header_or_lintel_source_entity_id": "left_elevation:1470",
+        "status": "selector_candidate_not_bound",
+        "safety_status": "safe_to_keep_as_vertical_candidate_not_final_mesh"
+      },
+      "source_subgeometry_slot_candidates": [
+        {
+          "slot": "bay_subsegment_geometry",
+          "candidate_status": "source_cad_bay_subsegment_geometry_candidate_ready_not_bound_not_mesh",
+          "source_subpart_id": "ground_floor:opening_arch_bay_subpart:Y17",
+          "source_entity_count": 56,
+          "bound_to_slot": false,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "candidate_available_not_bound_slot_hints": [
+        "bay_subsegment_geometry"
+      ],
+      "required_slot_resolution_status": [
+        {
+          "slot": "opening_width_m",
+          "state": "source_bound_candidate_slot_present"
+        },
+        {
+          "slot": "opening_height_m",
+          "state": "source_bound_candidate_slot_present"
+        },
+        {
+          "slot": "threshold_level_m",
+          "state": "missing_source_bound_slot"
+        },
+        {
+          "slot": "bay_subsegment_geometry",
+          "state": "source_subgeometry_candidate_available_not_bound"
+        },
+        {
+          "slot": "header_or_lintel_height_m",
+          "state": "missing_source_bound_slot"
+        }
+      ],
+      "missing_required_slot_hints": [
+        "threshold_level_m",
+        "bay_subsegment_geometry",
+        "header_or_lintel_height_m"
+      ],
+      "visual_opening_detail_source_count": 111,
+      "wall_or_structure_source_count": 26,
+      "mesh_permission": "blocked_not_mesh",
+      "blockers": [
+        "required_metric_slots_missing",
+        "subgeometry_candidate_available_but_not_bound",
+        "final_mesh_blocked_until_all_slots_source_bound_and_reviewed"
+      ]
+    }
+  ]
+}

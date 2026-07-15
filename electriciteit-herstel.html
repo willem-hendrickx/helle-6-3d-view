@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elektriciteitsplan herstellen</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: #f4f6f2;
+        color: #18201b;
+        font-family: Inter, Arial, sans-serif;
+      }
+
+      main {
+        width: min(720px, calc(100vw - 40px));
+        background: #ffffff;
+        border: 1px solid #d7ddd5;
+        border-radius: 8px;
+        padding: 28px;
+        box-shadow: 0 20px 60px rgba(24, 32, 27, 0.12);
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: 28px;
+      }
+
+      p {
+        line-height: 1.5;
+        margin: 0 0 14px;
+      }
+
+      button,
+      a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 0 18px;
+        border-radius: 6px;
+        border: 1px solid #155844;
+        background: #1f6f58;
+        color: #ffffff;
+        font-weight: 800;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      a {
+        background: #ffffff;
+        color: #155844;
+        margin-left: 8px;
+      }
+
+      #status {
+        margin-top: 18px;
+        min-height: 24px;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Elektriciteitsplan herstellen</h1>
+      <p>
+        Er is een gedeeltelijke backup gevonden in de lokale browseropslag: 3 items op Gelijkvloers.
+        Deze knop zet die backup terug onder dezelfde opslagkey van de planner.
+      </p>
+      <p>
+        De huidige lege toestand wordt eerst apart bewaard als extra veiligheid.
+      </p>
+      <button id="restoreButton" type="button">Backup herstellen</button>
+      <a href="/electriciteit.html">Naar planner</a>
+      <div id="status"></div>
+    </main>
+
+    <script>
+      const STORAGE_KEY = "helle6-electricity-planner-v1";
+      const RECOVERED_PROJECT = {
+        "plan": {
+          "name": "2421 Hendrickx_2026 05 22 - UITVplan 4.pdf",
+          "sourceType": "rendered-pdf",
+          "width": 7087,
+          "height": 2384,
+          "pageCount": 1,
+          "fingerprint": "helle6-uitvplan-2026-05-22-page-1-r72"
+        },
+        "floors": [
+          {
+            "id": "3348f5be-7122-4586-98d7-def973dbb1c2",
+            "name": "Volledig plan",
+            "crop": { "x": 0, "y": 0, "w": 1, "h": 1 },
+            "items": []
+          },
+          {
+            "id": "1472795d-dc4e-47fc-9c56-d6f3ea763ffd",
+            "name": "Fundering / riolering",
+            "crop": { "x": 0.18, "y": 0.27, "w": 0.155, "h": 0.56 },
+            "items": []
+          },
+          {
+            "id": "5a83d530-b571-4a7d-9477-60daf18444c5",
+            "name": "Gelijkvloers",
+            "crop": { "x": 0.35, "y": 0.23, "w": 0.155, "h": 0.58 },
+            "items": [
+              {
+                "id": "a99fb21b-8437-4b91-a893-92a3fefabfd9",
+                "type": "cabinet",
+                "x": 0.2951438673990027,
+                "y": 0.4494239723405679,
+                "label": "",
+                "circuit": "",
+                "note": "",
+                "size": 0.075,
+                "rotation": 0
+              },
+              {
+                "id": "7793dce4-eb5e-4aa6-9ef5-b21d2328b73c",
+                "type": "cabinet",
+                "x": 0.3034128299852331,
+                "y": 0.41028557424946255,
+                "label": "",
+                "circuit": "",
+                "note": "",
+                "size": 0.075,
+                "rotation": 0
+              },
+              {
+                "id": "534c7afd-3207-4ae9-9da5-639256c48bdb",
+                "type": "cabinet",
+                "x": 0.6538749231111707,
+                "y": 0.13326784544859202,
+                "label": "",
+                "circuit": "",
+                "note": "",
+                "size": 0.075,
+                "cabinetWidth": 0.075,
+                "cabinetHeight": 0.075,
+                "rotation": 0
+              }
+            ]
+          },
+          {
+            "id": "c861a050-789c-4f15-a4be-e679d8053d2a",
+            "name": "Verdieping",
+            "crop": { "x": 0.51, "y": 0.23, "w": 0.15, "h": 0.58 },
+            "items": []
+          },
+          {
+            "id": "b239e32f-33d2-410c-b3d4-a6d9dc069a4a",
+            "name": "Zolder",
+            "crop": { "x": 0.665, "y": 0.23, "w": 0.14, "h": 0.58 },
+            "items": []
+          },
+          {
+            "id": "3d921a6f-624c-4732-b032-0fc06567c462",
+            "name": "Inplanting",
+            "crop": { "x": 0.875, "y": 0.015, "w": 0.115, "h": 0.42 },
+            "items": []
+          }
+        ],
+        "activeFloorId": "5a83d530-b571-4a7d-9477-60daf18444c5",
+        "activeTool": "select",
+        "showGrid": true,
+        "snapToGrid": false,
+        "layerVisibility": {
+          "switching": true,
+          "lighting": true,
+          "sockets": true,
+          "data": true,
+          "appliances": true,
+          "safety": true,
+          "cabinets": true,
+          "annotations": true
+        }
+      };
+
+      document.querySelector("#restoreButton").addEventListener("click", () => {
+        const current = localStorage.getItem(STORAGE_KEY);
+        if (current) {
+          localStorage.setItem(`${STORAGE_KEY}-before-manual-restore-${new Date().toISOString()}`, current);
+        }
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(RECOVERED_PROJECT));
+        document.querySelector("#status").textContent = "Backup hersteld. Open nu de planner.";
+      });
+    </script>
+  </body>
+</html>

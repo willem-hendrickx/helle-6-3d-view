@@ -1,0 +1,3911 @@
+{
+  "status": "ground_floor_opening_current_binding_workbench_ready_agent_side_not_mesh",
+  "purpose": "Fresh agent-side workbench derived from the current rollup only. It replaces stale backlog rows for the next CAD slot-binding pass and does not ask for user validation.",
+  "source_files": {
+    "rollup": "blender\\semantic_objects\\ground_floor_opening_current_readiness_rollup.json",
+    "search_packets": "blender\\semantic_objects\\ground_floor_opening_unresolved_slot_source_search_packets.json",
+    "pending_matrix": "blender\\semantic_objects\\ground_floor_opening_pending_slot_resolution_matrix.json",
+    "editable_schema": "blender\\semantic_objects\\ground_floor_opening_editable_component_schema.json",
+    "profile_review": "blender\\semantic_objects\\ground_floor_opening_profile_review_candidates.json",
+    "deeper_search_seeds": "blender\\semantic_objects\\ground_floor_opening_deeper_search_seeds.json"
+  },
+  "opening_count": 17,
+  "opening_with_tasks_count": 14,
+  "task_count": 41,
+  "task_counts_by_slot": {
+    "arch_geometry": 1,
+    "bay_subsegment_geometry": 1,
+    "header_or_lintel_height_m": 10,
+    "opening_height_m": 9,
+    "opening_width_m": 6,
+    "sill_height_m": 7,
+    "threshold_level_m": 6,
+    "threshold_or_sill_level_m": 1
+  },
+  "priority_counts": {
+    "P1": 32,
+    "P2": 9
+  },
+  "packet_counts": {
+    "with_deeper_search_seed": 11,
+    "with_source_packet": 30
+  },
+  "user_validation_needed_now_count": 0,
+  "mesh_ready_task_count": 0,
+  "tasks": [
+    {
+      "task_id": "Y02:header_or_lintel_height_m",
+      "legend_id": "Y02",
+      "label": "Raam Salon",
+      "opening_type": "window",
+      "slot": "header_or_lintel_height_m",
+      "slot_status": "pending",
+      "priority": "P2",
+      "known_metric_values": [
+        {
+          "slot": "opening_width_m",
+          "subrole": null,
+          "value_m": 0.95,
+          "source_ref_count": 3,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "opening_height_m",
+          "subrole": null,
+          "value_m": 2.3,
+          "source_ref_count": 2,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "glazing_subdivision",
+          "subrole": null,
+          "value_m": null,
+          "source_ref_count": 32,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "opening_height_m",
+          "subrole": "clear_opening_height",
+          "value_m": 2.3,
+          "source_ref_count": 2,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_packet_available": false,
+      "source_packet_status": null,
+      "source_pool_count": 0,
+      "source_pools": [],
+      "deeper_search_seed_available": true,
+      "deeper_search_seed_status": "deeper_search_seed_ready_agent_side_not_mesh",
+      "source_guidance_available": true,
+      "pending_actions": [
+        {
+          "slot": "header_or_lintel_height_m",
+          "proposal_status": "sill_header_pair_candidate_preserved_with_risk_not_bound_not_mesh",
+          "action": "agent_crosscheck_required_risk_flags_before_any_binding",
+          "risk_flags": [
+            "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+            "lower_limit_value_below_5cm_needs_level_reference_review",
+            "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold"
+          ],
+          "source_ref_count": 1,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "risk_flags": [
+        "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold",
+        "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+        "lower_limit_value_below_5cm_needs_level_reference_review"
+      ],
+      "next_agent_step": "use_deeper_search_seed_to_build_exact_original_CAD_source_packet",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y02:sill_height_m",
+      "legend_id": "Y02",
+      "label": "Raam Salon",
+      "opening_type": "window",
+      "slot": "sill_height_m",
+      "slot_status": "pending",
+      "priority": "P2",
+      "known_metric_values": [
+        {
+          "slot": "opening_width_m",
+          "subrole": null,
+          "value_m": 0.95,
+          "source_ref_count": 3,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "opening_height_m",
+          "subrole": null,
+          "value_m": 2.3,
+          "source_ref_count": 2,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "glazing_subdivision",
+          "subrole": null,
+          "value_m": null,
+          "source_ref_count": 32,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "opening_height_m",
+          "subrole": "clear_opening_height",
+          "value_m": 2.3,
+          "source_ref_count": 2,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_packet_available": false,
+      "source_packet_status": null,
+      "source_pool_count": 0,
+      "source_pools": [],
+      "deeper_search_seed_available": true,
+      "deeper_search_seed_status": "deeper_search_seed_ready_agent_side_not_mesh",
+      "source_guidance_available": true,
+      "pending_actions": [
+        {
+          "slot": "sill_height_m",
+          "proposal_status": "sill_header_pair_candidate_preserved_with_risk_not_bound_not_mesh",
+          "action": "agent_crosscheck_required_risk_flags_before_any_binding",
+          "risk_flags": [
+            "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+            "lower_limit_value_below_5cm_needs_level_reference_review",
+            "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold"
+          ],
+          "source_ref_count": 1,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "risk_flags": [
+        "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold",
+        "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+        "lower_limit_value_below_5cm_needs_level_reference_review"
+      ],
+      "next_agent_step": "use_deeper_search_seed_to_build_exact_original_CAD_source_packet",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y03:threshold_level_m",
+      "legend_id": "Y03",
+      "label": "schuifraam",
+      "opening_type": "sliding_glass_door",
+      "slot": "threshold_level_m",
+      "slot_status": "missing",
+      "priority": "P1",
+      "known_metric_values": [
+        {
+          "slot": "opening_width_m",
+          "subrole": null,
+          "value_m": 2.68,
+          "source_ref_count": 6,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "opening_height_m",
+          "subrole": null,
+          "value_m": 2.44,
+          "source_ref_count": 6,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "glazing_subdivision",
+          "subrole": null,
+          "value_m": null,
+          "source_ref_count": 10,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_packet_available": true,
+      "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+      "source_pool_count": 1,
+      "source_pools": [
+        {
+          "source_system": "vertical_slot_candidate_selector_sill_or_threshold_pool",
+          "source_status": "candidate_selector_ready_not_bound",
+          "candidate_count": 14,
+          "top_pair_count": 8,
+          "binding_permission": "ranked_pool_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "deeper_search_seed_available": false,
+      "deeper_search_seed_status": null,
+      "source_guidance_available": true,
+      "pending_actions": [],
+      "risk_flags": [],
+      "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y03:header_or_lintel_height_m",
+      "legend_id": "Y03",
+      "label": "schuifraam",
+      "opening_type": "sliding_glass_door",
+      "slot": "header_or_lintel_height_m",
+      "slot_status": "missing",
+      "priority": "P1",
+      "known_metric_values": [
+        {
+          "slot": "opening_width_m",
+          "subrole": null,
+          "value_m": 2.68,
+          "source_ref_count": 6,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "opening_height_m",
+          "subrole": null,
+          "value_m": 2.44,
+          "source_ref_count": 6,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "glazing_subdivision",
+          "subrole": null,
+          "value_m": null,
+          "source_ref_count": 10,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_packet_available": true,
+      "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+      "source_pool_count": 1,
+      "source_pools": [
+        {
+          "source_system": "vertical_slot_candidate_selector_header_pool",
+          "source_status": "candidate_selector_ready_not_bound",
+          "candidate_count": 9,
+          "top_pair_count": 8,
+          "binding_permission": "ranked_pool_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "deeper_search_seed_available": false,
+      "deeper_search_seed_status": null,
+      "source_guidance_available": true,
+      "pending_actions": [],
+      "risk_flags": [],
+      "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y04:opening_height_m",
+      "legend_id": "Y04",
+      "label": "Raam Hobbyruimte",
+      "opening_type": "window",
+      "slot": "opening_height_m",
+      "slot_status": "missing",
+      "priority": "P1",
+      "known_metric_values": [
+        {
+          "slot": "opening_width_m",
+          "subrole": null,
+          "value_m": 1.22,
+          "source_ref_count": 15,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "glazing_subdivision",
+          "subrole": null,
+          "value_m": null,
+          "source_ref_count": 53,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "opening_width_m",
+          "subrole": null,
+          "value_m": 1.22,
+          "source_ref_count": 12,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_packet_available": true,
+      "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+      "source_pool_count": 1,
+      "source_pools": [
+        {
+          "source_system": "component_dimension_crosscheck",
+          "source_status": "component_dimension_text_support_missing_needs_detail_or_line_geometry",
+          "candidate_count": null,
+          "top_pair_count": null,
+          "binding_permission": "component_height_is_evidence_not_binding",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "deeper_search_seed_available": false,
+      "deeper_search_seed_status": null,
+      "source_guidance_available": true,
+      "pending_actions": [],
+      "risk_flags": [],
+      "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y04:sill_height_m",
+      "legend_id": "Y04",
+      "label": "Raam Hobbyruimte",
+      "opening_type": "window",
+      "slot": "sill_height_m",
+      "slot_status": "missing",
+      "priority": "P1",
+      "known_metric_values": [
+        {
+          "slot": "opening_width_m",
+          "subrole": null,
+          "value_m": 1.22,
+          "source_ref_count": 15,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "glazing_subdivision",
+          "subrole": null,
+          "value_m": null,
+          "source_ref_count": 53,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "opening_width_m",
+          "subrole": null,
+          "value_m": 1.22,
+          "source_ref_count": 12,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_packet_available": true,
+      "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+      "source_pool_count": 1,
+      "source_pools": [
+        {
+          "source_system": "vertical_slot_candidate_selector_sill_or_threshold_pool",
+          "source_status": "candidate_selector_ready_not_bound",
+          "candidate_count": 15,
+          "top_pair_count": 8,
+          "binding_permission": "ranked_pool_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "deeper_search_seed_available": false,
+      "deeper_search_seed_status": null,
+      "source_guidance_available": true,
+      "pending_actions": [],
+      "risk_flags": [],
+      "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y04:header_or_lintel_height_m",
+      "legend_id": "Y04",
+      "label": "Raam Hobbyruimte",
+      "opening_type": "window",
+      "slot": "header_or_lintel_height_m",
+      "slot_status": "missing",
+      "priority": "P1",
+      "known_metric_values": [
+        {
+          "slot": "opening_width_m",
+          "subrole": null,
+          "value_m": 1.22,
+          "source_ref_count": 15,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "glazing_subdivision",
+          "subrole": null,
+          "value_m": null,
+          "source_ref_count": 53,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "opening_width_m",
+          "subrole": null,
+          "value_m": 1.22,
+          "source_ref_count": 12,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_packet_available": true,
+      "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+      "source_pool_count": 1,
+      "source_pools": [
+        {
+          "source_system": "vertical_slot_candidate_selector_header_pool",
+          "source_status": "candidate_selector_ready_not_bound",
+          "candidate_count": 11,
+          "top_pair_count": 8,
+          "binding_permission": "ranked_pool_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "deeper_search_seed_available": false,
+      "deeper_search_seed_status": null,
+      "source_guidance_available": true,
+      "pending_actions": [],
+      "risk_flags": [],
+      "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y05:arch_geometry",
+      "legend_id": "Y05",
+      "label": "boograam eetkamer",
+      "opening_type": "arched_window",
+      "slot": "arch_geometry",
+      "slot_status": "pending",
+      "priority": "P2",
+      "known_metric_values": [
+        {
+          "slot": "opening_width_m",
+          "subrole": null,
+          "value_m": 2.21,
+          "source_ref_count": 5,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "opening_height_m",
+          "subrole": "clear_opening_height",
+          "value_m": 2.66,
+          "source_ref_count": 2,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_packet_available": false,
+      "source_packet_status": null,
+      "source_pool_count": 0,
+      "source_pools": [],
+      "deeper_search_seed_available": true,
+      "deeper_search_seed_status": "deeper_search_seed_ready_agent_side_not_mesh",
+      "source_guidance_available": true,
+      "pending_actions": [
+        {
+          "slot": "arch_geometry",
+          "proposal_status": "source_cad_arch_geometry_candidate_ready_not_bound_not_mesh",
+          "action": "agent_can_prepare_subgeometry_binding_packet_from_exact_cad_refs",
+          "risk_flags": [],
+          "source_ref_count": 57,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "risk_flags": [],
+      "next_agent_step": "use_deeper_search_seed_to_build_exact_original_CAD_source_packet",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y05:threshold_or_sill_level_m",
+      "legend_id": "Y05",
+      "label": "boograam eetkamer",
+      "opening_type": "arched_window",
+      "slot": "threshold_or_sill_level_m",
+      "slot_status": "pending",
+      "priority": "P2",
+      "known_metric_values": [
+        {
+          "slot": "opening_width_m",
+          "subrole": null,
+          "value_m": 2.21,
+          "source_ref_count": 5,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "opening_height_m",
+          "subrole": "clear_opening_height",
+          "value_m": 2.66,
+          "source_ref_count": 2,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_packet_available": false,
+      "source_packet_status": null,
+      "source_pool_count": 0,
+      "source_pools": [],
+      "deeper_search_seed_available": true,
+      "deeper_search_seed_status": "deeper_search_seed_ready_agent_side_not_mesh",
+      "source_guidance_available": true,
+      "pending_actions": [
+        {
+          "slot": "threshold_or_sill_level_m",
+          "proposal_status": "sill_header_pair_candidate_preserved_with_risk_not_bound_not_mesh",
+          "action": "agent_crosscheck_required_risk_flags_before_any_binding",
+          "risk_flags": [
+            "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+            "lower_limit_value_below_5cm_needs_level_reference_review",
+            "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold",
+            "header_candidate_may_be_overall_or_storey_context"
+          ],
+          "source_ref_count": 1,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "risk_flags": [
+        "header_candidate_may_be_overall_or_storey_context",
+        "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold",
+        "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+        "lower_limit_value_below_5cm_needs_level_reference_review"
+      ],
+      "next_agent_step": "use_deeper_search_seed_to_build_exact_original_CAD_source_packet",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y06:opening_height_m",
+      "legend_id": "Y06",
+      "label": "deur inkomhal",
+      "opening_type": "interior_door",
+      "slot": "opening_height_m",
+      "slot_status": "missing",
+      "priority": "P1",
+      "known_metric_values": [
+        {
+          "slot": "opening_width_m",
+          "subrole": null,
+          "value_m": 1.4,
+          "source_ref_count": 4,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_packet_available": true,
+      "source_packet_status": "source_trace_context_available_but_metric_source_needs_deeper_cad_search",
+      "source_pool_count": 1,
+      "source_pools": [
+        {
+          "source_system": "plan_trace_context_for_deeper_cad_search",
+          "source_status": "plan_trace_subgeometry_preserved_not_narrowed_not_mesh",
+          "candidate_count": null,
+          "top_pair_count": null,
+          "binding_permission": "not_metric_authority_context_only",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "deeper_search_seed_available": false,
+      "deeper_search_seed_status": null,
+      "source_guidance_available": true,
+      "pending_actions": [],
+      "risk_flags": [],
+      "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y06:threshold_level_m",
+      "legend_id": "Y06",
+      "label": "deur inkomhal",
+      "opening_type": "interior_door",
+      "slot": "threshold_level_m",
+      "slot_status": "missing",
+      "priority": "P1",
+      "known_metric_values": [
+        {
+          "slot": "opening_width_m",
+          "subrole": null,
+          "value_m": 1.4,
+          "source_ref_count": 4,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_packet_available": true,
+      "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+      "source_pool_count": 1,
+      "source_pools": [
+        {
+          "source_system": "vertical_slot_candidate_selector_sill_or_threshold_pool",
+          "source_status": "candidate_selector_ready_not_bound",
+          "candidate_count": 6,
+          "top_pair_count": 8,
+          "binding_permission": "ranked_pool_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "deeper_search_seed_available": false,
+      "deeper_search_seed_status": null,
+      "source_guidance_available": true,
+      "pending_actions": [],
+      "risk_flags": [],
+      "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y07:opening_width_m",
+      "legend_id": "Y07",
+      "label": "deur WC1",
+      "opening_type": "interior_door",
+      "slot": "opening_width_m",
+      "slot_status": "missing",
+      "priority": "P1",
+      "known_metric_values": [],
+      "source_packet_available": true,
+      "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+      "source_pool_count": 1,
+      "source_pools": [
+        {
+          "source_system": "width_draft_gap_work_order",
+          "source_status": "width_pair_needs_dimension_text_or_detail_confirmation_not_bound",
+          "candidate_count": null,
+          "top_pair_count": null,
+          "binding_permission": "agent_crosscheck_required_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "deeper_search_seed_available": false,
+      "deeper_search_seed_status": null,
+      "source_guidance_available": true,
+      "pending_actions": [],
+      "risk_flags": [],
+      "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y07:opening_height_m",
+      "legend_id": "Y07",
+      "label": "deur WC1",
+      "opening_type": "interior_door",
+      "slot": "opening_height_m",
+      "slot_status": "missing",
+      "priority": "P1",
+      "known_metric_values": [],
+      "source_packet_available": true,
+      "source_packet_status": "source_trace_context_available_but_metric_source_needs_deeper_cad_search",
+      "source_pool_count": 1,
+      "source_pools": [
+        {
+          "source_system": "plan_trace_context_for_deeper_cad_search",
+          "source_status": "plan_trace_subgeometry_preserved_not_narrowed_not_mesh",
+          "candidate_count": null,
+          "top_pair_count": null,
+          "binding_permission": "not_metric_authority_context_only",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "deeper_search_seed_available": false,
+      "deeper_search_seed_status": null,
+      "source_guidance_available": true,
+      "pending_actions": [],
+      "risk_flags": [],
+      "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y07:threshold_level_m",
+      "legend_id": "Y07",
+      "label": "deur WC1",
+      "opening_type": "interior_door",
+      "slot": "threshold_level_m",
+      "slot_status": "missing",
+      "priority": "P1",
+      "known_metric_values": [],
+      "source_packet_available": true,
+      "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+      "source_pool_count": 1,
+      "source_pools": [
+        {
+          "source_system": "vertical_slot_candidate_selector_sill_or_threshold_pool",
+          "source_status": "candidate_selector_ready_not_bound",
+          "candidate_count": 5,
+          "top_pair_count": 5,
+          "binding_permission": "ranked_pool_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "deeper_search_seed_available": false,
+      "deeper_search_seed_status": null,
+      "source_guidance_available": true,
+      "pending_actions": [],
+      "risk_flags": [],
+      "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y08:opening_width_m",
+      "legend_id": "Y08",
+      "label": "voordeur",
+      "opening_type": "exterior_door",
+      "slot": "opening_width_m",
+      "slot_status": "missing",
+      "priority": "P1",
+      "known_metric_values": [
+        {
+          "slot": "opening_height_m",
+          "subrole": "clear_opening_height",
+          "value_m": 2.1,
+          "source_ref_count": 2,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_packet_available": true,
+      "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+      "source_pool_count": 1,
+      "source_pools": [
+        {
+          "source_system": "width_draft_gap_work_order",
+          "source_status": "subpart_width_pair_preserved_not_overall_opening_width",
+          "candidate_count": null,
+          "top_pair_count": null,
+          "binding_permission": "agent_crosscheck_required_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "deeper_search_seed_available": false,
+      "deeper_search_seed_status": null,
+      "source_guidance_available": true,
+      "pending_actions": [],
+      "risk_flags": [],
+      "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y08:header_or_lintel_height_m",
+      "legend_id": "Y08",
+      "label": "voordeur",
+      "opening_type": "exterior_door",
+      "slot": "header_or_lintel_height_m",
+      "slot_status": "pending",
+      "priority": "P2",
+      "known_metric_values": [
+        {
+          "slot": "opening_height_m",
+          "subrole": "clear_opening_height",
+          "value_m": 2.1,
+          "source_ref_count": 2,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_packet_available": false,
+      "source_packet_status": null,
+      "source_pool_count": 0,
+      "source_pools": [],
+      "deeper_search_seed_available": true,
+      "deeper_search_seed_status": "deeper_search_seed_ready_agent_side_not_mesh",
+      "source_guidance_available": true,
+      "pending_actions": [
+        {
+          "slot": "header_or_lintel_height_m",
+          "proposal_status": "sill_header_pair_candidate_preserved_with_risk_not_bound_not_mesh",
+          "action": "agent_crosscheck_required_risk_flags_before_any_binding",
+          "risk_flags": [
+            "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+            "lower_limit_value_below_5cm_needs_level_reference_review",
+            "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold"
+          ],
+          "source_ref_count": 1,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "risk_flags": [
+        "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold",
+        "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+        "lower_limit_value_below_5cm_needs_level_reference_review"
+      ],
+      "next_agent_step": "use_deeper_search_seed_to_build_exact_original_CAD_source_packet",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y08:threshold_level_m",
+      "legend_id": "Y08",
+      "label": "voordeur",
+      "opening_type": "exterior_door",
+      "slot": "threshold_level_m",
+      "slot_status": "pending",
+      "priority": "P2",
+      "known_metric_values": [
+        {
+          "slot": "opening_height_m",
+          "subrole": "clear_opening_height",
+          "value_m": 2.1,
+          "source_ref_count": 2,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_packet_available": false,
+      "source_packet_status": null,
+      "source_pool_count": 0,
+      "source_pools": [],
+      "deeper_search_seed_available": true,
+      "deeper_search_seed_status": "deeper_search_seed_ready_agent_side_not_mesh",
+      "source_guidance_available": true,
+      "pending_actions": [
+        {
+          "slot": "threshold_level_m",
+          "proposal_status": "sill_header_pair_candidate_preserved_with_risk_not_bound_not_mesh",
+          "action": "agent_crosscheck_required_risk_flags_before_any_binding",
+          "risk_flags": [
+            "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+            "lower_limit_value_below_5cm_needs_level_reference_review",
+            "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold"
+          ],
+          "source_ref_count": 1,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "risk_flags": [
+        "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold",
+        "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+        "lower_limit_value_below_5cm_needs_level_reference_review"
+      ],
+      "next_agent_step": "use_deeper_search_seed_to_build_exact_original_CAD_source_packet",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y09:opening_height_m",
+      "legend_id": "Y09",
+      "label": "raam WC1",
+      "opening_type": "window",
+      "slot": "opening_height_m",
+      "slot_status": "missing",
+      "priority": "P1",
+      "known_metric_values": [
+        {
+          "slot": "glazing_subdivision",
+          "subrole": null,
+          "value_m": null,
+          "source_ref_count": 26,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "opening_width_m",
+          "subrole": null,
+          "value_m": 0.816,
+          "source_ref_count": 4,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_packet_available": true,
+      "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+      "source_pool_count": 2,
+      "source_pools": [
+        {
+          "source_system": "component_dimension_crosscheck",
+          "source_status": "not_a_ready_component_packet",
+          "candidate_count": null,
+          "top_pair_count": null,
+          "binding_permission": "component_height_is_evidence_not_binding",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "source_system": "dimension_line_slot_candidates",
+          "source_status": "candidate_text_line_pairs_not_bound",
+          "candidate_count": 3,
+          "top_pair_count": null,
+          "binding_permission": "agent_crosscheck_required_not_bound",
+          "mesh_permission": "blocked_metadata_only"
+        }
+      ],
+      "deeper_search_seed_available": false,
+      "deeper_search_seed_status": null,
+      "source_guidance_available": true,
+      "pending_actions": [],
+      "risk_flags": [],
+      "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y09:sill_height_m",
+      "legend_id": "Y09",
+      "label": "raam WC1",
+      "opening_type": "window",
+      "slot": "sill_height_m",
+      "slot_status": "missing",
+      "priority": "P1",
+      "known_metric_values": [
+        {
+          "slot": "glazing_subdivision",
+          "subrole": null,
+          "value_m": null,
+          "source_ref_count": 26,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "opening_width_m",
+          "subrole": null,
+          "value_m": 0.816,
+          "source_ref_count": 4,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_packet_available": true,
+      "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+      "source_pool_count": 2,
+      "source_pools": [
+        {
+          "source_system": "vertical_slot_candidate_selector_sill_or_threshold_pool",
+          "source_status": "candidate_selector_ready_not_bound",
+          "candidate_count": 19,
+          "top_pair_count": 8,
+          "binding_permission": "ranked_pool_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "source_system": "dimension_line_slot_candidates",
+          "source_status": "candidate_text_line_pairs_not_bound",
+          "candidate_count": 3,
+          "top_pair_count": null,
+          "binding_permission": "agent_crosscheck_required_not_bound",
+          "mesh_permission": "blocked_metadata_only"
+        }
+      ],
+      "deeper_search_seed_available": false,
+      "deeper_search_seed_status": null,
+      "source_guidance_available": true,
+      "pending_actions": [],
+      "risk_flags": [],
+      "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y09:header_or_lintel_height_m",
+      "legend_id": "Y09",
+      "label": "raam WC1",
+      "opening_type": "window",
+      "slot": "header_or_lintel_height_m",
+      "slot_status": "missing",
+      "priority": "P1",
+      "known_metric_values": [
+        {
+          "slot": "glazing_subdivision",
+          "subrole": null,
+          "value_m": null,
+          "source_ref_count": 26,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "opening_width_m",
+          "subrole": null,
+          "value_m": 0.816,
+          "source_ref_count": 4,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_packet_available": true,
+      "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+      "source_pool_count": 2,
+      "source_pools": [
+        {
+          "source_system": "vertical_slot_candidate_selector_header_pool",
+          "source_status": "candidate_selector_ready_not_bound",
+          "candidate_count": 11,
+          "top_pair_count": 8,
+          "binding_permission": "ranked_pool_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "source_system": "dimension_line_slot_candidates",
+          "source_status": "candidate_text_line_pairs_not_bound",
+          "candidate_count": 3,
+          "top_pair_count": null,
+          "binding_permission": "agent_crosscheck_required_not_bound",
+          "mesh_permission": "blocked_metadata_only"
+        }
+      ],
+      "deeper_search_seed_available": false,
+      "deeper_search_seed_status": null,
+      "source_guidance_available": true,
+      "pending_actions": [],
+      "risk_flags": [],
+      "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y11:opening_width_m",
+      "legend_id": "Y11",
+      "label": "raam berging",
+      "opening_type": "window",
+      "slot": "opening_width_m",
+      "slot_status": "missing",
+      "priority": "P1",
+      "known_metric_values": [
+        {
+          "slot": "glazing_subdivision",
+          "subrole": null,
+          "value_m": null,
+          "source_ref_count": 25,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_packet_available": true,
+      "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+      "source_pool_count": 1,
+      "source_pools": [
+        {
+          "source_system": "width_draft_gap_work_order",
+          "source_status": "coordinate_only_width_pair_preserved_needs_dimension_text_or_detail_review",
+          "candidate_count": null,
+          "top_pair_count": null,
+          "binding_permission": "agent_crosscheck_required_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "deeper_search_seed_available": false,
+      "deeper_search_seed_status": null,
+      "source_guidance_available": true,
+      "pending_actions": [],
+      "risk_flags": [],
+      "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y11:opening_height_m",
+      "legend_id": "Y11",
+      "label": "raam berging",
+      "opening_type": "window",
+      "slot": "opening_height_m",
+      "slot_status": "missing",
+      "priority": "P1",
+      "known_metric_values": [
+        {
+          "slot": "glazing_subdivision",
+          "subrole": null,
+          "value_m": null,
+          "source_ref_count": 25,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_packet_available": true,
+      "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+      "source_pool_count": 1,
+      "source_pools": [
+        {
+          "source_system": "component_dimension_crosscheck",
+          "source_status": "not_a_ready_component_packet",
+          "candidate_count": null,
+          "top_pair_count": null,
+          "binding_permission": "component_height_is_evidence_not_binding",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "deeper_search_seed_available": false,
+      "deeper_search_seed_status": null,
+      "source_guidance_available": true,
+      "pending_actions": [],
+      "risk_flags": [],
+      "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y11:sill_height_m",
+      "legend_id": "Y11",
+      "label": "raam berging",
+      "opening_type": "window",
+      "slot": "sill_height_m",
+      "slot_status": "missing",
+      "priority": "P1",
+      "known_metric_values": [
+        {
+          "slot": "glazing_subdivision",
+          "subrole": null,
+          "value_m": null,
+          "source_ref_count": 25,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_packet_available": true,
+      "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+      "source_pool_count": 1,
+      "source_pools": [
+        {
+          "source_system": "vertical_slot_candidate_selector_sill_or_threshold_pool",
+          "source_status": "candidate_selector_ready_not_bound",
+          "candidate_count": 17,
+          "top_pair_count": 8,
+          "binding_permission": "ranked_pool_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "deeper_search_seed_available": false,
+      "deeper_search_seed_status": null,
+      "source_guidance_available": true,
+      "pending_actions": [],
+      "risk_flags": [],
+      "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y11:header_or_lintel_height_m",
+      "legend_id": "Y11",
+      "label": "raam berging",
+      "opening_type": "window",
+      "slot": "header_or_lintel_height_m",
+      "slot_status": "missing",
+      "priority": "P1",
+      "known_metric_values": [
+        {
+          "slot": "glazing_subdivision",
+          "subrole": null,
+          "value_m": null,
+          "source_ref_count": 25,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_packet_available": true,
+      "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+      "source_pool_count": 1,
+      "source_pools": [
+        {
+          "source_system": "vertical_slot_candidate_selector_header_pool",
+          "source_status": "candidate_selector_ready_not_bound",
+          "candidate_count": 11,
+          "top_pair_count": 8,
+          "binding_permission": "ranked_pool_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "deeper_search_seed_available": false,
+      "deeper_search_seed_status": null,
+      "source_guidance_available": true,
+      "pending_actions": [],
+      "risk_flags": [],
+      "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y12:opening_height_m",
+      "legend_id": "Y12",
+      "label": "raam keuken",
+      "opening_type": "window",
+      "slot": "opening_height_m",
+      "slot_status": "missing",
+      "priority": "P1",
+      "known_metric_values": [],
+      "source_packet_available": true,
+      "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+      "source_pool_count": 1,
+      "source_pools": [
+        {
+          "source_system": "component_dimension_crosscheck",
+          "source_status": "component_dimension_text_support_missing_needs_detail_or_line_geometry",
+          "candidate_count": null,
+          "top_pair_count": null,
+          "binding_permission": "component_height_is_evidence_not_binding",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "deeper_search_seed_available": false,
+      "deeper_search_seed_status": null,
+      "source_guidance_available": true,
+      "pending_actions": [],
+      "risk_flags": [],
+      "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y12:sill_height_m",
+      "legend_id": "Y12",
+      "label": "raam keuken",
+      "opening_type": "window",
+      "slot": "sill_height_m",
+      "slot_status": "missing",
+      "priority": "P1",
+      "known_metric_values": [],
+      "source_packet_available": true,
+      "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+      "source_pool_count": 1,
+      "source_pools": [
+        {
+          "source_system": "vertical_slot_candidate_selector_sill_or_threshold_pool",
+          "source_status": "candidate_selector_ready_not_bound",
+          "candidate_count": 13,
+          "top_pair_count": 8,
+          "binding_permission": "ranked_pool_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "deeper_search_seed_available": false,
+      "deeper_search_seed_status": null,
+      "source_guidance_available": true,
+      "pending_actions": [],
+      "risk_flags": [],
+      "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y12:header_or_lintel_height_m",
+      "legend_id": "Y12",
+      "label": "raam keuken",
+      "opening_type": "window",
+      "slot": "header_or_lintel_height_m",
+      "slot_status": "missing",
+      "priority": "P1",
+      "known_metric_values": [],
+      "source_packet_available": true,
+      "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+      "source_pool_count": 1,
+      "source_pools": [
+        {
+          "source_system": "vertical_slot_candidate_selector_header_pool",
+          "source_status": "candidate_selector_ready_not_bound",
+          "candidate_count": 10,
+          "top_pair_count": 8,
+          "binding_permission": "ranked_pool_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "deeper_search_seed_available": false,
+      "deeper_search_seed_status": null,
+      "source_guidance_available": true,
+      "pending_actions": [],
+      "risk_flags": [],
+      "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y12:opening_width_m",
+      "legend_id": "Y12",
+      "label": "raam keuken",
+      "opening_type": "window",
+      "slot": "opening_width_m",
+      "slot_status": "pending",
+      "priority": "P1",
+      "known_metric_values": [],
+      "source_packet_available": false,
+      "source_packet_status": null,
+      "source_pool_count": 0,
+      "source_pools": [],
+      "deeper_search_seed_available": true,
+      "deeper_search_seed_status": "deeper_search_seed_ready_agent_side_not_mesh",
+      "source_guidance_available": true,
+      "pending_actions": [
+        {
+          "slot": "opening_width_m",
+          "proposal_status": "eligible_not_final_width_draft_slot_not_bound",
+          "action": "agent_can_crosscheck_width_pair_against_exact_plan_and_elevation_before_binding",
+          "risk_flags": [],
+          "source_ref_count": 2,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "risk_flags": [],
+      "next_agent_step": "use_deeper_search_seed_to_build_exact_original_CAD_source_packet",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y13:opening_height_m",
+      "legend_id": "Y13",
+      "label": "raam bureau Oost",
+      "opening_type": "window",
+      "slot": "opening_height_m",
+      "slot_status": "missing",
+      "priority": "P1",
+      "known_metric_values": [
+        {
+          "slot": "opening_width_m",
+          "subrole": null,
+          "value_m": 1.22,
+          "source_ref_count": 12,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_packet_available": true,
+      "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+      "source_pool_count": 1,
+      "source_pools": [
+        {
+          "source_system": "component_dimension_crosscheck",
+          "source_status": "component_dimension_text_support_missing_needs_detail_or_line_geometry",
+          "candidate_count": null,
+          "top_pair_count": null,
+          "binding_permission": "component_height_is_evidence_not_binding",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "deeper_search_seed_available": false,
+      "deeper_search_seed_status": null,
+      "source_guidance_available": true,
+      "pending_actions": [],
+      "risk_flags": [],
+      "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y13:sill_height_m",
+      "legend_id": "Y13",
+      "label": "raam bureau Oost",
+      "opening_type": "window",
+      "slot": "sill_height_m",
+      "slot_status": "missing",
+      "priority": "P1",
+      "known_metric_values": [
+        {
+          "slot": "opening_width_m",
+          "subrole": null,
+          "value_m": 1.22,
+          "source_ref_count": 12,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_packet_available": true,
+      "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+      "source_pool_count": 1,
+      "source_pools": [
+        {
+          "source_system": "vertical_slot_candidate_selector_sill_or_threshold_pool",
+          "source_status": "candidate_selector_ready_not_bound",
+          "candidate_count": 17,
+          "top_pair_count": 8,
+          "binding_permission": "ranked_pool_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "deeper_search_seed_available": false,
+      "deeper_search_seed_status": null,
+      "source_guidance_available": true,
+      "pending_actions": [],
+      "risk_flags": [],
+      "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y13:header_or_lintel_height_m",
+      "legend_id": "Y13",
+      "label": "raam bureau Oost",
+      "opening_type": "window",
+      "slot": "header_or_lintel_height_m",
+      "slot_status": "missing",
+      "priority": "P1",
+      "known_metric_values": [
+        {
+          "slot": "opening_width_m",
+          "subrole": null,
+          "value_m": 1.22,
+          "source_ref_count": 12,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_packet_available": true,
+      "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+      "source_pool_count": 1,
+      "source_pools": [
+        {
+          "source_system": "vertical_slot_candidate_selector_header_pool",
+          "source_status": "candidate_selector_ready_not_bound",
+          "candidate_count": 12,
+          "top_pair_count": 8,
+          "binding_permission": "ranked_pool_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "deeper_search_seed_available": false,
+      "deeper_search_seed_status": null,
+      "source_guidance_available": true,
+      "pending_actions": [],
+      "risk_flags": [],
+      "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y14:opening_width_m",
+      "legend_id": "Y14",
+      "label": "deur bureau",
+      "opening_type": "interior_door",
+      "slot": "opening_width_m",
+      "slot_status": "missing",
+      "priority": "P1",
+      "known_metric_values": [],
+      "source_packet_available": true,
+      "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+      "source_pool_count": 1,
+      "source_pools": [
+        {
+          "source_system": "width_draft_gap_work_order",
+          "source_status": "coordinate_only_width_pair_preserved_needs_dimension_text_or_detail_review",
+          "candidate_count": null,
+          "top_pair_count": null,
+          "binding_permission": "agent_crosscheck_required_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "deeper_search_seed_available": false,
+      "deeper_search_seed_status": null,
+      "source_guidance_available": true,
+      "pending_actions": [],
+      "risk_flags": [],
+      "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y14:opening_height_m",
+      "legend_id": "Y14",
+      "label": "deur bureau",
+      "opening_type": "interior_door",
+      "slot": "opening_height_m",
+      "slot_status": "missing",
+      "priority": "P1",
+      "known_metric_values": [],
+      "source_packet_available": true,
+      "source_packet_status": "source_trace_context_available_but_metric_source_needs_deeper_cad_search",
+      "source_pool_count": 1,
+      "source_pools": [
+        {
+          "source_system": "plan_trace_context_for_deeper_cad_search",
+          "source_status": "plan_trace_subgeometry_preserved_not_narrowed_not_mesh",
+          "candidate_count": null,
+          "top_pair_count": null,
+          "binding_permission": "not_metric_authority_context_only",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "deeper_search_seed_available": false,
+      "deeper_search_seed_status": null,
+      "source_guidance_available": true,
+      "pending_actions": [],
+      "risk_flags": [],
+      "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y14:threshold_level_m",
+      "legend_id": "Y14",
+      "label": "deur bureau",
+      "opening_type": "interior_door",
+      "slot": "threshold_level_m",
+      "slot_status": "missing",
+      "priority": "P1",
+      "known_metric_values": [],
+      "source_packet_available": true,
+      "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+      "source_pool_count": 1,
+      "source_pools": [
+        {
+          "source_system": "vertical_slot_candidate_selector_sill_or_threshold_pool",
+          "source_status": "candidate_selector_ready_not_bound",
+          "candidate_count": 2,
+          "top_pair_count": 2,
+          "binding_permission": "ranked_pool_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "deeper_search_seed_available": false,
+      "deeper_search_seed_status": null,
+      "source_guidance_available": true,
+      "pending_actions": [],
+      "risk_flags": [],
+      "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y15:opening_height_m",
+      "legend_id": "Y15",
+      "label": "raam bureau Zuid",
+      "opening_type": "window",
+      "slot": "opening_height_m",
+      "slot_status": "missing",
+      "priority": "P1",
+      "known_metric_values": [],
+      "source_packet_available": true,
+      "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+      "source_pool_count": 1,
+      "source_pools": [
+        {
+          "source_system": "component_dimension_crosscheck",
+          "source_status": "component_height_close_to_cad_dimension_candidate_not_bound",
+          "candidate_count": null,
+          "top_pair_count": null,
+          "binding_permission": "component_height_is_evidence_not_binding",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "deeper_search_seed_available": false,
+      "deeper_search_seed_status": null,
+      "source_guidance_available": true,
+      "pending_actions": [],
+      "risk_flags": [],
+      "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y15:sill_height_m",
+      "legend_id": "Y15",
+      "label": "raam bureau Zuid",
+      "opening_type": "window",
+      "slot": "sill_height_m",
+      "slot_status": "missing",
+      "priority": "P1",
+      "known_metric_values": [],
+      "source_packet_available": true,
+      "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+      "source_pool_count": 1,
+      "source_pools": [
+        {
+          "source_system": "vertical_slot_candidate_selector_sill_or_threshold_pool",
+          "source_status": "candidate_selector_ready_not_bound",
+          "candidate_count": 13,
+          "top_pair_count": 8,
+          "binding_permission": "ranked_pool_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "deeper_search_seed_available": false,
+      "deeper_search_seed_status": null,
+      "source_guidance_available": true,
+      "pending_actions": [],
+      "risk_flags": [],
+      "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y15:header_or_lintel_height_m",
+      "legend_id": "Y15",
+      "label": "raam bureau Zuid",
+      "opening_type": "window",
+      "slot": "header_or_lintel_height_m",
+      "slot_status": "missing",
+      "priority": "P1",
+      "known_metric_values": [],
+      "source_packet_available": true,
+      "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+      "source_pool_count": 1,
+      "source_pools": [
+        {
+          "source_system": "vertical_slot_candidate_selector_header_pool",
+          "source_status": "candidate_selector_ready_not_bound",
+          "candidate_count": 10,
+          "top_pair_count": 8,
+          "binding_permission": "ranked_pool_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "deeper_search_seed_available": false,
+      "deeper_search_seed_status": null,
+      "source_guidance_available": true,
+      "pending_actions": [],
+      "risk_flags": [],
+      "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y15:opening_width_m",
+      "legend_id": "Y15",
+      "label": "raam bureau Zuid",
+      "opening_type": "window",
+      "slot": "opening_width_m",
+      "slot_status": "pending",
+      "priority": "P1",
+      "known_metric_values": [],
+      "source_packet_available": false,
+      "source_packet_status": null,
+      "source_pool_count": 0,
+      "source_pools": [],
+      "deeper_search_seed_available": true,
+      "deeper_search_seed_status": "deeper_search_seed_ready_agent_side_not_mesh",
+      "source_guidance_available": true,
+      "pending_actions": [
+        {
+          "slot": "opening_width_m",
+          "proposal_status": "eligible_not_final_width_draft_slot_not_bound",
+          "action": "agent_can_crosscheck_width_pair_against_exact_plan_and_elevation_before_binding",
+          "risk_flags": [],
+          "source_ref_count": 2,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "risk_flags": [],
+      "next_agent_step": "use_deeper_search_seed_to_build_exact_original_CAD_source_packet",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y17:bay_subsegment_geometry",
+      "legend_id": "Y17",
+      "label": "erker inclusief raamdeur",
+      "opening_type": "bay_window_group_with_operable_door",
+      "slot": "bay_subsegment_geometry",
+      "slot_status": "pending",
+      "priority": "P2",
+      "known_metric_values": [
+        {
+          "slot": "bay_subsegment_geometry",
+          "subrole": null,
+          "value_m": null,
+          "source_ref_count": 56,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "opening_width_m",
+          "subrole": null,
+          "value_m": 3.2501,
+          "source_ref_count": 13,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "opening_height_m",
+          "subrole": "clear_opening_height",
+          "value_m": 2.55,
+          "source_ref_count": 2,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_packet_available": false,
+      "source_packet_status": null,
+      "source_pool_count": 0,
+      "source_pools": [],
+      "deeper_search_seed_available": true,
+      "deeper_search_seed_status": "deeper_search_seed_ready_agent_side_not_mesh",
+      "source_guidance_available": true,
+      "pending_actions": [
+        {
+          "slot": "bay_subsegment_geometry",
+          "proposal_status": "source_cad_bay_subsegment_geometry_candidate_ready_not_bound_not_mesh",
+          "action": "agent_can_prepare_subgeometry_binding_packet_from_exact_cad_refs",
+          "risk_flags": [],
+          "source_ref_count": 56,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "risk_flags": [],
+      "next_agent_step": "use_deeper_search_seed_to_build_exact_original_CAD_source_packet",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y17:header_or_lintel_height_m",
+      "legend_id": "Y17",
+      "label": "erker inclusief raamdeur",
+      "opening_type": "bay_window_group_with_operable_door",
+      "slot": "header_or_lintel_height_m",
+      "slot_status": "pending",
+      "priority": "P2",
+      "known_metric_values": [
+        {
+          "slot": "bay_subsegment_geometry",
+          "subrole": null,
+          "value_m": null,
+          "source_ref_count": 56,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "opening_width_m",
+          "subrole": null,
+          "value_m": 3.2501,
+          "source_ref_count": 13,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "opening_height_m",
+          "subrole": "clear_opening_height",
+          "value_m": 2.55,
+          "source_ref_count": 2,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_packet_available": false,
+      "source_packet_status": null,
+      "source_pool_count": 0,
+      "source_pools": [],
+      "deeper_search_seed_available": true,
+      "deeper_search_seed_status": "deeper_search_seed_ready_agent_side_not_mesh",
+      "source_guidance_available": true,
+      "pending_actions": [
+        {
+          "slot": "header_or_lintel_height_m",
+          "proposal_status": "sill_header_pair_candidate_preserved_with_risk_not_bound_not_mesh",
+          "action": "agent_crosscheck_required_risk_flags_before_any_binding",
+          "risk_flags": [
+            "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold",
+            "header_candidate_may_be_overall_or_storey_context"
+          ],
+          "source_ref_count": 1,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "risk_flags": [
+        "header_candidate_may_be_overall_or_storey_context",
+        "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold"
+      ],
+      "next_agent_step": "use_deeper_search_seed_to_build_exact_original_CAD_source_packet",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "task_id": "Y17:threshold_level_m",
+      "legend_id": "Y17",
+      "label": "erker inclusief raamdeur",
+      "opening_type": "bay_window_group_with_operable_door",
+      "slot": "threshold_level_m",
+      "slot_status": "pending",
+      "priority": "P2",
+      "known_metric_values": [
+        {
+          "slot": "bay_subsegment_geometry",
+          "subrole": null,
+          "value_m": null,
+          "source_ref_count": 56,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "opening_width_m",
+          "subrole": null,
+          "value_m": 3.2501,
+          "source_ref_count": 13,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "opening_height_m",
+          "subrole": "clear_opening_height",
+          "value_m": 2.55,
+          "source_ref_count": 2,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_packet_available": false,
+      "source_packet_status": null,
+      "source_pool_count": 0,
+      "source_pools": [],
+      "deeper_search_seed_available": true,
+      "deeper_search_seed_status": "deeper_search_seed_ready_agent_side_not_mesh",
+      "source_guidance_available": true,
+      "pending_actions": [
+        {
+          "slot": "threshold_level_m",
+          "proposal_status": "sill_header_pair_candidate_preserved_with_risk_not_bound_not_mesh",
+          "action": "agent_crosscheck_required_risk_flags_before_any_binding",
+          "risk_flags": [
+            "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold",
+            "header_candidate_may_be_overall_or_storey_context"
+          ],
+          "source_ref_count": 1,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "risk_flags": [
+        "header_candidate_may_be_overall_or_storey_context",
+        "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold"
+      ],
+      "next_agent_step": "use_deeper_search_seed_to_build_exact_original_CAD_source_packet",
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_work_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    }
+  ],
+  "objects": [
+    {
+      "legend_id": "Y01",
+      "label": "boograam achtergevel / panoramisch raam",
+      "opening_type": "fixed_or_operable_window",
+      "next_agent_action": "promote_to_final_slot_binding_review_before_mesh",
+      "task_count": 0,
+      "tasks": [],
+      "source_bound_slots": [
+        "arch_geometry",
+        "glazing_subdivision",
+        "header_or_lintel_height_m",
+        "opening_height_m",
+        "opening_width_m",
+        "sill_height_m"
+      ],
+      "editable_component_slot_count": 12,
+      "profile_review_status": "source_bound_profile_candidate_not_final_not_mesh",
+      "user_validation_needed_now": false,
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "legend_id": "Y02",
+      "label": "Raam Salon",
+      "opening_type": "window",
+      "next_agent_action": "resolve_pending_slots_and_risk_flags_before_mesh",
+      "task_count": 2,
+      "tasks": [
+        {
+          "task_id": "Y02:header_or_lintel_height_m",
+          "legend_id": "Y02",
+          "label": "Raam Salon",
+          "opening_type": "window",
+          "slot": "header_or_lintel_height_m",
+          "slot_status": "pending",
+          "priority": "P2",
+          "known_metric_values": [
+            {
+              "slot": "opening_width_m",
+              "subrole": null,
+              "value_m": 0.95,
+              "source_ref_count": 3,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "slot": "opening_height_m",
+              "subrole": null,
+              "value_m": 2.3,
+              "source_ref_count": 2,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "slot": "glazing_subdivision",
+              "subrole": null,
+              "value_m": null,
+              "source_ref_count": 32,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "slot": "opening_height_m",
+              "subrole": "clear_opening_height",
+              "value_m": 2.3,
+              "source_ref_count": 2,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "source_packet_available": false,
+          "source_packet_status": null,
+          "source_pool_count": 0,
+          "source_pools": [],
+          "deeper_search_seed_available": true,
+          "deeper_search_seed_status": "deeper_search_seed_ready_agent_side_not_mesh",
+          "source_guidance_available": true,
+          "pending_actions": [
+            {
+              "slot": "header_or_lintel_height_m",
+              "proposal_status": "sill_header_pair_candidate_preserved_with_risk_not_bound_not_mesh",
+              "action": "agent_crosscheck_required_risk_flags_before_any_binding",
+              "risk_flags": [
+                "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+                "lower_limit_value_below_5cm_needs_level_reference_review",
+                "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold"
+              ],
+              "source_ref_count": 1,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "risk_flags": [
+            "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold",
+            "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+            "lower_limit_value_below_5cm_needs_level_reference_review"
+          ],
+          "next_agent_step": "use_deeper_search_seed_to_build_exact_original_CAD_source_packet",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "task_id": "Y02:sill_height_m",
+          "legend_id": "Y02",
+          "label": "Raam Salon",
+          "opening_type": "window",
+          "slot": "sill_height_m",
+          "slot_status": "pending",
+          "priority": "P2",
+          "known_metric_values": [
+            {
+              "slot": "opening_width_m",
+              "subrole": null,
+              "value_m": 0.95,
+              "source_ref_count": 3,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "slot": "opening_height_m",
+              "subrole": null,
+              "value_m": 2.3,
+              "source_ref_count": 2,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "slot": "glazing_subdivision",
+              "subrole": null,
+              "value_m": null,
+              "source_ref_count": 32,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "slot": "opening_height_m",
+              "subrole": "clear_opening_height",
+              "value_m": 2.3,
+              "source_ref_count": 2,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "source_packet_available": false,
+          "source_packet_status": null,
+          "source_pool_count": 0,
+          "source_pools": [],
+          "deeper_search_seed_available": true,
+          "deeper_search_seed_status": "deeper_search_seed_ready_agent_side_not_mesh",
+          "source_guidance_available": true,
+          "pending_actions": [
+            {
+              "slot": "sill_height_m",
+              "proposal_status": "sill_header_pair_candidate_preserved_with_risk_not_bound_not_mesh",
+              "action": "agent_crosscheck_required_risk_flags_before_any_binding",
+              "risk_flags": [
+                "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+                "lower_limit_value_below_5cm_needs_level_reference_review",
+                "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold"
+              ],
+              "source_ref_count": 1,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "risk_flags": [
+            "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold",
+            "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+            "lower_limit_value_below_5cm_needs_level_reference_review"
+          ],
+          "next_agent_step": "use_deeper_search_seed_to_build_exact_original_CAD_source_packet",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_bound_slots": [
+        "glazing_subdivision",
+        "opening_height_m",
+        "opening_width_m"
+      ],
+      "editable_component_slot_count": 8,
+      "profile_review_status": null,
+      "user_validation_needed_now": false,
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "legend_id": "Y03",
+      "label": "schuifraam",
+      "opening_type": "sliding_glass_door",
+      "next_agent_action": "bind_missing_slots_from_CAD_before_mesh",
+      "task_count": 2,
+      "tasks": [
+        {
+          "task_id": "Y03:threshold_level_m",
+          "legend_id": "Y03",
+          "label": "schuifraam",
+          "opening_type": "sliding_glass_door",
+          "slot": "threshold_level_m",
+          "slot_status": "missing",
+          "priority": "P1",
+          "known_metric_values": [
+            {
+              "slot": "opening_width_m",
+              "subrole": null,
+              "value_m": 2.68,
+              "source_ref_count": 6,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "slot": "opening_height_m",
+              "subrole": null,
+              "value_m": 2.44,
+              "source_ref_count": 6,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "slot": "glazing_subdivision",
+              "subrole": null,
+              "value_m": null,
+              "source_ref_count": 10,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "source_packet_available": true,
+          "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+          "source_pool_count": 1,
+          "source_pools": [
+            {
+              "source_system": "vertical_slot_candidate_selector_sill_or_threshold_pool",
+              "source_status": "candidate_selector_ready_not_bound",
+              "candidate_count": 14,
+              "top_pair_count": 8,
+              "binding_permission": "ranked_pool_only_not_bound",
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "deeper_search_seed_available": false,
+          "deeper_search_seed_status": null,
+          "source_guidance_available": true,
+          "pending_actions": [],
+          "risk_flags": [],
+          "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "task_id": "Y03:header_or_lintel_height_m",
+          "legend_id": "Y03",
+          "label": "schuifraam",
+          "opening_type": "sliding_glass_door",
+          "slot": "header_or_lintel_height_m",
+          "slot_status": "missing",
+          "priority": "P1",
+          "known_metric_values": [
+            {
+              "slot": "opening_width_m",
+              "subrole": null,
+              "value_m": 2.68,
+              "source_ref_count": 6,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "slot": "opening_height_m",
+              "subrole": null,
+              "value_m": 2.44,
+              "source_ref_count": 6,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "slot": "glazing_subdivision",
+              "subrole": null,
+              "value_m": null,
+              "source_ref_count": 10,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "source_packet_available": true,
+          "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+          "source_pool_count": 1,
+          "source_pools": [
+            {
+              "source_system": "vertical_slot_candidate_selector_header_pool",
+              "source_status": "candidate_selector_ready_not_bound",
+              "candidate_count": 9,
+              "top_pair_count": 8,
+              "binding_permission": "ranked_pool_only_not_bound",
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "deeper_search_seed_available": false,
+          "deeper_search_seed_status": null,
+          "source_guidance_available": true,
+          "pending_actions": [],
+          "risk_flags": [],
+          "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_bound_slots": [
+        "glazing_subdivision",
+        "opening_height_m",
+        "opening_width_m"
+      ],
+      "editable_component_slot_count": 11,
+      "profile_review_status": null,
+      "user_validation_needed_now": false,
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "legend_id": "Y04",
+      "label": "Raam Hobbyruimte",
+      "opening_type": "window",
+      "next_agent_action": "bind_missing_slots_from_CAD_before_mesh",
+      "task_count": 3,
+      "tasks": [
+        {
+          "task_id": "Y04:opening_height_m",
+          "legend_id": "Y04",
+          "label": "Raam Hobbyruimte",
+          "opening_type": "window",
+          "slot": "opening_height_m",
+          "slot_status": "missing",
+          "priority": "P1",
+          "known_metric_values": [
+            {
+              "slot": "opening_width_m",
+              "subrole": null,
+              "value_m": 1.22,
+              "source_ref_count": 15,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "slot": "glazing_subdivision",
+              "subrole": null,
+              "value_m": null,
+              "source_ref_count": 53,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "slot": "opening_width_m",
+              "subrole": null,
+              "value_m": 1.22,
+              "source_ref_count": 12,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "source_packet_available": true,
+          "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+          "source_pool_count": 1,
+          "source_pools": [
+            {
+              "source_system": "component_dimension_crosscheck",
+              "source_status": "component_dimension_text_support_missing_needs_detail_or_line_geometry",
+              "candidate_count": null,
+              "top_pair_count": null,
+              "binding_permission": "component_height_is_evidence_not_binding",
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "deeper_search_seed_available": false,
+          "deeper_search_seed_status": null,
+          "source_guidance_available": true,
+          "pending_actions": [],
+          "risk_flags": [],
+          "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "task_id": "Y04:sill_height_m",
+          "legend_id": "Y04",
+          "label": "Raam Hobbyruimte",
+          "opening_type": "window",
+          "slot": "sill_height_m",
+          "slot_status": "missing",
+          "priority": "P1",
+          "known_metric_values": [
+            {
+              "slot": "opening_width_m",
+              "subrole": null,
+              "value_m": 1.22,
+              "source_ref_count": 15,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "slot": "glazing_subdivision",
+              "subrole": null,
+              "value_m": null,
+              "source_ref_count": 53,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "slot": "opening_width_m",
+              "subrole": null,
+              "value_m": 1.22,
+              "source_ref_count": 12,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "source_packet_available": true,
+          "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+          "source_pool_count": 1,
+          "source_pools": [
+            {
+              "source_system": "vertical_slot_candidate_selector_sill_or_threshold_pool",
+              "source_status": "candidate_selector_ready_not_bound",
+              "candidate_count": 15,
+              "top_pair_count": 8,
+              "binding_permission": "ranked_pool_only_not_bound",
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "deeper_search_seed_available": false,
+          "deeper_search_seed_status": null,
+          "source_guidance_available": true,
+          "pending_actions": [],
+          "risk_flags": [],
+          "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "task_id": "Y04:header_or_lintel_height_m",
+          "legend_id": "Y04",
+          "label": "Raam Hobbyruimte",
+          "opening_type": "window",
+          "slot": "header_or_lintel_height_m",
+          "slot_status": "missing",
+          "priority": "P1",
+          "known_metric_values": [
+            {
+              "slot": "opening_width_m",
+              "subrole": null,
+              "value_m": 1.22,
+              "source_ref_count": 15,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "slot": "glazing_subdivision",
+              "subrole": null,
+              "value_m": null,
+              "source_ref_count": 53,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "slot": "opening_width_m",
+              "subrole": null,
+              "value_m": 1.22,
+              "source_ref_count": 12,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "source_packet_available": true,
+          "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+          "source_pool_count": 1,
+          "source_pools": [
+            {
+              "source_system": "vertical_slot_candidate_selector_header_pool",
+              "source_status": "candidate_selector_ready_not_bound",
+              "candidate_count": 11,
+              "top_pair_count": 8,
+              "binding_permission": "ranked_pool_only_not_bound",
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "deeper_search_seed_available": false,
+          "deeper_search_seed_status": null,
+          "source_guidance_available": true,
+          "pending_actions": [],
+          "risk_flags": [],
+          "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_bound_slots": [
+        "glazing_subdivision",
+        "opening_width_m"
+      ],
+      "editable_component_slot_count": 11,
+      "profile_review_status": null,
+      "user_validation_needed_now": false,
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "legend_id": "Y05",
+      "label": "boograam eetkamer",
+      "opening_type": "arched_window",
+      "next_agent_action": "resolve_pending_slots_and_risk_flags_before_mesh",
+      "task_count": 2,
+      "tasks": [
+        {
+          "task_id": "Y05:arch_geometry",
+          "legend_id": "Y05",
+          "label": "boograam eetkamer",
+          "opening_type": "arched_window",
+          "slot": "arch_geometry",
+          "slot_status": "pending",
+          "priority": "P2",
+          "known_metric_values": [
+            {
+              "slot": "opening_width_m",
+              "subrole": null,
+              "value_m": 2.21,
+              "source_ref_count": 5,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "slot": "opening_height_m",
+              "subrole": "clear_opening_height",
+              "value_m": 2.66,
+              "source_ref_count": 2,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "source_packet_available": false,
+          "source_packet_status": null,
+          "source_pool_count": 0,
+          "source_pools": [],
+          "deeper_search_seed_available": true,
+          "deeper_search_seed_status": "deeper_search_seed_ready_agent_side_not_mesh",
+          "source_guidance_available": true,
+          "pending_actions": [
+            {
+              "slot": "arch_geometry",
+              "proposal_status": "source_cad_arch_geometry_candidate_ready_not_bound_not_mesh",
+              "action": "agent_can_prepare_subgeometry_binding_packet_from_exact_cad_refs",
+              "risk_flags": [],
+              "source_ref_count": 57,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "risk_flags": [],
+          "next_agent_step": "use_deeper_search_seed_to_build_exact_original_CAD_source_packet",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "task_id": "Y05:threshold_or_sill_level_m",
+          "legend_id": "Y05",
+          "label": "boograam eetkamer",
+          "opening_type": "arched_window",
+          "slot": "threshold_or_sill_level_m",
+          "slot_status": "pending",
+          "priority": "P2",
+          "known_metric_values": [
+            {
+              "slot": "opening_width_m",
+              "subrole": null,
+              "value_m": 2.21,
+              "source_ref_count": 5,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "slot": "opening_height_m",
+              "subrole": "clear_opening_height",
+              "value_m": 2.66,
+              "source_ref_count": 2,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "source_packet_available": false,
+          "source_packet_status": null,
+          "source_pool_count": 0,
+          "source_pools": [],
+          "deeper_search_seed_available": true,
+          "deeper_search_seed_status": "deeper_search_seed_ready_agent_side_not_mesh",
+          "source_guidance_available": true,
+          "pending_actions": [
+            {
+              "slot": "threshold_or_sill_level_m",
+              "proposal_status": "sill_header_pair_candidate_preserved_with_risk_not_bound_not_mesh",
+              "action": "agent_crosscheck_required_risk_flags_before_any_binding",
+              "risk_flags": [
+                "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+                "lower_limit_value_below_5cm_needs_level_reference_review",
+                "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold",
+                "header_candidate_may_be_overall_or_storey_context"
+              ],
+              "source_ref_count": 1,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "risk_flags": [
+            "header_candidate_may_be_overall_or_storey_context",
+            "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold",
+            "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+            "lower_limit_value_below_5cm_needs_level_reference_review"
+          ],
+          "next_agent_step": "use_deeper_search_seed_to_build_exact_original_CAD_source_packet",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_bound_slots": [
+        "opening_height_m",
+        "opening_width_m"
+      ],
+      "editable_component_slot_count": 10,
+      "profile_review_status": null,
+      "user_validation_needed_now": false,
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "legend_id": "Y06",
+      "label": "deur inkomhal",
+      "opening_type": "interior_door",
+      "next_agent_action": "bind_missing_slots_from_CAD_before_mesh",
+      "task_count": 2,
+      "tasks": [
+        {
+          "task_id": "Y06:opening_height_m",
+          "legend_id": "Y06",
+          "label": "deur inkomhal",
+          "opening_type": "interior_door",
+          "slot": "opening_height_m",
+          "slot_status": "missing",
+          "priority": "P1",
+          "known_metric_values": [
+            {
+              "slot": "opening_width_m",
+              "subrole": null,
+              "value_m": 1.4,
+              "source_ref_count": 4,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "source_packet_available": true,
+          "source_packet_status": "source_trace_context_available_but_metric_source_needs_deeper_cad_search",
+          "source_pool_count": 1,
+          "source_pools": [
+            {
+              "source_system": "plan_trace_context_for_deeper_cad_search",
+              "source_status": "plan_trace_subgeometry_preserved_not_narrowed_not_mesh",
+              "candidate_count": null,
+              "top_pair_count": null,
+              "binding_permission": "not_metric_authority_context_only",
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "deeper_search_seed_available": false,
+          "deeper_search_seed_status": null,
+          "source_guidance_available": true,
+          "pending_actions": [],
+          "risk_flags": [],
+          "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "task_id": "Y06:threshold_level_m",
+          "legend_id": "Y06",
+          "label": "deur inkomhal",
+          "opening_type": "interior_door",
+          "slot": "threshold_level_m",
+          "slot_status": "missing",
+          "priority": "P1",
+          "known_metric_values": [
+            {
+              "slot": "opening_width_m",
+              "subrole": null,
+              "value_m": 1.4,
+              "source_ref_count": 4,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "source_packet_available": true,
+          "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+          "source_pool_count": 1,
+          "source_pools": [
+            {
+              "source_system": "vertical_slot_candidate_selector_sill_or_threshold_pool",
+              "source_status": "candidate_selector_ready_not_bound",
+              "candidate_count": 6,
+              "top_pair_count": 8,
+              "binding_permission": "ranked_pool_only_not_bound",
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "deeper_search_seed_available": false,
+          "deeper_search_seed_status": null,
+          "source_guidance_available": true,
+          "pending_actions": [],
+          "risk_flags": [],
+          "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_bound_slots": [
+        "opening_width_m"
+      ],
+      "editable_component_slot_count": 4,
+      "profile_review_status": null,
+      "user_validation_needed_now": false,
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "legend_id": "Y07",
+      "label": "deur WC1",
+      "opening_type": "interior_door",
+      "next_agent_action": "bind_missing_slots_from_CAD_before_mesh",
+      "task_count": 3,
+      "tasks": [
+        {
+          "task_id": "Y07:opening_width_m",
+          "legend_id": "Y07",
+          "label": "deur WC1",
+          "opening_type": "interior_door",
+          "slot": "opening_width_m",
+          "slot_status": "missing",
+          "priority": "P1",
+          "known_metric_values": [],
+          "source_packet_available": true,
+          "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+          "source_pool_count": 1,
+          "source_pools": [
+            {
+              "source_system": "width_draft_gap_work_order",
+              "source_status": "width_pair_needs_dimension_text_or_detail_confirmation_not_bound",
+              "candidate_count": null,
+              "top_pair_count": null,
+              "binding_permission": "agent_crosscheck_required_not_bound",
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "deeper_search_seed_available": false,
+          "deeper_search_seed_status": null,
+          "source_guidance_available": true,
+          "pending_actions": [],
+          "risk_flags": [],
+          "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "task_id": "Y07:opening_height_m",
+          "legend_id": "Y07",
+          "label": "deur WC1",
+          "opening_type": "interior_door",
+          "slot": "opening_height_m",
+          "slot_status": "missing",
+          "priority": "P1",
+          "known_metric_values": [],
+          "source_packet_available": true,
+          "source_packet_status": "source_trace_context_available_but_metric_source_needs_deeper_cad_search",
+          "source_pool_count": 1,
+          "source_pools": [
+            {
+              "source_system": "plan_trace_context_for_deeper_cad_search",
+              "source_status": "plan_trace_subgeometry_preserved_not_narrowed_not_mesh",
+              "candidate_count": null,
+              "top_pair_count": null,
+              "binding_permission": "not_metric_authority_context_only",
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "deeper_search_seed_available": false,
+          "deeper_search_seed_status": null,
+          "source_guidance_available": true,
+          "pending_actions": [],
+          "risk_flags": [],
+          "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "task_id": "Y07:threshold_level_m",
+          "legend_id": "Y07",
+          "label": "deur WC1",
+          "opening_type": "interior_door",
+          "slot": "threshold_level_m",
+          "slot_status": "missing",
+          "priority": "P1",
+          "known_metric_values": [],
+          "source_packet_available": true,
+          "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+          "source_pool_count": 1,
+          "source_pools": [
+            {
+              "source_system": "vertical_slot_candidate_selector_sill_or_threshold_pool",
+              "source_status": "candidate_selector_ready_not_bound",
+              "candidate_count": 5,
+              "top_pair_count": 5,
+              "binding_permission": "ranked_pool_only_not_bound",
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "deeper_search_seed_available": false,
+          "deeper_search_seed_status": null,
+          "source_guidance_available": true,
+          "pending_actions": [],
+          "risk_flags": [],
+          "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_bound_slots": [],
+      "editable_component_slot_count": 4,
+      "profile_review_status": null,
+      "user_validation_needed_now": false,
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "legend_id": "Y08",
+      "label": "voordeur",
+      "opening_type": "exterior_door",
+      "next_agent_action": "bind_missing_slots_from_CAD_before_mesh",
+      "task_count": 3,
+      "tasks": [
+        {
+          "task_id": "Y08:opening_width_m",
+          "legend_id": "Y08",
+          "label": "voordeur",
+          "opening_type": "exterior_door",
+          "slot": "opening_width_m",
+          "slot_status": "missing",
+          "priority": "P1",
+          "known_metric_values": [
+            {
+              "slot": "opening_height_m",
+              "subrole": "clear_opening_height",
+              "value_m": 2.1,
+              "source_ref_count": 2,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "source_packet_available": true,
+          "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+          "source_pool_count": 1,
+          "source_pools": [
+            {
+              "source_system": "width_draft_gap_work_order",
+              "source_status": "subpart_width_pair_preserved_not_overall_opening_width",
+              "candidate_count": null,
+              "top_pair_count": null,
+              "binding_permission": "agent_crosscheck_required_not_bound",
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "deeper_search_seed_available": false,
+          "deeper_search_seed_status": null,
+          "source_guidance_available": true,
+          "pending_actions": [],
+          "risk_flags": [],
+          "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "task_id": "Y08:header_or_lintel_height_m",
+          "legend_id": "Y08",
+          "label": "voordeur",
+          "opening_type": "exterior_door",
+          "slot": "header_or_lintel_height_m",
+          "slot_status": "pending",
+          "priority": "P2",
+          "known_metric_values": [
+            {
+              "slot": "opening_height_m",
+              "subrole": "clear_opening_height",
+              "value_m": 2.1,
+              "source_ref_count": 2,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "source_packet_available": false,
+          "source_packet_status": null,
+          "source_pool_count": 0,
+          "source_pools": [],
+          "deeper_search_seed_available": true,
+          "deeper_search_seed_status": "deeper_search_seed_ready_agent_side_not_mesh",
+          "source_guidance_available": true,
+          "pending_actions": [
+            {
+              "slot": "header_or_lintel_height_m",
+              "proposal_status": "sill_header_pair_candidate_preserved_with_risk_not_bound_not_mesh",
+              "action": "agent_crosscheck_required_risk_flags_before_any_binding",
+              "risk_flags": [
+                "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+                "lower_limit_value_below_5cm_needs_level_reference_review",
+                "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold"
+              ],
+              "source_ref_count": 1,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "risk_flags": [
+            "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold",
+            "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+            "lower_limit_value_below_5cm_needs_level_reference_review"
+          ],
+          "next_agent_step": "use_deeper_search_seed_to_build_exact_original_CAD_source_packet",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "task_id": "Y08:threshold_level_m",
+          "legend_id": "Y08",
+          "label": "voordeur",
+          "opening_type": "exterior_door",
+          "slot": "threshold_level_m",
+          "slot_status": "pending",
+          "priority": "P2",
+          "known_metric_values": [
+            {
+              "slot": "opening_height_m",
+              "subrole": "clear_opening_height",
+              "value_m": 2.1,
+              "source_ref_count": 2,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "source_packet_available": false,
+          "source_packet_status": null,
+          "source_pool_count": 0,
+          "source_pools": [],
+          "deeper_search_seed_available": true,
+          "deeper_search_seed_status": "deeper_search_seed_ready_agent_side_not_mesh",
+          "source_guidance_available": true,
+          "pending_actions": [
+            {
+              "slot": "threshold_level_m",
+              "proposal_status": "sill_header_pair_candidate_preserved_with_risk_not_bound_not_mesh",
+              "action": "agent_crosscheck_required_risk_flags_before_any_binding",
+              "risk_flags": [
+                "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+                "lower_limit_value_below_5cm_needs_level_reference_review",
+                "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold"
+              ],
+              "source_ref_count": 1,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "risk_flags": [
+            "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold",
+            "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+            "lower_limit_value_below_5cm_needs_level_reference_review"
+          ],
+          "next_agent_step": "use_deeper_search_seed_to_build_exact_original_CAD_source_packet",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_bound_slots": [
+        "opening_height_m"
+      ],
+      "editable_component_slot_count": 11,
+      "profile_review_status": null,
+      "user_validation_needed_now": false,
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "legend_id": "Y09",
+      "label": "raam WC1",
+      "opening_type": "window",
+      "next_agent_action": "bind_missing_slots_from_CAD_before_mesh",
+      "task_count": 3,
+      "tasks": [
+        {
+          "task_id": "Y09:opening_height_m",
+          "legend_id": "Y09",
+          "label": "raam WC1",
+          "opening_type": "window",
+          "slot": "opening_height_m",
+          "slot_status": "missing",
+          "priority": "P1",
+          "known_metric_values": [
+            {
+              "slot": "glazing_subdivision",
+              "subrole": null,
+              "value_m": null,
+              "source_ref_count": 26,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "slot": "opening_width_m",
+              "subrole": null,
+              "value_m": 0.816,
+              "source_ref_count": 4,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "source_packet_available": true,
+          "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+          "source_pool_count": 2,
+          "source_pools": [
+            {
+              "source_system": "component_dimension_crosscheck",
+              "source_status": "not_a_ready_component_packet",
+              "candidate_count": null,
+              "top_pair_count": null,
+              "binding_permission": "component_height_is_evidence_not_binding",
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "source_system": "dimension_line_slot_candidates",
+              "source_status": "candidate_text_line_pairs_not_bound",
+              "candidate_count": 3,
+              "top_pair_count": null,
+              "binding_permission": "agent_crosscheck_required_not_bound",
+              "mesh_permission": "blocked_metadata_only"
+            }
+          ],
+          "deeper_search_seed_available": false,
+          "deeper_search_seed_status": null,
+          "source_guidance_available": true,
+          "pending_actions": [],
+          "risk_flags": [],
+          "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "task_id": "Y09:sill_height_m",
+          "legend_id": "Y09",
+          "label": "raam WC1",
+          "opening_type": "window",
+          "slot": "sill_height_m",
+          "slot_status": "missing",
+          "priority": "P1",
+          "known_metric_values": [
+            {
+              "slot": "glazing_subdivision",
+              "subrole": null,
+              "value_m": null,
+              "source_ref_count": 26,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "slot": "opening_width_m",
+              "subrole": null,
+              "value_m": 0.816,
+              "source_ref_count": 4,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "source_packet_available": true,
+          "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+          "source_pool_count": 2,
+          "source_pools": [
+            {
+              "source_system": "vertical_slot_candidate_selector_sill_or_threshold_pool",
+              "source_status": "candidate_selector_ready_not_bound",
+              "candidate_count": 19,
+              "top_pair_count": 8,
+              "binding_permission": "ranked_pool_only_not_bound",
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "source_system": "dimension_line_slot_candidates",
+              "source_status": "candidate_text_line_pairs_not_bound",
+              "candidate_count": 3,
+              "top_pair_count": null,
+              "binding_permission": "agent_crosscheck_required_not_bound",
+              "mesh_permission": "blocked_metadata_only"
+            }
+          ],
+          "deeper_search_seed_available": false,
+          "deeper_search_seed_status": null,
+          "source_guidance_available": true,
+          "pending_actions": [],
+          "risk_flags": [],
+          "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "task_id": "Y09:header_or_lintel_height_m",
+          "legend_id": "Y09",
+          "label": "raam WC1",
+          "opening_type": "window",
+          "slot": "header_or_lintel_height_m",
+          "slot_status": "missing",
+          "priority": "P1",
+          "known_metric_values": [
+            {
+              "slot": "glazing_subdivision",
+              "subrole": null,
+              "value_m": null,
+              "source_ref_count": 26,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "slot": "opening_width_m",
+              "subrole": null,
+              "value_m": 0.816,
+              "source_ref_count": 4,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "source_packet_available": true,
+          "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+          "source_pool_count": 2,
+          "source_pools": [
+            {
+              "source_system": "vertical_slot_candidate_selector_header_pool",
+              "source_status": "candidate_selector_ready_not_bound",
+              "candidate_count": 11,
+              "top_pair_count": 8,
+              "binding_permission": "ranked_pool_only_not_bound",
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "source_system": "dimension_line_slot_candidates",
+              "source_status": "candidate_text_line_pairs_not_bound",
+              "candidate_count": 3,
+              "top_pair_count": null,
+              "binding_permission": "agent_crosscheck_required_not_bound",
+              "mesh_permission": "blocked_metadata_only"
+            }
+          ],
+          "deeper_search_seed_available": false,
+          "deeper_search_seed_status": null,
+          "source_guidance_available": true,
+          "pending_actions": [],
+          "risk_flags": [],
+          "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_bound_slots": [
+        "glazing_subdivision",
+        "opening_width_m"
+      ],
+      "editable_component_slot_count": 8,
+      "profile_review_status": null,
+      "user_validation_needed_now": false,
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "legend_id": "Y10",
+      "label": "kastdeur berging (ingebouwde kast)",
+      "opening_type": "built_in_cabinet_door",
+      "next_agent_action": "promote_to_final_slot_binding_review_before_mesh",
+      "task_count": 0,
+      "tasks": [],
+      "source_bound_slots": [],
+      "editable_component_slot_count": 6,
+      "profile_review_status": null,
+      "user_validation_needed_now": false,
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "legend_id": "Y11",
+      "label": "raam berging",
+      "opening_type": "window",
+      "next_agent_action": "bind_missing_slots_from_CAD_before_mesh",
+      "task_count": 4,
+      "tasks": [
+        {
+          "task_id": "Y11:opening_width_m",
+          "legend_id": "Y11",
+          "label": "raam berging",
+          "opening_type": "window",
+          "slot": "opening_width_m",
+          "slot_status": "missing",
+          "priority": "P1",
+          "known_metric_values": [
+            {
+              "slot": "glazing_subdivision",
+              "subrole": null,
+              "value_m": null,
+              "source_ref_count": 25,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "source_packet_available": true,
+          "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+          "source_pool_count": 1,
+          "source_pools": [
+            {
+              "source_system": "width_draft_gap_work_order",
+              "source_status": "coordinate_only_width_pair_preserved_needs_dimension_text_or_detail_review",
+              "candidate_count": null,
+              "top_pair_count": null,
+              "binding_permission": "agent_crosscheck_required_not_bound",
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "deeper_search_seed_available": false,
+          "deeper_search_seed_status": null,
+          "source_guidance_available": true,
+          "pending_actions": [],
+          "risk_flags": [],
+          "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "task_id": "Y11:opening_height_m",
+          "legend_id": "Y11",
+          "label": "raam berging",
+          "opening_type": "window",
+          "slot": "opening_height_m",
+          "slot_status": "missing",
+          "priority": "P1",
+          "known_metric_values": [
+            {
+              "slot": "glazing_subdivision",
+              "subrole": null,
+              "value_m": null,
+              "source_ref_count": 25,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "source_packet_available": true,
+          "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+          "source_pool_count": 1,
+          "source_pools": [
+            {
+              "source_system": "component_dimension_crosscheck",
+              "source_status": "not_a_ready_component_packet",
+              "candidate_count": null,
+              "top_pair_count": null,
+              "binding_permission": "component_height_is_evidence_not_binding",
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "deeper_search_seed_available": false,
+          "deeper_search_seed_status": null,
+          "source_guidance_available": true,
+          "pending_actions": [],
+          "risk_flags": [],
+          "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "task_id": "Y11:sill_height_m",
+          "legend_id": "Y11",
+          "label": "raam berging",
+          "opening_type": "window",
+          "slot": "sill_height_m",
+          "slot_status": "missing",
+          "priority": "P1",
+          "known_metric_values": [
+            {
+              "slot": "glazing_subdivision",
+              "subrole": null,
+              "value_m": null,
+              "source_ref_count": 25,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "source_packet_available": true,
+          "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+          "source_pool_count": 1,
+          "source_pools": [
+            {
+              "source_system": "vertical_slot_candidate_selector_sill_or_threshold_pool",
+              "source_status": "candidate_selector_ready_not_bound",
+              "candidate_count": 17,
+              "top_pair_count": 8,
+              "binding_permission": "ranked_pool_only_not_bound",
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "deeper_search_seed_available": false,
+          "deeper_search_seed_status": null,
+          "source_guidance_available": true,
+          "pending_actions": [],
+          "risk_flags": [],
+          "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "task_id": "Y11:header_or_lintel_height_m",
+          "legend_id": "Y11",
+          "label": "raam berging",
+          "opening_type": "window",
+          "slot": "header_or_lintel_height_m",
+          "slot_status": "missing",
+          "priority": "P1",
+          "known_metric_values": [
+            {
+              "slot": "glazing_subdivision",
+              "subrole": null,
+              "value_m": null,
+              "source_ref_count": 25,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "source_packet_available": true,
+          "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+          "source_pool_count": 1,
+          "source_pools": [
+            {
+              "source_system": "vertical_slot_candidate_selector_header_pool",
+              "source_status": "candidate_selector_ready_not_bound",
+              "candidate_count": 11,
+              "top_pair_count": 8,
+              "binding_permission": "ranked_pool_only_not_bound",
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "deeper_search_seed_available": false,
+          "deeper_search_seed_status": null,
+          "source_guidance_available": true,
+          "pending_actions": [],
+          "risk_flags": [],
+          "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_bound_slots": [
+        "glazing_subdivision"
+      ],
+      "editable_component_slot_count": 7,
+      "profile_review_status": null,
+      "user_validation_needed_now": false,
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "legend_id": "Y12",
+      "label": "raam keuken",
+      "opening_type": "window",
+      "next_agent_action": "bind_missing_slots_from_CAD_before_mesh",
+      "task_count": 4,
+      "tasks": [
+        {
+          "task_id": "Y12:opening_height_m",
+          "legend_id": "Y12",
+          "label": "raam keuken",
+          "opening_type": "window",
+          "slot": "opening_height_m",
+          "slot_status": "missing",
+          "priority": "P1",
+          "known_metric_values": [],
+          "source_packet_available": true,
+          "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+          "source_pool_count": 1,
+          "source_pools": [
+            {
+              "source_system": "component_dimension_crosscheck",
+              "source_status": "component_dimension_text_support_missing_needs_detail_or_line_geometry",
+              "candidate_count": null,
+              "top_pair_count": null,
+              "binding_permission": "component_height_is_evidence_not_binding",
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "deeper_search_seed_available": false,
+          "deeper_search_seed_status": null,
+          "source_guidance_available": true,
+          "pending_actions": [],
+          "risk_flags": [],
+          "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "task_id": "Y12:sill_height_m",
+          "legend_id": "Y12",
+          "label": "raam keuken",
+          "opening_type": "window",
+          "slot": "sill_height_m",
+          "slot_status": "missing",
+          "priority": "P1",
+          "known_metric_values": [],
+          "source_packet_available": true,
+          "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+          "source_pool_count": 1,
+          "source_pools": [
+            {
+              "source_system": "vertical_slot_candidate_selector_sill_or_threshold_pool",
+              "source_status": "candidate_selector_ready_not_bound",
+              "candidate_count": 13,
+              "top_pair_count": 8,
+              "binding_permission": "ranked_pool_only_not_bound",
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "deeper_search_seed_available": false,
+          "deeper_search_seed_status": null,
+          "source_guidance_available": true,
+          "pending_actions": [],
+          "risk_flags": [],
+          "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "task_id": "Y12:header_or_lintel_height_m",
+          "legend_id": "Y12",
+          "label": "raam keuken",
+          "opening_type": "window",
+          "slot": "header_or_lintel_height_m",
+          "slot_status": "missing",
+          "priority": "P1",
+          "known_metric_values": [],
+          "source_packet_available": true,
+          "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+          "source_pool_count": 1,
+          "source_pools": [
+            {
+              "source_system": "vertical_slot_candidate_selector_header_pool",
+              "source_status": "candidate_selector_ready_not_bound",
+              "candidate_count": 10,
+              "top_pair_count": 8,
+              "binding_permission": "ranked_pool_only_not_bound",
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "deeper_search_seed_available": false,
+          "deeper_search_seed_status": null,
+          "source_guidance_available": true,
+          "pending_actions": [],
+          "risk_flags": [],
+          "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "task_id": "Y12:opening_width_m",
+          "legend_id": "Y12",
+          "label": "raam keuken",
+          "opening_type": "window",
+          "slot": "opening_width_m",
+          "slot_status": "pending",
+          "priority": "P1",
+          "known_metric_values": [],
+          "source_packet_available": false,
+          "source_packet_status": null,
+          "source_pool_count": 0,
+          "source_pools": [],
+          "deeper_search_seed_available": true,
+          "deeper_search_seed_status": "deeper_search_seed_ready_agent_side_not_mesh",
+          "source_guidance_available": true,
+          "pending_actions": [
+            {
+              "slot": "opening_width_m",
+              "proposal_status": "eligible_not_final_width_draft_slot_not_bound",
+              "action": "agent_can_crosscheck_width_pair_against_exact_plan_and_elevation_before_binding",
+              "risk_flags": [],
+              "source_ref_count": 2,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "risk_flags": [],
+          "next_agent_step": "use_deeper_search_seed_to_build_exact_original_CAD_source_packet",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_bound_slots": [],
+      "editable_component_slot_count": 10,
+      "profile_review_status": null,
+      "user_validation_needed_now": false,
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "legend_id": "Y13",
+      "label": "raam bureau Oost",
+      "opening_type": "window",
+      "next_agent_action": "bind_missing_slots_from_CAD_before_mesh",
+      "task_count": 3,
+      "tasks": [
+        {
+          "task_id": "Y13:opening_height_m",
+          "legend_id": "Y13",
+          "label": "raam bureau Oost",
+          "opening_type": "window",
+          "slot": "opening_height_m",
+          "slot_status": "missing",
+          "priority": "P1",
+          "known_metric_values": [
+            {
+              "slot": "opening_width_m",
+              "subrole": null,
+              "value_m": 1.22,
+              "source_ref_count": 12,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "source_packet_available": true,
+          "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+          "source_pool_count": 1,
+          "source_pools": [
+            {
+              "source_system": "component_dimension_crosscheck",
+              "source_status": "component_dimension_text_support_missing_needs_detail_or_line_geometry",
+              "candidate_count": null,
+              "top_pair_count": null,
+              "binding_permission": "component_height_is_evidence_not_binding",
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "deeper_search_seed_available": false,
+          "deeper_search_seed_status": null,
+          "source_guidance_available": true,
+          "pending_actions": [],
+          "risk_flags": [],
+          "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "task_id": "Y13:sill_height_m",
+          "legend_id": "Y13",
+          "label": "raam bureau Oost",
+          "opening_type": "window",
+          "slot": "sill_height_m",
+          "slot_status": "missing",
+          "priority": "P1",
+          "known_metric_values": [
+            {
+              "slot": "opening_width_m",
+              "subrole": null,
+              "value_m": 1.22,
+              "source_ref_count": 12,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "source_packet_available": true,
+          "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+          "source_pool_count": 1,
+          "source_pools": [
+            {
+              "source_system": "vertical_slot_candidate_selector_sill_or_threshold_pool",
+              "source_status": "candidate_selector_ready_not_bound",
+              "candidate_count": 17,
+              "top_pair_count": 8,
+              "binding_permission": "ranked_pool_only_not_bound",
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "deeper_search_seed_available": false,
+          "deeper_search_seed_status": null,
+          "source_guidance_available": true,
+          "pending_actions": [],
+          "risk_flags": [],
+          "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "task_id": "Y13:header_or_lintel_height_m",
+          "legend_id": "Y13",
+          "label": "raam bureau Oost",
+          "opening_type": "window",
+          "slot": "header_or_lintel_height_m",
+          "slot_status": "missing",
+          "priority": "P1",
+          "known_metric_values": [
+            {
+              "slot": "opening_width_m",
+              "subrole": null,
+              "value_m": 1.22,
+              "source_ref_count": 12,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "source_packet_available": true,
+          "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+          "source_pool_count": 1,
+          "source_pools": [
+            {
+              "source_system": "vertical_slot_candidate_selector_header_pool",
+              "source_status": "candidate_selector_ready_not_bound",
+              "candidate_count": 12,
+              "top_pair_count": 8,
+              "binding_permission": "ranked_pool_only_not_bound",
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "deeper_search_seed_available": false,
+          "deeper_search_seed_status": null,
+          "source_guidance_available": true,
+          "pending_actions": [],
+          "risk_flags": [],
+          "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_bound_slots": [
+        "opening_width_m"
+      ],
+      "editable_component_slot_count": 11,
+      "profile_review_status": null,
+      "user_validation_needed_now": false,
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "legend_id": "Y14",
+      "label": "deur bureau",
+      "opening_type": "interior_door",
+      "next_agent_action": "bind_missing_slots_from_CAD_before_mesh",
+      "task_count": 3,
+      "tasks": [
+        {
+          "task_id": "Y14:opening_width_m",
+          "legend_id": "Y14",
+          "label": "deur bureau",
+          "opening_type": "interior_door",
+          "slot": "opening_width_m",
+          "slot_status": "missing",
+          "priority": "P1",
+          "known_metric_values": [],
+          "source_packet_available": true,
+          "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+          "source_pool_count": 1,
+          "source_pools": [
+            {
+              "source_system": "width_draft_gap_work_order",
+              "source_status": "coordinate_only_width_pair_preserved_needs_dimension_text_or_detail_review",
+              "candidate_count": null,
+              "top_pair_count": null,
+              "binding_permission": "agent_crosscheck_required_not_bound",
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "deeper_search_seed_available": false,
+          "deeper_search_seed_status": null,
+          "source_guidance_available": true,
+          "pending_actions": [],
+          "risk_flags": [],
+          "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "task_id": "Y14:opening_height_m",
+          "legend_id": "Y14",
+          "label": "deur bureau",
+          "opening_type": "interior_door",
+          "slot": "opening_height_m",
+          "slot_status": "missing",
+          "priority": "P1",
+          "known_metric_values": [],
+          "source_packet_available": true,
+          "source_packet_status": "source_trace_context_available_but_metric_source_needs_deeper_cad_search",
+          "source_pool_count": 1,
+          "source_pools": [
+            {
+              "source_system": "plan_trace_context_for_deeper_cad_search",
+              "source_status": "plan_trace_subgeometry_preserved_not_narrowed_not_mesh",
+              "candidate_count": null,
+              "top_pair_count": null,
+              "binding_permission": "not_metric_authority_context_only",
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "deeper_search_seed_available": false,
+          "deeper_search_seed_status": null,
+          "source_guidance_available": true,
+          "pending_actions": [],
+          "risk_flags": [],
+          "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "task_id": "Y14:threshold_level_m",
+          "legend_id": "Y14",
+          "label": "deur bureau",
+          "opening_type": "interior_door",
+          "slot": "threshold_level_m",
+          "slot_status": "missing",
+          "priority": "P1",
+          "known_metric_values": [],
+          "source_packet_available": true,
+          "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+          "source_pool_count": 1,
+          "source_pools": [
+            {
+              "source_system": "vertical_slot_candidate_selector_sill_or_threshold_pool",
+              "source_status": "candidate_selector_ready_not_bound",
+              "candidate_count": 2,
+              "top_pair_count": 2,
+              "binding_permission": "ranked_pool_only_not_bound",
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "deeper_search_seed_available": false,
+          "deeper_search_seed_status": null,
+          "source_guidance_available": true,
+          "pending_actions": [],
+          "risk_flags": [],
+          "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_bound_slots": [],
+      "editable_component_slot_count": 4,
+      "profile_review_status": null,
+      "user_validation_needed_now": false,
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "legend_id": "Y15",
+      "label": "raam bureau Zuid",
+      "opening_type": "window",
+      "next_agent_action": "bind_missing_slots_from_CAD_before_mesh",
+      "task_count": 4,
+      "tasks": [
+        {
+          "task_id": "Y15:opening_height_m",
+          "legend_id": "Y15",
+          "label": "raam bureau Zuid",
+          "opening_type": "window",
+          "slot": "opening_height_m",
+          "slot_status": "missing",
+          "priority": "P1",
+          "known_metric_values": [],
+          "source_packet_available": true,
+          "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+          "source_pool_count": 1,
+          "source_pools": [
+            {
+              "source_system": "component_dimension_crosscheck",
+              "source_status": "component_height_close_to_cad_dimension_candidate_not_bound",
+              "candidate_count": null,
+              "top_pair_count": null,
+              "binding_permission": "component_height_is_evidence_not_binding",
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "deeper_search_seed_available": false,
+          "deeper_search_seed_status": null,
+          "source_guidance_available": true,
+          "pending_actions": [],
+          "risk_flags": [],
+          "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "task_id": "Y15:sill_height_m",
+          "legend_id": "Y15",
+          "label": "raam bureau Zuid",
+          "opening_type": "window",
+          "slot": "sill_height_m",
+          "slot_status": "missing",
+          "priority": "P1",
+          "known_metric_values": [],
+          "source_packet_available": true,
+          "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+          "source_pool_count": 1,
+          "source_pools": [
+            {
+              "source_system": "vertical_slot_candidate_selector_sill_or_threshold_pool",
+              "source_status": "candidate_selector_ready_not_bound",
+              "candidate_count": 13,
+              "top_pair_count": 8,
+              "binding_permission": "ranked_pool_only_not_bound",
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "deeper_search_seed_available": false,
+          "deeper_search_seed_status": null,
+          "source_guidance_available": true,
+          "pending_actions": [],
+          "risk_flags": [],
+          "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "task_id": "Y15:header_or_lintel_height_m",
+          "legend_id": "Y15",
+          "label": "raam bureau Zuid",
+          "opening_type": "window",
+          "slot": "header_or_lintel_height_m",
+          "slot_status": "missing",
+          "priority": "P1",
+          "known_metric_values": [],
+          "source_packet_available": true,
+          "source_packet_status": "source_pools_available_for_agent_crosscheck_not_bound",
+          "source_pool_count": 1,
+          "source_pools": [
+            {
+              "source_system": "vertical_slot_candidate_selector_header_pool",
+              "source_status": "candidate_selector_ready_not_bound",
+              "candidate_count": 10,
+              "top_pair_count": 8,
+              "binding_permission": "ranked_pool_only_not_bound",
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "deeper_search_seed_available": false,
+          "deeper_search_seed_status": null,
+          "source_guidance_available": true,
+          "pending_actions": [],
+          "risk_flags": [],
+          "next_agent_step": "crosscheck_packaged_original_CAD_source_pool",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "task_id": "Y15:opening_width_m",
+          "legend_id": "Y15",
+          "label": "raam bureau Zuid",
+          "opening_type": "window",
+          "slot": "opening_width_m",
+          "slot_status": "pending",
+          "priority": "P1",
+          "known_metric_values": [],
+          "source_packet_available": false,
+          "source_packet_status": null,
+          "source_pool_count": 0,
+          "source_pools": [],
+          "deeper_search_seed_available": true,
+          "deeper_search_seed_status": "deeper_search_seed_ready_agent_side_not_mesh",
+          "source_guidance_available": true,
+          "pending_actions": [
+            {
+              "slot": "opening_width_m",
+              "proposal_status": "eligible_not_final_width_draft_slot_not_bound",
+              "action": "agent_can_crosscheck_width_pair_against_exact_plan_and_elevation_before_binding",
+              "risk_flags": [],
+              "source_ref_count": 2,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "risk_flags": [],
+          "next_agent_step": "use_deeper_search_seed_to_build_exact_original_CAD_source_packet",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_bound_slots": [],
+      "editable_component_slot_count": 11,
+      "profile_review_status": null,
+      "user_validation_needed_now": false,
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "legend_id": "Y16",
+      "label": "rondboog",
+      "opening_type": "arched_free_opening",
+      "next_agent_action": "promote_to_final_slot_binding_review_before_mesh",
+      "task_count": 0,
+      "tasks": [],
+      "source_bound_slots": [
+        "arch_geometry",
+        "opening_height_m",
+        "opening_width_m"
+      ],
+      "editable_component_slot_count": 6,
+      "profile_review_status": "source_bound_profile_candidate_not_final_not_mesh",
+      "user_validation_needed_now": false,
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "legend_id": "Y17",
+      "label": "erker inclusief raamdeur",
+      "opening_type": "bay_window_group_with_operable_door",
+      "next_agent_action": "resolve_pending_slots_and_risk_flags_before_mesh",
+      "task_count": 3,
+      "tasks": [
+        {
+          "task_id": "Y17:bay_subsegment_geometry",
+          "legend_id": "Y17",
+          "label": "erker inclusief raamdeur",
+          "opening_type": "bay_window_group_with_operable_door",
+          "slot": "bay_subsegment_geometry",
+          "slot_status": "pending",
+          "priority": "P2",
+          "known_metric_values": [
+            {
+              "slot": "bay_subsegment_geometry",
+              "subrole": null,
+              "value_m": null,
+              "source_ref_count": 56,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "slot": "opening_width_m",
+              "subrole": null,
+              "value_m": 3.2501,
+              "source_ref_count": 13,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "slot": "opening_height_m",
+              "subrole": "clear_opening_height",
+              "value_m": 2.55,
+              "source_ref_count": 2,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "source_packet_available": false,
+          "source_packet_status": null,
+          "source_pool_count": 0,
+          "source_pools": [],
+          "deeper_search_seed_available": true,
+          "deeper_search_seed_status": "deeper_search_seed_ready_agent_side_not_mesh",
+          "source_guidance_available": true,
+          "pending_actions": [
+            {
+              "slot": "bay_subsegment_geometry",
+              "proposal_status": "source_cad_bay_subsegment_geometry_candidate_ready_not_bound_not_mesh",
+              "action": "agent_can_prepare_subgeometry_binding_packet_from_exact_cad_refs",
+              "risk_flags": [],
+              "source_ref_count": 56,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "risk_flags": [],
+          "next_agent_step": "use_deeper_search_seed_to_build_exact_original_CAD_source_packet",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "task_id": "Y17:header_or_lintel_height_m",
+          "legend_id": "Y17",
+          "label": "erker inclusief raamdeur",
+          "opening_type": "bay_window_group_with_operable_door",
+          "slot": "header_or_lintel_height_m",
+          "slot_status": "pending",
+          "priority": "P2",
+          "known_metric_values": [
+            {
+              "slot": "bay_subsegment_geometry",
+              "subrole": null,
+              "value_m": null,
+              "source_ref_count": 56,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "slot": "opening_width_m",
+              "subrole": null,
+              "value_m": 3.2501,
+              "source_ref_count": 13,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "slot": "opening_height_m",
+              "subrole": "clear_opening_height",
+              "value_m": 2.55,
+              "source_ref_count": 2,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "source_packet_available": false,
+          "source_packet_status": null,
+          "source_pool_count": 0,
+          "source_pools": [],
+          "deeper_search_seed_available": true,
+          "deeper_search_seed_status": "deeper_search_seed_ready_agent_side_not_mesh",
+          "source_guidance_available": true,
+          "pending_actions": [
+            {
+              "slot": "header_or_lintel_height_m",
+              "proposal_status": "sill_header_pair_candidate_preserved_with_risk_not_bound_not_mesh",
+              "action": "agent_crosscheck_required_risk_flags_before_any_binding",
+              "risk_flags": [
+                "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold",
+                "header_candidate_may_be_overall_or_storey_context"
+              ],
+              "source_ref_count": 1,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "risk_flags": [
+            "header_candidate_may_be_overall_or_storey_context",
+            "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold"
+          ],
+          "next_agent_step": "use_deeper_search_seed_to_build_exact_original_CAD_source_packet",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "task_id": "Y17:threshold_level_m",
+          "legend_id": "Y17",
+          "label": "erker inclusief raamdeur",
+          "opening_type": "bay_window_group_with_operable_door",
+          "slot": "threshold_level_m",
+          "slot_status": "pending",
+          "priority": "P2",
+          "known_metric_values": [
+            {
+              "slot": "bay_subsegment_geometry",
+              "subrole": null,
+              "value_m": null,
+              "source_ref_count": 56,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "slot": "opening_width_m",
+              "subrole": null,
+              "value_m": 3.2501,
+              "source_ref_count": 13,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "slot": "opening_height_m",
+              "subrole": "clear_opening_height",
+              "value_m": 2.55,
+              "source_ref_count": 2,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "source_packet_available": false,
+          "source_packet_status": null,
+          "source_pool_count": 0,
+          "source_pools": [],
+          "deeper_search_seed_available": true,
+          "deeper_search_seed_status": "deeper_search_seed_ready_agent_side_not_mesh",
+          "source_guidance_available": true,
+          "pending_actions": [
+            {
+              "slot": "threshold_level_m",
+              "proposal_status": "sill_header_pair_candidate_preserved_with_risk_not_bound_not_mesh",
+              "action": "agent_crosscheck_required_risk_flags_before_any_binding",
+              "risk_flags": [
+                "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold",
+                "header_candidate_may_be_overall_or_storey_context"
+              ],
+              "source_ref_count": 1,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "risk_flags": [
+            "header_candidate_may_be_overall_or_storey_context",
+            "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold"
+          ],
+          "next_agent_step": "use_deeper_search_seed_to_build_exact_original_CAD_source_packet",
+          "user_validation_needed_now": false,
+          "binding_permission": "agent_work_only_not_bound",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_bound_slots": [
+        "bay_subsegment_geometry",
+        "opening_height_m",
+        "opening_width_m"
+      ],
+      "editable_component_slot_count": 7,
+      "profile_review_status": "source_bound_leaf_candidate_set_not_final_not_mesh",
+      "user_validation_needed_now": false,
+      "mesh_permission": "blocked_not_mesh"
+    }
+  ],
+  "rules": [
+    "Use only this current workbench for the next binding pass; older backlog files may contain stale slot states.",
+    "A source packet is a search aid, not a binding.",
+    "Do not create final wall cuts, frames, glass, doors or material assignments from this workbench.",
+    "Ask user validation only after a slot has exact CAD binding evidence and a readable review artifact."
+  ],
+  "mesh_permission": "blocked_not_mesh"
+}

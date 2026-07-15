@@ -1,0 +1,736 @@
+{
+  "status": "ground_floor_opening_material_backlog_ready_not_mesh",
+  "purpose": "Backlog of future opening component materials that must not be invented now. It separates source-bound material slots from glass/accessory/detail material choices that need later source search or user design selection.",
+  "source_files": {
+    "opening_component_export_manifest": "blender\\semantic_objects\\ground_floor_opening_component_export_manifest.json",
+    "material_assignment_preflight": "blender\\semantic_objects\\material_assignment_preflight.json"
+  },
+  "known_source_material_slot_count": 6,
+  "known_source_material_slots": [
+    {
+      "material_slot_id": "MAT-EXTERIOR-WALL-GEVELSTEEN",
+      "label": "exterior wall facing brick",
+      "source_count": 13,
+      "render_assignment_permission": "blocked_until_wall_roof_plinth_door_or_opening_subpart_mesh_is_exact_cad_bound",
+      "target_resolution_status": "blocked_until_exact_target_geometry_object_and_surface_role_are_bound"
+    },
+    {
+      "material_slot_id": "MAT-ROOF-COVERING",
+      "label": "roof covering",
+      "source_count": 8,
+      "render_assignment_permission": "blocked_until_wall_roof_plinth_door_or_opening_subpart_mesh_is_exact_cad_bound",
+      "target_resolution_status": "blocked_until_roof_plane_registry_exists"
+    },
+    {
+      "material_slot_id": "MAT-PLINTH-HARDSTONE",
+      "label": "plinth / blue hardstone",
+      "source_count": 6,
+      "render_assignment_permission": "blocked_until_wall_roof_plinth_door_or_opening_subpart_mesh_is_exact_cad_bound",
+      "target_resolution_status": "blocked_until_plinth_or_sill_subsurface_is_separated_from_wall_mesh"
+    },
+    {
+      "material_slot_id": "MAT-WINDOW-VENTILATION-INVISIVENT",
+      "label": "invisivent ventilation detail",
+      "source_count": 9,
+      "render_assignment_permission": "blocked_until_wall_roof_plinth_door_or_opening_subpart_mesh_is_exact_cad_bound",
+      "target_resolution_status": "blocked_until_opening_subcomponent_meshes_exist"
+    },
+    {
+      "material_slot_id": "MAT-FRAME-STYLE-STEELLOOK",
+      "label": "steellook frame/glazing detail",
+      "source_count": 3,
+      "render_assignment_permission": "blocked_until_wall_roof_plinth_door_or_opening_subpart_mesh_is_exact_cad_bound",
+      "target_resolution_status": "blocked_until_opening_subcomponent_meshes_exist"
+    },
+    {
+      "material_slot_id": "MAT-DOOR-NOTE",
+      "label": "door material/detail note",
+      "source_count": 2,
+      "render_assignment_permission": "blocked_until_wall_roof_plinth_door_or_opening_subpart_mesh_is_exact_cad_bound",
+      "target_resolution_status": "blocked_until_opening_subcomponent_meshes_exist"
+    }
+  ],
+  "backlog_group_count": 8,
+  "backlog_component_count": 67,
+  "material_status_counts": {
+    "accessory_material_slot_not_source_bound_yet": 10,
+    "glass_material_slot_not_source_bound_yet": 11,
+    "no_source_material_slot_bound_yet": 46
+  },
+  "component_slot_counts": {
+    "arched_or_curved_cut_profile": 3,
+    "external_screen_or_shading": 2,
+    "flyscreen_or_insect_screen": 8,
+    "free_opening_finish": 1,
+    "glass_panels": 11,
+    "outer_frame": 15,
+    "visual_subdivision_mullions_roedes_laths": 10,
+    "wall_reveals_and_returns": 17
+  },
+  "objects": [
+    {
+      "material_status": "no_source_material_slot_bound_yet",
+      "component_slot": "arched_or_curved_cut_profile",
+      "export_kind": "arched_cut_profile_and_curved_frame",
+      "priority": "P1_source_search_or_user_material_later",
+      "agent_or_design_action": "Search existing CAD/PDF detail text first; if no material note exists, leave for later user design choice.",
+      "component_count": 3,
+      "openings": [
+        {
+          "legend_id": "Y01",
+          "opening_label": "boograam achtergevel / panoramisch raam"
+        },
+        {
+          "legend_id": "Y05",
+          "opening_label": "boograam eetkamer"
+        },
+        {
+          "legend_id": "Y16",
+          "opening_label": "rondboog"
+        }
+      ],
+      "example_components": [
+        {
+          "stable_object_name": "H6_GF_Y01_arched_or_curved_cut_profile",
+          "legend_id": "Y01",
+          "opening_label": "boograam achtergevel / panoramisch raam",
+          "source_status": "source_bound_profile_pending_final_wall_context"
+        },
+        {
+          "stable_object_name": "H6_GF_Y05_arched_or_curved_cut_profile",
+          "legend_id": "Y05",
+          "opening_label": "boograam eetkamer",
+          "source_status": "source_bound_profile_pending_final_wall_context"
+        },
+        {
+          "stable_object_name": "H6_GF_Y16_arched_or_curved_cut_profile",
+          "legend_id": "Y16",
+          "opening_label": "rondboog",
+          "source_status": "source_bound_profile_pending_final_wall_context"
+        }
+      ],
+      "mesh_permission": "blocked_not_mesh",
+      "render_assignment_permission": "blocked_until_source_or_user_material_choice_and_exact_component_mesh_exist"
+    },
+    {
+      "material_status": "no_source_material_slot_bound_yet",
+      "component_slot": "free_opening_finish",
+      "export_kind": "finished_free_opening_surface",
+      "priority": "P1_source_search_or_user_material_later",
+      "agent_or_design_action": "Search existing CAD/PDF detail text first; if no material note exists, leave for later user design choice.",
+      "component_count": 1,
+      "openings": [
+        {
+          "legend_id": "Y16",
+          "opening_label": "rondboog"
+        }
+      ],
+      "example_components": [
+        {
+          "stable_object_name": "H6_GF_Y16_free_opening_finish",
+          "legend_id": "Y16",
+          "opening_label": "rondboog",
+          "source_status": "source_bound_profile_pending_final_wall_context"
+        }
+      ],
+      "mesh_permission": "blocked_not_mesh",
+      "render_assignment_permission": "blocked_until_source_or_user_material_choice_and_exact_component_mesh_exist"
+    },
+    {
+      "material_status": "no_source_material_slot_bound_yet",
+      "component_slot": "outer_frame",
+      "export_kind": "outer_frame_object",
+      "priority": "P1_source_search_or_user_material_later",
+      "agent_or_design_action": "Search existing CAD/PDF detail text first; if no material note exists, leave for later user design choice.",
+      "component_count": 15,
+      "openings": [
+        {
+          "legend_id": "Y02",
+          "opening_label": "Raam Salon"
+        },
+        {
+          "legend_id": "Y03",
+          "opening_label": "schuifraam"
+        },
+        {
+          "legend_id": "Y04",
+          "opening_label": "Raam Hobbyruimte"
+        },
+        {
+          "legend_id": "Y06",
+          "opening_label": "deur inkomhal"
+        },
+        {
+          "legend_id": "Y07",
+          "opening_label": "deur WC1"
+        },
+        {
+          "legend_id": "Y08",
+          "opening_label": "voordeur"
+        },
+        {
+          "legend_id": "Y09",
+          "opening_label": "raam WC1"
+        },
+        {
+          "legend_id": "Y10",
+          "opening_label": "kastdeur berging (ingebouwde kast)"
+        },
+        {
+          "legend_id": "Y11",
+          "opening_label": "raam berging"
+        },
+        {
+          "legend_id": "Y12",
+          "opening_label": "raam keuken"
+        },
+        {
+          "legend_id": "Y13",
+          "opening_label": "raam bureau Oost"
+        },
+        {
+          "legend_id": "Y14",
+          "opening_label": "deur bureau"
+        },
+        {
+          "legend_id": "Y15",
+          "opening_label": "raam bureau Zuid"
+        },
+        {
+          "legend_id": "Y16",
+          "opening_label": "rondboog"
+        },
+        {
+          "legend_id": "Y17",
+          "opening_label": "erker inclusief raamdeur"
+        }
+      ],
+      "example_components": [
+        {
+          "stable_object_name": "H6_GF_Y02_outer_frame",
+          "legend_id": "Y02",
+          "opening_label": "Raam Salon",
+          "source_status": "cad_linework_available_depth_material_and_final_profile_pending"
+        },
+        {
+          "stable_object_name": "H6_GF_Y03_outer_frame",
+          "legend_id": "Y03",
+          "opening_label": "schuifraam",
+          "source_status": "cad_linework_available_depth_material_and_final_profile_pending"
+        },
+        {
+          "stable_object_name": "H6_GF_Y04_outer_frame",
+          "legend_id": "Y04",
+          "opening_label": "Raam Hobbyruimte",
+          "source_status": "cad_linework_available_depth_material_and_final_profile_pending"
+        },
+        {
+          "stable_object_name": "H6_GF_Y06_outer_frame",
+          "legend_id": "Y06",
+          "opening_label": "deur inkomhal",
+          "source_status": "cad_linework_available_depth_material_and_final_profile_pending"
+        },
+        {
+          "stable_object_name": "H6_GF_Y07_outer_frame",
+          "legend_id": "Y07",
+          "opening_label": "deur WC1",
+          "source_status": "cad_linework_available_depth_material_and_final_profile_pending"
+        },
+        {
+          "stable_object_name": "H6_GF_Y08_outer_frame",
+          "legend_id": "Y08",
+          "opening_label": "voordeur",
+          "source_status": "cad_linework_available_depth_material_and_final_profile_pending"
+        },
+        {
+          "stable_object_name": "H6_GF_Y09_outer_frame",
+          "legend_id": "Y09",
+          "opening_label": "raam WC1",
+          "source_status": "cad_linework_available_depth_material_and_final_profile_pending"
+        },
+        {
+          "stable_object_name": "H6_GF_Y10_outer_frame",
+          "legend_id": "Y10",
+          "opening_label": "kastdeur berging (ingebouwde kast)",
+          "source_status": "cad_linework_available_depth_material_and_final_profile_pending"
+        }
+      ],
+      "mesh_permission": "blocked_not_mesh",
+      "render_assignment_permission": "blocked_until_source_or_user_material_choice_and_exact_component_mesh_exist"
+    },
+    {
+      "material_status": "no_source_material_slot_bound_yet",
+      "component_slot": "visual_subdivision_mullions_roedes_laths",
+      "export_kind": "visual_subdivision_trim_or_decorative_bar",
+      "priority": "P1_source_search_or_user_material_later",
+      "agent_or_design_action": "Search existing CAD/PDF detail text first; if no material note exists, leave for later user design choice.",
+      "component_count": 10,
+      "openings": [
+        {
+          "legend_id": "Y02",
+          "opening_label": "Raam Salon"
+        },
+        {
+          "legend_id": "Y03",
+          "opening_label": "schuifraam"
+        },
+        {
+          "legend_id": "Y04",
+          "opening_label": "Raam Hobbyruimte"
+        },
+        {
+          "legend_id": "Y08",
+          "opening_label": "voordeur"
+        },
+        {
+          "legend_id": "Y09",
+          "opening_label": "raam WC1"
+        },
+        {
+          "legend_id": "Y11",
+          "opening_label": "raam berging"
+        },
+        {
+          "legend_id": "Y12",
+          "opening_label": "raam keuken"
+        },
+        {
+          "legend_id": "Y13",
+          "opening_label": "raam bureau Oost"
+        },
+        {
+          "legend_id": "Y15",
+          "opening_label": "raam bureau Zuid"
+        },
+        {
+          "legend_id": "Y17",
+          "opening_label": "erker inclusief raamdeur"
+        }
+      ],
+      "example_components": [
+        {
+          "stable_object_name": "H6_GF_Y02_visual_subdivision_mullions_roedes_laths",
+          "legend_id": "Y02",
+          "opening_label": "Raam Salon",
+          "source_status": "cad_linework_available_true_component_split_pending"
+        },
+        {
+          "stable_object_name": "H6_GF_Y03_visual_subdivision_mullions_roedes_laths",
+          "legend_id": "Y03",
+          "opening_label": "schuifraam",
+          "source_status": "cad_linework_available_true_component_split_pending"
+        },
+        {
+          "stable_object_name": "H6_GF_Y04_visual_subdivision_mullions_roedes_laths",
+          "legend_id": "Y04",
+          "opening_label": "Raam Hobbyruimte",
+          "source_status": "cad_linework_available_true_component_split_pending"
+        },
+        {
+          "stable_object_name": "H6_GF_Y08_visual_subdivision_mullions_roedes_laths",
+          "legend_id": "Y08",
+          "opening_label": "voordeur",
+          "source_status": "cad_linework_available_true_component_split_pending"
+        },
+        {
+          "stable_object_name": "H6_GF_Y09_visual_subdivision_mullions_roedes_laths",
+          "legend_id": "Y09",
+          "opening_label": "raam WC1",
+          "source_status": "cad_linework_available_true_component_split_pending"
+        },
+        {
+          "stable_object_name": "H6_GF_Y11_visual_subdivision_mullions_roedes_laths",
+          "legend_id": "Y11",
+          "opening_label": "raam berging",
+          "source_status": "cad_linework_available_true_component_split_pending"
+        },
+        {
+          "stable_object_name": "H6_GF_Y12_visual_subdivision_mullions_roedes_laths",
+          "legend_id": "Y12",
+          "opening_label": "raam keuken",
+          "source_status": "cad_linework_available_true_component_split_pending"
+        },
+        {
+          "stable_object_name": "H6_GF_Y13_visual_subdivision_mullions_roedes_laths",
+          "legend_id": "Y13",
+          "opening_label": "raam bureau Oost",
+          "source_status": "cad_linework_available_true_component_split_pending"
+        }
+      ],
+      "mesh_permission": "blocked_not_mesh",
+      "render_assignment_permission": "blocked_until_source_or_user_material_choice_and_exact_component_mesh_exist"
+    },
+    {
+      "material_status": "no_source_material_slot_bound_yet",
+      "component_slot": "wall_reveals_and_returns",
+      "export_kind": "reveal_return_threshold_or_sill_surface",
+      "priority": "P1_source_search_or_user_material_later",
+      "agent_or_design_action": "Search existing CAD/PDF detail text first; if no material note exists, leave for later user design choice.",
+      "component_count": 17,
+      "openings": [
+        {
+          "legend_id": "Y01",
+          "opening_label": "boograam achtergevel / panoramisch raam"
+        },
+        {
+          "legend_id": "Y02",
+          "opening_label": "Raam Salon"
+        },
+        {
+          "legend_id": "Y03",
+          "opening_label": "schuifraam"
+        },
+        {
+          "legend_id": "Y04",
+          "opening_label": "Raam Hobbyruimte"
+        },
+        {
+          "legend_id": "Y05",
+          "opening_label": "boograam eetkamer"
+        },
+        {
+          "legend_id": "Y06",
+          "opening_label": "deur inkomhal"
+        },
+        {
+          "legend_id": "Y07",
+          "opening_label": "deur WC1"
+        },
+        {
+          "legend_id": "Y08",
+          "opening_label": "voordeur"
+        },
+        {
+          "legend_id": "Y09",
+          "opening_label": "raam WC1"
+        },
+        {
+          "legend_id": "Y10",
+          "opening_label": "kastdeur berging (ingebouwde kast)"
+        },
+        {
+          "legend_id": "Y11",
+          "opening_label": "raam berging"
+        },
+        {
+          "legend_id": "Y12",
+          "opening_label": "raam keuken"
+        },
+        {
+          "legend_id": "Y13",
+          "opening_label": "raam bureau Oost"
+        },
+        {
+          "legend_id": "Y14",
+          "opening_label": "deur bureau"
+        },
+        {
+          "legend_id": "Y15",
+          "opening_label": "raam bureau Zuid"
+        },
+        {
+          "legend_id": "Y16",
+          "opening_label": "rondboog"
+        },
+        {
+          "legend_id": "Y17",
+          "opening_label": "erker inclusief raamdeur"
+        }
+      ],
+      "example_components": [
+        {
+          "stable_object_name": "H6_GF_Y01_wall_reveals_and_returns",
+          "legend_id": "Y01",
+          "opening_label": "boograam achtergevel / panoramisch raam",
+          "source_status": "cad_plan_trace_available_role_split_pending"
+        },
+        {
+          "stable_object_name": "H6_GF_Y02_wall_reveals_and_returns",
+          "legend_id": "Y02",
+          "opening_label": "Raam Salon",
+          "source_status": "cad_plan_trace_available_role_split_pending"
+        },
+        {
+          "stable_object_name": "H6_GF_Y03_wall_reveals_and_returns",
+          "legend_id": "Y03",
+          "opening_label": "schuifraam",
+          "source_status": "cad_plan_trace_available_role_split_pending"
+        },
+        {
+          "stable_object_name": "H6_GF_Y04_wall_reveals_and_returns",
+          "legend_id": "Y04",
+          "opening_label": "Raam Hobbyruimte",
+          "source_status": "cad_plan_trace_available_role_split_pending"
+        },
+        {
+          "stable_object_name": "H6_GF_Y05_wall_reveals_and_returns",
+          "legend_id": "Y05",
+          "opening_label": "boograam eetkamer",
+          "source_status": "cad_plan_trace_available_role_split_pending"
+        },
+        {
+          "stable_object_name": "H6_GF_Y06_wall_reveals_and_returns",
+          "legend_id": "Y06",
+          "opening_label": "deur inkomhal",
+          "source_status": "cad_plan_trace_available_role_split_pending"
+        },
+        {
+          "stable_object_name": "H6_GF_Y07_wall_reveals_and_returns",
+          "legend_id": "Y07",
+          "opening_label": "deur WC1",
+          "source_status": "cad_plan_trace_available_role_split_pending"
+        },
+        {
+          "stable_object_name": "H6_GF_Y08_wall_reveals_and_returns",
+          "legend_id": "Y08",
+          "opening_label": "voordeur",
+          "source_status": "cad_plan_trace_available_role_split_pending"
+        }
+      ],
+      "mesh_permission": "blocked_not_mesh",
+      "render_assignment_permission": "blocked_until_source_or_user_material_choice_and_exact_component_mesh_exist"
+    },
+    {
+      "material_status": "accessory_material_slot_not_source_bound_yet",
+      "component_slot": "external_screen_or_shading",
+      "export_kind": "opening_accessory_component",
+      "priority": "P2_design_material_later",
+      "agent_or_design_action": "Keep screen/flyscreen/accessory materials unassigned until exact component mesh and product/material choice exist.",
+      "component_count": 2,
+      "openings": [
+        {
+          "legend_id": "Y12",
+          "opening_label": "raam keuken"
+        },
+        {
+          "legend_id": "Y15",
+          "opening_label": "raam bureau Zuid"
+        }
+      ],
+      "example_components": [
+        {
+          "stable_object_name": "H6_GF_Y12_external_screen_or_shading",
+          "legend_id": "Y12",
+          "opening_label": "raam keuken",
+          "source_status": "source_text_available_exact_subpart_binding_pending"
+        },
+        {
+          "stable_object_name": "H6_GF_Y15_external_screen_or_shading",
+          "legend_id": "Y15",
+          "opening_label": "raam bureau Zuid",
+          "source_status": "source_text_available_exact_subpart_binding_pending"
+        }
+      ],
+      "mesh_permission": "blocked_not_mesh",
+      "render_assignment_permission": "blocked_until_source_or_user_material_choice_and_exact_component_mesh_exist"
+    },
+    {
+      "material_status": "accessory_material_slot_not_source_bound_yet",
+      "component_slot": "flyscreen_or_insect_screen",
+      "export_kind": "opening_accessory_component",
+      "priority": "P2_design_material_later",
+      "agent_or_design_action": "Keep screen/flyscreen/accessory materials unassigned until exact component mesh and product/material choice exist.",
+      "component_count": 8,
+      "openings": [
+        {
+          "legend_id": "Y03",
+          "opening_label": "schuifraam"
+        },
+        {
+          "legend_id": "Y04",
+          "opening_label": "Raam Hobbyruimte"
+        },
+        {
+          "legend_id": "Y08",
+          "opening_label": "voordeur"
+        },
+        {
+          "legend_id": "Y09",
+          "opening_label": "raam WC1"
+        },
+        {
+          "legend_id": "Y11",
+          "opening_label": "raam berging"
+        },
+        {
+          "legend_id": "Y12",
+          "opening_label": "raam keuken"
+        },
+        {
+          "legend_id": "Y13",
+          "opening_label": "raam bureau Oost"
+        },
+        {
+          "legend_id": "Y15",
+          "opening_label": "raam bureau Zuid"
+        }
+      ],
+      "example_components": [
+        {
+          "stable_object_name": "H6_GF_Y03_flyscreen_or_insect_screen",
+          "legend_id": "Y03",
+          "opening_label": "schuifraam",
+          "source_status": "source_text_available_leaf_assignment_pending"
+        },
+        {
+          "stable_object_name": "H6_GF_Y04_flyscreen_or_insect_screen",
+          "legend_id": "Y04",
+          "opening_label": "Raam Hobbyruimte",
+          "source_status": "source_text_available_leaf_assignment_pending"
+        },
+        {
+          "stable_object_name": "H6_GF_Y08_flyscreen_or_insect_screen",
+          "legend_id": "Y08",
+          "opening_label": "voordeur",
+          "source_status": "source_text_available_leaf_assignment_pending"
+        },
+        {
+          "stable_object_name": "H6_GF_Y09_flyscreen_or_insect_screen",
+          "legend_id": "Y09",
+          "opening_label": "raam WC1",
+          "source_status": "source_text_available_leaf_assignment_pending"
+        },
+        {
+          "stable_object_name": "H6_GF_Y11_flyscreen_or_insect_screen",
+          "legend_id": "Y11",
+          "opening_label": "raam berging",
+          "source_status": "source_text_available_leaf_assignment_pending"
+        },
+        {
+          "stable_object_name": "H6_GF_Y12_flyscreen_or_insect_screen",
+          "legend_id": "Y12",
+          "opening_label": "raam keuken",
+          "source_status": "source_text_available_leaf_assignment_pending"
+        },
+        {
+          "stable_object_name": "H6_GF_Y13_flyscreen_or_insect_screen",
+          "legend_id": "Y13",
+          "opening_label": "raam bureau Oost",
+          "source_status": "source_text_available_leaf_assignment_pending"
+        },
+        {
+          "stable_object_name": "H6_GF_Y15_flyscreen_or_insect_screen",
+          "legend_id": "Y15",
+          "opening_label": "raam bureau Zuid",
+          "source_status": "source_text_available_leaf_assignment_pending"
+        }
+      ],
+      "mesh_permission": "blocked_not_mesh",
+      "render_assignment_permission": "blocked_until_source_or_user_material_choice_and_exact_component_mesh_exist"
+    },
+    {
+      "material_status": "glass_material_slot_not_source_bound_yet",
+      "component_slot": "glass_panels",
+      "export_kind": "glass_panel_surface",
+      "priority": "P2_design_material_later",
+      "agent_or_design_action": "Keep glass as a future material slot; CAD confirms glass geometry/components but does not define a photoreal glass material.",
+      "component_count": 11,
+      "openings": [
+        {
+          "legend_id": "Y01",
+          "opening_label": "boograam achtergevel / panoramisch raam"
+        },
+        {
+          "legend_id": "Y02",
+          "opening_label": "Raam Salon"
+        },
+        {
+          "legend_id": "Y03",
+          "opening_label": "schuifraam"
+        },
+        {
+          "legend_id": "Y04",
+          "opening_label": "Raam Hobbyruimte"
+        },
+        {
+          "legend_id": "Y05",
+          "opening_label": "boograam eetkamer"
+        },
+        {
+          "legend_id": "Y09",
+          "opening_label": "raam WC1"
+        },
+        {
+          "legend_id": "Y11",
+          "opening_label": "raam berging"
+        },
+        {
+          "legend_id": "Y12",
+          "opening_label": "raam keuken"
+        },
+        {
+          "legend_id": "Y13",
+          "opening_label": "raam bureau Oost"
+        },
+        {
+          "legend_id": "Y15",
+          "opening_label": "raam bureau Zuid"
+        },
+        {
+          "legend_id": "Y17",
+          "opening_label": "erker inclusief raamdeur"
+        }
+      ],
+      "example_components": [
+        {
+          "stable_object_name": "H6_GF_Y01_glass_panels",
+          "legend_id": "Y01",
+          "opening_label": "boograam achtergevel / panoramisch raam",
+          "source_status": "cad_linework_available_panel_split_pending"
+        },
+        {
+          "stable_object_name": "H6_GF_Y02_glass_panels",
+          "legend_id": "Y02",
+          "opening_label": "Raam Salon",
+          "source_status": "cad_linework_available_panel_split_pending"
+        },
+        {
+          "stable_object_name": "H6_GF_Y03_glass_panels",
+          "legend_id": "Y03",
+          "opening_label": "schuifraam",
+          "source_status": "cad_linework_available_panel_split_pending"
+        },
+        {
+          "stable_object_name": "H6_GF_Y04_glass_panels",
+          "legend_id": "Y04",
+          "opening_label": "Raam Hobbyruimte",
+          "source_status": "cad_linework_available_panel_split_pending"
+        },
+        {
+          "stable_object_name": "H6_GF_Y05_glass_panels",
+          "legend_id": "Y05",
+          "opening_label": "boograam eetkamer",
+          "source_status": "cad_linework_available_panel_split_pending"
+        },
+        {
+          "stable_object_name": "H6_GF_Y09_glass_panels",
+          "legend_id": "Y09",
+          "opening_label": "raam WC1",
+          "source_status": "cad_linework_available_panel_split_pending"
+        },
+        {
+          "stable_object_name": "H6_GF_Y11_glass_panels",
+          "legend_id": "Y11",
+          "opening_label": "raam berging",
+          "source_status": "cad_linework_available_panel_split_pending"
+        },
+        {
+          "stable_object_name": "H6_GF_Y12_glass_panels",
+          "legend_id": "Y12",
+          "opening_label": "raam keuken",
+          "source_status": "cad_linework_available_panel_split_pending"
+        }
+      ],
+      "mesh_permission": "blocked_not_mesh",
+      "render_assignment_permission": "blocked_until_source_or_user_material_choice_and_exact_component_mesh_exist"
+    }
+  ],
+  "rules": [
+    "Do not create photoreal materials for these backlog rows from assumptions.",
+    "Glass exists as a component type, but exact glass material/PBR settings are a later design choice unless a source note is found.",
+    "Flyscreen, screen and accessory materials require exact component meshes and source/product/user choice before assignment.",
+    "Rows with existing CAD material candidates remain in the export manifest/material preflight and are not duplicated here."
+  ],
+  "mesh_permission": "blocked_not_mesh",
+  "render_assignment_ready_count": 0
+}

@@ -1,0 +1,149 @@
+{
+  "status": "roof_mesh_blocker_matrix_ready_not_mesh",
+  "purpose": "Per-roof-plane blocker matrix proving that CAD roof plane loops, edge candidates, height/slope text and material notes are preserved as source evidence only and cannot yet become a 3D roof mesh.",
+  "source_files": {
+    "roof_source_contract": "blender\\semantic_objects\\roof_source_contract.json",
+    "roof_plan_role_workbench": "blender\\semantic_objects\\roof_plan_role_workbench.json",
+    "roof_height_slope_evidence_contract": "blender\\semantic_objects\\roof_height_slope_evidence_contract.json"
+  },
+  "roof_plane_count": 2,
+  "blocked_roof_plane_count": 2,
+  "mesh_ready_roof_plane_count": 0,
+  "blocker_counts": {
+    "eave_ridge_verge_overhang_roles_not_exact_bound": 2,
+    "final_roof_mesh_blocked_until_plane_edge_slope_level_material_roles_are_exact_source_bound": 2,
+    "roof_edge_levels_not_bound_to_this_plane": 2,
+    "roof_material_not_bound_to_this_plane": 2,
+    "roof_slope_not_bound_to_this_plane": 2,
+    "roof_thickness_and_build_up_not_bound_to_this_plane": 2
+  },
+  "objects": [
+    {
+      "stable_object_id": "roof:mesh_blocker:P01",
+      "roof_plane_marker": "P01",
+      "source_plane_id": "roof_loops:loop:0033",
+      "source_entity_id": "roof_plan:0785",
+      "source_layer": "27 Daken",
+      "source_dxf_type": "HATCH",
+      "source_points_m": [
+        [
+          5.7059,
+          13.3201
+        ],
+        [
+          8.3709,
+          13.3201
+        ],
+        [
+          8.3709,
+          16.5101
+        ],
+        [
+          5.7059,
+          16.5101
+        ]
+      ],
+      "source_area_m2": 8.5014,
+      "edge_summary": {
+        "edge_count": 4,
+        "role_candidate_counts": {
+          "outer_roof_edge_eave_or_overhang_needs_elevation_crosscheck": 3,
+          "shared_between_two_roof_plane_candidates_ridge_or_valley_needs_elevation_crosscheck": 1
+        },
+        "match_status_counts": {
+          "with_candidate_line_match": 4
+        },
+        "matched_edge_count": 4,
+        "unmatched_edge_count": 0
+      },
+      "available_evidence_summary_not_bound": {
+        "slope_candidate_count": 6,
+        "material_candidate_count": 10,
+        "roof_level_text_candidate_count": 14,
+        "ridge_context_candidate_count": 3,
+        "bound_roof_plane_edge_level_count": 0,
+        "bound_roof_plane_slope_count": 0
+      },
+      "bound_slope_count": 0,
+      "bound_edge_level_count": 0,
+      "bound_material_count": 0,
+      "mesh_permission": "blocked_not_mesh",
+      "mesh_ready": false,
+      "blockers": [
+        "eave_ridge_verge_overhang_roles_not_exact_bound",
+        "roof_slope_not_bound_to_this_plane",
+        "roof_edge_levels_not_bound_to_this_plane",
+        "roof_material_not_bound_to_this_plane",
+        "roof_thickness_and_build_up_not_bound_to_this_plane",
+        "final_roof_mesh_blocked_until_plane_edge_slope_level_material_roles_are_exact_source_bound"
+      ]
+    },
+    {
+      "stable_object_id": "roof:mesh_blocker:P02",
+      "roof_plane_marker": "P02",
+      "source_plane_id": "roof_loops:loop:0034",
+      "source_entity_id": "roof_plan:0786",
+      "source_layer": "27 Daken",
+      "source_dxf_type": "HATCH",
+      "source_points_m": [
+        [
+          11.0359,
+          16.5101
+        ],
+        [
+          8.3709,
+          16.5101
+        ],
+        [
+          8.3709,
+          13.3201
+        ],
+        [
+          11.0359,
+          13.3201
+        ]
+      ],
+      "source_area_m2": 8.5014,
+      "edge_summary": {
+        "edge_count": 4,
+        "role_candidate_counts": {
+          "outer_roof_edge_eave_or_overhang_needs_elevation_crosscheck": 3,
+          "shared_between_two_roof_plane_candidates_ridge_or_valley_needs_elevation_crosscheck": 1
+        },
+        "match_status_counts": {
+          "with_candidate_line_match": 4
+        },
+        "matched_edge_count": 4,
+        "unmatched_edge_count": 0
+      },
+      "available_evidence_summary_not_bound": {
+        "slope_candidate_count": 6,
+        "material_candidate_count": 10,
+        "roof_level_text_candidate_count": 14,
+        "ridge_context_candidate_count": 3,
+        "bound_roof_plane_edge_level_count": 0,
+        "bound_roof_plane_slope_count": 0
+      },
+      "bound_slope_count": 0,
+      "bound_edge_level_count": 0,
+      "bound_material_count": 0,
+      "mesh_permission": "blocked_not_mesh",
+      "mesh_ready": false,
+      "blockers": [
+        "eave_ridge_verge_overhang_roles_not_exact_bound",
+        "roof_slope_not_bound_to_this_plane",
+        "roof_edge_levels_not_bound_to_this_plane",
+        "roof_material_not_bound_to_this_plane",
+        "roof_thickness_and_build_up_not_bound_to_this_plane",
+        "final_roof_mesh_blocked_until_plane_edge_slope_level_material_roles_are_exact_source_bound"
+      ]
+    }
+  ],
+  "rules": [
+    "Do not generate roof mesh while mesh_ready_roof_plane_count is zero.",
+    "Do not use roof plane hatch loops as final roof geometry until edge, ridge, eave, verge and overhang roles are exact-bound.",
+    "Do not apply slope, level or material candidates to roof planes until exact source binding exists.",
+    "Use this matrix as the guard before any later roof mesh script."
+  ],
+  "mesh_ready_for_final_world": false
+}

@@ -1,0 +1,5267 @@
+{
+  "status": "source_bound_roof_technical_preview_ready",
+  "purpose": "First exact roof shell from CAD roof-plan edges plus repeated PDF/CAD elevation and section levels. No bounding boxes and no guessed roof direction.",
+  "coordinate_system": {
+    "source_units": "meters",
+    "mesh_units": "meters",
+    "axis": "Mesh data stores source X/Y on ground plane and Z as display height; WebGL viewer remaps to Three.js X/Z ground plane with Y up",
+    "mesh_origin_source_m": {
+      "x": 6.63005,
+      "y": 9.1903
+    }
+  },
+  "alignment_transform": {
+    "scale": 0.25,
+    "rotation_deg": 0.0,
+    "translate_x": 3.6468249999999998,
+    "translate_y": 6.755625
+  },
+  "roof_plan_to_ground_transform": {
+    "translate_x_m": 0.0,
+    "translate_y_m": 1.6,
+    "rotation_deg": 0.0,
+    "scale": 1.0
+  },
+  "source_files": {
+    "roof_source_contract": "blender\\semantic_objects\\roof_source_contract.json",
+    "roof_height_slope_evidence": "blender\\semantic_objects\\roof_height_slope_evidence_contract.json",
+    "front_elevation_truth": "blender\\cad_truth_layers\\left_elevation_truth_layer.json",
+    "rear_elevation_truth": "blender\\cad_truth_layers\\front_elevation_truth_layer.json",
+    "ground_alignment": "blender\\site_mesh\\ground_floor_complete_preview_mesh_aligned.json"
+  },
+  "object_count": 32,
+  "roof_plane_count": 8,
+  "gable_surface_count": 6,
+  "objects": [
+    {
+      "validation_id": "RF01",
+      "stable_object_id": "roof:source_bound_preview:RF01",
+      "label": "Hoofddak westelijk dakvlak",
+      "object_type": "source_bound_roof_plane_surface",
+      "material_key": "roof_tiles_vlaamse_pan_401_rustiek",
+      "material": {
+        "hex": "#75412f",
+        "label": "Wienerberger Koramic Vlaamse Pan 401 Rustiek - hoofd- en achterbouwdak"
+      },
+      "vertices": [
+        [
+          -2.5988,
+          -1.50715,
+          5.82
+        ],
+        [
+          -2.5988,
+          1.29535,
+          5.82
+        ],
+        [
+          -1.39924,
+          1.29535,
+          10.55
+        ],
+        [
+          -1.39924,
+          -1.50715,
+          10.55
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ],
+      "vertex_count": 4,
+      "face_count": 2,
+      "source_entity_ids": [
+        "front_elevation:1667",
+        "front_elevation:1682",
+        "left_elevation:1478",
+        "left_elevation:1479",
+        "left_elevation:1483",
+        "rear_elevation:1753",
+        "rear_elevation:1754",
+        "right_elevation:1851",
+        "right_elevation:1852",
+        "roof_plan:0017",
+        "roof_plan:0018",
+        "roof_plan:0020",
+        "roof_plan:0410",
+        "roof_plan:0413",
+        "roof_plan:0416"
+      ],
+      "source_entity_count": 15,
+      "source_evidence": {
+        "slope_deg": 45,
+        "eave_level_m": 5.82,
+        "ridge_level_m": 10.55,
+        "roof_covering_source": "Wienerberger Koramic Vlaamse Pan 401 Rustiek - hoofd- en achterbouwdak"
+      },
+      "mesh_status": "source_bound_technical_roof_preview_not_photoreal_finish",
+      "mesh_permission": "technical_shell_preview_from_exact_plan_edges_and_repeated_section_levels"
+    },
+    {
+      "validation_id": "RF02",
+      "stable_object_id": "roof:source_bound_preview:RF02",
+      "label": "Hoofddak oostelijk dakvlak",
+      "object_type": "source_bound_roof_plane_surface",
+      "material_key": "roof_tiles_vlaamse_pan_401_rustiek",
+      "material": {
+        "hex": "#75412f",
+        "label": "Wienerberger Koramic Vlaamse Pan 401 Rustiek - hoofd- en achterbouwdak"
+      },
+      "vertices": [
+        [
+          -0.19968,
+          -1.50715,
+          5.82
+        ],
+        [
+          -0.19968,
+          1.29535,
+          5.82
+        ],
+        [
+          -1.39924,
+          1.29535,
+          10.55
+        ],
+        [
+          -1.39924,
+          -1.50715,
+          10.55
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ],
+      "vertex_count": 4,
+      "face_count": 2,
+      "source_entity_ids": [
+        "front_elevation:1667",
+        "front_elevation:1682",
+        "left_elevation:1478",
+        "left_elevation:1479",
+        "left_elevation:1483",
+        "rear_elevation:1753",
+        "rear_elevation:1754",
+        "right_elevation:1851",
+        "right_elevation:1852",
+        "roof_plan:0017",
+        "roof_plan:0018",
+        "roof_plan:0020",
+        "roof_plan:0410",
+        "roof_plan:0413",
+        "roof_plan:0416"
+      ],
+      "source_entity_count": 15,
+      "source_evidence": {
+        "slope_deg": 45,
+        "eave_level_m": 5.82,
+        "ridge_level_m": 10.55,
+        "roof_covering_source": "Wienerberger Koramic Vlaamse Pan 401 Rustiek - hoofd- en achterbouwdak"
+      },
+      "mesh_status": "source_bound_technical_roof_preview_not_photoreal_finish",
+      "mesh_permission": "technical_shell_preview_from_exact_plan_edges_and_repeated_section_levels"
+    },
+    {
+      "validation_id": "GF02",
+      "stable_object_id": "roof:source_bound_preview:GF02",
+      "label": "Hoofdtopgevel noord",
+      "object_type": "source_bound_gable_wall_surface",
+      "material_key": "gable_wall_technical",
+      "material": {
+        "hex": "#704638",
+        "label": "Beerse klinker rijnformaat wildverband - PDF material role"
+      },
+      "vertices": [
+        [
+          -2.5988,
+          1.29535,
+          5.82
+        ],
+        [
+          -0.19968,
+          1.29535,
+          5.82
+        ],
+        [
+          -1.39924,
+          1.29535,
+          10.55
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "vertex_count": 3,
+      "face_count": 1,
+      "source_entity_ids": [
+        "front_elevation:1667",
+        "front_elevation:1682",
+        "left_elevation:1478",
+        "left_elevation:1479",
+        "left_elevation:1483",
+        "rear_elevation:1753",
+        "rear_elevation:1754",
+        "right_elevation:1851",
+        "right_elevation:1852",
+        "roof_plan:0017",
+        "roof_plan:0018",
+        "roof_plan:0020",
+        "roof_plan:0410",
+        "roof_plan:0413",
+        "roof_plan:0416"
+      ],
+      "source_entity_count": 15,
+      "source_evidence": {
+        "section": "AB",
+        "facade_role": "north_rear_gable"
+      },
+      "mesh_status": "source_bound_technical_roof_preview_not_photoreal_finish",
+      "mesh_permission": "technical_shell_preview_from_exact_plan_edges_and_repeated_section_levels"
+    },
+    {
+      "validation_id": "RF03",
+      "stable_object_id": "roof:source_bound_preview:RF03",
+      "label": "Achterbouw westelijk dakvlak",
+      "object_type": "source_bound_roof_plane_surface",
+      "material_key": "roof_tiles_vlaamse_pan_401_rustiek",
+      "material": {
+        "hex": "#75412f",
+        "label": "Wienerberger Koramic Vlaamse Pan 401 Rustiek - hoofd- en achterbouwdak"
+      },
+      "vertices": [
+        [
+          -1.55675,
+          1.29535,
+          2.95
+        ],
+        [
+          -1.55675,
+          2.09285,
+          2.95
+        ],
+        [
+          -0.8905,
+          2.09285,
+          5.67
+        ],
+        [
+          -0.8905,
+          1.29535,
+          5.67
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ],
+      "vertex_count": 4,
+      "face_count": 2,
+      "source_entity_ids": [
+        "front_elevation:1679",
+        "front_elevation:1689",
+        "rear_elevation:1760",
+        "rear_elevation:1765",
+        "right_elevation:1850",
+        "roof_plan:0785",
+        "roof_plan:0786",
+        "roof_plan:0787",
+        "roof_plan:0788",
+        "roof_plan:0789",
+        "roof_plan:0790",
+        "roof_plan:0791",
+        "roof_plan:0792",
+        "roof_plan:0793"
+      ],
+      "source_entity_count": 14,
+      "source_evidence": {
+        "slope_deg": 45,
+        "eave_level_m": 2.95,
+        "ridge_level_m": 5.67,
+        "source_plane_id": "roof_loops:loop:0033",
+        "roof_covering_source": "Wienerberger Koramic Vlaamse Pan 401 Rustiek - hoofd- en achterbouwdak"
+      },
+      "mesh_status": "source_bound_technical_roof_preview_not_photoreal_finish",
+      "mesh_permission": "technical_shell_preview_from_exact_plan_edges_and_repeated_section_levels"
+    },
+    {
+      "validation_id": "RF04",
+      "stable_object_id": "roof:source_bound_preview:RF04",
+      "label": "Achterbouw oostelijk dakvlak",
+      "object_type": "source_bound_roof_plane_surface",
+      "material_key": "roof_tiles_vlaamse_pan_401_rustiek",
+      "material": {
+        "hex": "#75412f",
+        "label": "Wienerberger Koramic Vlaamse Pan 401 Rustiek - hoofd- en achterbouwdak"
+      },
+      "vertices": [
+        [
+          -0.22425,
+          1.29535,
+          2.95
+        ],
+        [
+          -0.22425,
+          2.09285,
+          2.95
+        ],
+        [
+          -0.8905,
+          2.09285,
+          5.67
+        ],
+        [
+          -0.8905,
+          1.29535,
+          5.67
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ],
+      "vertex_count": 4,
+      "face_count": 2,
+      "source_entity_ids": [
+        "front_elevation:1679",
+        "front_elevation:1689",
+        "rear_elevation:1760",
+        "rear_elevation:1765",
+        "right_elevation:1850",
+        "roof_plan:0785",
+        "roof_plan:0786",
+        "roof_plan:0787",
+        "roof_plan:0788",
+        "roof_plan:0789",
+        "roof_plan:0790",
+        "roof_plan:0791",
+        "roof_plan:0792",
+        "roof_plan:0793"
+      ],
+      "source_entity_count": 14,
+      "source_evidence": {
+        "slope_deg": 45,
+        "eave_level_m": 2.95,
+        "ridge_level_m": 5.67,
+        "source_plane_id": "roof_loops:loop:0034",
+        "roof_covering_source": "Wienerberger Koramic Vlaamse Pan 401 Rustiek - hoofd- en achterbouwdak"
+      },
+      "mesh_status": "source_bound_technical_roof_preview_not_photoreal_finish",
+      "mesh_permission": "technical_shell_preview_from_exact_plan_edges_and_repeated_section_levels"
+    },
+    {
+      "validation_id": "GF03",
+      "stable_object_id": "roof:source_bound_preview:GF03",
+      "label": "Achterbouw topgevel noord",
+      "object_type": "source_bound_gable_wall_surface",
+      "material_key": "gable_wall_technical",
+      "material": {
+        "hex": "#704638",
+        "label": "Beerse klinker rijnformaat wildverband - PDF material role"
+      },
+      "vertices": [
+        [
+          -1.55675,
+          2.09285,
+          2.95
+        ],
+        [
+          -0.22425,
+          2.09285,
+          2.95
+        ],
+        [
+          -0.8905,
+          2.09285,
+          5.67
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "vertex_count": 3,
+      "face_count": 1,
+      "source_entity_ids": [
+        "front_elevation:1679",
+        "front_elevation:1689",
+        "rear_elevation:1760",
+        "rear_elevation:1765",
+        "right_elevation:1850",
+        "roof_plan:0785",
+        "roof_plan:0786",
+        "roof_plan:0787",
+        "roof_plan:0788",
+        "roof_plan:0789",
+        "roof_plan:0790",
+        "roof_plan:0791",
+        "roof_plan:0792",
+        "roof_plan:0793"
+      ],
+      "source_entity_count": 14,
+      "source_evidence": {
+        "section": "CD",
+        "facade_role": "rear_extension_north_gable"
+      },
+      "mesh_status": "source_bound_technical_roof_preview_not_photoreal_finish",
+      "mesh_permission": "technical_shell_preview_from_exact_plan_edges_and_repeated_section_levels"
+    },
+    {
+      "validation_id": "GF01A",
+      "stable_object_id": "roof:source_bound_preview:GF01A",
+      "label": "Voorste topgevel onder zolderraam",
+      "object_type": "source_bound_gable_wall_surface",
+      "material_key": "gable_wall_technical",
+      "material": {
+        "hex": "#704638",
+        "label": "Beerse klinker rijnformaat wildverband - PDF material role"
+      },
+      "vertices": [
+        [
+          -2.5988,
+          -1.50765,
+          5.82
+        ],
+        [
+          -0.19968,
+          -1.50765,
+          5.82
+        ],
+        [
+          -0.28796,
+          -1.50765,
+          6.1681
+        ],
+        [
+          -2.51052,
+          -1.50765,
+          6.1681
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ],
+      "vertex_count": 4,
+      "face_count": 2,
+      "source_entity_ids": [
+        "front_elevation:1667",
+        "front_elevation:1682",
+        "left_elevation:0271",
+        "left_elevation:0272",
+        "left_elevation:0286",
+        "left_elevation:0287",
+        "left_elevation:0288",
+        "left_elevation:0289",
+        "left_elevation:0290",
+        "left_elevation:0291",
+        "left_elevation:0292",
+        "left_elevation:0293",
+        "left_elevation:0298",
+        "left_elevation:0299",
+        "left_elevation:1478",
+        "left_elevation:1479",
+        "left_elevation:1483",
+        "rear_elevation:1753",
+        "rear_elevation:1754",
+        "right_elevation:1851",
+        "right_elevation:1852",
+        "roof_plan:0017",
+        "roof_plan:0018",
+        "roof_plan:0020",
+        "roof_plan:0410",
+        "roof_plan:0413",
+        "roof_plan:0416"
+      ],
+      "source_entity_count": 27,
+      "source_evidence": {
+        "facade_role": "south_front_gable",
+        "attic_window_opening_m": {
+          "left_x": 5.61605,
+          "right_x": 7.05605,
+          "bottom_z": 6.1681,
+          "top_z": 8.0681
+        },
+        "derivation": "main_gable_split_around_exact_front_elevation_window_frame",
+        "surface_role": "below_window"
+      },
+      "mesh_status": "source_bound_technical_roof_preview_not_photoreal_finish",
+      "mesh_permission": "technical_shell_preview_from_exact_plan_edges_and_repeated_section_levels"
+    },
+    {
+      "validation_id": "GF01B",
+      "stable_object_id": "roof:source_bound_preview:GF01B",
+      "label": "Voorste topgevel links van zolderraam",
+      "object_type": "source_bound_gable_wall_surface",
+      "material_key": "gable_wall_technical",
+      "material": {
+        "hex": "#704638",
+        "label": "Beerse klinker rijnformaat wildverband - PDF material role"
+      },
+      "vertices": [
+        [
+          -2.51052,
+          -1.50765,
+          6.1681
+        ],
+        [
+          -1.57921,
+          -1.50765,
+          6.1681
+        ],
+        [
+          -1.57921,
+          -1.50765,
+          8.0681
+        ],
+        [
+          -2.02867,
+          -1.50765,
+          8.0681
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ],
+      "vertex_count": 4,
+      "face_count": 2,
+      "source_entity_ids": [
+        "front_elevation:1667",
+        "front_elevation:1682",
+        "left_elevation:0271",
+        "left_elevation:0272",
+        "left_elevation:0286",
+        "left_elevation:0287",
+        "left_elevation:0288",
+        "left_elevation:0289",
+        "left_elevation:0290",
+        "left_elevation:0291",
+        "left_elevation:0292",
+        "left_elevation:0293",
+        "left_elevation:0298",
+        "left_elevation:0299",
+        "left_elevation:1478",
+        "left_elevation:1479",
+        "left_elevation:1483",
+        "rear_elevation:1753",
+        "rear_elevation:1754",
+        "right_elevation:1851",
+        "right_elevation:1852",
+        "roof_plan:0017",
+        "roof_plan:0018",
+        "roof_plan:0020",
+        "roof_plan:0410",
+        "roof_plan:0413",
+        "roof_plan:0416"
+      ],
+      "source_entity_count": 27,
+      "source_evidence": {
+        "facade_role": "south_front_gable",
+        "attic_window_opening_m": {
+          "left_x": 5.61605,
+          "right_x": 7.05605,
+          "bottom_z": 6.1681,
+          "top_z": 8.0681
+        },
+        "derivation": "main_gable_split_around_exact_front_elevation_window_frame",
+        "surface_role": "left_of_window"
+      },
+      "mesh_status": "source_bound_technical_roof_preview_not_photoreal_finish",
+      "mesh_permission": "technical_shell_preview_from_exact_plan_edges_and_repeated_section_levels"
+    },
+    {
+      "validation_id": "GF01C",
+      "stable_object_id": "roof:source_bound_preview:GF01C",
+      "label": "Voorste topgevel rechts van zolderraam",
+      "object_type": "source_bound_gable_wall_surface",
+      "material_key": "gable_wall_technical",
+      "material": {
+        "hex": "#704638",
+        "label": "Beerse klinker rijnformaat wildverband - PDF material role"
+      },
+      "vertices": [
+        [
+          -1.21921,
+          -1.50765,
+          6.1681
+        ],
+        [
+          -0.28796,
+          -1.50765,
+          6.1681
+        ],
+        [
+          -0.76981,
+          -1.50765,
+          8.0681
+        ],
+        [
+          -1.21921,
+          -1.50765,
+          8.0681
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ],
+      "vertex_count": 4,
+      "face_count": 2,
+      "source_entity_ids": [
+        "front_elevation:1667",
+        "front_elevation:1682",
+        "left_elevation:0271",
+        "left_elevation:0272",
+        "left_elevation:0286",
+        "left_elevation:0287",
+        "left_elevation:0288",
+        "left_elevation:0289",
+        "left_elevation:0290",
+        "left_elevation:0291",
+        "left_elevation:0292",
+        "left_elevation:0293",
+        "left_elevation:0298",
+        "left_elevation:0299",
+        "left_elevation:1478",
+        "left_elevation:1479",
+        "left_elevation:1483",
+        "rear_elevation:1753",
+        "rear_elevation:1754",
+        "right_elevation:1851",
+        "right_elevation:1852",
+        "roof_plan:0017",
+        "roof_plan:0018",
+        "roof_plan:0020",
+        "roof_plan:0410",
+        "roof_plan:0413",
+        "roof_plan:0416"
+      ],
+      "source_entity_count": 27,
+      "source_evidence": {
+        "facade_role": "south_front_gable",
+        "attic_window_opening_m": {
+          "left_x": 5.61605,
+          "right_x": 7.05605,
+          "bottom_z": 6.1681,
+          "top_z": 8.0681
+        },
+        "derivation": "main_gable_split_around_exact_front_elevation_window_frame",
+        "surface_role": "right_of_window"
+      },
+      "mesh_status": "source_bound_technical_roof_preview_not_photoreal_finish",
+      "mesh_permission": "technical_shell_preview_from_exact_plan_edges_and_repeated_section_levels"
+    },
+    {
+      "validation_id": "GF01D",
+      "stable_object_id": "roof:source_bound_preview:GF01D",
+      "label": "Voorste topgevel boven zolderraam",
+      "object_type": "source_bound_gable_wall_surface",
+      "material_key": "gable_wall_technical",
+      "material": {
+        "hex": "#704638",
+        "label": "Beerse klinker rijnformaat wildverband - PDF material role"
+      },
+      "vertices": [
+        [
+          -2.02867,
+          -1.50765,
+          8.0681
+        ],
+        [
+          -1.57921,
+          -1.50765,
+          8.0681
+        ],
+        [
+          -1.21921,
+          -1.50765,
+          8.0681
+        ],
+        [
+          -0.76981,
+          -1.50765,
+          8.0681
+        ],
+        [
+          -1.39924,
+          -1.50765,
+          10.55
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "vertex_count": 5,
+      "face_count": 3,
+      "source_entity_ids": [
+        "front_elevation:1667",
+        "front_elevation:1682",
+        "left_elevation:0271",
+        "left_elevation:0272",
+        "left_elevation:0286",
+        "left_elevation:0287",
+        "left_elevation:0288",
+        "left_elevation:0289",
+        "left_elevation:0290",
+        "left_elevation:0291",
+        "left_elevation:0292",
+        "left_elevation:0293",
+        "left_elevation:0298",
+        "left_elevation:0299",
+        "left_elevation:1478",
+        "left_elevation:1479",
+        "left_elevation:1483",
+        "rear_elevation:1753",
+        "rear_elevation:1754",
+        "right_elevation:1851",
+        "right_elevation:1852",
+        "roof_plan:0017",
+        "roof_plan:0018",
+        "roof_plan:0020",
+        "roof_plan:0410",
+        "roof_plan:0413",
+        "roof_plan:0416"
+      ],
+      "source_entity_count": 27,
+      "source_evidence": {
+        "facade_role": "south_front_gable",
+        "attic_window_opening_m": {
+          "left_x": 5.61605,
+          "right_x": 7.05605,
+          "bottom_z": 6.1681,
+          "top_z": 8.0681
+        },
+        "derivation": "main_gable_split_around_exact_front_elevation_window_frame",
+        "surface_role": "above_window"
+      },
+      "mesh_status": "source_bound_technical_roof_preview_not_photoreal_finish",
+      "mesh_permission": "technical_shell_preview_from_exact_plan_edges_and_repeated_section_levels"
+    },
+    {
+      "validation_id": "AFR01",
+      "stable_object_id": "roof:source_bound_preview:AFR01",
+      "label": "Zolderraam buitenkader links",
+      "object_type": "source_bound_attic_window_frame",
+      "material_key": "window_frame_technical",
+      "material": {
+        "hex": "#3f423d",
+        "label": "Exact CAD window frame"
+      },
+      "vertices": [
+        [
+          -1.57921,
+          -1.50865,
+          6.1681
+        ],
+        [
+          -1.55921,
+          -1.50865,
+          6.1681
+        ],
+        [
+          -1.55921,
+          -1.50865,
+          8.0681
+        ],
+        [
+          -1.57921,
+          -1.50865,
+          8.0681
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ],
+      "vertex_count": 4,
+      "face_count": 2,
+      "source_entity_ids": [
+        "left_elevation:0145",
+        "left_elevation:0146",
+        "left_elevation:0211",
+        "left_elevation:0212",
+        "left_elevation:0213",
+        "left_elevation:0214",
+        "left_elevation:0271",
+        "left_elevation:0272",
+        "left_elevation:0279",
+        "left_elevation:0280",
+        "left_elevation:0281",
+        "left_elevation:0282",
+        "left_elevation:0285",
+        "left_elevation:0286",
+        "left_elevation:0287",
+        "left_elevation:0288",
+        "left_elevation:0289",
+        "left_elevation:0290",
+        "left_elevation:0291",
+        "left_elevation:0292",
+        "left_elevation:0293",
+        "left_elevation:0298",
+        "left_elevation:0299"
+      ],
+      "source_entity_count": 23,
+      "source_evidence": {
+        "outer_width_m": 1.44,
+        "outer_height_m": 1.9,
+        "lower_leaf_count": 2,
+        "upper_fixed_light_count": 1,
+        "derivation": "exact_front_elevation_frame_and_leaf_linework"
+      },
+      "mesh_status": "source_bound_technical_roof_preview_not_photoreal_finish",
+      "mesh_permission": "technical_shell_preview_from_exact_plan_edges_and_repeated_section_levels"
+    },
+    {
+      "validation_id": "AFR02",
+      "stable_object_id": "roof:source_bound_preview:AFR02",
+      "label": "Zolderraam buitenkader rechts",
+      "object_type": "source_bound_attic_window_frame",
+      "material_key": "window_frame_technical",
+      "material": {
+        "hex": "#3f423d",
+        "label": "Exact CAD window frame"
+      },
+      "vertices": [
+        [
+          -1.23921,
+          -1.50865,
+          6.1681
+        ],
+        [
+          -1.21921,
+          -1.50865,
+          6.1681
+        ],
+        [
+          -1.21921,
+          -1.50865,
+          8.0681
+        ],
+        [
+          -1.23921,
+          -1.50865,
+          8.0681
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ],
+      "vertex_count": 4,
+      "face_count": 2,
+      "source_entity_ids": [
+        "left_elevation:0145",
+        "left_elevation:0146",
+        "left_elevation:0211",
+        "left_elevation:0212",
+        "left_elevation:0213",
+        "left_elevation:0214",
+        "left_elevation:0271",
+        "left_elevation:0272",
+        "left_elevation:0279",
+        "left_elevation:0280",
+        "left_elevation:0281",
+        "left_elevation:0282",
+        "left_elevation:0285",
+        "left_elevation:0286",
+        "left_elevation:0287",
+        "left_elevation:0288",
+        "left_elevation:0289",
+        "left_elevation:0290",
+        "left_elevation:0291",
+        "left_elevation:0292",
+        "left_elevation:0293",
+        "left_elevation:0298",
+        "left_elevation:0299"
+      ],
+      "source_entity_count": 23,
+      "source_evidence": {
+        "outer_width_m": 1.44,
+        "outer_height_m": 1.9,
+        "lower_leaf_count": 2,
+        "upper_fixed_light_count": 1,
+        "derivation": "exact_front_elevation_frame_and_leaf_linework"
+      },
+      "mesh_status": "source_bound_technical_roof_preview_not_photoreal_finish",
+      "mesh_permission": "technical_shell_preview_from_exact_plan_edges_and_repeated_section_levels"
+    },
+    {
+      "validation_id": "AFR03",
+      "stable_object_id": "roof:source_bound_preview:AFR03",
+      "label": "Zolderraam buitenkader onder",
+      "object_type": "source_bound_attic_window_frame",
+      "material_key": "window_frame_technical",
+      "material": {
+        "hex": "#3f423d",
+        "label": "Exact CAD window frame"
+      },
+      "vertices": [
+        [
+          -1.55921,
+          -1.50865,
+          6.1681
+        ],
+        [
+          -1.23921,
+          -1.50865,
+          6.1681
+        ],
+        [
+          -1.23921,
+          -1.50865,
+          6.2781
+        ],
+        [
+          -1.55921,
+          -1.50865,
+          6.2781
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ],
+      "vertex_count": 4,
+      "face_count": 2,
+      "source_entity_ids": [
+        "left_elevation:0145",
+        "left_elevation:0146",
+        "left_elevation:0211",
+        "left_elevation:0212",
+        "left_elevation:0213",
+        "left_elevation:0214",
+        "left_elevation:0271",
+        "left_elevation:0272",
+        "left_elevation:0279",
+        "left_elevation:0280",
+        "left_elevation:0281",
+        "left_elevation:0282",
+        "left_elevation:0285",
+        "left_elevation:0286",
+        "left_elevation:0287",
+        "left_elevation:0288",
+        "left_elevation:0289",
+        "left_elevation:0290",
+        "left_elevation:0291",
+        "left_elevation:0292",
+        "left_elevation:0293",
+        "left_elevation:0298",
+        "left_elevation:0299"
+      ],
+      "source_entity_count": 23,
+      "source_evidence": {
+        "outer_width_m": 1.44,
+        "outer_height_m": 1.9,
+        "lower_leaf_count": 2,
+        "upper_fixed_light_count": 1,
+        "derivation": "exact_front_elevation_frame_and_leaf_linework"
+      },
+      "mesh_status": "source_bound_technical_roof_preview_not_photoreal_finish",
+      "mesh_permission": "technical_shell_preview_from_exact_plan_edges_and_repeated_section_levels"
+    },
+    {
+      "validation_id": "AFR04",
+      "stable_object_id": "roof:source_bound_preview:AFR04",
+      "label": "Zolderraam buitenkader boven",
+      "object_type": "source_bound_attic_window_frame",
+      "material_key": "window_frame_technical",
+      "material": {
+        "hex": "#3f423d",
+        "label": "Exact CAD window frame"
+      },
+      "vertices": [
+        [
+          -1.55921,
+          -1.50865,
+          8.0281
+        ],
+        [
+          -1.23921,
+          -1.50865,
+          8.0281
+        ],
+        [
+          -1.23921,
+          -1.50865,
+          8.0681
+        ],
+        [
+          -1.55921,
+          -1.50865,
+          8.0681
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ],
+      "vertex_count": 4,
+      "face_count": 2,
+      "source_entity_ids": [
+        "left_elevation:0145",
+        "left_elevation:0146",
+        "left_elevation:0211",
+        "left_elevation:0212",
+        "left_elevation:0213",
+        "left_elevation:0214",
+        "left_elevation:0271",
+        "left_elevation:0272",
+        "left_elevation:0279",
+        "left_elevation:0280",
+        "left_elevation:0281",
+        "left_elevation:0282",
+        "left_elevation:0285",
+        "left_elevation:0286",
+        "left_elevation:0287",
+        "left_elevation:0288",
+        "left_elevation:0289",
+        "left_elevation:0290",
+        "left_elevation:0291",
+        "left_elevation:0292",
+        "left_elevation:0293",
+        "left_elevation:0298",
+        "left_elevation:0299"
+      ],
+      "source_entity_count": 23,
+      "source_evidence": {
+        "outer_width_m": 1.44,
+        "outer_height_m": 1.9,
+        "lower_leaf_count": 2,
+        "upper_fixed_light_count": 1,
+        "derivation": "exact_front_elevation_frame_and_leaf_linework"
+      },
+      "mesh_status": "source_bound_technical_roof_preview_not_photoreal_finish",
+      "mesh_permission": "technical_shell_preview_from_exact_plan_edges_and_repeated_section_levels"
+    },
+    {
+      "validation_id": "AFR05",
+      "stable_object_id": "roof:source_bound_preview:AFR05",
+      "label": "Zolderraam tussenregel",
+      "object_type": "source_bound_attic_window_frame",
+      "material_key": "window_frame_technical",
+      "material": {
+        "hex": "#3f423d",
+        "label": "Exact CAD window frame"
+      },
+      "vertices": [
+        [
+          -1.55921,
+          -1.50865,
+          7.5931
+        ],
+        [
+          -1.23921,
+          -1.50865,
+          7.5931
+        ],
+        [
+          -1.23921,
+          -1.50865,
+          7.7031
+        ],
+        [
+          -1.55921,
+          -1.50865,
+          7.7031
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ],
+      "vertex_count": 4,
+      "face_count": 2,
+      "source_entity_ids": [
+        "left_elevation:0145",
+        "left_elevation:0146",
+        "left_elevation:0211",
+        "left_elevation:0212",
+        "left_elevation:0213",
+        "left_elevation:0214",
+        "left_elevation:0271",
+        "left_elevation:0272",
+        "left_elevation:0279",
+        "left_elevation:0280",
+        "left_elevation:0281",
+        "left_elevation:0282",
+        "left_elevation:0285",
+        "left_elevation:0286",
+        "left_elevation:0287",
+        "left_elevation:0288",
+        "left_elevation:0289",
+        "left_elevation:0290",
+        "left_elevation:0291",
+        "left_elevation:0292",
+        "left_elevation:0293",
+        "left_elevation:0298",
+        "left_elevation:0299"
+      ],
+      "source_entity_count": 23,
+      "source_evidence": {
+        "outer_width_m": 1.44,
+        "outer_height_m": 1.9,
+        "lower_leaf_count": 2,
+        "upper_fixed_light_count": 1,
+        "derivation": "exact_front_elevation_frame_and_leaf_linework"
+      },
+      "mesh_status": "source_bound_technical_roof_preview_not_photoreal_finish",
+      "mesh_permission": "technical_shell_preview_from_exact_plan_edges_and_repeated_section_levels"
+    },
+    {
+      "validation_id": "AFR06",
+      "stable_object_id": "roof:source_bound_preview:AFR06",
+      "label": "Zolderraam middenstijl",
+      "object_type": "source_bound_attic_window_frame",
+      "material_key": "window_frame_technical",
+      "material": {
+        "hex": "#3f423d",
+        "label": "Exact CAD window frame"
+      },
+      "vertices": [
+        [
+          -1.41671,
+          -1.50865,
+          6.2781
+        ],
+        [
+          -1.38171,
+          -1.50865,
+          6.2781
+        ],
+        [
+          -1.38171,
+          -1.50865,
+          7.5931
+        ],
+        [
+          -1.41671,
+          -1.50865,
+          7.5931
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ],
+      "vertex_count": 4,
+      "face_count": 2,
+      "source_entity_ids": [
+        "left_elevation:0145",
+        "left_elevation:0146",
+        "left_elevation:0211",
+        "left_elevation:0212",
+        "left_elevation:0213",
+        "left_elevation:0214",
+        "left_elevation:0271",
+        "left_elevation:0272",
+        "left_elevation:0279",
+        "left_elevation:0280",
+        "left_elevation:0281",
+        "left_elevation:0282",
+        "left_elevation:0285",
+        "left_elevation:0286",
+        "left_elevation:0287",
+        "left_elevation:0288",
+        "left_elevation:0289",
+        "left_elevation:0290",
+        "left_elevation:0291",
+        "left_elevation:0292",
+        "left_elevation:0293",
+        "left_elevation:0298",
+        "left_elevation:0299"
+      ],
+      "source_entity_count": 23,
+      "source_evidence": {
+        "outer_width_m": 1.44,
+        "outer_height_m": 1.9,
+        "lower_leaf_count": 2,
+        "upper_fixed_light_count": 1,
+        "derivation": "exact_front_elevation_frame_and_leaf_linework"
+      },
+      "mesh_status": "source_bound_technical_roof_preview_not_photoreal_finish",
+      "mesh_permission": "technical_shell_preview_from_exact_plan_edges_and_repeated_section_levels"
+    },
+    {
+      "validation_id": "AGL01",
+      "stable_object_id": "roof:source_bound_preview:AGL01",
+      "label": "Zolderraam glas links onder",
+      "object_type": "source_bound_attic_window_glass",
+      "material_key": "window_glass_technical",
+      "material": {
+        "hex": "#78b7c5",
+        "label": "Exact CAD glazing field"
+      },
+      "vertices": [
+        [
+          -1.55921,
+          -1.50915,
+          6.2781
+        ],
+        [
+          -1.41671,
+          -1.50915,
+          6.2781
+        ],
+        [
+          -1.41671,
+          -1.50915,
+          7.5931
+        ],
+        [
+          -1.55921,
+          -1.50915,
+          7.5931
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ],
+      "vertex_count": 4,
+      "face_count": 2,
+      "source_entity_ids": [
+        "left_elevation:0145",
+        "left_elevation:0146",
+        "left_elevation:0211",
+        "left_elevation:0212",
+        "left_elevation:0213",
+        "left_elevation:0214",
+        "left_elevation:0271",
+        "left_elevation:0272",
+        "left_elevation:0279",
+        "left_elevation:0280",
+        "left_elevation:0281",
+        "left_elevation:0282",
+        "left_elevation:0285",
+        "left_elevation:0286",
+        "left_elevation:0287",
+        "left_elevation:0288",
+        "left_elevation:0289",
+        "left_elevation:0290",
+        "left_elevation:0291",
+        "left_elevation:0292",
+        "left_elevation:0293",
+        "left_elevation:0298",
+        "left_elevation:0299"
+      ],
+      "source_entity_count": 23,
+      "source_evidence": {
+        "outer_width_m": 1.44,
+        "outer_height_m": 1.9,
+        "lower_leaf_count": 2,
+        "upper_fixed_light_count": 1,
+        "derivation": "exact_front_elevation_frame_and_leaf_linework",
+        "glass_field_role": "lower_left"
+      },
+      "mesh_status": "source_bound_technical_roof_preview_not_photoreal_finish",
+      "mesh_permission": "technical_shell_preview_from_exact_plan_edges_and_repeated_section_levels"
+    },
+    {
+      "validation_id": "AGL02",
+      "stable_object_id": "roof:source_bound_preview:AGL02",
+      "label": "Zolderraam glas rechts onder",
+      "object_type": "source_bound_attic_window_glass",
+      "material_key": "window_glass_technical",
+      "material": {
+        "hex": "#78b7c5",
+        "label": "Exact CAD glazing field"
+      },
+      "vertices": [
+        [
+          -1.38171,
+          -1.50915,
+          6.2781
+        ],
+        [
+          -1.23921,
+          -1.50915,
+          6.2781
+        ],
+        [
+          -1.23921,
+          -1.50915,
+          7.5931
+        ],
+        [
+          -1.38171,
+          -1.50915,
+          7.5931
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ],
+      "vertex_count": 4,
+      "face_count": 2,
+      "source_entity_ids": [
+        "left_elevation:0145",
+        "left_elevation:0146",
+        "left_elevation:0211",
+        "left_elevation:0212",
+        "left_elevation:0213",
+        "left_elevation:0214",
+        "left_elevation:0271",
+        "left_elevation:0272",
+        "left_elevation:0279",
+        "left_elevation:0280",
+        "left_elevation:0281",
+        "left_elevation:0282",
+        "left_elevation:0285",
+        "left_elevation:0286",
+        "left_elevation:0287",
+        "left_elevation:0288",
+        "left_elevation:0289",
+        "left_elevation:0290",
+        "left_elevation:0291",
+        "left_elevation:0292",
+        "left_elevation:0293",
+        "left_elevation:0298",
+        "left_elevation:0299"
+      ],
+      "source_entity_count": 23,
+      "source_evidence": {
+        "outer_width_m": 1.44,
+        "outer_height_m": 1.9,
+        "lower_leaf_count": 2,
+        "upper_fixed_light_count": 1,
+        "derivation": "exact_front_elevation_frame_and_leaf_linework",
+        "glass_field_role": "lower_right"
+      },
+      "mesh_status": "source_bound_technical_roof_preview_not_photoreal_finish",
+      "mesh_permission": "technical_shell_preview_from_exact_plan_edges_and_repeated_section_levels"
+    },
+    {
+      "validation_id": "AGL03",
+      "stable_object_id": "roof:source_bound_preview:AGL03",
+      "label": "Zolderraam vast bovenlicht",
+      "object_type": "source_bound_attic_window_glass",
+      "material_key": "window_glass_technical",
+      "material": {
+        "hex": "#78b7c5",
+        "label": "Exact CAD glazing field"
+      },
+      "vertices": [
+        [
+          -1.55921,
+          -1.50915,
+          7.7031
+        ],
+        [
+          -1.23921,
+          -1.50915,
+          7.7031
+        ],
+        [
+          -1.23921,
+          -1.50915,
+          8.0281
+        ],
+        [
+          -1.55921,
+          -1.50915,
+          8.0281
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ],
+      "vertex_count": 4,
+      "face_count": 2,
+      "source_entity_ids": [
+        "left_elevation:0145",
+        "left_elevation:0146",
+        "left_elevation:0211",
+        "left_elevation:0212",
+        "left_elevation:0213",
+        "left_elevation:0214",
+        "left_elevation:0271",
+        "left_elevation:0272",
+        "left_elevation:0279",
+        "left_elevation:0280",
+        "left_elevation:0281",
+        "left_elevation:0282",
+        "left_elevation:0285",
+        "left_elevation:0286",
+        "left_elevation:0287",
+        "left_elevation:0288",
+        "left_elevation:0289",
+        "left_elevation:0290",
+        "left_elevation:0291",
+        "left_elevation:0292",
+        "left_elevation:0293",
+        "left_elevation:0298",
+        "left_elevation:0299"
+      ],
+      "source_entity_count": 23,
+      "source_evidence": {
+        "outer_width_m": 1.44,
+        "outer_height_m": 1.9,
+        "lower_leaf_count": 2,
+        "upper_fixed_light_count": 1,
+        "derivation": "exact_front_elevation_frame_and_leaf_linework",
+        "glass_field_role": "upper_fixed"
+      },
+      "mesh_status": "source_bound_technical_roof_preview_not_photoreal_finish",
+      "mesh_permission": "technical_shell_preview_from_exact_plan_edges_and_repeated_section_levels"
+    },
+    {
+      "validation_id": "ASL01",
+      "stable_object_id": "roof:source_bound_preview:ASL01",
+      "label": "Zolderraam ventilatie- en lattenzone",
+      "object_type": "source_bound_attic_window_screen_lattice",
+      "material_key": "screen_lattice_technical",
+      "material": {
+        "hex": "#4f514b",
+        "label": "Exact CAD ventilation/screen lattice"
+      },
+      "vertices": [
+        [
+          -1.57924,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.56411,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.57624,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.59263,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.56286,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.54773,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.55861,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.57499,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.54648,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.53133,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.54097,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.55736,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.53008,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.51492,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.52333,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.53972,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.51367,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.4985,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.50569,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.52208,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.49725,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.48207,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.48805,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.50444,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.48082,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.46564,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.47041,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.4868,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.46439,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.4492,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.45278,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.46916,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.44795,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.43276,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.43514,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.45153,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.43151,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.41631,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.4175,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.43389,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.41506,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.39986,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.39986,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.41625,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.39861,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.38341,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.38222,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.39861,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.38216,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.36697,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.36458,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.38097,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.36572,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.35052,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.34695,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.36333,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.34927,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.33408,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.32931,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.3457,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.33283,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.31765,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.31167,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.32806,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.3164,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.30122,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.29403,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.31042,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.29997,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.2848,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.27639,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.29278,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.28355,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.26839,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.25875,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.27514,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.26714,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.25199,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.24111,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.2575,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.25074,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.23561,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.22348,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.23986,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.23436,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.21924,
+          -1.50965,
+          8.06808
+        ],
+        [
+          -1.20584,
+          -1.50965,
+          8.26808
+        ],
+        [
+          -1.22223,
+          -1.50965,
+          8.26808
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          4,
+          5,
+          6
+        ],
+        [
+          4,
+          6,
+          7
+        ],
+        [
+          8,
+          9,
+          10
+        ],
+        [
+          8,
+          10,
+          11
+        ],
+        [
+          12,
+          13,
+          14
+        ],
+        [
+          12,
+          14,
+          15
+        ],
+        [
+          16,
+          17,
+          18
+        ],
+        [
+          16,
+          18,
+          19
+        ],
+        [
+          20,
+          21,
+          22
+        ],
+        [
+          20,
+          22,
+          23
+        ],
+        [
+          24,
+          25,
+          26
+        ],
+        [
+          24,
+          26,
+          27
+        ],
+        [
+          28,
+          29,
+          30
+        ],
+        [
+          28,
+          30,
+          31
+        ],
+        [
+          32,
+          33,
+          34
+        ],
+        [
+          32,
+          34,
+          35
+        ],
+        [
+          36,
+          37,
+          38
+        ],
+        [
+          36,
+          38,
+          39
+        ],
+        [
+          40,
+          41,
+          42
+        ],
+        [
+          40,
+          42,
+          43
+        ],
+        [
+          44,
+          45,
+          46
+        ],
+        [
+          44,
+          46,
+          47
+        ],
+        [
+          48,
+          49,
+          50
+        ],
+        [
+          48,
+          50,
+          51
+        ],
+        [
+          52,
+          53,
+          54
+        ],
+        [
+          52,
+          54,
+          55
+        ],
+        [
+          56,
+          57,
+          58
+        ],
+        [
+          56,
+          58,
+          59
+        ],
+        [
+          60,
+          61,
+          62
+        ],
+        [
+          60,
+          62,
+          63
+        ],
+        [
+          64,
+          65,
+          66
+        ],
+        [
+          64,
+          66,
+          67
+        ],
+        [
+          68,
+          69,
+          70
+        ],
+        [
+          68,
+          70,
+          71
+        ],
+        [
+          72,
+          73,
+          74
+        ],
+        [
+          72,
+          74,
+          75
+        ],
+        [
+          76,
+          77,
+          78
+        ],
+        [
+          76,
+          78,
+          79
+        ],
+        [
+          80,
+          81,
+          82
+        ],
+        [
+          80,
+          82,
+          83
+        ],
+        [
+          84,
+          85,
+          86
+        ],
+        [
+          84,
+          86,
+          87
+        ]
+      ],
+      "vertex_count": 88,
+      "face_count": 44,
+      "source_entity_ids": [
+        "left_elevation:0147",
+        "left_elevation:0148",
+        "left_elevation:0150",
+        "left_elevation:0153",
+        "left_elevation:0154",
+        "left_elevation:0156",
+        "left_elevation:0159",
+        "left_elevation:0160",
+        "left_elevation:0162",
+        "left_elevation:0165",
+        "left_elevation:0166",
+        "left_elevation:0168",
+        "left_elevation:0171",
+        "left_elevation:0172",
+        "left_elevation:0174",
+        "left_elevation:0177",
+        "left_elevation:0178",
+        "left_elevation:0180",
+        "left_elevation:0183",
+        "left_elevation:0184",
+        "left_elevation:0186",
+        "left_elevation:0189",
+        "left_elevation:0190",
+        "left_elevation:0192",
+        "left_elevation:0195",
+        "left_elevation:0196",
+        "left_elevation:0198",
+        "left_elevation:0201",
+        "left_elevation:0202",
+        "left_elevation:0204",
+        "left_elevation:0207",
+        "left_elevation:0208",
+        "left_elevation:0210",
+        "left_elevation:0217",
+        "left_elevation:0218",
+        "left_elevation:0220",
+        "left_elevation:0223",
+        "left_elevation:0224",
+        "left_elevation:0226",
+        "left_elevation:0229",
+        "left_elevation:0230",
+        "left_elevation:0232",
+        "left_elevation:0235",
+        "left_elevation:0236",
+        "left_elevation:0238",
+        "left_elevation:0241",
+        "left_elevation:0242",
+        "left_elevation:0244",
+        "left_elevation:0247",
+        "left_elevation:0248",
+        "left_elevation:0250",
+        "left_elevation:0253",
+        "left_elevation:0254",
+        "left_elevation:0256",
+        "left_elevation:0259",
+        "left_elevation:0260",
+        "left_elevation:0262",
+        "left_elevation:0265",
+        "left_elevation:0266",
+        "left_elevation:0268",
+        "left_elevation:0273",
+        "left_elevation:0274",
+        "left_elevation:0276",
+        "left_elevation:0294",
+        "left_elevation:0295",
+        "left_elevation:0297"
+      ],
+      "source_entity_count": 66,
+      "source_evidence": {
+        "source_lattice_count": 22,
+        "derivation": "exact_front_elevation_lattice_polygons_from_preserved_CAD_entities"
+      },
+      "mesh_status": "source_bound_technical_roof_preview_not_photoreal_finish",
+      "mesh_permission": "technical_shell_preview_from_exact_plan_edges_and_repeated_section_levels"
+    },
+    {
+      "validation_id": "GT01",
+      "stable_object_id": "roof:source_bound_preview:GT01",
+      "label": "Hoofddak zinken bakgoot west",
+      "object_type": "source_bound_extruded_gutter_profile",
+      "material_key": "gutter_zinc_technical",
+      "material": {
+        "hex": "#858983",
+        "label": "Exact CAD rounded gutter profile - zinc finish role"
+      },
+      "vertices": [
+        [
+          -2.59592,
+          -1.50715,
+          5.81808
+        ],
+        [
+          -2.56924,
+          -1.50715,
+          5.81808
+        ],
+        [
+          -2.56924,
+          -1.50715,
+          5.77208
+        ],
+        [
+          -2.5702,
+          -1.50715,
+          5.75363
+        ],
+        [
+          -2.57294,
+          -1.50715,
+          5.73828
+        ],
+        [
+          -2.57698,
+          -1.50715,
+          5.7286
+        ],
+        [
+          -2.58165,
+          -1.50715,
+          5.72623
+        ],
+        [
+          -2.58618,
+          -1.50715,
+          5.73155
+        ],
+        [
+          -2.58978,
+          -1.50715,
+          5.74368
+        ],
+        [
+          -2.59187,
+          -1.50715,
+          5.76058
+        ],
+        [
+          -2.5943,
+          -1.50715,
+          5.79508
+        ],
+        [
+          -2.59592,
+          -1.50715,
+          5.79508
+        ],
+        [
+          -2.59795,
+          -1.50715,
+          5.79845
+        ],
+        [
+          -2.5988,
+          -1.50715,
+          5.80658
+        ],
+        [
+          -2.59795,
+          -1.50715,
+          5.81471
+        ],
+        [
+          -2.59592,
+          1.29535,
+          5.81808
+        ],
+        [
+          -2.56924,
+          1.29535,
+          5.81808
+        ],
+        [
+          -2.56924,
+          1.29535,
+          5.77208
+        ],
+        [
+          -2.5702,
+          1.29535,
+          5.75363
+        ],
+        [
+          -2.57294,
+          1.29535,
+          5.73828
+        ],
+        [
+          -2.57698,
+          1.29535,
+          5.7286
+        ],
+        [
+          -2.58165,
+          1.29535,
+          5.72623
+        ],
+        [
+          -2.58618,
+          1.29535,
+          5.73155
+        ],
+        [
+          -2.58978,
+          1.29535,
+          5.74368
+        ],
+        [
+          -2.59187,
+          1.29535,
+          5.76058
+        ],
+        [
+          -2.5943,
+          1.29535,
+          5.79508
+        ],
+        [
+          -2.59592,
+          1.29535,
+          5.79508
+        ],
+        [
+          -2.59795,
+          1.29535,
+          5.79845
+        ],
+        [
+          -2.5988,
+          1.29535,
+          5.80658
+        ],
+        [
+          -2.59795,
+          1.29535,
+          5.81471
+        ],
+        [
+          -2.58593,
+          -1.50715,
+          5.77338
+        ],
+        [
+          -2.58593,
+          1.29535,
+          5.77338
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          16
+        ],
+        [
+          0,
+          16,
+          15
+        ],
+        [
+          1,
+          2,
+          17
+        ],
+        [
+          1,
+          17,
+          16
+        ],
+        [
+          2,
+          3,
+          18
+        ],
+        [
+          2,
+          18,
+          17
+        ],
+        [
+          3,
+          4,
+          19
+        ],
+        [
+          3,
+          19,
+          18
+        ],
+        [
+          4,
+          5,
+          20
+        ],
+        [
+          4,
+          20,
+          19
+        ],
+        [
+          5,
+          6,
+          21
+        ],
+        [
+          5,
+          21,
+          20
+        ],
+        [
+          6,
+          7,
+          22
+        ],
+        [
+          6,
+          22,
+          21
+        ],
+        [
+          7,
+          8,
+          23
+        ],
+        [
+          7,
+          23,
+          22
+        ],
+        [
+          8,
+          9,
+          24
+        ],
+        [
+          8,
+          24,
+          23
+        ],
+        [
+          9,
+          10,
+          25
+        ],
+        [
+          9,
+          25,
+          24
+        ],
+        [
+          10,
+          11,
+          26
+        ],
+        [
+          10,
+          26,
+          25
+        ],
+        [
+          11,
+          12,
+          27
+        ],
+        [
+          11,
+          27,
+          26
+        ],
+        [
+          12,
+          13,
+          28
+        ],
+        [
+          12,
+          28,
+          27
+        ],
+        [
+          13,
+          14,
+          29
+        ],
+        [
+          13,
+          29,
+          28
+        ],
+        [
+          14,
+          0,
+          15
+        ],
+        [
+          14,
+          15,
+          29
+        ],
+        [
+          30,
+          1,
+          0
+        ],
+        [
+          31,
+          15,
+          16
+        ],
+        [
+          30,
+          2,
+          1
+        ],
+        [
+          31,
+          16,
+          17
+        ],
+        [
+          30,
+          3,
+          2
+        ],
+        [
+          31,
+          17,
+          18
+        ],
+        [
+          30,
+          4,
+          3
+        ],
+        [
+          31,
+          18,
+          19
+        ],
+        [
+          30,
+          5,
+          4
+        ],
+        [
+          31,
+          19,
+          20
+        ],
+        [
+          30,
+          6,
+          5
+        ],
+        [
+          31,
+          20,
+          21
+        ],
+        [
+          30,
+          7,
+          6
+        ],
+        [
+          31,
+          21,
+          22
+        ],
+        [
+          30,
+          8,
+          7
+        ],
+        [
+          31,
+          22,
+          23
+        ],
+        [
+          30,
+          9,
+          8
+        ],
+        [
+          31,
+          23,
+          24
+        ],
+        [
+          30,
+          10,
+          9
+        ],
+        [
+          31,
+          24,
+          25
+        ],
+        [
+          30,
+          11,
+          10
+        ],
+        [
+          31,
+          25,
+          26
+        ],
+        [
+          30,
+          12,
+          11
+        ],
+        [
+          31,
+          26,
+          27
+        ],
+        [
+          30,
+          13,
+          12
+        ],
+        [
+          31,
+          27,
+          28
+        ],
+        [
+          30,
+          14,
+          13
+        ],
+        [
+          31,
+          28,
+          29
+        ],
+        [
+          30,
+          0,
+          14
+        ],
+        [
+          31,
+          29,
+          15
+        ]
+      ],
+      "vertex_count": 32,
+      "face_count": 60,
+      "source_entity_ids": [
+        "left_elevation:0614",
+        "left_elevation:0615",
+        "left_elevation:0616",
+        "left_elevation:0617",
+        "left_elevation:0618",
+        "left_elevation:0619",
+        "left_elevation:0620",
+        "left_elevation:0621",
+        "left_elevation:0622",
+        "left_elevation:0623",
+        "left_elevation:0624",
+        "left_elevation:0625",
+        "left_elevation:0626",
+        "left_elevation:0627",
+        "left_elevation:0628",
+        "roof_plan:0410",
+        "roof_plan:0413"
+      ],
+      "source_entity_count": 17,
+      "source_evidence": {
+        "profile_width_m": 0.11824,
+        "profile_height_m": 0.09185,
+        "run_start_y_m": 3.7101,
+        "run_end_y_m": 14.9201,
+        "derivation": "exact_front_elevation_CAD_profile_extruded_along_exact_roof_plan_eave",
+        "profile_source_is_annotation_free": true
+      },
+      "mesh_status": "source_bound_technical_roof_preview_not_photoreal_finish",
+      "mesh_permission": "technical_shell_preview_from_exact_plan_edges_and_repeated_section_levels"
+    },
+    {
+      "validation_id": "GT02",
+      "stable_object_id": "roof:source_bound_preview:GT02",
+      "label": "Hoofddak zinken bakgoot oost",
+      "object_type": "source_bound_extruded_gutter_profile",
+      "material_key": "gutter_zinc_technical",
+      "material": {
+        "hex": "#858983",
+        "label": "Exact CAD rounded gutter profile - zinc finish role"
+      },
+      "vertices": [
+        [
+          -0.22924,
+          -1.50715,
+          5.81808
+        ],
+        [
+          -0.20255,
+          -1.50715,
+          5.81808
+        ],
+        [
+          -0.20052,
+          -1.50715,
+          5.81471
+        ],
+        [
+          -0.19968,
+          -1.50715,
+          5.80658
+        ],
+        [
+          -0.20052,
+          -1.50715,
+          5.79845
+        ],
+        [
+          -0.20255,
+          -1.50715,
+          5.79508
+        ],
+        [
+          -0.20417,
+          -1.50715,
+          5.79508
+        ],
+        [
+          -0.2066,
+          -1.50715,
+          5.76058
+        ],
+        [
+          -0.20869,
+          -1.50715,
+          5.74368
+        ],
+        [
+          -0.2123,
+          -1.50715,
+          5.73155
+        ],
+        [
+          -0.21682,
+          -1.50715,
+          5.72623
+        ],
+        [
+          -0.22149,
+          -1.50715,
+          5.7286
+        ],
+        [
+          -0.22554,
+          -1.50715,
+          5.73828
+        ],
+        [
+          -0.22827,
+          -1.50715,
+          5.75363
+        ],
+        [
+          -0.22924,
+          -1.50715,
+          5.77208
+        ],
+        [
+          -0.22924,
+          1.29535,
+          5.81808
+        ],
+        [
+          -0.20255,
+          1.29535,
+          5.81808
+        ],
+        [
+          -0.20052,
+          1.29535,
+          5.81471
+        ],
+        [
+          -0.19968,
+          1.29535,
+          5.80658
+        ],
+        [
+          -0.20052,
+          1.29535,
+          5.79845
+        ],
+        [
+          -0.20255,
+          1.29535,
+          5.79508
+        ],
+        [
+          -0.20417,
+          1.29535,
+          5.79508
+        ],
+        [
+          -0.2066,
+          1.29535,
+          5.76058
+        ],
+        [
+          -0.20869,
+          1.29535,
+          5.74368
+        ],
+        [
+          -0.2123,
+          1.29535,
+          5.73155
+        ],
+        [
+          -0.21682,
+          1.29535,
+          5.72623
+        ],
+        [
+          -0.22149,
+          1.29535,
+          5.7286
+        ],
+        [
+          -0.22554,
+          1.29535,
+          5.73828
+        ],
+        [
+          -0.22827,
+          1.29535,
+          5.75363
+        ],
+        [
+          -0.22924,
+          1.29535,
+          5.77208
+        ],
+        [
+          -0.21254,
+          -1.50715,
+          5.77338
+        ],
+        [
+          -0.21254,
+          1.29535,
+          5.77338
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          16
+        ],
+        [
+          0,
+          16,
+          15
+        ],
+        [
+          1,
+          2,
+          17
+        ],
+        [
+          1,
+          17,
+          16
+        ],
+        [
+          2,
+          3,
+          18
+        ],
+        [
+          2,
+          18,
+          17
+        ],
+        [
+          3,
+          4,
+          19
+        ],
+        [
+          3,
+          19,
+          18
+        ],
+        [
+          4,
+          5,
+          20
+        ],
+        [
+          4,
+          20,
+          19
+        ],
+        [
+          5,
+          6,
+          21
+        ],
+        [
+          5,
+          21,
+          20
+        ],
+        [
+          6,
+          7,
+          22
+        ],
+        [
+          6,
+          22,
+          21
+        ],
+        [
+          7,
+          8,
+          23
+        ],
+        [
+          7,
+          23,
+          22
+        ],
+        [
+          8,
+          9,
+          24
+        ],
+        [
+          8,
+          24,
+          23
+        ],
+        [
+          9,
+          10,
+          25
+        ],
+        [
+          9,
+          25,
+          24
+        ],
+        [
+          10,
+          11,
+          26
+        ],
+        [
+          10,
+          26,
+          25
+        ],
+        [
+          11,
+          12,
+          27
+        ],
+        [
+          11,
+          27,
+          26
+        ],
+        [
+          12,
+          13,
+          28
+        ],
+        [
+          12,
+          28,
+          27
+        ],
+        [
+          13,
+          14,
+          29
+        ],
+        [
+          13,
+          29,
+          28
+        ],
+        [
+          14,
+          0,
+          15
+        ],
+        [
+          14,
+          15,
+          29
+        ],
+        [
+          30,
+          1,
+          0
+        ],
+        [
+          31,
+          15,
+          16
+        ],
+        [
+          30,
+          2,
+          1
+        ],
+        [
+          31,
+          16,
+          17
+        ],
+        [
+          30,
+          3,
+          2
+        ],
+        [
+          31,
+          17,
+          18
+        ],
+        [
+          30,
+          4,
+          3
+        ],
+        [
+          31,
+          18,
+          19
+        ],
+        [
+          30,
+          5,
+          4
+        ],
+        [
+          31,
+          19,
+          20
+        ],
+        [
+          30,
+          6,
+          5
+        ],
+        [
+          31,
+          20,
+          21
+        ],
+        [
+          30,
+          7,
+          6
+        ],
+        [
+          31,
+          21,
+          22
+        ],
+        [
+          30,
+          8,
+          7
+        ],
+        [
+          31,
+          22,
+          23
+        ],
+        [
+          30,
+          9,
+          8
+        ],
+        [
+          31,
+          23,
+          24
+        ],
+        [
+          30,
+          10,
+          9
+        ],
+        [
+          31,
+          24,
+          25
+        ],
+        [
+          30,
+          11,
+          10
+        ],
+        [
+          31,
+          25,
+          26
+        ],
+        [
+          30,
+          12,
+          11
+        ],
+        [
+          31,
+          26,
+          27
+        ],
+        [
+          30,
+          13,
+          12
+        ],
+        [
+          31,
+          27,
+          28
+        ],
+        [
+          30,
+          14,
+          13
+        ],
+        [
+          31,
+          28,
+          29
+        ],
+        [
+          30,
+          0,
+          14
+        ],
+        [
+          31,
+          29,
+          15
+        ]
+      ],
+      "vertex_count": 32,
+      "face_count": 60,
+      "source_entity_ids": [
+        "left_elevation:0629",
+        "left_elevation:0630",
+        "left_elevation:0631",
+        "left_elevation:0632",
+        "left_elevation:0633",
+        "left_elevation:0634",
+        "left_elevation:0635",
+        "left_elevation:0636",
+        "left_elevation:0637",
+        "left_elevation:0638",
+        "left_elevation:0639",
+        "left_elevation:0640",
+        "left_elevation:0641",
+        "left_elevation:0642",
+        "left_elevation:0643",
+        "roof_plan:0410",
+        "roof_plan:0413"
+      ],
+      "source_entity_count": 17,
+      "source_evidence": {
+        "profile_width_m": 0.11824,
+        "profile_height_m": 0.09185,
+        "run_start_y_m": 3.7101,
+        "run_end_y_m": 14.9201,
+        "derivation": "exact_front_elevation_CAD_profile_extruded_along_exact_roof_plan_eave",
+        "profile_source_is_annotation_free": true
+      },
+      "mesh_status": "source_bound_technical_roof_preview_not_photoreal_finish",
+      "mesh_permission": "technical_shell_preview_from_exact_plan_edges_and_repeated_section_levels"
+    },
+    {
+      "validation_id": "GT03",
+      "stable_object_id": "roof:source_bound_preview:GT03",
+      "label": "Achterbouw zinken bakgoot west",
+      "object_type": "source_bound_extruded_gutter_profile",
+      "material_key": "gutter_zinc_technical",
+      "material": {
+        "hex": "#858983",
+        "label": "Exact CAD rounded gutter profile - zinc finish role"
+      },
+      "vertices": [
+        [
+          -1.55175,
+          1.29535,
+          2.83001
+        ],
+        [
+          -1.55175,
+          1.29535,
+          2.78401
+        ],
+        [
+          -1.55272,
+          1.29535,
+          2.76556
+        ],
+        [
+          -1.55545,
+          1.29535,
+          2.75021
+        ],
+        [
+          -1.55949,
+          1.29535,
+          2.74053
+        ],
+        [
+          -1.56417,
+          1.29535,
+          2.73816
+        ],
+        [
+          -1.56869,
+          1.29535,
+          2.74348
+        ],
+        [
+          -1.5723,
+          1.29535,
+          2.75561
+        ],
+        [
+          -1.57438,
+          1.29535,
+          2.77251
+        ],
+        [
+          -1.57681,
+          1.29535,
+          2.80701
+        ],
+        [
+          -1.57844,
+          1.29535,
+          2.80701
+        ],
+        [
+          -1.58047,
+          1.29535,
+          2.81038
+        ],
+        [
+          -1.58131,
+          1.29535,
+          2.81851
+        ],
+        [
+          -1.58047,
+          1.29535,
+          2.82664
+        ],
+        [
+          -1.57844,
+          1.29535,
+          2.83001
+        ],
+        [
+          -1.55175,
+          2.09285,
+          2.83001
+        ],
+        [
+          -1.55175,
+          2.09285,
+          2.78401
+        ],
+        [
+          -1.55272,
+          2.09285,
+          2.76556
+        ],
+        [
+          -1.55545,
+          2.09285,
+          2.75021
+        ],
+        [
+          -1.55949,
+          2.09285,
+          2.74053
+        ],
+        [
+          -1.56417,
+          2.09285,
+          2.73816
+        ],
+        [
+          -1.56869,
+          2.09285,
+          2.74348
+        ],
+        [
+          -1.5723,
+          2.09285,
+          2.75561
+        ],
+        [
+          -1.57438,
+          2.09285,
+          2.77251
+        ],
+        [
+          -1.57681,
+          2.09285,
+          2.80701
+        ],
+        [
+          -1.57844,
+          2.09285,
+          2.80701
+        ],
+        [
+          -1.58047,
+          2.09285,
+          2.81038
+        ],
+        [
+          -1.58131,
+          2.09285,
+          2.81851
+        ],
+        [
+          -1.58047,
+          2.09285,
+          2.82664
+        ],
+        [
+          -1.57844,
+          2.09285,
+          2.83001
+        ],
+        [
+          -1.56844,
+          1.29535,
+          2.78531
+        ],
+        [
+          -1.56844,
+          2.09285,
+          2.78531
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          16
+        ],
+        [
+          0,
+          16,
+          15
+        ],
+        [
+          1,
+          2,
+          17
+        ],
+        [
+          1,
+          17,
+          16
+        ],
+        [
+          2,
+          3,
+          18
+        ],
+        [
+          2,
+          18,
+          17
+        ],
+        [
+          3,
+          4,
+          19
+        ],
+        [
+          3,
+          19,
+          18
+        ],
+        [
+          4,
+          5,
+          20
+        ],
+        [
+          4,
+          20,
+          19
+        ],
+        [
+          5,
+          6,
+          21
+        ],
+        [
+          5,
+          21,
+          20
+        ],
+        [
+          6,
+          7,
+          22
+        ],
+        [
+          6,
+          22,
+          21
+        ],
+        [
+          7,
+          8,
+          23
+        ],
+        [
+          7,
+          23,
+          22
+        ],
+        [
+          8,
+          9,
+          24
+        ],
+        [
+          8,
+          24,
+          23
+        ],
+        [
+          9,
+          10,
+          25
+        ],
+        [
+          9,
+          25,
+          24
+        ],
+        [
+          10,
+          11,
+          26
+        ],
+        [
+          10,
+          26,
+          25
+        ],
+        [
+          11,
+          12,
+          27
+        ],
+        [
+          11,
+          27,
+          26
+        ],
+        [
+          12,
+          13,
+          28
+        ],
+        [
+          12,
+          28,
+          27
+        ],
+        [
+          13,
+          14,
+          29
+        ],
+        [
+          13,
+          29,
+          28
+        ],
+        [
+          14,
+          0,
+          15
+        ],
+        [
+          14,
+          15,
+          29
+        ],
+        [
+          30,
+          1,
+          0
+        ],
+        [
+          31,
+          15,
+          16
+        ],
+        [
+          30,
+          2,
+          1
+        ],
+        [
+          31,
+          16,
+          17
+        ],
+        [
+          30,
+          3,
+          2
+        ],
+        [
+          31,
+          17,
+          18
+        ],
+        [
+          30,
+          4,
+          3
+        ],
+        [
+          31,
+          18,
+          19
+        ],
+        [
+          30,
+          5,
+          4
+        ],
+        [
+          31,
+          19,
+          20
+        ],
+        [
+          30,
+          6,
+          5
+        ],
+        [
+          31,
+          20,
+          21
+        ],
+        [
+          30,
+          7,
+          6
+        ],
+        [
+          31,
+          21,
+          22
+        ],
+        [
+          30,
+          8,
+          7
+        ],
+        [
+          31,
+          22,
+          23
+        ],
+        [
+          30,
+          9,
+          8
+        ],
+        [
+          31,
+          23,
+          24
+        ],
+        [
+          30,
+          10,
+          9
+        ],
+        [
+          31,
+          24,
+          25
+        ],
+        [
+          30,
+          11,
+          10
+        ],
+        [
+          31,
+          25,
+          26
+        ],
+        [
+          30,
+          12,
+          11
+        ],
+        [
+          31,
+          26,
+          27
+        ],
+        [
+          30,
+          13,
+          12
+        ],
+        [
+          31,
+          27,
+          28
+        ],
+        [
+          30,
+          14,
+          13
+        ],
+        [
+          31,
+          28,
+          29
+        ],
+        [
+          30,
+          0,
+          14
+        ],
+        [
+          31,
+          29,
+          15
+        ]
+      ],
+      "vertex_count": 32,
+      "face_count": 60,
+      "source_entity_ids": [
+        "front_elevation:1047",
+        "front_elevation:1048",
+        "front_elevation:1049",
+        "front_elevation:1050",
+        "front_elevation:1051",
+        "front_elevation:1052",
+        "front_elevation:1053",
+        "front_elevation:1054",
+        "front_elevation:1055",
+        "front_elevation:1056",
+        "front_elevation:1057",
+        "front_elevation:1058",
+        "front_elevation:1059",
+        "front_elevation:1060",
+        "front_elevation:1061",
+        "roof_plan:0785",
+        "roof_plan:0788"
+      ],
+      "source_entity_count": 17,
+      "source_evidence": {
+        "profile_width_m": 0.11824,
+        "profile_height_m": 0.09185,
+        "run_start_y_m": 14.9201,
+        "run_end_y_m": 18.110100000000003,
+        "derivation": "exact_rear_elevation_CAD_profile_extruded_along_exact_rear_extension_roof_plan_eave",
+        "profile_source_is_annotation_free": true
+      },
+      "mesh_status": "source_bound_technical_roof_preview_not_photoreal_finish",
+      "mesh_permission": "technical_shell_preview_from_exact_plan_edges_and_repeated_section_levels"
+    },
+    {
+      "validation_id": "GT04",
+      "stable_object_id": "roof:source_bound_preview:GT04",
+      "label": "Achterbouw zinken bakgoot oost",
+      "object_type": "source_bound_extruded_gutter_profile",
+      "material_key": "gutter_zinc_technical",
+      "material": {
+        "hex": "#858983",
+        "label": "Exact CAD rounded gutter profile - zinc finish role"
+      },
+      "vertices": [
+        [
+          -0.22925,
+          1.29535,
+          2.83001
+        ],
+        [
+          -0.20256,
+          1.29535,
+          2.83001
+        ],
+        [
+          -0.20053,
+          1.29535,
+          2.82664
+        ],
+        [
+          -0.19969,
+          1.29535,
+          2.81851
+        ],
+        [
+          -0.20053,
+          1.29535,
+          2.81038
+        ],
+        [
+          -0.20256,
+          1.29535,
+          2.80701
+        ],
+        [
+          -0.20419,
+          1.29535,
+          2.80701
+        ],
+        [
+          -0.20662,
+          1.29535,
+          2.77251
+        ],
+        [
+          -0.2087,
+          1.29535,
+          2.75561
+        ],
+        [
+          -0.21231,
+          1.29535,
+          2.74348
+        ],
+        [
+          -0.21683,
+          1.29535,
+          2.73816
+        ],
+        [
+          -0.22151,
+          1.29535,
+          2.74053
+        ],
+        [
+          -0.22555,
+          1.29535,
+          2.75021
+        ],
+        [
+          -0.22828,
+          1.29535,
+          2.76556
+        ],
+        [
+          -0.22925,
+          1.29535,
+          2.78401
+        ],
+        [
+          -0.22925,
+          2.09285,
+          2.83001
+        ],
+        [
+          -0.20256,
+          2.09285,
+          2.83001
+        ],
+        [
+          -0.20053,
+          2.09285,
+          2.82664
+        ],
+        [
+          -0.19969,
+          2.09285,
+          2.81851
+        ],
+        [
+          -0.20053,
+          2.09285,
+          2.81038
+        ],
+        [
+          -0.20256,
+          2.09285,
+          2.80701
+        ],
+        [
+          -0.20419,
+          2.09285,
+          2.80701
+        ],
+        [
+          -0.20662,
+          2.09285,
+          2.77251
+        ],
+        [
+          -0.2087,
+          2.09285,
+          2.75561
+        ],
+        [
+          -0.21231,
+          2.09285,
+          2.74348
+        ],
+        [
+          -0.21683,
+          2.09285,
+          2.73816
+        ],
+        [
+          -0.22151,
+          2.09285,
+          2.74053
+        ],
+        [
+          -0.22555,
+          2.09285,
+          2.75021
+        ],
+        [
+          -0.22828,
+          2.09285,
+          2.76556
+        ],
+        [
+          -0.22925,
+          2.09285,
+          2.78401
+        ],
+        [
+          -0.21256,
+          1.29535,
+          2.78531
+        ],
+        [
+          -0.21256,
+          2.09285,
+          2.78531
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          16
+        ],
+        [
+          0,
+          16,
+          15
+        ],
+        [
+          1,
+          2,
+          17
+        ],
+        [
+          1,
+          17,
+          16
+        ],
+        [
+          2,
+          3,
+          18
+        ],
+        [
+          2,
+          18,
+          17
+        ],
+        [
+          3,
+          4,
+          19
+        ],
+        [
+          3,
+          19,
+          18
+        ],
+        [
+          4,
+          5,
+          20
+        ],
+        [
+          4,
+          20,
+          19
+        ],
+        [
+          5,
+          6,
+          21
+        ],
+        [
+          5,
+          21,
+          20
+        ],
+        [
+          6,
+          7,
+          22
+        ],
+        [
+          6,
+          22,
+          21
+        ],
+        [
+          7,
+          8,
+          23
+        ],
+        [
+          7,
+          23,
+          22
+        ],
+        [
+          8,
+          9,
+          24
+        ],
+        [
+          8,
+          24,
+          23
+        ],
+        [
+          9,
+          10,
+          25
+        ],
+        [
+          9,
+          25,
+          24
+        ],
+        [
+          10,
+          11,
+          26
+        ],
+        [
+          10,
+          26,
+          25
+        ],
+        [
+          11,
+          12,
+          27
+        ],
+        [
+          11,
+          27,
+          26
+        ],
+        [
+          12,
+          13,
+          28
+        ],
+        [
+          12,
+          28,
+          27
+        ],
+        [
+          13,
+          14,
+          29
+        ],
+        [
+          13,
+          29,
+          28
+        ],
+        [
+          14,
+          0,
+          15
+        ],
+        [
+          14,
+          15,
+          29
+        ],
+        [
+          30,
+          1,
+          0
+        ],
+        [
+          31,
+          15,
+          16
+        ],
+        [
+          30,
+          2,
+          1
+        ],
+        [
+          31,
+          16,
+          17
+        ],
+        [
+          30,
+          3,
+          2
+        ],
+        [
+          31,
+          17,
+          18
+        ],
+        [
+          30,
+          4,
+          3
+        ],
+        [
+          31,
+          18,
+          19
+        ],
+        [
+          30,
+          5,
+          4
+        ],
+        [
+          31,
+          19,
+          20
+        ],
+        [
+          30,
+          6,
+          5
+        ],
+        [
+          31,
+          20,
+          21
+        ],
+        [
+          30,
+          7,
+          6
+        ],
+        [
+          31,
+          21,
+          22
+        ],
+        [
+          30,
+          8,
+          7
+        ],
+        [
+          31,
+          22,
+          23
+        ],
+        [
+          30,
+          9,
+          8
+        ],
+        [
+          31,
+          23,
+          24
+        ],
+        [
+          30,
+          10,
+          9
+        ],
+        [
+          31,
+          24,
+          25
+        ],
+        [
+          30,
+          11,
+          10
+        ],
+        [
+          31,
+          25,
+          26
+        ],
+        [
+          30,
+          12,
+          11
+        ],
+        [
+          31,
+          26,
+          27
+        ],
+        [
+          30,
+          13,
+          12
+        ],
+        [
+          31,
+          27,
+          28
+        ],
+        [
+          30,
+          14,
+          13
+        ],
+        [
+          31,
+          28,
+          29
+        ],
+        [
+          30,
+          0,
+          14
+        ],
+        [
+          31,
+          29,
+          15
+        ]
+      ],
+      "vertex_count": 32,
+      "face_count": 60,
+      "source_entity_ids": [
+        "front_elevation:1032",
+        "front_elevation:1033",
+        "front_elevation:1034",
+        "front_elevation:1035",
+        "front_elevation:1036",
+        "front_elevation:1037",
+        "front_elevation:1038",
+        "front_elevation:1039",
+        "front_elevation:1040",
+        "front_elevation:1041",
+        "front_elevation:1042",
+        "front_elevation:1043",
+        "front_elevation:1044",
+        "front_elevation:1045",
+        "front_elevation:1046",
+        "roof_plan:0786",
+        "roof_plan:0789"
+      ],
+      "source_entity_count": 17,
+      "source_evidence": {
+        "profile_width_m": 0.11824,
+        "profile_height_m": 0.09185,
+        "run_start_y_m": 14.9201,
+        "run_end_y_m": 18.110100000000003,
+        "derivation": "exact_rear_elevation_CAD_profile_extruded_along_exact_rear_extension_roof_plan_eave",
+        "profile_source_is_annotation_free": true
+      },
+      "mesh_status": "source_bound_technical_roof_preview_not_photoreal_finish",
+      "mesh_permission": "technical_shell_preview_from_exact_plan_edges_and_repeated_section_levels"
+    },
+    {
+      "validation_id": "RF05",
+      "stable_object_id": "roof:source_bound_preview:RF05",
+      "label": "Erkerdak voorvlak",
+      "object_type": "source_bound_hip_roof_plane_surface",
+      "material_key": "roof_tiles_tegelpan_301_rustiek",
+      "material": {
+        "hex": "#713a2b",
+        "label": "Wienerberger Koramic Tegelpan 301 Rustiek - erker en inkomluifel"
+      },
+      "vertices": [
+        [
+          -2.26943,
+          -1.67,
+          2.72
+        ],
+        [
+          -1.44655,
+          -1.67,
+          2.72
+        ],
+        [
+          -1.64174,
+          -1.51625,
+          3.43
+        ],
+        [
+          -2.07424,
+          -1.51625,
+          3.43
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ],
+      "vertex_count": 4,
+      "face_count": 2,
+      "source_entity_ids": [
+        "ground_floor_plan:1279",
+        "ground_floor_plan:1282",
+        "ground_floor_plan:1303",
+        "ground_floor_plan:1305",
+        "ground_floor_plan:1355",
+        "ground_floor_plan:1358",
+        "left_elevation:1042",
+        "left_elevation:1044",
+        "left_elevation:1046",
+        "left_elevation:1047",
+        "left_elevation:1048",
+        "left_elevation:1051",
+        "left_elevation:1480",
+        "left_elevation:1494",
+        "rear_elevation:1295",
+        "rear_elevation:1298",
+        "rear_elevation:1300",
+        "rear_elevation:1309",
+        "rear_elevation:1310",
+        "rear_elevation:1311",
+        "right_elevation:1449",
+        "right_elevation:1453",
+        "right_elevation:1454",
+        "right_elevation:1463",
+        "right_elevation:1465",
+        "right_elevation:1467"
+      ],
+      "source_entity_count": 26,
+      "source_evidence": {
+        "plan_outer_eave_polyline_source": [
+          "ground_floor_plan:1279",
+          "ground_floor_plan:1303",
+          "ground_floor_plan:1355"
+        ],
+        "front_elevation_ridge_width_m": 1.73,
+        "side_elevation_roof_run_m": 0.615,
+        "eave_level_m": 2.72,
+        "ridge_level_m": 3.43,
+        "level_source_entity_ids": [
+          "left_elevation:1480",
+          "left_elevation:1494",
+          "rear_elevation:1766",
+          "right_elevation:1865",
+          "right_elevation:1866"
+        ],
+        "derivation": "exact_plan_eave_polyline_crossed_with_front_and_side_elevation_roof_profile",
+        "surface_role": "front_trapezoid",
+        "roof_covering_source": "Wienerberger Koramic Tegelpan 301 Rustiek - erker en inkomluifel"
+      },
+      "mesh_status": "source_bound_technical_roof_preview_not_photoreal_finish",
+      "mesh_permission": "technical_shell_preview_from_exact_plan_edges_and_repeated_section_levels"
+    },
+    {
+      "validation_id": "RF06",
+      "stable_object_id": "roof:source_bound_preview:RF06",
+      "label": "Erkerdak linker schild",
+      "object_type": "source_bound_hip_roof_plane_surface",
+      "material_key": "roof_tiles_tegelpan_301_rustiek",
+      "material": {
+        "hex": "#713a2b",
+        "label": "Wienerberger Koramic Tegelpan 301 Rustiek - erker en inkomluifel"
+      },
+      "vertices": [
+        [
+          -2.41247,
+          -1.52698,
+          2.72
+        ],
+        [
+          -2.26943,
+          -1.67,
+          2.72
+        ],
+        [
+          -2.07424,
+          -1.51625,
+          3.43
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "vertex_count": 3,
+      "face_count": 1,
+      "source_entity_ids": [
+        "ground_floor_plan:1279",
+        "ground_floor_plan:1282",
+        "ground_floor_plan:1303",
+        "ground_floor_plan:1305",
+        "ground_floor_plan:1355",
+        "ground_floor_plan:1358",
+        "left_elevation:1042",
+        "left_elevation:1044",
+        "left_elevation:1046",
+        "left_elevation:1047",
+        "left_elevation:1048",
+        "left_elevation:1051",
+        "left_elevation:1480",
+        "left_elevation:1494",
+        "rear_elevation:1295",
+        "rear_elevation:1298",
+        "rear_elevation:1300",
+        "rear_elevation:1309",
+        "rear_elevation:1310",
+        "rear_elevation:1311",
+        "right_elevation:1449",
+        "right_elevation:1453",
+        "right_elevation:1454",
+        "right_elevation:1463",
+        "right_elevation:1465",
+        "right_elevation:1467"
+      ],
+      "source_entity_count": 26,
+      "source_evidence": {
+        "plan_outer_eave_polyline_source": [
+          "ground_floor_plan:1279",
+          "ground_floor_plan:1303",
+          "ground_floor_plan:1355"
+        ],
+        "front_elevation_ridge_width_m": 1.73,
+        "side_elevation_roof_run_m": 0.615,
+        "eave_level_m": 2.72,
+        "ridge_level_m": 3.43,
+        "level_source_entity_ids": [
+          "left_elevation:1480",
+          "left_elevation:1494",
+          "rear_elevation:1766",
+          "right_elevation:1865",
+          "right_elevation:1866"
+        ],
+        "derivation": "exact_plan_eave_polyline_crossed_with_front_and_side_elevation_roof_profile",
+        "surface_role": "left_hip",
+        "roof_covering_source": "Wienerberger Koramic Tegelpan 301 Rustiek - erker en inkomluifel"
+      },
+      "mesh_status": "source_bound_technical_roof_preview_not_photoreal_finish",
+      "mesh_permission": "technical_shell_preview_from_exact_plan_edges_and_repeated_section_levels"
+    },
+    {
+      "validation_id": "RF07",
+      "stable_object_id": "roof:source_bound_preview:RF07",
+      "label": "Erkerdak rechter schild",
+      "object_type": "source_bound_hip_roof_plane_surface",
+      "material_key": "roof_tiles_tegelpan_301_rustiek",
+      "material": {
+        "hex": "#713a2b",
+        "label": "Wienerberger Koramic Tegelpan 301 Rustiek - erker en inkomluifel"
+      },
+      "vertices": [
+        [
+          -1.44655,
+          -1.67,
+          2.72
+        ],
+        [
+          -1.3035,
+          -1.52698,
+          2.72
+        ],
+        [
+          -1.64174,
+          -1.51625,
+          3.43
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "vertex_count": 3,
+      "face_count": 1,
+      "source_entity_ids": [
+        "ground_floor_plan:1279",
+        "ground_floor_plan:1282",
+        "ground_floor_plan:1303",
+        "ground_floor_plan:1305",
+        "ground_floor_plan:1355",
+        "ground_floor_plan:1358",
+        "left_elevation:1042",
+        "left_elevation:1044",
+        "left_elevation:1046",
+        "left_elevation:1047",
+        "left_elevation:1048",
+        "left_elevation:1051",
+        "left_elevation:1480",
+        "left_elevation:1494",
+        "rear_elevation:1295",
+        "rear_elevation:1298",
+        "rear_elevation:1300",
+        "rear_elevation:1309",
+        "rear_elevation:1310",
+        "rear_elevation:1311",
+        "right_elevation:1449",
+        "right_elevation:1453",
+        "right_elevation:1454",
+        "right_elevation:1463",
+        "right_elevation:1465",
+        "right_elevation:1467"
+      ],
+      "source_entity_count": 26,
+      "source_evidence": {
+        "plan_outer_eave_polyline_source": [
+          "ground_floor_plan:1279",
+          "ground_floor_plan:1303",
+          "ground_floor_plan:1355"
+        ],
+        "front_elevation_ridge_width_m": 1.73,
+        "side_elevation_roof_run_m": 0.615,
+        "eave_level_m": 2.72,
+        "ridge_level_m": 3.43,
+        "level_source_entity_ids": [
+          "left_elevation:1480",
+          "left_elevation:1494",
+          "rear_elevation:1766",
+          "right_elevation:1865",
+          "right_elevation:1866"
+        ],
+        "derivation": "exact_plan_eave_polyline_crossed_with_front_and_side_elevation_roof_profile",
+        "surface_role": "right_hip",
+        "roof_covering_source": "Wienerberger Koramic Tegelpan 301 Rustiek - erker en inkomluifel"
+      },
+      "mesh_status": "source_bound_technical_roof_preview_not_photoreal_finish",
+      "mesh_permission": "technical_shell_preview_from_exact_plan_edges_and_repeated_section_levels"
+    },
+    {
+      "validation_id": "RF08",
+      "stable_object_id": "roof:source_bound_preview:RF08",
+      "label": "Inkomafdak dakvlak",
+      "object_type": "source_bound_entrance_canopy_roof_plane",
+      "material_key": "roof_tiles_tegelpan_301_rustiek",
+      "material": {
+        "hex": "#713a2b",
+        "label": "Wienerberger Koramic Tegelpan 301 Rustiek - erker en inkomluifel"
+      },
+      "vertices": [
+        [
+          -0.35942,
+          0.09595,
+          3.37
+        ],
+        [
+          -0.35942,
+          0.49997,
+          3.37
+        ],
+        [
+          -0.21323,
+          0.49997,
+          2.8
+        ],
+        [
+          -0.21323,
+          0.09595,
+          2.8
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ]
+      ],
+      "vertex_count": 4,
+      "face_count": 2,
+      "source_entity_ids": [
+        "ground_floor_plan:0285",
+        "ground_floor_plan:0286",
+        "ground_floor_plan:0287",
+        "ground_floor_plan:0288",
+        "ground_floor_plan:0289",
+        "ground_floor_plan:0290",
+        "ground_floor_plan:0291",
+        "rear_elevation:0017",
+        "rear_elevation:0018",
+        "rear_elevation:0489",
+        "rear_elevation:0490",
+        "rear_elevation:0491",
+        "rear_elevation:0492",
+        "rear_elevation:0493",
+        "rear_elevation:0494",
+        "rear_elevation:0832",
+        "rear_elevation:0833",
+        "rear_elevation:0834",
+        "rear_elevation:0849",
+        "rear_elevation:0851",
+        "rear_elevation:0852",
+        "rear_elevation:1372",
+        "rear_elevation:1373"
+      ],
+      "source_entity_count": 23,
+      "source_evidence": {
+        "plan_width_m": 1.6161,
+        "plan_projection_m": 0.5848,
+        "wall_level_m": 3.37,
+        "outer_eave_level_m": 2.8,
+        "derivation": "exact_plan_footprint_crossed_with_right_facade_roof_extent_and_45_degree_side_profile",
+        "oak_support_brackets": "preserved_as_separate_pending_source_objects",
+        "roof_covering_source": "Wienerberger Koramic Tegelpan 301 Rustiek - erker en inkomluifel"
+      },
+      "mesh_status": "source_bound_technical_roof_preview_not_photoreal_finish",
+      "mesh_permission": "technical_shell_preview_from_exact_plan_edges_and_repeated_section_levels"
+    },
+    {
+      "validation_id": "CH01",
+      "stable_object_id": "roof:source_bound_preview:CH01",
+      "label": "Schoorsteen metselwerk",
+      "object_type": "source_bound_chimney_wall_volume",
+      "material_key": "chimney_brick_technical",
+      "material": {
+        "hex": "#704638",
+        "label": "CAD chimney brickwork - matching Beerse-klinker facade role"
+      },
+      "vertices": [
+        [
+          -1.31046,
+          0.6125,
+          9.4
+        ],
+        [
+          -1.12046,
+          0.6125,
+          9.4
+        ],
+        [
+          -1.12046,
+          0.8025,
+          9.4
+        ],
+        [
+          -1.31046,
+          0.8025,
+          9.4
+        ],
+        [
+          -1.31046,
+          0.6125,
+          11.4651
+        ],
+        [
+          -1.12046,
+          0.6125,
+          11.4651
+        ],
+        [
+          -1.12046,
+          0.8025,
+          11.4651
+        ],
+        [
+          -1.31046,
+          0.8025,
+          11.4651
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          3,
+          2
+        ],
+        [
+          4,
+          5,
+          6
+        ],
+        [
+          4,
+          6,
+          7
+        ],
+        [
+          0,
+          1,
+          5
+        ],
+        [
+          0,
+          5,
+          4
+        ],
+        [
+          1,
+          2,
+          6
+        ],
+        [
+          1,
+          6,
+          5
+        ],
+        [
+          2,
+          3,
+          7
+        ],
+        [
+          2,
+          7,
+          6
+        ],
+        [
+          3,
+          0,
+          4
+        ],
+        [
+          3,
+          4,
+          7
+        ]
+      ],
+      "vertex_count": 8,
+      "face_count": 12,
+      "source_entity_ids": [
+        "front_elevation:1701",
+        "left_elevation:0545",
+        "left_elevation:0546",
+        "left_elevation:1294",
+        "rear_elevation:1771",
+        "right_elevation:0970",
+        "right_elevation:0971",
+        "right_elevation:1885"
+      ],
+      "source_entity_count": 8,
+      "source_evidence": {
+        "footprint_m": [
+          0.76,
+          0.76
+        ],
+        "front_projection_source": "left_elevation",
+        "side_projection_source": "right_elevation",
+        "derivation": "exact_orthogonal_facade_projection_intersection"
+      },
+      "mesh_status": "source_bound_technical_roof_preview_not_photoreal_finish",
+      "mesh_permission": "technical_shell_preview_from_exact_plan_edges_and_repeated_section_levels"
+    },
+    {
+      "validation_id": "CH02",
+      "stable_object_id": "roof:source_bound_preview:CH02",
+      "label": "Schoorsteen deksteen wit beton",
+      "object_type": "source_bound_chimney_cap_volume",
+      "material_key": "chimney_cap_technical",
+      "material": {
+        "hex": "#d9d6cd",
+        "label": "CAD white-concrete chimney cap"
+      },
+      "vertices": [
+        [
+          -1.33046,
+          0.5925,
+          11.4651
+        ],
+        [
+          -1.10046,
+          0.5925,
+          11.4651
+        ],
+        [
+          -1.10046,
+          0.8225,
+          11.4651
+        ],
+        [
+          -1.33046,
+          0.8225,
+          11.4651
+        ],
+        [
+          -1.33046,
+          0.5925,
+          11.5451
+        ],
+        [
+          -1.10046,
+          0.5925,
+          11.5451
+        ],
+        [
+          -1.10046,
+          0.8225,
+          11.5451
+        ],
+        [
+          -1.33046,
+          0.8225,
+          11.5451
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          3,
+          2
+        ],
+        [
+          4,
+          5,
+          6
+        ],
+        [
+          4,
+          6,
+          7
+        ],
+        [
+          0,
+          1,
+          5
+        ],
+        [
+          0,
+          5,
+          4
+        ],
+        [
+          1,
+          2,
+          6
+        ],
+        [
+          1,
+          6,
+          5
+        ],
+        [
+          2,
+          3,
+          7
+        ],
+        [
+          2,
+          7,
+          6
+        ],
+        [
+          3,
+          0,
+          4
+        ],
+        [
+          3,
+          4,
+          7
+        ]
+      ],
+      "vertex_count": 8,
+      "face_count": 12,
+      "source_entity_ids": [
+        "left_elevation:0014",
+        "left_elevation:0547",
+        "left_elevation:0548",
+        "left_elevation:0549",
+        "left_elevation:0550",
+        "left_elevation:1507",
+        "right_elevation:0021",
+        "right_elevation:0972",
+        "right_elevation:0973",
+        "right_elevation:0974",
+        "right_elevation:0975",
+        "right_elevation:1877"
+      ],
+      "source_entity_count": 12,
+      "source_evidence": {
+        "footprint_m": [
+          0.92,
+          0.92
+        ],
+        "height_m": 0.08,
+        "finish": "wit beton",
+        "derivation": "exact_orthogonal_facade_projection_intersection"
+      },
+      "mesh_status": "source_bound_technical_roof_preview_not_photoreal_finish",
+      "mesh_permission": "technical_shell_preview_from_exact_plan_edges_and_repeated_section_levels"
+    },
+    {
+      "validation_id": "RV01",
+      "stable_object_id": "roof:source_bound_preview:RV01",
+      "label": "Dakdoorvoer ventilatie kern",
+      "object_type": "source_bound_roof_vent_body",
+      "material_key": "roof_vent_technical",
+      "material": {
+        "hex": "#59605d",
+        "label": "CAD roof ventilation penetration"
+      },
+      "vertices": [
+        [
+          -1.0099,
+          1.01225,
+          8.84
+        ],
+        [
+          -0.9599,
+          1.01225,
+          8.84
+        ],
+        [
+          -0.9599,
+          1.06225,
+          8.84
+        ],
+        [
+          -1.0099,
+          1.06225,
+          8.84
+        ],
+        [
+          -1.0099,
+          1.01225,
+          9.18
+        ],
+        [
+          -0.9599,
+          1.01225,
+          9.18
+        ],
+        [
+          -0.9599,
+          1.06225,
+          9.18
+        ],
+        [
+          -1.0099,
+          1.06225,
+          9.18
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          3,
+          2
+        ],
+        [
+          4,
+          5,
+          6
+        ],
+        [
+          4,
+          6,
+          7
+        ],
+        [
+          0,
+          1,
+          5
+        ],
+        [
+          0,
+          5,
+          4
+        ],
+        [
+          1,
+          2,
+          6
+        ],
+        [
+          1,
+          6,
+          5
+        ],
+        [
+          2,
+          3,
+          7
+        ],
+        [
+          2,
+          7,
+          6
+        ],
+        [
+          3,
+          0,
+          4
+        ],
+        [
+          3,
+          4,
+          7
+        ]
+      ],
+      "vertex_count": 8,
+      "face_count": 12,
+      "source_entity_ids": [
+        "left_elevation:0586",
+        "left_elevation:0587",
+        "left_elevation:0588",
+        "left_elevation:0589",
+        "left_elevation:0590",
+        "left_elevation:0591",
+        "left_elevation:0604",
+        "left_elevation:0605",
+        "left_elevation:0606",
+        "left_elevation:0607",
+        "left_elevation:0608",
+        "left_elevation:0609",
+        "left_elevation:0610",
+        "left_elevation:0612",
+        "roof_plan:0971"
+      ],
+      "source_entity_count": 15,
+      "source_evidence": {
+        "plan_size_m": [
+          0.2,
+          0.2
+        ],
+        "derivation": "exact_roof_plan_inner_square_crossed_with_front_elevation_profile"
+      },
+      "mesh_status": "source_bound_technical_roof_preview_not_photoreal_finish",
+      "mesh_permission": "technical_shell_preview_from_exact_plan_edges_and_repeated_section_levels"
+    },
+    {
+      "validation_id": "RV02",
+      "stable_object_id": "roof:source_bound_preview:RV02",
+      "label": "Dakdoorvoer ventilatie kap",
+      "object_type": "source_bound_roof_vent_cap",
+      "material_key": "roof_vent_technical",
+      "material": {
+        "hex": "#59605d",
+        "label": "CAD roof ventilation penetration"
+      },
+      "vertices": [
+        [
+          -1.0224,
+          0.99975,
+          9.18
+        ],
+        [
+          -0.9474,
+          0.99975,
+          9.18
+        ],
+        [
+          -0.9474,
+          1.07475,
+          9.18
+        ],
+        [
+          -1.0224,
+          1.07475,
+          9.18
+        ],
+        [
+          -1.0224,
+          0.99975,
+          9.2621
+        ],
+        [
+          -0.9474,
+          0.99975,
+          9.2621
+        ],
+        [
+          -0.9474,
+          1.07475,
+          9.2621
+        ],
+        [
+          -1.0224,
+          1.07475,
+          9.2621
+        ]
+      ],
+      "faces": [
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          3,
+          2
+        ],
+        [
+          4,
+          5,
+          6
+        ],
+        [
+          4,
+          6,
+          7
+        ],
+        [
+          0,
+          1,
+          5
+        ],
+        [
+          0,
+          5,
+          4
+        ],
+        [
+          1,
+          2,
+          6
+        ],
+        [
+          1,
+          6,
+          5
+        ],
+        [
+          2,
+          3,
+          7
+        ],
+        [
+          2,
+          7,
+          6
+        ],
+        [
+          3,
+          0,
+          4
+        ],
+        [
+          3,
+          4,
+          7
+        ]
+      ],
+      "vertex_count": 8,
+      "face_count": 12,
+      "source_entity_ids": [
+        "left_elevation:1528",
+        "roof_plan:0970"
+      ],
+      "source_entity_count": 2,
+      "source_evidence": {
+        "plan_size_m": [
+          0.3,
+          0.3
+        ],
+        "top_level_m": 9.2621,
+        "derivation": "exact_roof_plan_outer_square_crossed_with_front_elevation_profile"
+      },
+      "mesh_status": "source_bound_technical_roof_preview_not_photoreal_finish",
+      "mesh_permission": "technical_shell_preview_from_exact_plan_edges_and_repeated_section_levels"
+    }
+  ],
+  "remaining_source_bound_work": [
+    "bind_main_roof_build_up_thickness_from_roof_wall_detail",
+    "audit_remaining_sanitary_roof_markers_without_promoting_annotations",
+    "build_entrance_canopy_oak_support_brackets_from_facade_CAD",
+    "bind_rainwater_pipes_by_intersecting_front_and_side_facade_CAD_positions",
+    "resolve_main_and_rear_roof_intersection_before_photoreal_export"
+  ]
+}

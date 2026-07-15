@@ -1,0 +1,230 @@
+{
+  "status": "ground_floor_opening_candidate_source_review_boards_ready_not_mesh",
+  "purpose": "Exact CAD-linework review boards for near-review opening candidates. They show selected original CAD entities and same-viewport context without using boxes as geometry.",
+  "source_files": {
+    "pending_queue": "blender\\semantic_objects\\ground_floor_opening_pending_slot_review_queue.json",
+    "subgeometry_candidates": "blender\\semantic_objects\\ground_floor_opening_subgeometry_slot_candidates.json",
+    "width_search_packets": "blender\\semantic_objects\\ground_floor_opening_width_unresolved_search_packets.json",
+    "detail_contract": "blender\\semantic_objects\\ground_floor_opening_component_detail_contract.json"
+  },
+  "board_count": 4,
+  "status_counts": {
+    "source_linework_review_board_ready_not_final_not_mesh": 4
+  },
+  "slot_counts": {
+    "arch_geometry": 1,
+    "bay_subsegment_geometry": 1,
+    "opening_width_m": 2
+  },
+  "user_validation_needed_now_count": 0,
+  "mesh_ready_count": 0,
+  "objects": [
+    {
+      "status": "source_linework_review_board_ready_not_final_not_mesh",
+      "task_id": "Y05:arch_geometry",
+      "legend_id": "Y05",
+      "label": "boograam eetkamer",
+      "opening_type": "arched_window",
+      "slot": "arch_geometry",
+      "candidate_status": "source_cad_subgeometry_candidate_can_be_prepared_for_visual_review",
+      "facade_title": "Linker zijgevel",
+      "primary_cad_source": "right_elevation",
+      "selected_source_ref_count": 57,
+      "context_entity_count": 550,
+      "svg": "assets/cad-truth/opening-source-review-boards/y05-arch_geometry.svg",
+      "svg_url": "opening-source-review-boards/y05-arch_geometry.svg",
+      "source_detail_image": "assets\\cad-truth\\building-detail-matches\\opening-cad-validation\\y05-elevation-cad-detail.png",
+      "source_detail_url": "building-detail-matches/opening-cad-validation/y05-elevation-cad-detail.png",
+      "plan_cad_validation_image": null,
+      "elevation_cad_validation_image": "building-detail-matches/opening-cad-validation/y05-elevation-cad-detail.png",
+      "risk_flags": [],
+      "proposal_summary": [
+        {
+          "slot": "arch_geometry",
+          "value_label": "source subgeometry",
+          "value_m": null,
+          "proposal_status": "source_cad_arch_geometry_candidate_ready_not_bound_not_mesh",
+          "source_system": "subgeometry_slot_candidates",
+          "source_refs": [
+            "right_elevation:0006",
+            "right_elevation:0298",
+            "right_elevation:0371",
+            "right_elevation:0373",
+            "right_elevation:0377",
+            "right_elevation:0379",
+            "right_elevation:0383",
+            "right_elevation:0385",
+            "right_elevation:0389",
+            "right_elevation:0391",
+            "right_elevation:0395",
+            "right_elevation:0397",
+            "right_elevation:0401",
+            "right_elevation:0403",
+            "right_elevation:0407",
+            "right_elevation:0409",
+            "right_elevation:0413",
+            "right_elevation:0415",
+            "right_elevation:0419",
+            "right_elevation:0421",
+            "right_elevation:0533",
+            "right_elevation:0535",
+            "right_elevation:0539",
+            "right_elevation:0541"
+          ],
+          "source_ref_count": 57,
+          "risk_flags": [],
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "user_validation_needed_now": false,
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "status": "source_linework_review_board_ready_not_final_not_mesh",
+      "task_id": "Y12:opening_width_m",
+      "legend_id": "Y12",
+      "label": "raam keuken",
+      "opening_type": "window",
+      "slot": "opening_width_m",
+      "candidate_status": "candidate_preserved_but_risk_flags_must_be_resolved_before_user_review",
+      "facade_title": "Linker zijgevel",
+      "primary_cad_source": "ground_floor_plan",
+      "selected_source_ref_count": 20,
+      "context_entity_count": 163,
+      "svg": "assets/cad-truth/opening-source-review-boards/y12-opening_width_m.svg",
+      "svg_url": "opening-source-review-boards/y12-opening_width_m.svg",
+      "source_detail_image": "assets\\cad-truth\\building-detail-matches\\opening-cad-validation\\y12-elevation-cad-detail.png",
+      "source_detail_url": "building-detail-matches/opening-cad-validation/y12-elevation-cad-detail.png",
+      "plan_cad_validation_image": "building-detail-matches/opening-cad-validation/y12-plan-cad-detail.png",
+      "elevation_cad_validation_image": "building-detail-matches/opening-cad-validation/y12-elevation-cad-detail.png",
+      "risk_flags": [
+        "medium_tolerance_needs_detail_confirmation"
+      ],
+      "proposal_summary": [
+        {
+          "slot": "opening_width_m",
+          "value_label": "1.610 m m",
+          "value_m": 1.61,
+          "proposal_status": "eligible_not_final_width_draft_slot_not_bound",
+          "source_system": "strong_width_gap_safety_audit",
+          "source_refs": [
+            "ground_floor_plan:0448",
+            "ground_floor_plan:0456"
+          ],
+          "source_ref_count": 2,
+          "risk_flags": [],
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "user_validation_needed_now": false,
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "status": "source_linework_review_board_ready_not_final_not_mesh",
+      "task_id": "Y15:opening_width_m",
+      "legend_id": "Y15",
+      "label": "raam bureau Zuid",
+      "opening_type": "window",
+      "slot": "opening_width_m",
+      "candidate_status": "candidate_preserved_but_risk_flags_must_be_resolved_before_user_review",
+      "facade_title": "Voorgevel",
+      "primary_cad_source": "ground_floor_plan",
+      "selected_source_ref_count": 28,
+      "context_entity_count": 126,
+      "svg": "assets/cad-truth/opening-source-review-boards/y15-opening_width_m.svg",
+      "svg_url": "opening-source-review-boards/y15-opening_width_m.svg",
+      "source_detail_image": "assets\\cad-truth\\building-detail-matches\\opening-cad-validation\\y15-elevation-cad-detail.png",
+      "source_detail_url": "building-detail-matches/opening-cad-validation/y15-elevation-cad-detail.png",
+      "plan_cad_validation_image": "building-detail-matches/opening-cad-validation/y15-plan-cad-detail.png",
+      "elevation_cad_validation_image": "building-detail-matches/opening-cad-validation/y15-elevation-cad-detail.png",
+      "risk_flags": [
+        "dimension_text_outside_local_opening_detail_viewport_needs_review"
+      ],
+      "proposal_summary": [
+        {
+          "slot": "opening_width_m",
+          "value_label": "1.280 m m",
+          "value_m": 1.28,
+          "proposal_status": "eligible_not_final_width_draft_slot_not_bound",
+          "source_system": "strong_width_gap_safety_audit",
+          "source_refs": [
+            "ground_floor_plan:1174",
+            "ground_floor_plan:1183"
+          ],
+          "source_ref_count": 2,
+          "risk_flags": [],
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "user_validation_needed_now": false,
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "status": "source_linework_review_board_ready_not_final_not_mesh",
+      "task_id": "Y17:bay_subsegment_geometry",
+      "legend_id": "Y17",
+      "label": "erker inclusief raamdeur",
+      "opening_type": "bay_window_group_with_operable_door",
+      "slot": "bay_subsegment_geometry",
+      "candidate_status": "source_cad_subgeometry_candidate_can_be_prepared_for_visual_review",
+      "facade_title": "Voorgevel",
+      "primary_cad_source": "left_elevation",
+      "selected_source_ref_count": 56,
+      "context_entity_count": 778,
+      "svg": "assets/cad-truth/opening-source-review-boards/y17-bay_subsegment_geometry.svg",
+      "svg_url": "opening-source-review-boards/y17-bay_subsegment_geometry.svg",
+      "source_detail_image": "assets\\cad-truth\\building-detail-matches\\opening-cad-validation\\y17-elevation-cad-detail.png",
+      "source_detail_url": "building-detail-matches/opening-cad-validation/y17-elevation-cad-detail.png",
+      "plan_cad_validation_image": null,
+      "elevation_cad_validation_image": "building-detail-matches/opening-cad-validation/y17-elevation-cad-detail.png",
+      "risk_flags": [],
+      "proposal_summary": [
+        {
+          "slot": "bay_subsegment_geometry",
+          "value_label": "source subgeometry",
+          "value_m": null,
+          "proposal_status": "source_cad_bay_subsegment_geometry_candidate_ready_not_bound_not_mesh",
+          "source_system": "subgeometry_slot_candidates",
+          "source_refs": [
+            "left_elevation:0937",
+            "left_elevation:0943",
+            "left_elevation:0944",
+            "left_elevation:0945",
+            "left_elevation:0946",
+            "left_elevation:0947",
+            "left_elevation:0948",
+            "left_elevation:0949",
+            "left_elevation:0950",
+            "left_elevation:0951",
+            "left_elevation:0955",
+            "left_elevation:0956",
+            "left_elevation:0957",
+            "left_elevation:0958",
+            "left_elevation:0959",
+            "left_elevation:0965",
+            "left_elevation:0966",
+            "left_elevation:0967",
+            "left_elevation:0968",
+            "left_elevation:0969",
+            "left_elevation:0970",
+            "left_elevation:0971",
+            "left_elevation:0972",
+            "left_elevation:0973"
+          ],
+          "source_ref_count": 56,
+          "risk_flags": [],
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "user_validation_needed_now": false,
+      "mesh_permission": "blocked_not_mesh"
+    }
+  ],
+  "rules": [
+    "SVGs are review evidence generated from original CAD paths_m only.",
+    "Highlighted linework is not a final wall cut, frame, glass, door or mesh.",
+    "Risk-flagged width candidates remain blocked until detail/slot meaning is confirmed.",
+    "No high-level boxes are used as candidate geometry in this board."
+  ],
+  "mesh_permission": "blocked_not_mesh"
+}

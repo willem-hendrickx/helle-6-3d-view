@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Helle 6 CAD/PDF QA</title>
+    <script type="module" crossorigin src="./assets/qa-VygWd1iq.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill-CSRv37U6.js">
+    <link rel="stylesheet" crossorigin href="./assets/qa-IOImo0nP.css">
+  </head>
+  <body>
+    <main class="qa-shell">
+      <header class="qa-header">
+        <div>
+          <p class="eyebrow">Helle 6 reconstruction</p>
+          <h1>CAD/PDF QA viewer</h1>
+          <p>
+            Verify the preserved DXF truth layers against the rendered Archicad PDF references before any 3D extraction.
+          </p>
+        </div>
+        <nav class="qa-nav" aria-label="QA navigation">
+          <a href="./index.html">3D viewer</a>
+          <a href="./assets/pdf-reference/index.html" target="_blank" rel="noreferrer">PDF crops</a>
+          <a href="./assets/pdf-reference/uitvplan-4-page-1-coordinate-overlay.png" target="_blank" rel="noreferrer">PDF overlay</a>
+          <a href="./assets/dxf-block-previews/index.html" target="_blank" rel="noreferrer">CAD previews</a>
+          <a href="https://github.com/willem-hendrickx/helle-6-virtual-world" target="_blank" rel="noreferrer">GitHub</a>
+        </nav>
+      </header>
+
+      <section id="summary" class="summary-grid" aria-label="Audit summary"></section>
+
+      <section class="validation-queue-panel">
+        <div class="panel-head">
+          <div>
+            <h2>Current Validation Queue</h2>
+            <p>
+              Direct checklist for what needs user validation now, what is already checked, and what remains blocked until source binding is stronger.
+            </p>
+          </div>
+          <a href="./docs/current-validation-queue.md" target="_blank" rel="noreferrer">Open full queue</a>
+        </div>
+        <div id="currentValidationQueue" class="validation-queue-body"></div>
+      </section>
+
+      <section class="source-basing-panel">
+        <div class="panel-head">
+          <div>
+            <h2>Source Basing Audit</h2>
+            <p>
+              Confirms which parts are real CAD/PDF source based and blocks existing cube/bounding-box 3D exports from being used as final model basis.
+            </p>
+          </div>
+        </div>
+        <div id="sourceBasing" class="source-basing-body"></div>
+      </section>
+
+      <section class="opening-inspector-panel">
+        <div class="panel-head">
+          <div>
+            <h2>Ground-Floor Opening Inspector</h2>
+            <p>
+              Readable per-window/door payload for future popups and editable 3D elements. This is source-linked metadata only: exact CAD refs are preserved, while final wall cuts stay blocked until all width and height slots are bound.
+            </p>
+          </div>
+          <a href="./docs/ground-floor-opening-inspector-payload.md" target="_blank" rel="noreferrer">Open report</a>
+        </div>
+        <div id="openingInspectorPayload" class="opening-inspector-body"></div>
+      </section>
+
+      <section class="source-gate-panel">
+        <div>
+          <h2>Source Readiness Gate</h2>
+          <p>
+            Shows whether the validated CAD/PDF source set is ready for the next 3D shell extraction step.
+          </p>
+        </div>
+        <div id="sourceGate" class="source-gate-body"></div>
+      </section>
+
+      <section class="semantic-cad-panel">
+        <div class="panel-head">
+          <div>
+            <h2>Semantic CAD Sources</h2>
+            <p>
+              Bottom-up source layer for the new model. These are detailed CAD entities with source IDs, layers, text/control labels and semantic roles, not generated 3D blocks.
+            </p>
+          </div>
+          <a href="./docs/semantic-cad-sources.md" target="_blank" rel="noreferrer">Open source report</a>
+        </div>
+        <div id="semanticCadSources" class="semantic-cad-grid"></div>
+      </section>
+
+      <section class="validated-site-panel">
+        <div class="panel-head">
+          <div>
+            <h2>Validated Site Context</h2>
+            <p>
+              First source layer to validate before 3D: parcel boundary candidates, street, driveway, garden/terrain, neighbour context and garden shed. Demolished old house and garage are excluded from active modelling.
+            </p>
+          </div>
+          <a href="./assets/cad-truth/validated-site-context.png" target="_blank" rel="noreferrer">Open site QA board</a>
+        </div>
+        <div id="validatedSiteContext" class="validated-site-body"></div>
+      </section>
+
+      <section class="loop-qa-panel">
+        <div class="panel-head">
+          <div>
+            <h2>CAD Loop QA Boards</h2>
+            <p>
+              Visual QA boards for classified CAD loops. These use actual CAD entity point overlays and remain blocked for final mesh generation.
+            </p>
+          </div>
+        </div>
+        <div id="loopQaBoards" class="loop-qa-grid"></div>
+      </section>
+
+      <section class="semantic-object-panel">
+        <div class="panel-head">
+          <div>
+            <h2>Semantic Object Worksets</h2>
+            <p>
+              Source-linked object candidates for parcel, walls, openings, floors and roof. Mesh generation remains blocked until these worksets are checked against the CAD/PDF underlays.
+            </p>
+          </div>
+          <a href="./docs/semantic-object-worksets.md" target="_blank" rel="noreferrer">Open workset report</a>
+        </div>
+        <div id="semanticObjectWorksets" class="semantic-object-grid"></div>
+      </section>
+
+      <section class="joined-object-panel">
+        <div class="panel-head">
+          <div>
+            <h2>Joined Object Candidates</h2>
+            <p>
+              Stable source-linked object candidates with material slots and CAD entity references. These are ready for visual QA, not mesh generation.
+            </p>
+          </div>
+          <a href="./docs/joined-object-candidates.md" target="_blank" rel="noreferrer">Open object report</a>
+        </div>
+        <div id="joinedObjectCandidates" class="joined-object-body"></div>
+      </section>
+
+      <section class="cad-detail-panel">
+        <div class="panel-head">
+          <div>
+            <h2>Complete CAD Detail Catalog</h2>
+            <p>
+              Every preserved CAD entity from every drawing insert, including elevations, sections, construction details, dimensions and material notes.
+            </p>
+          </div>
+          <a href="./docs/cad-detail-catalog.md" target="_blank" rel="noreferrer">Open detail report</a>
+        </div>
+        <div id="cadDetailCatalog" class="cad-detail-body"></div>
+      </section>
+
+      <section class="detail-enrichment-panel">
+        <div class="panel-head">
+          <div>
+            <h2>Detail Enrichment Manifest</h2>
+            <p>
+              Maps object families to the full CAD detail catalog so facade, section, roof, material and dimension details remain available before mesh generation.
+            </p>
+          </div>
+          <a href="./docs/detail-enrichment-manifest.md" target="_blank" rel="noreferrer">Open enrichment report</a>
+        </div>
+        <div id="detailEnrichment" class="detail-enrichment-body"></div>
+      </section>
+
+      <section class="detail-enrichment-qa-panel">
+        <div class="panel-head">
+          <div>
+            <h2>Detail Enrichment QA Boards</h2>
+            <p>
+              Visual source-pool boards per object family. These show which detailed CAD drawings are being preserved for later matching; they are not exact object matches yet.
+            </p>
+          </div>
+          <a href="./docs/detail-enrichment-qa-boards.md" target="_blank" rel="noreferrer">Open QA report</a>
+        </div>
+        <div id="detailEnrichmentQaBoards" class="detail-enrichment-qa-grid"></div>
+      </section>
+
+      <section class="cad-detail-components-panel">
+        <div class="panel-head">
+          <div>
+            <h2>CAD Detail Components</h2>
+            <p>
+              Source-preserving component candidates from every CAD detail entity. These are still validation candidates, not generated 3D mesh.
+            </p>
+          </div>
+          <a href="./docs/cad-detail-components.md" target="_blank" rel="noreferrer">Open component report</a>
+        </div>
+        <div id="cadDetailComponents" class="cad-detail-components-body"></div>
+      </section>
+
+      <section class="interchange-panel">
+        <div class="panel-head">
+          <div>
+            <h2>Interchange Contract</h2>
+            <p>
+              Defines how the source-linked model may later move to Blender, WebGL, Twinmotion or Unreal while keeping CAD source traceability as the master.
+            </p>
+          </div>
+          <a href="./docs/interchange-manifest.md" target="_blank" rel="noreferrer">Open interchange report</a>
+        </div>
+        <div id="interchangeManifest" class="interchange-body"></div>
+      </section>
+
+      <section class="promotion-panel">
+        <div class="panel-head">
+          <div>
+            <h2>3D Promotion Gate</h2>
+            <p>
+              Shows what may be used as a source-linked preview and what remains blocked from final house, room,
+              roof, opening, material and walkthrough mesh. This prevents placeholder/cube geometry from becoming the model basis.
+            </p>
+          </div>
+          <a href="./docs/three-d-promotion-readiness-matrix.md" target="_blank" rel="noreferrer">Open promotion report</a>
+        </div>
+        <div id="promotionReadiness" class="promotion-body"></div>
+      </section>
+
+      <section class="level-constraints-panel">
+        <div class="panel-head">
+          <div>
+            <h2>Ground-floor Level Constraints</h2>
+            <p>
+              Source-linked CAD text workbench for wall heights, roof/eave/ridge candidates, terrain peilen and visible material notes.
+              These are validation candidates only; no wall or opening mesh is generated from them yet.
+            </p>
+          </div>
+          <div class="panel-links">
+            <a href="./assets/cad-truth/building-detail-matches/ground-floor-level-constraints-qa.png" target="_blank" rel="noreferrer">Open QA board</a>
+            <a href="./docs/ground-floor-level-constraints.md" target="_blank" rel="noreferrer">Open report</a>
+          </div>
+        </div>
+        <div id="levelConstraints" class="level-constraints-body"></div>
+      </section>
+
+      <section class="level-constraints-panel">
+        <div class="panel-head">
+          <div>
+            <h2>Bound Ground-floor Level / Material Contract</h2>
+            <p>
+              Technical next-step contract. Repeated CAD/PDF peilen and validated material notes are bound to source IDs,
+              while wall extrusion and opening cuts remain blocked until exact wall/roof and opening dimension joins are ready.
+            </p>
+          </div>
+          <div class="panel-links">
+            <a href="./assets/cad-truth/building-detail-matches/ground-floor-bound-level-constraints-qa.png" target="_blank" rel="noreferrer">Open QA board</a>
+            <a href="./docs/ground-floor-bound-level-constraints.md" target="_blank" rel="noreferrer">Open report</a>
+          </div>
+        </div>
+        <div id="boundLevelConstraints" class="level-constraints-body"></div>
+      </section>
+
+      <section class="level-constraints-panel">
+        <div class="panel-head">
+          <div>
+            <h2>Ground-floor Wall-run / Level Join</h2>
+            <p>
+              Technical CAD-first grouping of the exact wall polygons into wall-runs, with level/material refs attached.
+              This is not mesh and does not cut windows or doors.
+            </p>
+          </div>
+          <div class="panel-links">
+            <a href="./assets/cad-truth/building-detail-matches/ground-floor-wall-run-level-join-contract-qa.png" target="_blank" rel="noreferrer">Open QA board</a>
+            <a href="./docs/ground-floor-wall-run-level-join-contract.md" target="_blank" rel="noreferrer">Open report</a>
+          </div>
+        </div>
+        <div id="wallRunLevelJoin" class="level-constraints-body"></div>
+      </section>
+
+      <section class="level-constraints-panel">
+        <div class="panel-head">
+          <div>
+            <h2>Opening / Wall-run Dimension Bindings</h2>
+            <p>
+              Technical CAD-first link between every validated ground-floor facade opening and the exact wall-runs around it.
+              This is still metadata only: exact dimensions and wall cuts remain blocked.
+            </p>
+          </div>
+          <div class="panel-links">
+            <a href="./assets/cad-truth/building-detail-matches/ground-floor-opening-wall-run-dimension-bindings-qa.png" target="_blank" rel="noreferrer">Open QA board</a>
+            <a href="./docs/ground-floor-opening-wall-run-dimension-bindings.md" target="_blank" rel="noreferrer">Open report</a>
+          </div>
+        </div>
+        <div id="openingWallRunDimensions" class="level-constraints-body"></div>
+      </section>
+
+      <section class="level-constraints-panel">
+        <div class="panel-head">
+          <div>
+            <h2>Opening 3D Preparation Contract</h2>
+            <p>
+              CAD-first split of every ground-floor opening into visible opening candidates, wall/structural context to preserve,
+              and metadata/reference-only entities. Still no wall cuts or mesh: exact dimensions remain blocked.
+            </p>
+          </div>
+          <div class="panel-links">
+            <a href="./assets/cad-truth/building-detail-matches/ground-floor-opening-3d-preparation-contract-qa.png" target="_blank" rel="noreferrer">Open QA board</a>
+            <a href="./docs/ground-floor-opening-3d-preparation-contract.md" target="_blank" rel="noreferrer">Open report</a>
+          </div>
+        </div>
+        <div id="opening3dPreparation" class="level-constraints-body"></div>
+      </section>
+
+      <section class="facade-alignment-panel">
+        <div class="panel-head">
+          <div>
+            <h2>Facade PDF/CAD Alignment</h2>
+            <p>
+              Correct validated gevelkoppelingen. Legacy opening-projection boards are removed from the active workflow because they were abstract projections, not CAD-first source truth.
+            </p>
+          </div>
+          <a href="./docs/facade-reference-alignment.md" target="_blank" rel="noreferrer">Open alignment report</a>
+        </div>
+        <div id="facadeAlignment" class="facade-alignment-grid"></div>
+      </section>
+
+      <section class="workspace">
+        <aside class="drawing-list">
+          <div class="toolbar">
+            <input id="drawingSearch" type="search" placeholder="Search drawing, stage, block..." />
+            <select id="stageFilter" aria-label="Filter by stage">
+              <option value="all">All stages</option>
+            </select>
+          </div>
+          <div id="drawings"></div>
+        </aside>
+
+        <section class="drawing-detail" aria-live="polite">
+          <div id="drawingDetail"></div>
+        </section>
+      </section>
+
+      <section class="crop-validation-panel">
+        <div class="panel-head">
+          <div>
+            <h2>PDF Crop Validation</h2>
+            <p>
+              Every crop below must contain exactly one drawing before it may be used as evidence for the final 3D model.
+              Blocked or unvalidated crops remain visual references only.
+            </p>
+          </div>
+          <a href="./assets/pdf-reference/uitvplan-4-page-1-coordinate-overlay.png" target="_blank" rel="noreferrer">
+            Open coordinate overlay
+          </a>
+        </div>
+        <div id="cropValidation" class="crop-validation-grid"></div>
+      </section>
+
+      <section class="data-panels">
+        <article class="contract-panel">
+          <h2>Model Extraction Contract</h2>
+          <div id="contract" class="contract-list"></div>
+        </article>
+        <article>
+          <h2>Selectable Object Families</h2>
+          <div id="families" class="compact-grid"></div>
+        </article>
+        <article>
+          <h2>Material And Level Evidence</h2>
+          <div id="materials" class="evidence-list"></div>
+        </article>
+        <article>
+          <h2>CAD Label Anchors</h2>
+          <input id="anchorSearch" type="search" placeholder="Search rooms, openings, site labels..." />
+          <div id="anchors" class="anchor-list"></div>
+        </article>
+      </section>
+    </main>
+
+  </body>
+</html>

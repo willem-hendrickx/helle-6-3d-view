@@ -1,0 +1,3074 @@
+{
+  "status": "ground_floor_opening_deeper_search_seeds_ready_agent_side_not_mesh",
+  "purpose": "Agent-only deep-search seeds for the remaining current binding-workbench tasks that have no packaged source packet yet. This keeps the next CAD pass source-bound and avoids simplified boxes.",
+  "source_files": {
+    "current_workbench": "blender\\semantic_objects\\ground_floor_opening_current_binding_workbench.json",
+    "detail_contract": "blender\\semantic_objects\\ground_floor_opening_component_detail_contract.json",
+    "pending_matrix": "blender\\semantic_objects\\ground_floor_opening_pending_slot_resolution_matrix.json",
+    "pending_proposals": "blender\\semantic_objects\\ground_floor_opening_pending_slot_proposals.json",
+    "dimension_crosscheck": "blender\\semantic_objects\\ground_floor_opening_component_dimension_crosscheck.json",
+    "dimension_line_slot_candidates": "blender\\semantic_objects\\ground_floor_opening_dimension_line_slot_candidates.json",
+    "vertical_search_packets": "blender\\semantic_objects\\ground_floor_opening_vertical_search_packets.json",
+    "width_search_packets": "blender\\semantic_objects\\ground_floor_opening_width_unresolved_search_packets.json"
+  },
+  "task_count": 11,
+  "opening_count": 6,
+  "slot_counts": {
+    "arch_geometry": 1,
+    "bay_subsegment_geometry": 1,
+    "header_or_lintel_height_m": 3,
+    "opening_width_m": 2,
+    "sill_height_m": 1,
+    "threshold_level_m": 2,
+    "threshold_or_sill_level_m": 1
+  },
+  "opening_task_counts": {
+    "Y02": 2,
+    "Y05": 2,
+    "Y08": 2,
+    "Y12": 1,
+    "Y15": 1,
+    "Y17": 3
+  },
+  "special_contract_seed_counts": {
+    "Y02": 2,
+    "Y17": 3
+  },
+  "user_validation_needed_now_count": 0,
+  "mesh_ready_seed_count": 0,
+  "seeds": [
+    {
+      "status": "deeper_search_seed_ready_agent_side_not_mesh",
+      "task_id": "Y02:header_or_lintel_height_m",
+      "legend_id": "Y02",
+      "label": "Raam Salon",
+      "opening_type": "window",
+      "slot": "header_or_lintel_height_m",
+      "slot_status": "pending",
+      "priority": "P2",
+      "known_metric_values": [
+        {
+          "slot": "opening_width_m",
+          "subrole": null,
+          "value_m": 0.95,
+          "source_ref_count": 3,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "opening_height_m",
+          "subrole": null,
+          "value_m": 2.3,
+          "source_ref_count": 2,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "glazing_subdivision",
+          "subrole": null,
+          "value_m": null,
+          "source_ref_count": 32,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "opening_height_m",
+          "subrole": "clear_opening_height",
+          "value_m": 2.3,
+          "source_ref_count": 2,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_summary": {
+        "source_detail_image": "assets\\cad-truth\\building-detail-matches\\opening-cad-validation\\y02-elevation-cad-detail.png",
+        "facade_title": "Linker zijgevel",
+        "source_plan_bbox_m": {
+          "min_x_m": 5.8359,
+          "min_y_m": 16.6486,
+          "max_x_m": 5.8359,
+          "max_y_m": 17.5986,
+          "extent_x_m": 0.0,
+          "extent_y_m": 0.95
+        },
+        "context_dimensions": {
+          "opening_width_m_for_context": 0.95,
+          "opening_height_m_for_context": 2.3,
+          "display_preview_height_m": 2.3
+        },
+        "source_entity_count_context": {
+          "candidate_elevation_source_entity_count": 119,
+          "candidate_plan_source_entity_count": 73,
+          "component_metadata_source_count": 2
+        },
+        "component_part_counts": {
+          "elevation_visual_part_counts": {
+            "frame_or_leaf_vertical_edges": 29,
+            "frame_sill_lintel_or_leaf_horizontal_edges": 11,
+            "mullion_trim_hardware_or_decorative_lath": 75,
+            "sill_lintel_panel_or_hatched_fill": 4
+          },
+          "plan_trace_part_counts": {
+            "plan_frame_glass_or_panel_trace": 11,
+            "plan_reveal_or_wall_return_trace": 16,
+            "plan_short_trim_or_reveal_trace": 40,
+            "plan_wall_context_preserved": 6
+          }
+        },
+        "component_text_metadata": [
+          {
+            "text": "vast",
+            "detected_roles": [
+              "fixed_glazing_leaf_state"
+            ],
+            "source_entity_id": "right_elevation:1896",
+            "source_layer": "Info ALG",
+            "use_as": "metadata_only_not_geometry"
+          },
+          {
+            "text": "Invisivent Air Light 2Pa",
+            "detected_roles": [
+              "window_ventilation_detail"
+            ],
+            "source_entity_id": "right_elevation:1905",
+            "source_layer": "Info ALG",
+            "use_as": "metadata_only_not_geometry"
+          }
+        ],
+        "pending_actions_for_slot": [
+          {
+            "slot": "header_or_lintel_height_m",
+            "proposal_status": "sill_header_pair_candidate_preserved_with_risk_not_bound_not_mesh",
+            "action": "agent_crosscheck_required_risk_flags_before_any_binding",
+            "risk_flags": [
+              "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+              "lower_limit_value_below_5cm_needs_level_reference_review",
+              "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold"
+            ],
+            "source_ref_count": 1,
+            "mesh_permission": "blocked_not_mesh"
+          }
+        ],
+        "pending_proposals_for_slot": [
+          {
+            "slot": "header_or_lintel_height_m",
+            "value_m": 2.3,
+            "proposal_status": "sill_header_pair_candidate_preserved_with_risk_not_bound_not_mesh",
+            "source_entity_ids": [
+              "right_elevation:1842"
+            ],
+            "source_system": "sill_header_candidate_work_order",
+            "risk_flags": [
+              "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+              "lower_limit_value_below_5cm_needs_level_reference_review",
+              "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold"
+            ],
+            "binding_permission": "blocked_for_review_due_risk_flags",
+            "mesh_permission": "blocked_not_mesh"
+          }
+        ],
+        "dimension_crosscheck": {
+          "mesh_permission": "blocked_not_mesh"
+        },
+        "dimension_line_candidates_for_slot": [
+          {
+            "mesh_permission": "blocked_metadata_only"
+          },
+          {
+            "mesh_permission": "blocked_metadata_only"
+          },
+          {
+            "mesh_permission": "blocked_metadata_only"
+          }
+        ],
+        "vertical_search_packet": {
+          "candidate_dimension_source_entity_ids": [
+            "ground_floor_plan:2756",
+            "ground_floor_plan:2812",
+            "right_elevation:1834",
+            "right_elevation:1835",
+            "right_elevation:1836",
+            "right_elevation:1837",
+            "right_elevation:1838",
+            "right_elevation:1839",
+            "right_elevation:1840",
+            "right_elevation:1841",
+            "right_elevation:1842",
+            "right_elevation:1843"
+          ],
+          "candidate_dimension_source_entity_ids_count": 29,
+          "candidate_dimension_source_count": 29,
+          "known_height_slots": [
+            {
+              "slot": "opening_height_m",
+              "status": "source_dimension_chain_bound_to_metric_slot_candidate_not_mesh",
+              "value_m": 2.3,
+              "mesh_permission": "blocked_until_opening_subgeometry_and_wall_cut_contract"
+            }
+          ],
+          "context_dimensions": [
+            {
+              "status": "preserved_context_dimension_not_bound_as_opening_geometry",
+              "value_m": 0.18
+            },
+            {
+              "status": "preserved_context_dimension_not_bound_as_opening_geometry",
+              "value_m": 2.95
+            }
+          ],
+          "vertical_detail_text_evidence": [
+            {
+              "source_entity_id": "right_elevation:1905",
+              "text": "Invisivent Air Light 2Pa"
+            },
+            {
+              "source_entity_id": "ground_floor_plan:2756",
+              "source_scope": "plan_cad_window_validation",
+              "text": "39"
+            },
+            {
+              "source_entity_id": "ground_floor_plan:2812",
+              "source_scope": "plan_cad_window_validation",
+              "text": "280"
+            },
+            {
+              "source_entity_id": "right_elevation:1834",
+              "source_scope": "elevation_cad_window_validation",
+              "text": "18"
+            }
+          ],
+          "missing_vertical_cut_slots": [
+            "sill_height_m",
+            "header_or_lintel_height_m"
+          ],
+          "search_status": "vertical_search_pool_ready_not_bound",
+          "next_agent_tasks": [
+            "Classify candidate dimension entities into sill/threshold/header/opening-height candidates.",
+            "Reject plinth, gutter, pipe and material annotation dimensions as geometry drivers.",
+            "Bind only source IDs that match the same facade/detail opening."
+          ],
+          "source_scope": "dimension_workbench_plus_cad_window_validation",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        "width_search_packet": null,
+        "special_contract": {
+          "status": "ground_floor_opening_y02_salon_window_detail_role_contract_ready_not_final_not_mesh",
+          "purpose": "Preserves exact CAD plan and left-elevation detail roles for Y02 Raam Salon. It carries safe not-final slots forward but does not cut walls or generate mesh.",
+          "mesh_permission": "blocked_not_mesh",
+          "rules": [
+            "The Y02 detail is semantically Linker zijgevel even though the CAD catalog filename is right_elevation.json.",
+            "The 0.95 m width is carried only because the exact plan source-pair and CAD width text 95 agree.",
+            "The 2.30 m height is carried from the existing CAD dimension text plus dimension-line draft, still not a final wall cut.",
+            "The broad 2.85 m component envelope is preserved as rejected context and must not be used as window width.",
+            "18, -18, +295, rainwater pipe, brick material and rounded gutter-end notes are context metadata only.",
+            "This contract is not a final wall cut, frame, glass or mesh instruction."
+          ]
+        },
+        "candidate_source_files": [
+          "blender\\semantic_objects\\ground_floor_opening_component_detail_contract.json",
+          "blender\\semantic_objects\\ground_floor_opening_component_dimension_crosscheck.json",
+          "blender\\semantic_objects\\ground_floor_opening_dimension_line_slot_candidates.json",
+          "blender\\semantic_objects\\ground_floor_opening_pending_slot_proposals.json",
+          "blender\\semantic_objects\\ground_floor_opening_pending_slot_resolution_matrix.json",
+          "blender\\semantic_objects\\ground_floor_opening_vertical_search_packets.json",
+          "blender\\semantic_objects\\ground_floor_opening_width_unresolved_search_packets.json",
+          "blender\\semantic_objects\\ground_floor_opening_y02_salon_window_detail_role_contract.json"
+        ]
+      },
+      "recommended_next_cad_queries": [
+        "Search local elevation vertical dimension lines, sill markers and header/lintel frame linework.",
+        "Separate sill/header from plinth, terrain level, rainwater pipe, gutter, screen cassette and Invisivent notes.",
+        "Do not infer final wall cut from preview height or component envelope until CAD entities are bound."
+      ],
+      "context_exclusions": [
+        "annotation_text_boxes_not_geometry",
+        "terrain_level_markers_not_window_or_door_geometry",
+        "rainwater_pipe_and_cast_iron_underpiece_not_opening_geometry",
+        "blue_hardstone_plinth_not_window_dimension",
+        "gutter_end_notes_not_opening_geometry",
+        "screens_flyscreens_invisivent_are_component_metadata_until_bound_to_exact_subparts"
+      ],
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_search_seed_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "status": "deeper_search_seed_ready_agent_side_not_mesh",
+      "task_id": "Y02:sill_height_m",
+      "legend_id": "Y02",
+      "label": "Raam Salon",
+      "opening_type": "window",
+      "slot": "sill_height_m",
+      "slot_status": "pending",
+      "priority": "P2",
+      "known_metric_values": [
+        {
+          "slot": "opening_width_m",
+          "subrole": null,
+          "value_m": 0.95,
+          "source_ref_count": 3,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "opening_height_m",
+          "subrole": null,
+          "value_m": 2.3,
+          "source_ref_count": 2,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "glazing_subdivision",
+          "subrole": null,
+          "value_m": null,
+          "source_ref_count": 32,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "opening_height_m",
+          "subrole": "clear_opening_height",
+          "value_m": 2.3,
+          "source_ref_count": 2,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_summary": {
+        "source_detail_image": "assets\\cad-truth\\building-detail-matches\\opening-cad-validation\\y02-elevation-cad-detail.png",
+        "facade_title": "Linker zijgevel",
+        "source_plan_bbox_m": {
+          "min_x_m": 5.8359,
+          "min_y_m": 16.6486,
+          "max_x_m": 5.8359,
+          "max_y_m": 17.5986,
+          "extent_x_m": 0.0,
+          "extent_y_m": 0.95
+        },
+        "context_dimensions": {
+          "opening_width_m_for_context": 0.95,
+          "opening_height_m_for_context": 2.3,
+          "display_preview_height_m": 2.3
+        },
+        "source_entity_count_context": {
+          "candidate_elevation_source_entity_count": 119,
+          "candidate_plan_source_entity_count": 73,
+          "component_metadata_source_count": 2
+        },
+        "component_part_counts": {
+          "elevation_visual_part_counts": {
+            "frame_or_leaf_vertical_edges": 29,
+            "frame_sill_lintel_or_leaf_horizontal_edges": 11,
+            "mullion_trim_hardware_or_decorative_lath": 75,
+            "sill_lintel_panel_or_hatched_fill": 4
+          },
+          "plan_trace_part_counts": {
+            "plan_frame_glass_or_panel_trace": 11,
+            "plan_reveal_or_wall_return_trace": 16,
+            "plan_short_trim_or_reveal_trace": 40,
+            "plan_wall_context_preserved": 6
+          }
+        },
+        "component_text_metadata": [
+          {
+            "text": "vast",
+            "detected_roles": [
+              "fixed_glazing_leaf_state"
+            ],
+            "source_entity_id": "right_elevation:1896",
+            "source_layer": "Info ALG",
+            "use_as": "metadata_only_not_geometry"
+          },
+          {
+            "text": "Invisivent Air Light 2Pa",
+            "detected_roles": [
+              "window_ventilation_detail"
+            ],
+            "source_entity_id": "right_elevation:1905",
+            "source_layer": "Info ALG",
+            "use_as": "metadata_only_not_geometry"
+          }
+        ],
+        "pending_actions_for_slot": [
+          {
+            "slot": "sill_height_m",
+            "proposal_status": "sill_header_pair_candidate_preserved_with_risk_not_bound_not_mesh",
+            "action": "agent_crosscheck_required_risk_flags_before_any_binding",
+            "risk_flags": [
+              "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+              "lower_limit_value_below_5cm_needs_level_reference_review",
+              "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold"
+            ],
+            "source_ref_count": 1,
+            "mesh_permission": "blocked_not_mesh"
+          }
+        ],
+        "pending_proposals_for_slot": [
+          {
+            "slot": "sill_height_m",
+            "value_m": 0.01,
+            "proposal_status": "sill_header_pair_candidate_preserved_with_risk_not_bound_not_mesh",
+            "source_entity_ids": [
+              "right_elevation:1859"
+            ],
+            "source_system": "sill_header_candidate_work_order",
+            "risk_flags": [
+              "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+              "lower_limit_value_below_5cm_needs_level_reference_review",
+              "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold"
+            ],
+            "binding_permission": "blocked_for_review_due_risk_flags",
+            "mesh_permission": "blocked_not_mesh"
+          }
+        ],
+        "dimension_crosscheck": {
+          "mesh_permission": "blocked_not_mesh"
+        },
+        "dimension_line_candidates_for_slot": [
+          {
+            "mesh_permission": "blocked_metadata_only"
+          },
+          {
+            "mesh_permission": "blocked_metadata_only"
+          },
+          {
+            "mesh_permission": "blocked_metadata_only"
+          }
+        ],
+        "vertical_search_packet": {
+          "candidate_dimension_source_entity_ids": [
+            "ground_floor_plan:2756",
+            "ground_floor_plan:2812",
+            "right_elevation:1834",
+            "right_elevation:1835",
+            "right_elevation:1836",
+            "right_elevation:1837",
+            "right_elevation:1838",
+            "right_elevation:1839",
+            "right_elevation:1840",
+            "right_elevation:1841",
+            "right_elevation:1842",
+            "right_elevation:1843"
+          ],
+          "candidate_dimension_source_entity_ids_count": 29,
+          "candidate_dimension_source_count": 29,
+          "known_height_slots": [
+            {
+              "slot": "opening_height_m",
+              "status": "source_dimension_chain_bound_to_metric_slot_candidate_not_mesh",
+              "value_m": 2.3,
+              "mesh_permission": "blocked_until_opening_subgeometry_and_wall_cut_contract"
+            }
+          ],
+          "context_dimensions": [
+            {
+              "status": "preserved_context_dimension_not_bound_as_opening_geometry",
+              "value_m": 0.18
+            },
+            {
+              "status": "preserved_context_dimension_not_bound_as_opening_geometry",
+              "value_m": 2.95
+            }
+          ],
+          "vertical_detail_text_evidence": [
+            {
+              "source_entity_id": "right_elevation:1905",
+              "text": "Invisivent Air Light 2Pa"
+            },
+            {
+              "source_entity_id": "ground_floor_plan:2756",
+              "source_scope": "plan_cad_window_validation",
+              "text": "39"
+            },
+            {
+              "source_entity_id": "ground_floor_plan:2812",
+              "source_scope": "plan_cad_window_validation",
+              "text": "280"
+            },
+            {
+              "source_entity_id": "right_elevation:1834",
+              "source_scope": "elevation_cad_window_validation",
+              "text": "18"
+            }
+          ],
+          "missing_vertical_cut_slots": [
+            "sill_height_m",
+            "header_or_lintel_height_m"
+          ],
+          "search_status": "vertical_search_pool_ready_not_bound",
+          "next_agent_tasks": [
+            "Classify candidate dimension entities into sill/threshold/header/opening-height candidates.",
+            "Reject plinth, gutter, pipe and material annotation dimensions as geometry drivers.",
+            "Bind only source IDs that match the same facade/detail opening."
+          ],
+          "source_scope": "dimension_workbench_plus_cad_window_validation",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        "width_search_packet": null,
+        "special_contract": {
+          "status": "ground_floor_opening_y02_salon_window_detail_role_contract_ready_not_final_not_mesh",
+          "purpose": "Preserves exact CAD plan and left-elevation detail roles for Y02 Raam Salon. It carries safe not-final slots forward but does not cut walls or generate mesh.",
+          "mesh_permission": "blocked_not_mesh",
+          "rules": [
+            "The Y02 detail is semantically Linker zijgevel even though the CAD catalog filename is right_elevation.json.",
+            "The 0.95 m width is carried only because the exact plan source-pair and CAD width text 95 agree.",
+            "The 2.30 m height is carried from the existing CAD dimension text plus dimension-line draft, still not a final wall cut.",
+            "The broad 2.85 m component envelope is preserved as rejected context and must not be used as window width.",
+            "18, -18, +295, rainwater pipe, brick material and rounded gutter-end notes are context metadata only.",
+            "This contract is not a final wall cut, frame, glass or mesh instruction."
+          ]
+        },
+        "candidate_source_files": [
+          "blender\\semantic_objects\\ground_floor_opening_component_detail_contract.json",
+          "blender\\semantic_objects\\ground_floor_opening_component_dimension_crosscheck.json",
+          "blender\\semantic_objects\\ground_floor_opening_dimension_line_slot_candidates.json",
+          "blender\\semantic_objects\\ground_floor_opening_pending_slot_proposals.json",
+          "blender\\semantic_objects\\ground_floor_opening_pending_slot_resolution_matrix.json",
+          "blender\\semantic_objects\\ground_floor_opening_vertical_search_packets.json",
+          "blender\\semantic_objects\\ground_floor_opening_width_unresolved_search_packets.json",
+          "blender\\semantic_objects\\ground_floor_opening_y02_salon_window_detail_role_contract.json"
+        ]
+      },
+      "recommended_next_cad_queries": [
+        "Search local elevation vertical dimension lines, sill markers and header/lintel frame linework.",
+        "Separate sill/header from plinth, terrain level, rainwater pipe, gutter, screen cassette and Invisivent notes.",
+        "Do not infer final wall cut from preview height or component envelope until CAD entities are bound."
+      ],
+      "context_exclusions": [
+        "annotation_text_boxes_not_geometry",
+        "terrain_level_markers_not_window_or_door_geometry",
+        "rainwater_pipe_and_cast_iron_underpiece_not_opening_geometry",
+        "blue_hardstone_plinth_not_window_dimension",
+        "gutter_end_notes_not_opening_geometry",
+        "screens_flyscreens_invisivent_are_component_metadata_until_bound_to_exact_subparts"
+      ],
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_search_seed_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "status": "deeper_search_seed_ready_agent_side_not_mesh",
+      "task_id": "Y05:arch_geometry",
+      "legend_id": "Y05",
+      "label": "boograam eetkamer",
+      "opening_type": "arched_window",
+      "slot": "arch_geometry",
+      "slot_status": "pending",
+      "priority": "P2",
+      "known_metric_values": [
+        {
+          "slot": "opening_width_m",
+          "subrole": null,
+          "value_m": 2.21,
+          "source_ref_count": 5,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "opening_height_m",
+          "subrole": "clear_opening_height",
+          "value_m": 2.66,
+          "source_ref_count": 2,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_summary": {
+        "source_detail_image": "assets\\cad-truth\\building-detail-matches\\opening-cad-validation\\y05-elevation-cad-detail.png",
+        "facade_title": "Linker zijgevel",
+        "source_plan_bbox_m": {
+          "min_x_m": 1.8259,
+          "min_y_m": 11.3686,
+          "max_x_m": 1.8259,
+          "max_y_m": 13.6386,
+          "extent_x_m": 0.0,
+          "extent_y_m": 2.27
+        },
+        "context_dimensions": {
+          "opening_width_m_for_context": 2.27,
+          "opening_height_m_for_context": 2.66,
+          "display_preview_height_m": 2.66
+        },
+        "source_entity_count_context": {
+          "candidate_elevation_source_entity_count": 351,
+          "candidate_plan_source_entity_count": 58,
+          "component_metadata_source_count": 4
+        },
+        "component_part_counts": {
+          "elevation_visual_part_counts": {
+            "arch_curve_or_diagonal_opening_shape": 48,
+            "frame_or_leaf_vertical_edges": 4,
+            "frame_sill_lintel_or_leaf_horizontal_edges": 4,
+            "mullion_trim_hardware_or_decorative_lath": 294,
+            "sill_lintel_panel_or_hatched_fill": 1
+          },
+          "plan_trace_part_counts": {
+            "plan_frame_glass_or_panel_trace": 2,
+            "plan_reveal_or_wall_return_trace": 12,
+            "plan_short_trim_or_reveal_trace": 30,
+            "plan_wall_context_preserved": 14
+          }
+        },
+        "component_text_metadata": [
+          {
+            "text": "panoramisch raam",
+            "detected_roles": [],
+            "source_entity_id": "ground_floor_plan:2920",
+            "source_layer": "Info ALG",
+            "use_as": "metadata_only_not_geometry"
+          },
+          {
+            "text": "vast",
+            "detected_roles": [
+              "fixed_glazing_leaf_state"
+            ],
+            "source_entity_id": "right_elevation:1891",
+            "source_layer": "Info ALG",
+            "use_as": "metadata_only_not_geometry"
+          },
+          {
+            "text": "steellook",
+            "detected_roles": [
+              "window_or_door_frame_style"
+            ],
+            "source_entity_id": "right_elevation:1903",
+            "source_layer": "Info ALG",
+            "use_as": "metadata_only_not_geometry"
+          }
+        ],
+        "pending_actions_for_slot": [
+          {
+            "slot": "arch_geometry",
+            "proposal_status": "source_cad_arch_geometry_candidate_ready_not_bound_not_mesh",
+            "action": "agent_can_prepare_subgeometry_binding_packet_from_exact_cad_refs",
+            "risk_flags": [],
+            "source_ref_count": 57,
+            "mesh_permission": "blocked_not_mesh"
+          }
+        ],
+        "pending_proposals_for_slot": [
+          {
+            "slot": "arch_geometry",
+            "value_m": null,
+            "proposal_status": "source_cad_arch_geometry_candidate_ready_not_bound_not_mesh",
+            "source_entity_ids": [
+              "right_elevation:0006",
+              "right_elevation:0298",
+              "right_elevation:0371",
+              "right_elevation:0373",
+              "right_elevation:0377",
+              "right_elevation:0379",
+              "right_elevation:0383",
+              "right_elevation:0385",
+              "right_elevation:0389",
+              "right_elevation:0391",
+              "right_elevation:0395",
+              "right_elevation:0397",
+              "right_elevation:0401",
+              "right_elevation:0403",
+              "right_elevation:0407",
+              "right_elevation:0409",
+              "right_elevation:0413",
+              "right_elevation:0415",
+              "right_elevation:0419",
+              "right_elevation:0421",
+              "right_elevation:0533",
+              "right_elevation:0535",
+              "right_elevation:0539",
+              "right_elevation:0541",
+              "right_elevation:0545",
+              "right_elevation:0547",
+              "right_elevation:0551",
+              "right_elevation:0553",
+              "right_elevation:0557",
+              "right_elevation:0559",
+              "right_elevation:0563",
+              "right_elevation:0565",
+              "right_elevation:0569",
+              "right_elevation:0571",
+              "right_elevation:0575",
+              "right_elevation:0577",
+              "right_elevation:0581",
+              "right_elevation:0583",
+              "right_elevation:0605",
+              "right_elevation:0607",
+              "right_elevation:0608",
+              "right_elevation:0609",
+              "right_elevation:0610",
+              "right_elevation:0611",
+              "right_elevation:0612",
+              "right_elevation:0615",
+              "right_elevation:0616",
+              "right_elevation:0617",
+              "right_elevation:0618",
+              "right_elevation:0619",
+              "right_elevation:0620",
+              "right_elevation:0622",
+              "right_elevation:0623",
+              "right_elevation:0629",
+              "right_elevation:0631",
+              "right_elevation:0663",
+              "right_elevation:0664"
+            ],
+            "source_system": "subgeometry_slot_candidates",
+            "source_subpart_id": "ground_floor:opening_arch_bay_subpart:Y05",
+            "risk_flags": [],
+            "binding_permission": "candidate_draft_only_not_final",
+            "mesh_permission": "blocked_not_mesh"
+          }
+        ],
+        "dimension_crosscheck": {
+          "mesh_permission": "blocked_not_mesh"
+        },
+        "dimension_line_candidates_for_slot": [],
+        "vertical_search_packet": {
+          "candidate_dimension_source_entity_ids": [
+            "ground_floor_plan:2707",
+            "ground_floor_plan:2764",
+            "ground_floor_plan:2920",
+            "right_elevation:1834",
+            "right_elevation:1835",
+            "right_elevation:1836",
+            "right_elevation:1837",
+            "right_elevation:1838",
+            "right_elevation:1839",
+            "right_elevation:1840",
+            "right_elevation:1841",
+            "right_elevation:1842"
+          ],
+          "candidate_dimension_source_entity_ids_count": 31,
+          "candidate_dimension_source_count": 31,
+          "known_height_slots": [
+            {
+              "slot": "opening_height_m",
+              "status": "source_dimension_chain_bound_to_metric_slot_candidate_not_mesh",
+              "value_m": 2.66,
+              "mesh_permission": "blocked_until_opening_subgeometry_and_wall_cut_contract"
+            }
+          ],
+          "context_dimensions": [],
+          "vertical_detail_text_evidence": [
+            {
+              "source_entity_id": "ground_floor_plan:2707",
+              "source_scope": "plan_cad_window_validation",
+              "text": "221"
+            },
+            {
+              "source_entity_id": "ground_floor_plan:2764",
+              "source_scope": "plan_cad_window_validation",
+              "text": "431"
+            },
+            {
+              "source_entity_id": "ground_floor_plan:2920",
+              "source_scope": "plan_cad_window_validation",
+              "text": "panoramisch raam"
+            },
+            {
+              "source_entity_id": "right_elevation:1841",
+              "source_scope": "elevation_cad_window_validation",
+              "text": "266"
+            }
+          ],
+          "missing_vertical_cut_slots": [
+            "sill_height_m",
+            "header_or_lintel_height_m"
+          ],
+          "search_status": "vertical_search_pool_ready_not_bound",
+          "next_agent_tasks": [
+            "Classify candidate dimension entities into sill/threshold/header/opening-height candidates.",
+            "Reject plinth, gutter, pipe and material annotation dimensions as geometry drivers.",
+            "Bind only source IDs that match the same facade/detail opening."
+          ],
+          "source_scope": "dimension_workbench_plus_cad_window_validation",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        "width_search_packet": null,
+        "special_contract": null,
+        "candidate_source_files": [
+          "blender\\semantic_objects\\ground_floor_opening_component_detail_contract.json",
+          "blender\\semantic_objects\\ground_floor_opening_component_dimension_crosscheck.json",
+          "blender\\semantic_objects\\ground_floor_opening_dimension_line_slot_candidates.json",
+          "blender\\semantic_objects\\ground_floor_opening_pending_slot_proposals.json",
+          "blender\\semantic_objects\\ground_floor_opening_pending_slot_resolution_matrix.json",
+          "blender\\semantic_objects\\ground_floor_opening_vertical_search_packets.json",
+          "blender\\semantic_objects\\ground_floor_opening_width_unresolved_search_packets.json"
+        ]
+      },
+      "recommended_next_cad_queries": [
+        "Use original elevation/detail CAD arc and adjacent vertical jamb entities only.",
+        "Keep arch outline, frame curve, mullions/roedes and sill/threshold as separate candidate roles.",
+        "Reject facade text, rainwater pipe, plinth, gutter notes and broad component envelopes as geometry."
+      ],
+      "context_exclusions": [
+        "annotation_text_boxes_not_geometry",
+        "terrain_level_markers_not_window_or_door_geometry",
+        "rainwater_pipe_and_cast_iron_underpiece_not_opening_geometry",
+        "blue_hardstone_plinth_not_window_dimension",
+        "gutter_end_notes_not_opening_geometry",
+        "screens_flyscreens_invisivent_are_component_metadata_until_bound_to_exact_subparts",
+        "broad_rectangular_bbox_not_arch_cut_profile"
+      ],
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_search_seed_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "status": "deeper_search_seed_ready_agent_side_not_mesh",
+      "task_id": "Y05:threshold_or_sill_level_m",
+      "legend_id": "Y05",
+      "label": "boograam eetkamer",
+      "opening_type": "arched_window",
+      "slot": "threshold_or_sill_level_m",
+      "slot_status": "pending",
+      "priority": "P2",
+      "known_metric_values": [
+        {
+          "slot": "opening_width_m",
+          "subrole": null,
+          "value_m": 2.21,
+          "source_ref_count": 5,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "opening_height_m",
+          "subrole": "clear_opening_height",
+          "value_m": 2.66,
+          "source_ref_count": 2,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_summary": {
+        "source_detail_image": "assets\\cad-truth\\building-detail-matches\\opening-cad-validation\\y05-elevation-cad-detail.png",
+        "facade_title": "Linker zijgevel",
+        "source_plan_bbox_m": {
+          "min_x_m": 1.8259,
+          "min_y_m": 11.3686,
+          "max_x_m": 1.8259,
+          "max_y_m": 13.6386,
+          "extent_x_m": 0.0,
+          "extent_y_m": 2.27
+        },
+        "context_dimensions": {
+          "opening_width_m_for_context": 2.27,
+          "opening_height_m_for_context": 2.66,
+          "display_preview_height_m": 2.66
+        },
+        "source_entity_count_context": {
+          "candidate_elevation_source_entity_count": 351,
+          "candidate_plan_source_entity_count": 58,
+          "component_metadata_source_count": 4
+        },
+        "component_part_counts": {
+          "elevation_visual_part_counts": {
+            "arch_curve_or_diagonal_opening_shape": 48,
+            "frame_or_leaf_vertical_edges": 4,
+            "frame_sill_lintel_or_leaf_horizontal_edges": 4,
+            "mullion_trim_hardware_or_decorative_lath": 294,
+            "sill_lintel_panel_or_hatched_fill": 1
+          },
+          "plan_trace_part_counts": {
+            "plan_frame_glass_or_panel_trace": 2,
+            "plan_reveal_or_wall_return_trace": 12,
+            "plan_short_trim_or_reveal_trace": 30,
+            "plan_wall_context_preserved": 14
+          }
+        },
+        "component_text_metadata": [
+          {
+            "text": "panoramisch raam",
+            "detected_roles": [],
+            "source_entity_id": "ground_floor_plan:2920",
+            "source_layer": "Info ALG",
+            "use_as": "metadata_only_not_geometry"
+          },
+          {
+            "text": "vast",
+            "detected_roles": [
+              "fixed_glazing_leaf_state"
+            ],
+            "source_entity_id": "right_elevation:1891",
+            "source_layer": "Info ALG",
+            "use_as": "metadata_only_not_geometry"
+          },
+          {
+            "text": "steellook",
+            "detected_roles": [
+              "window_or_door_frame_style"
+            ],
+            "source_entity_id": "right_elevation:1903",
+            "source_layer": "Info ALG",
+            "use_as": "metadata_only_not_geometry"
+          }
+        ],
+        "pending_actions_for_slot": [
+          {
+            "slot": "threshold_or_sill_level_m",
+            "proposal_status": "sill_header_pair_candidate_preserved_with_risk_not_bound_not_mesh",
+            "action": "agent_crosscheck_required_risk_flags_before_any_binding",
+            "risk_flags": [
+              "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+              "lower_limit_value_below_5cm_needs_level_reference_review",
+              "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold",
+              "header_candidate_may_be_overall_or_storey_context"
+            ],
+            "source_ref_count": 1,
+            "mesh_permission": "blocked_not_mesh"
+          }
+        ],
+        "pending_proposals_for_slot": [
+          {
+            "slot": "threshold_or_sill_level_m",
+            "value_m": 0.01,
+            "proposal_status": "sill_header_pair_candidate_preserved_with_risk_not_bound_not_mesh",
+            "source_entity_ids": [
+              "right_elevation:1859"
+            ],
+            "source_system": "sill_header_candidate_work_order",
+            "risk_flags": [
+              "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+              "lower_limit_value_below_5cm_needs_level_reference_review",
+              "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold",
+              "header_candidate_may_be_overall_or_storey_context"
+            ],
+            "binding_permission": "blocked_for_review_due_risk_flags",
+            "mesh_permission": "blocked_not_mesh"
+          }
+        ],
+        "dimension_crosscheck": {
+          "mesh_permission": "blocked_not_mesh"
+        },
+        "dimension_line_candidates_for_slot": [],
+        "vertical_search_packet": {
+          "candidate_dimension_source_entity_ids": [
+            "ground_floor_plan:2707",
+            "ground_floor_plan:2764",
+            "ground_floor_plan:2920",
+            "right_elevation:1834",
+            "right_elevation:1835",
+            "right_elevation:1836",
+            "right_elevation:1837",
+            "right_elevation:1838",
+            "right_elevation:1839",
+            "right_elevation:1840",
+            "right_elevation:1841",
+            "right_elevation:1842"
+          ],
+          "candidate_dimension_source_entity_ids_count": 31,
+          "candidate_dimension_source_count": 31,
+          "known_height_slots": [
+            {
+              "slot": "opening_height_m",
+              "status": "source_dimension_chain_bound_to_metric_slot_candidate_not_mesh",
+              "value_m": 2.66,
+              "mesh_permission": "blocked_until_opening_subgeometry_and_wall_cut_contract"
+            }
+          ],
+          "context_dimensions": [],
+          "vertical_detail_text_evidence": [
+            {
+              "source_entity_id": "ground_floor_plan:2707",
+              "source_scope": "plan_cad_window_validation",
+              "text": "221"
+            },
+            {
+              "source_entity_id": "ground_floor_plan:2764",
+              "source_scope": "plan_cad_window_validation",
+              "text": "431"
+            },
+            {
+              "source_entity_id": "ground_floor_plan:2920",
+              "source_scope": "plan_cad_window_validation",
+              "text": "panoramisch raam"
+            },
+            {
+              "source_entity_id": "right_elevation:1841",
+              "source_scope": "elevation_cad_window_validation",
+              "text": "266"
+            }
+          ],
+          "missing_vertical_cut_slots": [
+            "sill_height_m",
+            "header_or_lintel_height_m"
+          ],
+          "search_status": "vertical_search_pool_ready_not_bound",
+          "next_agent_tasks": [
+            "Classify candidate dimension entities into sill/threshold/header/opening-height candidates.",
+            "Reject plinth, gutter, pipe and material annotation dimensions as geometry drivers.",
+            "Bind only source IDs that match the same facade/detail opening."
+          ],
+          "source_scope": "dimension_workbench_plus_cad_window_validation",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        "width_search_packet": null,
+        "special_contract": null,
+        "candidate_source_files": [
+          "blender\\semantic_objects\\ground_floor_opening_component_detail_contract.json",
+          "blender\\semantic_objects\\ground_floor_opening_component_dimension_crosscheck.json",
+          "blender\\semantic_objects\\ground_floor_opening_dimension_line_slot_candidates.json",
+          "blender\\semantic_objects\\ground_floor_opening_pending_slot_proposals.json",
+          "blender\\semantic_objects\\ground_floor_opening_pending_slot_resolution_matrix.json",
+          "blender\\semantic_objects\\ground_floor_opening_vertical_search_packets.json",
+          "blender\\semantic_objects\\ground_floor_opening_width_unresolved_search_packets.json"
+        ]
+      },
+      "recommended_next_cad_queries": [
+        "Search local elevation vertical dimension lines, sill markers and header/lintel frame linework.",
+        "Separate sill/header from plinth, terrain level, rainwater pipe, gutter, screen cassette and Invisivent notes.",
+        "Do not infer final wall cut from preview height or component envelope until CAD entities are bound."
+      ],
+      "context_exclusions": [
+        "annotation_text_boxes_not_geometry",
+        "terrain_level_markers_not_window_or_door_geometry",
+        "rainwater_pipe_and_cast_iron_underpiece_not_opening_geometry",
+        "blue_hardstone_plinth_not_window_dimension",
+        "gutter_end_notes_not_opening_geometry",
+        "screens_flyscreens_invisivent_are_component_metadata_until_bound_to_exact_subparts"
+      ],
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_search_seed_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "status": "deeper_search_seed_ready_agent_side_not_mesh",
+      "task_id": "Y08:header_or_lintel_height_m",
+      "legend_id": "Y08",
+      "label": "voordeur",
+      "opening_type": "exterior_door",
+      "slot": "header_or_lintel_height_m",
+      "slot_status": "pending",
+      "priority": "P2",
+      "known_metric_values": [
+        {
+          "slot": "opening_height_m",
+          "subrole": "clear_opening_height",
+          "value_m": 2.1,
+          "source_ref_count": 2,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_summary": {
+        "source_detail_image": "assets\\cad-truth\\building-detail-matches\\opening-cad-validation\\y08-elevation-cad-detail.png",
+        "facade_title": "Rechter zijgevel",
+        "source_plan_bbox_m": {
+          "min_x_m": 10.3989,
+          "min_y_m": 10.3925,
+          "max_x_m": 10.3989,
+          "max_y_m": 11.4525,
+          "extent_x_m": 0.0,
+          "extent_y_m": 1.06
+        },
+        "context_dimensions": {
+          "opening_width_m_for_context": 1.06,
+          "opening_height_m_for_context": 2.1,
+          "display_preview_height_m": 2.1
+        },
+        "source_entity_count_context": {
+          "candidate_elevation_source_entity_count": 62,
+          "candidate_plan_source_entity_count": 82,
+          "component_metadata_source_count": 3
+        },
+        "component_part_counts": {
+          "elevation_visual_part_counts": {
+            "arch_curve_or_diagonal_opening_shape": 3,
+            "frame_or_leaf_vertical_edges": 22,
+            "frame_sill_lintel_or_leaf_horizontal_edges": 17,
+            "mullion_trim_hardware_or_decorative_lath": 15,
+            "sill_lintel_panel_or_hatched_fill": 5
+          },
+          "plan_trace_part_counts": {
+            "plan_frame_glass_or_panel_trace": 15,
+            "plan_reveal_or_wall_return_trace": 24,
+            "plan_short_trim_or_reveal_trace": 40,
+            "plan_wall_context_preserved": 3
+          }
+        },
+        "component_text_metadata": [
+          {
+            "text": "vast",
+            "detected_roles": [
+              "fixed_glazing_leaf_state"
+            ],
+            "source_entity_id": "rear_elevation:1823",
+            "source_layer": "Info ALG",
+            "use_as": "metadata_only_not_geometry"
+          },
+          {
+            "text": "vliegen- raam",
+            "detected_roles": [
+              "insect_screen_or_flyscreen_detail"
+            ],
+            "source_entity_id": "rear_elevation:1830",
+            "source_layer": "Info ALG",
+            "use_as": "metadata_only_not_geometry"
+          },
+          {
+            "text": "DEUR hout: Afrormosia",
+            "detected_roles": [
+              "door_component_detail_requires_local_context",
+              "wood_detail_requires_local_context"
+            ],
+            "source_entity_id": "rear_elevation:1776",
+            "source_layer": "0",
+            "use_as": "metadata_only_not_geometry"
+          }
+        ],
+        "pending_actions_for_slot": [
+          {
+            "slot": "header_or_lintel_height_m",
+            "proposal_status": "sill_header_pair_candidate_preserved_with_risk_not_bound_not_mesh",
+            "action": "agent_crosscheck_required_risk_flags_before_any_binding",
+            "risk_flags": [
+              "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+              "lower_limit_value_below_5cm_needs_level_reference_review",
+              "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold"
+            ],
+            "source_ref_count": 1,
+            "mesh_permission": "blocked_not_mesh"
+          }
+        ],
+        "pending_proposals_for_slot": [
+          {
+            "slot": "header_or_lintel_height_m",
+            "value_m": 2.1,
+            "proposal_status": "sill_header_pair_candidate_preserved_with_risk_not_bound_not_mesh",
+            "source_entity_ids": [
+              "rear_elevation:1756"
+            ],
+            "source_system": "sill_header_candidate_work_order",
+            "risk_flags": [
+              "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+              "lower_limit_value_below_5cm_needs_level_reference_review",
+              "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold"
+            ],
+            "binding_permission": "blocked_for_review_due_risk_flags",
+            "mesh_permission": "blocked_not_mesh"
+          }
+        ],
+        "dimension_crosscheck": {
+          "mesh_permission": "blocked_not_mesh"
+        },
+        "dimension_line_candidates_for_slot": [
+          {
+            "mesh_permission": "blocked_metadata_only"
+          },
+          {
+            "mesh_permission": "blocked_metadata_only"
+          },
+          {
+            "mesh_permission": "blocked_metadata_only"
+          }
+        ],
+        "vertical_search_packet": {
+          "candidate_dimension_source_entity_ids": [
+            "ground_floor_plan:2751",
+            "ground_floor_plan:2772",
+            "ground_floor_plan:2773",
+            "ground_floor_plan:2867",
+            "rear_elevation:1727",
+            "rear_elevation:1728",
+            "rear_elevation:1729",
+            "rear_elevation:1730",
+            "rear_elevation:1731",
+            "rear_elevation:1732",
+            "rear_elevation:1733",
+            "rear_elevation:1734"
+          ],
+          "candidate_dimension_source_entity_ids_count": 35,
+          "candidate_dimension_source_count": 35,
+          "known_height_slots": [
+            {
+              "slot": "opening_height_m",
+              "status": "source_dimension_chain_bound_to_metric_slot_candidate_not_mesh",
+              "value_m": 2.1,
+              "mesh_permission": "blocked_until_opening_subgeometry_and_wall_cut_contract"
+            }
+          ],
+          "context_dimensions": [
+            {
+              "status": "preserved_context_dimension_not_bound_as_opening_geometry",
+              "value_m": 0.4
+            },
+            {
+              "status": "preserved_context_dimension_not_bound_as_opening_geometry",
+              "value_m": 2.5
+            }
+          ],
+          "vertical_detail_text_evidence": [
+            {
+              "source_entity_id": "rear_elevation:1804",
+              "text": "eiken steuntje afdak"
+            },
+            {
+              "source_entity_id": "rear_elevation:1811",
+              "text": "eiken steuntje afdak"
+            },
+            {
+              "source_entity_id": "rear_elevation:1785",
+              "text": "linteel: blauwe hardsteen"
+            },
+            {
+              "source_entity_id": "rear_elevation:1776",
+              "text": "DEUR\nhout: Afrormosia"
+            }
+          ],
+          "missing_vertical_cut_slots": [
+            "threshold_level_m",
+            "header_or_lintel_height_m"
+          ],
+          "search_status": "vertical_search_pool_ready_not_bound",
+          "next_agent_tasks": [
+            "Classify candidate dimension entities into sill/threshold/header/opening-height candidates.",
+            "Reject plinth, gutter, pipe and material annotation dimensions as geometry drivers.",
+            "Bind only source IDs that match the same facade/detail opening."
+          ],
+          "source_scope": "dimension_workbench_plus_cad_window_validation",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        "width_search_packet": null,
+        "special_contract": null,
+        "candidate_source_files": [
+          "blender\\semantic_objects\\ground_floor_opening_component_detail_contract.json",
+          "blender\\semantic_objects\\ground_floor_opening_component_dimension_crosscheck.json",
+          "blender\\semantic_objects\\ground_floor_opening_dimension_line_slot_candidates.json",
+          "blender\\semantic_objects\\ground_floor_opening_pending_slot_proposals.json",
+          "blender\\semantic_objects\\ground_floor_opening_pending_slot_resolution_matrix.json",
+          "blender\\semantic_objects\\ground_floor_opening_vertical_search_packets.json",
+          "blender\\semantic_objects\\ground_floor_opening_width_unresolved_search_packets.json"
+        ]
+      },
+      "recommended_next_cad_queries": [
+        "Search local elevation vertical dimension lines and level markers at the door threshold/header only.",
+        "Separate threshold/floor level from door leaf, fixed side panel, awning/afdak and rainwater/gutter context.",
+        "Do not infer final cut height from generic door default or preview height."
+      ],
+      "context_exclusions": [
+        "annotation_text_boxes_not_geometry",
+        "terrain_level_markers_not_window_or_door_geometry",
+        "rainwater_pipe_and_cast_iron_underpiece_not_opening_geometry",
+        "blue_hardstone_plinth_not_window_dimension",
+        "gutter_end_notes_not_opening_geometry",
+        "screens_flyscreens_invisivent_are_component_metadata_until_bound_to_exact_subparts"
+      ],
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_search_seed_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "status": "deeper_search_seed_ready_agent_side_not_mesh",
+      "task_id": "Y08:threshold_level_m",
+      "legend_id": "Y08",
+      "label": "voordeur",
+      "opening_type": "exterior_door",
+      "slot": "threshold_level_m",
+      "slot_status": "pending",
+      "priority": "P2",
+      "known_metric_values": [
+        {
+          "slot": "opening_height_m",
+          "subrole": "clear_opening_height",
+          "value_m": 2.1,
+          "source_ref_count": 2,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_summary": {
+        "source_detail_image": "assets\\cad-truth\\building-detail-matches\\opening-cad-validation\\y08-elevation-cad-detail.png",
+        "facade_title": "Rechter zijgevel",
+        "source_plan_bbox_m": {
+          "min_x_m": 10.3989,
+          "min_y_m": 10.3925,
+          "max_x_m": 10.3989,
+          "max_y_m": 11.4525,
+          "extent_x_m": 0.0,
+          "extent_y_m": 1.06
+        },
+        "context_dimensions": {
+          "opening_width_m_for_context": 1.06,
+          "opening_height_m_for_context": 2.1,
+          "display_preview_height_m": 2.1
+        },
+        "source_entity_count_context": {
+          "candidate_elevation_source_entity_count": 62,
+          "candidate_plan_source_entity_count": 82,
+          "component_metadata_source_count": 3
+        },
+        "component_part_counts": {
+          "elevation_visual_part_counts": {
+            "arch_curve_or_diagonal_opening_shape": 3,
+            "frame_or_leaf_vertical_edges": 22,
+            "frame_sill_lintel_or_leaf_horizontal_edges": 17,
+            "mullion_trim_hardware_or_decorative_lath": 15,
+            "sill_lintel_panel_or_hatched_fill": 5
+          },
+          "plan_trace_part_counts": {
+            "plan_frame_glass_or_panel_trace": 15,
+            "plan_reveal_or_wall_return_trace": 24,
+            "plan_short_trim_or_reveal_trace": 40,
+            "plan_wall_context_preserved": 3
+          }
+        },
+        "component_text_metadata": [
+          {
+            "text": "vast",
+            "detected_roles": [
+              "fixed_glazing_leaf_state"
+            ],
+            "source_entity_id": "rear_elevation:1823",
+            "source_layer": "Info ALG",
+            "use_as": "metadata_only_not_geometry"
+          },
+          {
+            "text": "vliegen- raam",
+            "detected_roles": [
+              "insect_screen_or_flyscreen_detail"
+            ],
+            "source_entity_id": "rear_elevation:1830",
+            "source_layer": "Info ALG",
+            "use_as": "metadata_only_not_geometry"
+          },
+          {
+            "text": "DEUR hout: Afrormosia",
+            "detected_roles": [
+              "door_component_detail_requires_local_context",
+              "wood_detail_requires_local_context"
+            ],
+            "source_entity_id": "rear_elevation:1776",
+            "source_layer": "0",
+            "use_as": "metadata_only_not_geometry"
+          }
+        ],
+        "pending_actions_for_slot": [
+          {
+            "slot": "threshold_level_m",
+            "proposal_status": "sill_header_pair_candidate_preserved_with_risk_not_bound_not_mesh",
+            "action": "agent_crosscheck_required_risk_flags_before_any_binding",
+            "risk_flags": [
+              "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+              "lower_limit_value_below_5cm_needs_level_reference_review",
+              "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold"
+            ],
+            "source_ref_count": 1,
+            "mesh_permission": "blocked_not_mesh"
+          }
+        ],
+        "pending_proposals_for_slot": [
+          {
+            "slot": "threshold_level_m",
+            "value_m": 0.01,
+            "proposal_status": "sill_header_pair_candidate_preserved_with_risk_not_bound_not_mesh",
+            "source_entity_ids": [
+              "rear_elevation:1744"
+            ],
+            "source_system": "sill_header_candidate_work_order",
+            "risk_flags": [
+              "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+              "lower_limit_value_below_5cm_needs_level_reference_review",
+              "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold"
+            ],
+            "binding_permission": "blocked_for_review_due_risk_flags",
+            "mesh_permission": "blocked_not_mesh"
+          }
+        ],
+        "dimension_crosscheck": {
+          "mesh_permission": "blocked_not_mesh"
+        },
+        "dimension_line_candidates_for_slot": [
+          {
+            "mesh_permission": "blocked_metadata_only"
+          },
+          {
+            "mesh_permission": "blocked_metadata_only"
+          },
+          {
+            "mesh_permission": "blocked_metadata_only"
+          }
+        ],
+        "vertical_search_packet": {
+          "candidate_dimension_source_entity_ids": [
+            "ground_floor_plan:2751",
+            "ground_floor_plan:2772",
+            "ground_floor_plan:2773",
+            "ground_floor_plan:2867",
+            "rear_elevation:1727",
+            "rear_elevation:1728",
+            "rear_elevation:1729",
+            "rear_elevation:1730",
+            "rear_elevation:1731",
+            "rear_elevation:1732",
+            "rear_elevation:1733",
+            "rear_elevation:1734"
+          ],
+          "candidate_dimension_source_entity_ids_count": 35,
+          "candidate_dimension_source_count": 35,
+          "known_height_slots": [
+            {
+              "slot": "opening_height_m",
+              "status": "source_dimension_chain_bound_to_metric_slot_candidate_not_mesh",
+              "value_m": 2.1,
+              "mesh_permission": "blocked_until_opening_subgeometry_and_wall_cut_contract"
+            }
+          ],
+          "context_dimensions": [
+            {
+              "status": "preserved_context_dimension_not_bound_as_opening_geometry",
+              "value_m": 0.4
+            },
+            {
+              "status": "preserved_context_dimension_not_bound_as_opening_geometry",
+              "value_m": 2.5
+            }
+          ],
+          "vertical_detail_text_evidence": [
+            {
+              "source_entity_id": "rear_elevation:1804",
+              "text": "eiken steuntje afdak"
+            },
+            {
+              "source_entity_id": "rear_elevation:1811",
+              "text": "eiken steuntje afdak"
+            },
+            {
+              "source_entity_id": "rear_elevation:1785",
+              "text": "linteel: blauwe hardsteen"
+            },
+            {
+              "source_entity_id": "rear_elevation:1776",
+              "text": "DEUR\nhout: Afrormosia"
+            }
+          ],
+          "missing_vertical_cut_slots": [
+            "threshold_level_m",
+            "header_or_lintel_height_m"
+          ],
+          "search_status": "vertical_search_pool_ready_not_bound",
+          "next_agent_tasks": [
+            "Classify candidate dimension entities into sill/threshold/header/opening-height candidates.",
+            "Reject plinth, gutter, pipe and material annotation dimensions as geometry drivers.",
+            "Bind only source IDs that match the same facade/detail opening."
+          ],
+          "source_scope": "dimension_workbench_plus_cad_window_validation",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        "width_search_packet": null,
+        "special_contract": null,
+        "candidate_source_files": [
+          "blender\\semantic_objects\\ground_floor_opening_component_detail_contract.json",
+          "blender\\semantic_objects\\ground_floor_opening_component_dimension_crosscheck.json",
+          "blender\\semantic_objects\\ground_floor_opening_dimension_line_slot_candidates.json",
+          "blender\\semantic_objects\\ground_floor_opening_pending_slot_proposals.json",
+          "blender\\semantic_objects\\ground_floor_opening_pending_slot_resolution_matrix.json",
+          "blender\\semantic_objects\\ground_floor_opening_vertical_search_packets.json",
+          "blender\\semantic_objects\\ground_floor_opening_width_unresolved_search_packets.json"
+        ]
+      },
+      "recommended_next_cad_queries": [
+        "Search local elevation vertical dimension lines and level markers at the door threshold/header only.",
+        "Separate threshold/floor level from door leaf, fixed side panel, awning/afdak and rainwater/gutter context.",
+        "Do not infer final cut height from generic door default or preview height."
+      ],
+      "context_exclusions": [
+        "annotation_text_boxes_not_geometry",
+        "terrain_level_markers_not_window_or_door_geometry",
+        "rainwater_pipe_and_cast_iron_underpiece_not_opening_geometry",
+        "blue_hardstone_plinth_not_window_dimension",
+        "gutter_end_notes_not_opening_geometry",
+        "screens_flyscreens_invisivent_are_component_metadata_until_bound_to_exact_subparts"
+      ],
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_search_seed_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "status": "deeper_search_seed_ready_agent_side_not_mesh",
+      "task_id": "Y12:opening_width_m",
+      "legend_id": "Y12",
+      "label": "raam keuken",
+      "opening_type": "window",
+      "slot": "opening_width_m",
+      "slot_status": "pending",
+      "priority": "P1",
+      "known_metric_values": [],
+      "source_summary": {
+        "source_detail_image": "assets\\cad-truth\\building-detail-matches\\opening-cad-validation\\y12-elevation-cad-detail.png",
+        "facade_title": "Linker zijgevel",
+        "source_plan_bbox_m": {
+          "min_x_m": 1.7819,
+          "min_y_m": 6.0528,
+          "max_x_m": 1.7819,
+          "max_y_m": 7.5228,
+          "extent_x_m": 0.0,
+          "extent_y_m": 1.47
+        },
+        "context_dimensions": {
+          "opening_width_m_for_context": 1.47,
+          "opening_height_m_for_context": null,
+          "display_preview_height_m": 1.3
+        },
+        "source_entity_count_context": {
+          "candidate_elevation_source_entity_count": 70,
+          "candidate_plan_source_entity_count": 74,
+          "component_metadata_source_count": 4
+        },
+        "component_part_counts": {
+          "elevation_visual_part_counts": {
+            "frame_or_leaf_vertical_edges": 52,
+            "frame_sill_lintel_or_leaf_horizontal_edges": 10,
+            "mullion_trim_hardware_or_decorative_lath": 6,
+            "sill_lintel_panel_or_hatched_fill": 2
+          },
+          "plan_trace_part_counts": {
+            "plan_reveal_or_wall_return_trace": 8,
+            "plan_short_trim_or_reveal_trace": 48,
+            "plan_wall_context_preserved": 18
+          }
+        },
+        "component_text_metadata": [
+          {
+            "text": "screen - bovenslag 20 type Sergé antraciet",
+            "detected_roles": [
+              "screen_or_shading_detail"
+            ],
+            "source_entity_id": "ground_floor_plan:2927",
+            "source_layer": "Info ALG",
+            "use_as": "metadata_only_not_geometry"
+          },
+          {
+            "text": "vast",
+            "detected_roles": [
+              "fixed_glazing_leaf_state"
+            ],
+            "source_entity_id": "right_elevation:1892",
+            "source_layer": "Info ALG",
+            "use_as": "metadata_only_not_geometry"
+          },
+          {
+            "text": "vliegenraam",
+            "detected_roles": [
+              "insect_screen_or_flyscreen_detail"
+            ],
+            "source_entity_id": "right_elevation:1900",
+            "source_layer": "Info ALG",
+            "use_as": "metadata_only_not_geometry"
+          }
+        ],
+        "pending_actions_for_slot": [
+          {
+            "slot": "opening_width_m",
+            "proposal_status": "eligible_not_final_width_draft_slot_not_bound",
+            "action": "agent_can_crosscheck_width_pair_against_exact_plan_and_elevation_before_binding",
+            "risk_flags": [],
+            "source_ref_count": 2,
+            "mesh_permission": "blocked_not_mesh"
+          }
+        ],
+        "pending_proposals_for_slot": [
+          {
+            "slot": "opening_width_m",
+            "value_m": 1.61,
+            "proposal_status": "eligible_not_final_width_draft_slot_not_bound",
+            "source_entity_ids": [
+              "ground_floor_plan:0448",
+              "ground_floor_plan:0456"
+            ],
+            "source_system": "strong_width_gap_safety_audit",
+            "risk_flags": [],
+            "binding_permission": "candidate_draft_only_not_final",
+            "mesh_permission": "blocked_not_mesh"
+          }
+        ],
+        "dimension_crosscheck": {
+          "mesh_permission": "blocked_not_mesh"
+        },
+        "dimension_line_candidates_for_slot": [],
+        "vertical_search_packet": {
+          "candidate_dimension_source_entity_ids": [
+            "ground_floor_plan:2762",
+            "ground_floor_plan:2777",
+            "ground_floor_plan:2803",
+            "right_elevation:1834",
+            "right_elevation:1835",
+            "right_elevation:1836",
+            "right_elevation:1837",
+            "right_elevation:1838",
+            "right_elevation:1839",
+            "right_elevation:1840",
+            "right_elevation:1841",
+            "right_elevation:1842"
+          ],
+          "candidate_dimension_source_entity_ids_count": 30,
+          "candidate_dimension_source_count": 30,
+          "known_height_slots": [],
+          "context_dimensions": [],
+          "vertical_detail_text_evidence": [
+            {
+              "source_entity_id": "right_elevation:1900",
+              "text": "vliegenraam"
+            },
+            {
+              "source_entity_id": "right_elevation:1902",
+              "text": "screen - bovenslag 20\ntype Sergé antraciet"
+            },
+            {
+              "source_entity_id": "ground_floor_plan:2762",
+              "source_scope": "plan_cad_window_validation",
+              "text": "448"
+            },
+            {
+              "source_entity_id": "ground_floor_plan:2777",
+              "source_scope": "plan_cad_window_validation",
+              "text": "39"
+            }
+          ],
+          "missing_vertical_cut_slots": [
+            "opening_height_m",
+            "sill_height_m",
+            "header_or_lintel_height_m"
+          ],
+          "search_status": "vertical_search_pool_ready_not_bound",
+          "next_agent_tasks": [
+            "Classify candidate dimension entities into sill/threshold/header/opening-height candidates.",
+            "Reject plinth, gutter, pipe and material annotation dimensions as geometry drivers.",
+            "Bind only source IDs that match the same facade/detail opening."
+          ],
+          "source_scope": "dimension_workbench_plus_cad_window_validation",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        "width_search_packet": {
+          "status": "width_unresolved_search_packet_ready_not_mesh",
+          "risk_flags": [
+            "medium_tolerance_needs_detail_confirmation"
+          ],
+          "next_agent_tasks": [
+            "Crosscheck the top plan line-family candidates against local detail CAD before any promotion.",
+            "Review paired source-part span candidates from exact CAD reveal/frame refs; keep blocked until slot meaning is proven.",
+            "Classify preserved exact dimension pairs as trim, leaf, reveal, cabinet or context before reuse."
+          ],
+          "blocked_best_width_proposal": {
+            "slot": "opening_width_m",
+            "mesh_permission": "blocked_until_width_proposal_crosschecked_with_detail_and_wall_cut_subroles"
+          },
+          "candidate_plan_line_families": [
+            {
+              "source_entity_ids": [
+                "ground_floor_plan:0521",
+                "ground_floor_plan:0523",
+                "ground_floor_plan:0527"
+              ],
+              "source_entity_ids_count": 3,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "source_entity_ids": [
+                "ground_floor_plan:0453",
+                "ground_floor_plan:0461",
+                "ground_floor_plan:0512",
+                "ground_floor_plan:0513",
+                "ground_floor_plan:0517",
+                "ground_floor_plan:0534",
+                "ground_floor_plan:0535",
+                "ground_floor_plan:0545",
+                "ground_floor_plan:0546"
+              ],
+              "source_entity_ids_count": 9,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "source_entity_ids": [
+                "ground_floor_plan:0509",
+                "ground_floor_plan:0516",
+                "ground_floor_plan:0518",
+                "ground_floor_plan:0519",
+                "ground_floor_plan:0525",
+                "ground_floor_plan:0528"
+              ],
+              "source_entity_ids_count": 6,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "source_entity_ids": [
+                "ground_floor_plan:0529"
+              ],
+              "source_entity_ids_count": 1,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "preserved_exact_plan_dimension_pairs": [
+            {
+              "value_m": 0.77,
+              "text": "77",
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "value_m": 0.39,
+              "text": "39",
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "value_m": 4.48,
+              "text": "448",
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "all_width_binding_proposals": [
+            {
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "paired_source_part_span_candidates": [
+            {
+              "status": "source_part_pair_span_candidate_not_bound",
+              "source_entity_ids": [
+                "ground_floor_plan:0448",
+                "ground_floor_plan:0456"
+              ],
+              "source_entity_ids_count": 2,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "status": "source_part_pair_span_candidate_not_bound",
+              "source_entity_ids": [
+                "ground_floor_plan:0448",
+                "ground_floor_plan:0540"
+              ],
+              "source_entity_ids_count": 2,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "status": "source_part_pair_span_candidate_not_bound",
+              "source_entity_ids": [
+                "ground_floor_plan:0456",
+                "ground_floor_plan:0551"
+              ],
+              "source_entity_ids_count": 2,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "status": "source_part_pair_span_candidate_not_bound",
+              "source_entity_ids": [
+                "ground_floor_plan:0540",
+                "ground_floor_plan:0551"
+              ],
+              "source_entity_ids_count": 2,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "text_semantic_context_groups": {},
+          "mesh_permission": "blocked_not_mesh"
+        },
+        "special_contract": null,
+        "candidate_source_files": [
+          "blender\\semantic_objects\\ground_floor_opening_component_detail_contract.json",
+          "blender\\semantic_objects\\ground_floor_opening_component_dimension_crosscheck.json",
+          "blender\\semantic_objects\\ground_floor_opening_dimension_line_slot_candidates.json",
+          "blender\\semantic_objects\\ground_floor_opening_pending_slot_proposals.json",
+          "blender\\semantic_objects\\ground_floor_opening_pending_slot_resolution_matrix.json",
+          "blender\\semantic_objects\\ground_floor_opening_vertical_search_packets.json",
+          "blender\\semantic_objects\\ground_floor_opening_width_unresolved_search_packets.json"
+        ]
+      },
+      "recommended_next_cad_queries": [
+        "Crosscheck exact plan source-pair, elevation frame linework and dimension text at the same opening.",
+        "Reject wall returns, reveal thickness, screens and broad component envelope when they are wider than the clear/frame opening.",
+        "Keep candidate source_entity_ids until the matching CAD pair is unambiguous."
+      ],
+      "context_exclusions": [
+        "annotation_text_boxes_not_geometry",
+        "terrain_level_markers_not_window_or_door_geometry",
+        "rainwater_pipe_and_cast_iron_underpiece_not_opening_geometry",
+        "blue_hardstone_plinth_not_window_dimension",
+        "gutter_end_notes_not_opening_geometry",
+        "screens_flyscreens_invisivent_are_component_metadata_until_bound_to_exact_subparts"
+      ],
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_search_seed_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "status": "deeper_search_seed_ready_agent_side_not_mesh",
+      "task_id": "Y15:opening_width_m",
+      "legend_id": "Y15",
+      "label": "raam bureau Zuid",
+      "opening_type": "window",
+      "slot": "opening_width_m",
+      "slot_status": "pending",
+      "priority": "P1",
+      "known_metric_values": [],
+      "source_summary": {
+        "source_detail_image": "assets\\cad-truth\\building-detail-matches\\opening-cad-validation\\y15-elevation-cad-detail.png",
+        "facade_title": "Voorgevel",
+        "source_plan_bbox_m": {
+          "min_x_m": 7.8559,
+          "min_y_m": 3.8246,
+          "max_x_m": 8.9959,
+          "max_y_m": 3.8246,
+          "extent_x_m": 1.14,
+          "extent_y_m": 0.0
+        },
+        "context_dimensions": {
+          "opening_width_m_for_context": 1.14,
+          "opening_height_m_for_context": null,
+          "display_preview_height_m": 1.3
+        },
+        "source_entity_count_context": {
+          "candidate_elevation_source_entity_count": 68,
+          "candidate_plan_source_entity_count": 96,
+          "component_metadata_source_count": 4
+        },
+        "component_part_counts": {
+          "elevation_visual_part_counts": {
+            "arch_curve_or_diagonal_opening_shape": 3,
+            "frame_or_leaf_vertical_edges": 45,
+            "frame_sill_lintel_or_leaf_horizontal_edges": 12,
+            "mullion_trim_hardware_or_decorative_lath": 4,
+            "sill_lintel_panel_or_hatched_fill": 4
+          },
+          "plan_trace_part_counts": {
+            "plan_door_swing_or_reference_curve_preserved": 1,
+            "plan_frame_glass_or_panel_trace": 13,
+            "plan_reveal_or_wall_return_trace": 8,
+            "plan_short_trim_or_reveal_trace": 62,
+            "plan_wall_context_preserved": 12
+          }
+        },
+        "component_text_metadata": [
+          {
+            "text": "screen type Sergé antraciet bovenslag 20cm",
+            "detected_roles": [
+              "screen_or_shading_detail"
+            ],
+            "source_entity_id": "ground_floor_plan:2923",
+            "source_layer": "Info ALG",
+            "use_as": "metadata_only_not_geometry"
+          },
+          {
+            "text": "vast",
+            "detected_roles": [
+              "fixed_glazing_leaf_state"
+            ],
+            "source_entity_id": "left_elevation:1529",
+            "source_layer": "Info ALG",
+            "use_as": "metadata_only_not_geometry"
+          },
+          {
+            "text": "vliegen- raam",
+            "detected_roles": [
+              "insect_screen_or_flyscreen_detail"
+            ],
+            "source_entity_id": "left_elevation:1541",
+            "source_layer": "Info ALG",
+            "use_as": "metadata_only_not_geometry"
+          }
+        ],
+        "pending_actions_for_slot": [
+          {
+            "slot": "opening_width_m",
+            "proposal_status": "eligible_not_final_width_draft_slot_not_bound",
+            "action": "agent_can_crosscheck_width_pair_against_exact_plan_and_elevation_before_binding",
+            "risk_flags": [],
+            "source_ref_count": 2,
+            "mesh_permission": "blocked_not_mesh"
+          }
+        ],
+        "pending_proposals_for_slot": [
+          {
+            "slot": "opening_width_m",
+            "value_m": 1.28,
+            "proposal_status": "eligible_not_final_width_draft_slot_not_bound",
+            "source_entity_ids": [
+              "ground_floor_plan:1174",
+              "ground_floor_plan:1183"
+            ],
+            "source_system": "strong_width_gap_safety_audit",
+            "risk_flags": [],
+            "binding_permission": "candidate_draft_only_not_final",
+            "mesh_permission": "blocked_not_mesh"
+          }
+        ],
+        "dimension_crosscheck": {
+          "mesh_permission": "blocked_not_mesh"
+        },
+        "dimension_line_candidates_for_slot": [],
+        "vertical_search_packet": {
+          "candidate_dimension_source_entity_ids": [
+            "ground_floor_plan:2800",
+            "left_elevation:1468",
+            "left_elevation:1469",
+            "left_elevation:1470",
+            "left_elevation:1471",
+            "left_elevation:1472",
+            "left_elevation:1473",
+            "left_elevation:1474",
+            "left_elevation:1475",
+            "left_elevation:1476",
+            "left_elevation:1477",
+            "left_elevation:1484"
+          ],
+          "candidate_dimension_source_entity_ids_count": 28,
+          "candidate_dimension_source_count": 28,
+          "known_height_slots": [],
+          "context_dimensions": [],
+          "vertical_detail_text_evidence": [
+            {
+              "source_entity_id": "left_elevation:1541",
+              "text": "vliegen-\nraam"
+            },
+            {
+              "source_entity_id": "left_elevation:1546",
+              "text": "screen type Sergé antraciet\nbovenslag 20cm"
+            },
+            {
+              "source_entity_id": "ground_floor_plan:2800",
+              "source_scope": "plan_cad_window_validation",
+              "text": "405"
+            }
+          ],
+          "missing_vertical_cut_slots": [
+            "opening_height_m",
+            "sill_height_m",
+            "header_or_lintel_height_m"
+          ],
+          "search_status": "vertical_search_pool_ready_not_bound",
+          "next_agent_tasks": [
+            "Classify candidate dimension entities into sill/threshold/header/opening-height candidates.",
+            "Reject plinth, gutter, pipe and material annotation dimensions as geometry drivers.",
+            "Bind only source IDs that match the same facade/detail opening."
+          ],
+          "source_scope": "dimension_workbench_plus_cad_window_validation",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        "width_search_packet": {
+          "status": "width_unresolved_search_packet_ready_not_mesh",
+          "risk_flags": [
+            "dimension_text_outside_local_opening_detail_viewport_needs_review"
+          ],
+          "next_agent_tasks": [
+            "Find a same-opening local CAD dimension text/line pair; current facade text is outside the validated detail viewport.",
+            "Crosscheck the top plan line-family candidates against local detail CAD before any promotion.",
+            "Review paired source-part span candidates from exact CAD reveal/frame refs; keep blocked until slot meaning is proven.",
+            "Confirm the wall/opening orientation from original CAD before using any secondary-axis candidate."
+          ],
+          "blocked_best_width_proposal": {
+            "slot": "opening_width_m",
+            "mesh_permission": "blocked_until_width_proposal_crosschecked_with_detail_and_wall_cut_subroles"
+          },
+          "candidate_plan_line_families": [
+            {
+              "source_entity_ids": [
+                "ground_floor_plan:1212",
+                "ground_floor_plan:1214",
+                "ground_floor_plan:1218",
+                "ground_floor_plan:1229",
+                "ground_floor_plan:1231",
+                "ground_floor_plan:1235"
+              ],
+              "source_entity_ids_count": 6,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "source_entity_ids": [
+                "ground_floor_plan:1179",
+                "ground_floor_plan:1188",
+                "ground_floor_plan:1207",
+                "ground_floor_plan:1208",
+                "ground_floor_plan:1221",
+                "ground_floor_plan:1225",
+                "ground_floor_plan:1242",
+                "ground_floor_plan:1243",
+                "ground_floor_plan:1254",
+                "ground_floor_plan:1255"
+              ],
+              "source_entity_ids_count": 10,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "source_entity_ids": [
+                "ground_floor_plan:1204",
+                "ground_floor_plan:1209",
+                "ground_floor_plan:1210",
+                "ground_floor_plan:1216",
+                "ground_floor_plan:1219",
+                "ground_floor_plan:1224",
+                "ground_floor_plan:1226",
+                "ground_floor_plan:1227",
+                "ground_floor_plan:1233",
+                "ground_floor_plan:1236"
+              ],
+              "source_entity_ids_count": 10,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "source_entity_ids": [
+                "ground_floor_plan:1220",
+                "ground_floor_plan:1237"
+              ],
+              "source_entity_ids_count": 2,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "preserved_exact_plan_dimension_pairs": [
+            {
+              "value_m": 4.05,
+              "text": "405",
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "all_width_binding_proposals": [
+            {
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "paired_source_part_span_candidates": [
+            {
+              "status": "source_part_pair_span_candidate_not_bound",
+              "source_entity_ids": [
+                "ground_floor_plan:1174",
+                "ground_floor_plan:1183"
+              ],
+              "source_entity_ids_count": 2,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "status": "source_part_pair_span_candidate_not_bound",
+              "source_entity_ids": [
+                "ground_floor_plan:1174",
+                "ground_floor_plan:1248"
+              ],
+              "source_entity_ids_count": 2,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "status": "source_part_pair_span_candidate_not_bound",
+              "source_entity_ids": [
+                "ground_floor_plan:1183",
+                "ground_floor_plan:1260"
+              ],
+              "source_entity_ids_count": 2,
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "status": "source_part_pair_span_candidate_not_bound",
+              "source_entity_ids": [
+                "ground_floor_plan:1248",
+                "ground_floor_plan:1260"
+              ],
+              "source_entity_ids_count": 2,
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ],
+          "text_semantic_context_groups": {},
+          "mesh_permission": "blocked_not_mesh"
+        },
+        "special_contract": null,
+        "candidate_source_files": [
+          "blender\\semantic_objects\\ground_floor_opening_component_detail_contract.json",
+          "blender\\semantic_objects\\ground_floor_opening_component_dimension_crosscheck.json",
+          "blender\\semantic_objects\\ground_floor_opening_dimension_line_slot_candidates.json",
+          "blender\\semantic_objects\\ground_floor_opening_pending_slot_proposals.json",
+          "blender\\semantic_objects\\ground_floor_opening_pending_slot_resolution_matrix.json",
+          "blender\\semantic_objects\\ground_floor_opening_vertical_search_packets.json",
+          "blender\\semantic_objects\\ground_floor_opening_width_unresolved_search_packets.json"
+        ]
+      },
+      "recommended_next_cad_queries": [
+        "Crosscheck exact plan source-pair, elevation frame linework and dimension text at the same opening.",
+        "Reject wall returns, reveal thickness, screens and broad component envelope when they are wider than the clear/frame opening.",
+        "Keep candidate source_entity_ids until the matching CAD pair is unambiguous."
+      ],
+      "context_exclusions": [
+        "annotation_text_boxes_not_geometry",
+        "terrain_level_markers_not_window_or_door_geometry",
+        "rainwater_pipe_and_cast_iron_underpiece_not_opening_geometry",
+        "blue_hardstone_plinth_not_window_dimension",
+        "gutter_end_notes_not_opening_geometry",
+        "screens_flyscreens_invisivent_are_component_metadata_until_bound_to_exact_subparts"
+      ],
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_search_seed_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "status": "deeper_search_seed_ready_agent_side_not_mesh",
+      "task_id": "Y17:bay_subsegment_geometry",
+      "legend_id": "Y17",
+      "label": "erker inclusief raamdeur",
+      "opening_type": "bay_window_group_with_operable_door",
+      "slot": "bay_subsegment_geometry",
+      "slot_status": "pending",
+      "priority": "P2",
+      "known_metric_values": [
+        {
+          "slot": "bay_subsegment_geometry",
+          "subrole": null,
+          "value_m": null,
+          "source_ref_count": 56,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "opening_width_m",
+          "subrole": null,
+          "value_m": 3.2501,
+          "source_ref_count": 13,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "opening_height_m",
+          "subrole": "clear_opening_height",
+          "value_m": 2.55,
+          "source_ref_count": 2,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_summary": {
+        "source_detail_image": "assets\\cad-truth\\building-detail-matches\\opening-cad-validation\\y17-elevation-cad-detail.png",
+        "facade_title": "Voorgevel",
+        "source_plan_bbox_m": {
+          "min_x_m": 2.4457,
+          "min_y_m": 3.0587,
+          "max_x_m": 7.7419,
+          "max_y_m": 5.0616,
+          "extent_x_m": 5.2962,
+          "extent_y_m": 2.0029
+        },
+        "context_dimensions": {
+          "opening_width_m_for_context": 0.956,
+          "opening_height_m_for_context": 2.55,
+          "display_preview_height_m": 2.55
+        },
+        "source_entity_count_context": {
+          "candidate_elevation_source_entity_count": 103,
+          "candidate_plan_source_entity_count": 118,
+          "component_metadata_source_count": 9
+        },
+        "component_part_counts": {
+          "elevation_visual_part_counts": {
+            "frame_or_leaf_vertical_edges": 35,
+            "frame_sill_lintel_or_leaf_horizontal_edges": 26,
+            "mullion_trim_hardware_or_decorative_lath": 39,
+            "sill_lintel_panel_or_hatched_fill": 3
+          },
+          "plan_trace_part_counts": {
+            "plan_door_swing_or_reference_curve_preserved": 65,
+            "plan_frame_glass_or_panel_trace": 12,
+            "plan_reveal_or_wall_return_trace": 9,
+            "plan_short_trim_or_reveal_trace": 25,
+            "plan_wall_context_preserved": 7
+          }
+        },
+        "component_text_metadata": [
+          {
+            "text": "vast",
+            "detected_roles": [
+              "fixed_glazing_leaf_state"
+            ],
+            "source_entity_id": "left_elevation:1532",
+            "source_layer": "Info ALG",
+            "use_as": "metadata_only_not_geometry"
+          }
+        ],
+        "pending_actions_for_slot": [
+          {
+            "slot": "bay_subsegment_geometry",
+            "proposal_status": "source_cad_bay_subsegment_geometry_candidate_ready_not_bound_not_mesh",
+            "action": "agent_can_prepare_subgeometry_binding_packet_from_exact_cad_refs",
+            "risk_flags": [],
+            "source_ref_count": 56,
+            "mesh_permission": "blocked_not_mesh"
+          }
+        ],
+        "pending_proposals_for_slot": [
+          {
+            "slot": "bay_subsegment_geometry",
+            "value_m": null,
+            "proposal_status": "source_cad_bay_subsegment_geometry_candidate_ready_not_bound_not_mesh",
+            "source_entity_ids": [
+              "left_elevation:0937",
+              "left_elevation:0943",
+              "left_elevation:0944",
+              "left_elevation:0945",
+              "left_elevation:0946",
+              "left_elevation:0947",
+              "left_elevation:0948",
+              "left_elevation:0949",
+              "left_elevation:0950",
+              "left_elevation:0951",
+              "left_elevation:0955",
+              "left_elevation:0956",
+              "left_elevation:0957",
+              "left_elevation:0958",
+              "left_elevation:0959",
+              "left_elevation:0965",
+              "left_elevation:0966",
+              "left_elevation:0967",
+              "left_elevation:0968",
+              "left_elevation:0969",
+              "left_elevation:0970",
+              "left_elevation:0971",
+              "left_elevation:0972",
+              "left_elevation:0973",
+              "left_elevation:0974",
+              "left_elevation:0975",
+              "left_elevation:0976",
+              "left_elevation:0977",
+              "left_elevation:0984",
+              "left_elevation:0985",
+              "left_elevation:0986",
+              "left_elevation:0987",
+              "left_elevation:0988",
+              "left_elevation:0989",
+              "left_elevation:0990",
+              "left_elevation:0991",
+              "left_elevation:0992",
+              "left_elevation:0993",
+              "left_elevation:0994",
+              "left_elevation:0995",
+              "left_elevation:0996",
+              "left_elevation:0997",
+              "left_elevation:0998",
+              "left_elevation:1000",
+              "left_elevation:1001",
+              "left_elevation:1002",
+              "left_elevation:1003",
+              "left_elevation:1004",
+              "left_elevation:1005",
+              "left_elevation:1006",
+              "left_elevation:1007",
+              "left_elevation:1008",
+              "left_elevation:1009",
+              "left_elevation:1013",
+              "left_elevation:1014",
+              "left_elevation:1061"
+            ],
+            "source_system": "subgeometry_slot_candidates",
+            "source_subpart_id": "ground_floor:opening_arch_bay_subpart:Y17",
+            "risk_flags": [],
+            "binding_permission": "candidate_draft_only_not_final",
+            "mesh_permission": "blocked_not_mesh"
+          }
+        ],
+        "dimension_crosscheck": {
+          "mesh_permission": "blocked_not_mesh"
+        },
+        "dimension_line_candidates_for_slot": [],
+        "vertical_search_packet": {
+          "candidate_dimension_source_entity_ids": [
+            "ground_floor_plan:1546",
+            "ground_floor_plan:2693",
+            "ground_floor_plan:2694",
+            "ground_floor_plan:2695",
+            "ground_floor_plan:2700",
+            "ground_floor_plan:2798",
+            "ground_floor_plan:2799",
+            "ground_floor_plan:2801",
+            "ground_floor_plan:2802",
+            "ground_floor_plan:2869",
+            "left_elevation:1468",
+            "left_elevation:1469"
+          ],
+          "candidate_dimension_source_entity_ids_count": 37,
+          "candidate_dimension_source_count": 37,
+          "known_height_slots": [
+            {
+              "slot": "opening_height_m",
+              "status": "source_dimension_chain_bound_to_metric_slot_candidate_not_mesh",
+              "value_m": 2.55,
+              "mesh_permission": "blocked_until_opening_subgeometry_and_wall_cut_contract"
+            }
+          ],
+          "context_dimensions": [],
+          "vertical_detail_text_evidence": [
+            {
+              "source_entity_id": "left_elevation:1508",
+              "text": "inslijpen lood \nhoogte lood te \nbespreken met werfleider"
+            },
+            {
+              "source_entity_id": "left_elevation:1504",
+              "text": "plint: 1cm inspringend - blauwe hardsteen - geschuurd"
+            },
+            {
+              "source_entity_id": "ground_floor_plan:1546",
+              "source_scope": "plan_cad_window_validation",
+              "text": "10"
+            },
+            {
+              "source_entity_id": "ground_floor_plan:2693",
+              "source_scope": "plan_cad_window_validation",
+              "text": "60"
+            }
+          ],
+          "missing_vertical_cut_slots": [
+            "threshold_level_m",
+            "header_or_lintel_height_m"
+          ],
+          "search_status": "vertical_search_pool_ready_not_bound",
+          "next_agent_tasks": [
+            "Classify candidate dimension entities into sill/threshold/header/opening-height candidates.",
+            "Reject plinth, gutter, pipe and material annotation dimensions as geometry drivers.",
+            "Bind only source IDs that match the same facade/detail opening."
+          ],
+          "source_scope": "dimension_workbench_plus_cad_window_validation",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        "width_search_packet": null,
+        "special_contract": {
+          "status": "y17_erker_leaf_candidates_ready_not_mesh",
+          "purpose": "Splits Y17 erker into exact CAD leaf/panel candidates from the original elevation frame linework. This is source evidence only and does not identify the operable door leaf yet.",
+          "mesh_permission": "blocked_not_mesh",
+          "rules": [
+            "Leaf candidates are derived from original CAD frame source segments only.",
+            "The candidate leaf envelopes are indexing evidence and must not be rendered as boxes.",
+            "The operable raamdeur leaf is not assigned until exact CAD text/geometry or user validation resolves it."
+          ],
+          "leaf_candidate_count": 5,
+          "leaf_candidates": [
+            {
+              "candidate_operation_type": "unknown_pending_exact_leaf_text_or_user_validation",
+              "left_to_right_order": 1,
+              "leaf_candidate_id": "Y17-L01",
+              "combined_leaf_evidence": {
+                "width_m": 0.4958,
+                "height_m": 2.6796,
+                "source_entity_count": 17,
+                "part_role_counts": {
+                  "frame_or_leaf_vertical_edges": 8,
+                  "frame_sill_lintel_or_leaf_horizontal_edges": 4,
+                  "mullion_trim_hardware_or_decorative_lath": 5
+                },
+                "status": "cad_erker_leaf_combined_source_evidence_not_bound_not_mesh",
+                "mesh_permission": "blocked_not_mesh"
+              },
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "candidate_operation_type": "unknown_pending_exact_leaf_text_or_user_validation",
+              "left_to_right_order": 2,
+              "leaf_candidate_id": "Y17-L02",
+              "combined_leaf_evidence": {
+                "width_m": 1.0949,
+                "height_m": 2.55,
+                "source_entity_count": 11,
+                "part_role_counts": {
+                  "frame_or_leaf_vertical_edges": 7,
+                  "frame_sill_lintel_or_leaf_horizontal_edges": 2,
+                  "mullion_trim_hardware_or_decorative_lath": 2
+                },
+                "status": "cad_erker_leaf_combined_source_evidence_not_bound_not_mesh",
+                "mesh_permission": "blocked_not_mesh"
+              },
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "candidate_operation_type": "unknown_pending_exact_leaf_text_or_user_validation",
+              "left_to_right_order": 3,
+              "leaf_candidate_id": "Y17-L03",
+              "combined_leaf_evidence": {
+                "width_m": 1.0658,
+                "height_m": 2.44,
+                "source_entity_count": 10,
+                "part_role_counts": {
+                  "frame_or_leaf_vertical_edges": 8,
+                  "frame_sill_lintel_or_leaf_horizontal_edges": 2
+                },
+                "status": "cad_erker_leaf_combined_source_evidence_not_bound_not_mesh",
+                "mesh_permission": "blocked_not_mesh"
+              },
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "candidate_operation_type": "unknown_pending_exact_leaf_text_or_user_validation",
+              "left_to_right_order": 4,
+              "leaf_candidate_id": "Y17-L04",
+              "combined_leaf_evidence": {
+                "width_m": 1.0949,
+                "height_m": 2.55,
+                "source_entity_count": 11,
+                "part_role_counts": {
+                  "frame_or_leaf_vertical_edges": 7,
+                  "frame_sill_lintel_or_leaf_horizontal_edges": 2,
+                  "mullion_trim_hardware_or_decorative_lath": 2
+                },
+                "status": "cad_erker_leaf_combined_source_evidence_not_bound_not_mesh",
+                "mesh_permission": "blocked_not_mesh"
+              },
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "candidate_operation_type": "unknown_pending_exact_leaf_text_or_user_validation",
+              "left_to_right_order": 5,
+              "leaf_candidate_id": "Y17-L05",
+              "combined_leaf_evidence": {
+                "width_m": 0.5455,
+                "height_m": 3.12,
+                "source_entity_count": 21,
+                "part_role_counts": {
+                  "frame_or_leaf_vertical_edges": 9,
+                  "frame_sill_lintel_or_leaf_horizontal_edges": 4,
+                  "mullion_trim_hardware_or_decorative_lath": 8
+                },
+                "status": "cad_erker_leaf_combined_source_evidence_not_bound_not_mesh",
+                "mesh_permission": "blocked_not_mesh"
+              },
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ]
+        },
+        "candidate_source_files": [
+          "blender\\semantic_objects\\ground_floor_opening_component_detail_contract.json",
+          "blender\\semantic_objects\\ground_floor_opening_component_dimension_crosscheck.json",
+          "blender\\semantic_objects\\ground_floor_opening_dimension_line_slot_candidates.json",
+          "blender\\semantic_objects\\ground_floor_opening_pending_slot_proposals.json",
+          "blender\\semantic_objects\\ground_floor_opening_pending_slot_resolution_matrix.json",
+          "blender\\semantic_objects\\ground_floor_opening_vertical_search_packets.json",
+          "blender\\semantic_objects\\ground_floor_opening_width_unresolved_search_packets.json",
+          "blender\\semantic_objects\\ground_floor_opening_y17_erker_leaf_workbench.json"
+        ]
+      },
+      "recommended_next_cad_queries": [
+        "Use the Y17 erker leaf workbench with the five CAD leaf candidates and original source_entity_ids.",
+        "Bind angled side leaves, fixed leaves and the operable raamdeur only from CAD leaf/operation evidence.",
+        "Do not simplify the erker into one rectangle or use the rough plan bbox as leaf geometry."
+      ],
+      "context_exclusions": [
+        "annotation_text_boxes_not_geometry",
+        "terrain_level_markers_not_window_or_door_geometry",
+        "rainwater_pipe_and_cast_iron_underpiece_not_opening_geometry",
+        "blue_hardstone_plinth_not_window_dimension",
+        "gutter_end_notes_not_opening_geometry",
+        "screens_flyscreens_invisivent_are_component_metadata_until_bound_to_exact_subparts",
+        "single_erker_bbox_not_leaf_geometry"
+      ],
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_search_seed_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "status": "deeper_search_seed_ready_agent_side_not_mesh",
+      "task_id": "Y17:header_or_lintel_height_m",
+      "legend_id": "Y17",
+      "label": "erker inclusief raamdeur",
+      "opening_type": "bay_window_group_with_operable_door",
+      "slot": "header_or_lintel_height_m",
+      "slot_status": "pending",
+      "priority": "P2",
+      "known_metric_values": [
+        {
+          "slot": "bay_subsegment_geometry",
+          "subrole": null,
+          "value_m": null,
+          "source_ref_count": 56,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "opening_width_m",
+          "subrole": null,
+          "value_m": 3.2501,
+          "source_ref_count": 13,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "opening_height_m",
+          "subrole": "clear_opening_height",
+          "value_m": 2.55,
+          "source_ref_count": 2,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_summary": {
+        "source_detail_image": "assets\\cad-truth\\building-detail-matches\\opening-cad-validation\\y17-elevation-cad-detail.png",
+        "facade_title": "Voorgevel",
+        "source_plan_bbox_m": {
+          "min_x_m": 2.4457,
+          "min_y_m": 3.0587,
+          "max_x_m": 7.7419,
+          "max_y_m": 5.0616,
+          "extent_x_m": 5.2962,
+          "extent_y_m": 2.0029
+        },
+        "context_dimensions": {
+          "opening_width_m_for_context": 0.956,
+          "opening_height_m_for_context": 2.55,
+          "display_preview_height_m": 2.55
+        },
+        "source_entity_count_context": {
+          "candidate_elevation_source_entity_count": 103,
+          "candidate_plan_source_entity_count": 118,
+          "component_metadata_source_count": 9
+        },
+        "component_part_counts": {
+          "elevation_visual_part_counts": {
+            "frame_or_leaf_vertical_edges": 35,
+            "frame_sill_lintel_or_leaf_horizontal_edges": 26,
+            "mullion_trim_hardware_or_decorative_lath": 39,
+            "sill_lintel_panel_or_hatched_fill": 3
+          },
+          "plan_trace_part_counts": {
+            "plan_door_swing_or_reference_curve_preserved": 65,
+            "plan_frame_glass_or_panel_trace": 12,
+            "plan_reveal_or_wall_return_trace": 9,
+            "plan_short_trim_or_reveal_trace": 25,
+            "plan_wall_context_preserved": 7
+          }
+        },
+        "component_text_metadata": [
+          {
+            "text": "vast",
+            "detected_roles": [
+              "fixed_glazing_leaf_state"
+            ],
+            "source_entity_id": "left_elevation:1532",
+            "source_layer": "Info ALG",
+            "use_as": "metadata_only_not_geometry"
+          }
+        ],
+        "pending_actions_for_slot": [
+          {
+            "slot": "header_or_lintel_height_m",
+            "proposal_status": "sill_header_pair_candidate_preserved_with_risk_not_bound_not_mesh",
+            "action": "agent_crosscheck_required_risk_flags_before_any_binding",
+            "risk_flags": [
+              "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold",
+              "header_candidate_may_be_overall_or_storey_context"
+            ],
+            "source_ref_count": 1,
+            "mesh_permission": "blocked_not_mesh"
+          }
+        ],
+        "pending_proposals_for_slot": [
+          {
+            "slot": "header_or_lintel_height_m",
+            "value_m": 2.72,
+            "proposal_status": "sill_header_pair_candidate_preserved_with_risk_not_bound_not_mesh",
+            "source_entity_ids": [
+              "left_elevation:1470"
+            ],
+            "source_system": "sill_header_candidate_work_order",
+            "risk_flags": [
+              "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold",
+              "header_candidate_may_be_overall_or_storey_context"
+            ],
+            "binding_permission": "blocked_for_review_due_risk_flags",
+            "mesh_permission": "blocked_not_mesh"
+          }
+        ],
+        "dimension_crosscheck": {
+          "mesh_permission": "blocked_not_mesh"
+        },
+        "dimension_line_candidates_for_slot": [
+          {
+            "mesh_permission": "blocked_metadata_only"
+          }
+        ],
+        "vertical_search_packet": {
+          "candidate_dimension_source_entity_ids": [
+            "ground_floor_plan:1546",
+            "ground_floor_plan:2693",
+            "ground_floor_plan:2694",
+            "ground_floor_plan:2695",
+            "ground_floor_plan:2700",
+            "ground_floor_plan:2798",
+            "ground_floor_plan:2799",
+            "ground_floor_plan:2801",
+            "ground_floor_plan:2802",
+            "ground_floor_plan:2869",
+            "left_elevation:1468",
+            "left_elevation:1469"
+          ],
+          "candidate_dimension_source_entity_ids_count": 37,
+          "candidate_dimension_source_count": 37,
+          "known_height_slots": [
+            {
+              "slot": "opening_height_m",
+              "status": "source_dimension_chain_bound_to_metric_slot_candidate_not_mesh",
+              "value_m": 2.55,
+              "mesh_permission": "blocked_until_opening_subgeometry_and_wall_cut_contract"
+            }
+          ],
+          "context_dimensions": [],
+          "vertical_detail_text_evidence": [
+            {
+              "source_entity_id": "left_elevation:1508",
+              "text": "inslijpen lood \nhoogte lood te \nbespreken met werfleider"
+            },
+            {
+              "source_entity_id": "left_elevation:1504",
+              "text": "plint: 1cm inspringend - blauwe hardsteen - geschuurd"
+            },
+            {
+              "source_entity_id": "ground_floor_plan:1546",
+              "source_scope": "plan_cad_window_validation",
+              "text": "10"
+            },
+            {
+              "source_entity_id": "ground_floor_plan:2693",
+              "source_scope": "plan_cad_window_validation",
+              "text": "60"
+            }
+          ],
+          "missing_vertical_cut_slots": [
+            "threshold_level_m",
+            "header_or_lintel_height_m"
+          ],
+          "search_status": "vertical_search_pool_ready_not_bound",
+          "next_agent_tasks": [
+            "Classify candidate dimension entities into sill/threshold/header/opening-height candidates.",
+            "Reject plinth, gutter, pipe and material annotation dimensions as geometry drivers.",
+            "Bind only source IDs that match the same facade/detail opening."
+          ],
+          "source_scope": "dimension_workbench_plus_cad_window_validation",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        "width_search_packet": null,
+        "special_contract": {
+          "status": "y17_erker_leaf_candidates_ready_not_mesh",
+          "purpose": "Splits Y17 erker into exact CAD leaf/panel candidates from the original elevation frame linework. This is source evidence only and does not identify the operable door leaf yet.",
+          "mesh_permission": "blocked_not_mesh",
+          "rules": [
+            "Leaf candidates are derived from original CAD frame source segments only.",
+            "The candidate leaf envelopes are indexing evidence and must not be rendered as boxes.",
+            "The operable raamdeur leaf is not assigned until exact CAD text/geometry or user validation resolves it."
+          ],
+          "leaf_candidate_count": 5,
+          "leaf_candidates": [
+            {
+              "candidate_operation_type": "unknown_pending_exact_leaf_text_or_user_validation",
+              "left_to_right_order": 1,
+              "leaf_candidate_id": "Y17-L01",
+              "combined_leaf_evidence": {
+                "width_m": 0.4958,
+                "height_m": 2.6796,
+                "source_entity_count": 17,
+                "part_role_counts": {
+                  "frame_or_leaf_vertical_edges": 8,
+                  "frame_sill_lintel_or_leaf_horizontal_edges": 4,
+                  "mullion_trim_hardware_or_decorative_lath": 5
+                },
+                "status": "cad_erker_leaf_combined_source_evidence_not_bound_not_mesh",
+                "mesh_permission": "blocked_not_mesh"
+              },
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "candidate_operation_type": "unknown_pending_exact_leaf_text_or_user_validation",
+              "left_to_right_order": 2,
+              "leaf_candidate_id": "Y17-L02",
+              "combined_leaf_evidence": {
+                "width_m": 1.0949,
+                "height_m": 2.55,
+                "source_entity_count": 11,
+                "part_role_counts": {
+                  "frame_or_leaf_vertical_edges": 7,
+                  "frame_sill_lintel_or_leaf_horizontal_edges": 2,
+                  "mullion_trim_hardware_or_decorative_lath": 2
+                },
+                "status": "cad_erker_leaf_combined_source_evidence_not_bound_not_mesh",
+                "mesh_permission": "blocked_not_mesh"
+              },
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "candidate_operation_type": "unknown_pending_exact_leaf_text_or_user_validation",
+              "left_to_right_order": 3,
+              "leaf_candidate_id": "Y17-L03",
+              "combined_leaf_evidence": {
+                "width_m": 1.0658,
+                "height_m": 2.44,
+                "source_entity_count": 10,
+                "part_role_counts": {
+                  "frame_or_leaf_vertical_edges": 8,
+                  "frame_sill_lintel_or_leaf_horizontal_edges": 2
+                },
+                "status": "cad_erker_leaf_combined_source_evidence_not_bound_not_mesh",
+                "mesh_permission": "blocked_not_mesh"
+              },
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "candidate_operation_type": "unknown_pending_exact_leaf_text_or_user_validation",
+              "left_to_right_order": 4,
+              "leaf_candidate_id": "Y17-L04",
+              "combined_leaf_evidence": {
+                "width_m": 1.0949,
+                "height_m": 2.55,
+                "source_entity_count": 11,
+                "part_role_counts": {
+                  "frame_or_leaf_vertical_edges": 7,
+                  "frame_sill_lintel_or_leaf_horizontal_edges": 2,
+                  "mullion_trim_hardware_or_decorative_lath": 2
+                },
+                "status": "cad_erker_leaf_combined_source_evidence_not_bound_not_mesh",
+                "mesh_permission": "blocked_not_mesh"
+              },
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "candidate_operation_type": "unknown_pending_exact_leaf_text_or_user_validation",
+              "left_to_right_order": 5,
+              "leaf_candidate_id": "Y17-L05",
+              "combined_leaf_evidence": {
+                "width_m": 0.5455,
+                "height_m": 3.12,
+                "source_entity_count": 21,
+                "part_role_counts": {
+                  "frame_or_leaf_vertical_edges": 9,
+                  "frame_sill_lintel_or_leaf_horizontal_edges": 4,
+                  "mullion_trim_hardware_or_decorative_lath": 8
+                },
+                "status": "cad_erker_leaf_combined_source_evidence_not_bound_not_mesh",
+                "mesh_permission": "blocked_not_mesh"
+              },
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ]
+        },
+        "candidate_source_files": [
+          "blender\\semantic_objects\\ground_floor_opening_component_detail_contract.json",
+          "blender\\semantic_objects\\ground_floor_opening_component_dimension_crosscheck.json",
+          "blender\\semantic_objects\\ground_floor_opening_dimension_line_slot_candidates.json",
+          "blender\\semantic_objects\\ground_floor_opening_pending_slot_proposals.json",
+          "blender\\semantic_objects\\ground_floor_opening_pending_slot_resolution_matrix.json",
+          "blender\\semantic_objects\\ground_floor_opening_vertical_search_packets.json",
+          "blender\\semantic_objects\\ground_floor_opening_width_unresolved_search_packets.json",
+          "blender\\semantic_objects\\ground_floor_opening_y17_erker_leaf_workbench.json"
+        ]
+      },
+      "recommended_next_cad_queries": [
+        "Search local elevation vertical dimension lines and level markers at the door threshold/header only.",
+        "Separate threshold/floor level from door leaf, fixed side panel, awning/afdak and rainwater/gutter context.",
+        "Do not infer final cut height from generic door default or preview height."
+      ],
+      "context_exclusions": [
+        "annotation_text_boxes_not_geometry",
+        "terrain_level_markers_not_window_or_door_geometry",
+        "rainwater_pipe_and_cast_iron_underpiece_not_opening_geometry",
+        "blue_hardstone_plinth_not_window_dimension",
+        "gutter_end_notes_not_opening_geometry",
+        "screens_flyscreens_invisivent_are_component_metadata_until_bound_to_exact_subparts"
+      ],
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_search_seed_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "status": "deeper_search_seed_ready_agent_side_not_mesh",
+      "task_id": "Y17:threshold_level_m",
+      "legend_id": "Y17",
+      "label": "erker inclusief raamdeur",
+      "opening_type": "bay_window_group_with_operable_door",
+      "slot": "threshold_level_m",
+      "slot_status": "pending",
+      "priority": "P2",
+      "known_metric_values": [
+        {
+          "slot": "bay_subsegment_geometry",
+          "subrole": null,
+          "value_m": null,
+          "source_ref_count": 56,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "opening_width_m",
+          "subrole": null,
+          "value_m": 3.2501,
+          "source_ref_count": 13,
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "opening_height_m",
+          "subrole": "clear_opening_height",
+          "value_m": 2.55,
+          "source_ref_count": 2,
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "source_summary": {
+        "source_detail_image": "assets\\cad-truth\\building-detail-matches\\opening-cad-validation\\y17-elevation-cad-detail.png",
+        "facade_title": "Voorgevel",
+        "source_plan_bbox_m": {
+          "min_x_m": 2.4457,
+          "min_y_m": 3.0587,
+          "max_x_m": 7.7419,
+          "max_y_m": 5.0616,
+          "extent_x_m": 5.2962,
+          "extent_y_m": 2.0029
+        },
+        "context_dimensions": {
+          "opening_width_m_for_context": 0.956,
+          "opening_height_m_for_context": 2.55,
+          "display_preview_height_m": 2.55
+        },
+        "source_entity_count_context": {
+          "candidate_elevation_source_entity_count": 103,
+          "candidate_plan_source_entity_count": 118,
+          "component_metadata_source_count": 9
+        },
+        "component_part_counts": {
+          "elevation_visual_part_counts": {
+            "frame_or_leaf_vertical_edges": 35,
+            "frame_sill_lintel_or_leaf_horizontal_edges": 26,
+            "mullion_trim_hardware_or_decorative_lath": 39,
+            "sill_lintel_panel_or_hatched_fill": 3
+          },
+          "plan_trace_part_counts": {
+            "plan_door_swing_or_reference_curve_preserved": 65,
+            "plan_frame_glass_or_panel_trace": 12,
+            "plan_reveal_or_wall_return_trace": 9,
+            "plan_short_trim_or_reveal_trace": 25,
+            "plan_wall_context_preserved": 7
+          }
+        },
+        "component_text_metadata": [
+          {
+            "text": "vast",
+            "detected_roles": [
+              "fixed_glazing_leaf_state"
+            ],
+            "source_entity_id": "left_elevation:1532",
+            "source_layer": "Info ALG",
+            "use_as": "metadata_only_not_geometry"
+          }
+        ],
+        "pending_actions_for_slot": [
+          {
+            "slot": "threshold_level_m",
+            "proposal_status": "sill_header_pair_candidate_preserved_with_risk_not_bound_not_mesh",
+            "action": "agent_crosscheck_required_risk_flags_before_any_binding",
+            "risk_flags": [
+              "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold",
+              "header_candidate_may_be_overall_or_storey_context"
+            ],
+            "source_ref_count": 1,
+            "mesh_permission": "blocked_not_mesh"
+          }
+        ],
+        "pending_proposals_for_slot": [
+          {
+            "slot": "threshold_level_m",
+            "value_m": 0.18,
+            "proposal_status": "sill_header_pair_candidate_preserved_with_risk_not_bound_not_mesh",
+            "source_entity_ids": [
+              "left_elevation:1472"
+            ],
+            "source_system": "sill_header_candidate_work_order",
+            "risk_flags": [
+              "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold",
+              "header_candidate_may_be_overall_or_storey_context"
+            ],
+            "binding_permission": "blocked_for_review_due_risk_flags",
+            "mesh_permission": "blocked_not_mesh"
+          }
+        ],
+        "dimension_crosscheck": {
+          "mesh_permission": "blocked_not_mesh"
+        },
+        "dimension_line_candidates_for_slot": [
+          {
+            "mesh_permission": "blocked_metadata_only"
+          }
+        ],
+        "vertical_search_packet": {
+          "candidate_dimension_source_entity_ids": [
+            "ground_floor_plan:1546",
+            "ground_floor_plan:2693",
+            "ground_floor_plan:2694",
+            "ground_floor_plan:2695",
+            "ground_floor_plan:2700",
+            "ground_floor_plan:2798",
+            "ground_floor_plan:2799",
+            "ground_floor_plan:2801",
+            "ground_floor_plan:2802",
+            "ground_floor_plan:2869",
+            "left_elevation:1468",
+            "left_elevation:1469"
+          ],
+          "candidate_dimension_source_entity_ids_count": 37,
+          "candidate_dimension_source_count": 37,
+          "known_height_slots": [
+            {
+              "slot": "opening_height_m",
+              "status": "source_dimension_chain_bound_to_metric_slot_candidate_not_mesh",
+              "value_m": 2.55,
+              "mesh_permission": "blocked_until_opening_subgeometry_and_wall_cut_contract"
+            }
+          ],
+          "context_dimensions": [],
+          "vertical_detail_text_evidence": [
+            {
+              "source_entity_id": "left_elevation:1508",
+              "text": "inslijpen lood \nhoogte lood te \nbespreken met werfleider"
+            },
+            {
+              "source_entity_id": "left_elevation:1504",
+              "text": "plint: 1cm inspringend - blauwe hardsteen - geschuurd"
+            },
+            {
+              "source_entity_id": "ground_floor_plan:1546",
+              "source_scope": "plan_cad_window_validation",
+              "text": "10"
+            },
+            {
+              "source_entity_id": "ground_floor_plan:2693",
+              "source_scope": "plan_cad_window_validation",
+              "text": "60"
+            }
+          ],
+          "missing_vertical_cut_slots": [
+            "threshold_level_m",
+            "header_or_lintel_height_m"
+          ],
+          "search_status": "vertical_search_pool_ready_not_bound",
+          "next_agent_tasks": [
+            "Classify candidate dimension entities into sill/threshold/header/opening-height candidates.",
+            "Reject plinth, gutter, pipe and material annotation dimensions as geometry drivers.",
+            "Bind only source IDs that match the same facade/detail opening."
+          ],
+          "source_scope": "dimension_workbench_plus_cad_window_validation",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        "width_search_packet": null,
+        "special_contract": {
+          "status": "y17_erker_leaf_candidates_ready_not_mesh",
+          "purpose": "Splits Y17 erker into exact CAD leaf/panel candidates from the original elevation frame linework. This is source evidence only and does not identify the operable door leaf yet.",
+          "mesh_permission": "blocked_not_mesh",
+          "rules": [
+            "Leaf candidates are derived from original CAD frame source segments only.",
+            "The candidate leaf envelopes are indexing evidence and must not be rendered as boxes.",
+            "The operable raamdeur leaf is not assigned until exact CAD text/geometry or user validation resolves it."
+          ],
+          "leaf_candidate_count": 5,
+          "leaf_candidates": [
+            {
+              "candidate_operation_type": "unknown_pending_exact_leaf_text_or_user_validation",
+              "left_to_right_order": 1,
+              "leaf_candidate_id": "Y17-L01",
+              "combined_leaf_evidence": {
+                "width_m": 0.4958,
+                "height_m": 2.6796,
+                "source_entity_count": 17,
+                "part_role_counts": {
+                  "frame_or_leaf_vertical_edges": 8,
+                  "frame_sill_lintel_or_leaf_horizontal_edges": 4,
+                  "mullion_trim_hardware_or_decorative_lath": 5
+                },
+                "status": "cad_erker_leaf_combined_source_evidence_not_bound_not_mesh",
+                "mesh_permission": "blocked_not_mesh"
+              },
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "candidate_operation_type": "unknown_pending_exact_leaf_text_or_user_validation",
+              "left_to_right_order": 2,
+              "leaf_candidate_id": "Y17-L02",
+              "combined_leaf_evidence": {
+                "width_m": 1.0949,
+                "height_m": 2.55,
+                "source_entity_count": 11,
+                "part_role_counts": {
+                  "frame_or_leaf_vertical_edges": 7,
+                  "frame_sill_lintel_or_leaf_horizontal_edges": 2,
+                  "mullion_trim_hardware_or_decorative_lath": 2
+                },
+                "status": "cad_erker_leaf_combined_source_evidence_not_bound_not_mesh",
+                "mesh_permission": "blocked_not_mesh"
+              },
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "candidate_operation_type": "unknown_pending_exact_leaf_text_or_user_validation",
+              "left_to_right_order": 3,
+              "leaf_candidate_id": "Y17-L03",
+              "combined_leaf_evidence": {
+                "width_m": 1.0658,
+                "height_m": 2.44,
+                "source_entity_count": 10,
+                "part_role_counts": {
+                  "frame_or_leaf_vertical_edges": 8,
+                  "frame_sill_lintel_or_leaf_horizontal_edges": 2
+                },
+                "status": "cad_erker_leaf_combined_source_evidence_not_bound_not_mesh",
+                "mesh_permission": "blocked_not_mesh"
+              },
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "candidate_operation_type": "unknown_pending_exact_leaf_text_or_user_validation",
+              "left_to_right_order": 4,
+              "leaf_candidate_id": "Y17-L04",
+              "combined_leaf_evidence": {
+                "width_m": 1.0949,
+                "height_m": 2.55,
+                "source_entity_count": 11,
+                "part_role_counts": {
+                  "frame_or_leaf_vertical_edges": 7,
+                  "frame_sill_lintel_or_leaf_horizontal_edges": 2,
+                  "mullion_trim_hardware_or_decorative_lath": 2
+                },
+                "status": "cad_erker_leaf_combined_source_evidence_not_bound_not_mesh",
+                "mesh_permission": "blocked_not_mesh"
+              },
+              "mesh_permission": "blocked_not_mesh"
+            },
+            {
+              "candidate_operation_type": "unknown_pending_exact_leaf_text_or_user_validation",
+              "left_to_right_order": 5,
+              "leaf_candidate_id": "Y17-L05",
+              "combined_leaf_evidence": {
+                "width_m": 0.5455,
+                "height_m": 3.12,
+                "source_entity_count": 21,
+                "part_role_counts": {
+                  "frame_or_leaf_vertical_edges": 9,
+                  "frame_sill_lintel_or_leaf_horizontal_edges": 4,
+                  "mullion_trim_hardware_or_decorative_lath": 8
+                },
+                "status": "cad_erker_leaf_combined_source_evidence_not_bound_not_mesh",
+                "mesh_permission": "blocked_not_mesh"
+              },
+              "mesh_permission": "blocked_not_mesh"
+            }
+          ]
+        },
+        "candidate_source_files": [
+          "blender\\semantic_objects\\ground_floor_opening_component_detail_contract.json",
+          "blender\\semantic_objects\\ground_floor_opening_component_dimension_crosscheck.json",
+          "blender\\semantic_objects\\ground_floor_opening_dimension_line_slot_candidates.json",
+          "blender\\semantic_objects\\ground_floor_opening_pending_slot_proposals.json",
+          "blender\\semantic_objects\\ground_floor_opening_pending_slot_resolution_matrix.json",
+          "blender\\semantic_objects\\ground_floor_opening_vertical_search_packets.json",
+          "blender\\semantic_objects\\ground_floor_opening_width_unresolved_search_packets.json",
+          "blender\\semantic_objects\\ground_floor_opening_y17_erker_leaf_workbench.json"
+        ]
+      },
+      "recommended_next_cad_queries": [
+        "Search local elevation vertical dimension lines and level markers at the door threshold/header only.",
+        "Separate threshold/floor level from door leaf, fixed side panel, awning/afdak and rainwater/gutter context.",
+        "Do not infer final cut height from generic door default or preview height."
+      ],
+      "context_exclusions": [
+        "annotation_text_boxes_not_geometry",
+        "terrain_level_markers_not_window_or_door_geometry",
+        "rainwater_pipe_and_cast_iron_underpiece_not_opening_geometry",
+        "blue_hardstone_plinth_not_window_dimension",
+        "gutter_end_notes_not_opening_geometry",
+        "screens_flyscreens_invisivent_are_component_metadata_until_bound_to_exact_subparts"
+      ],
+      "user_validation_needed_now": false,
+      "binding_permission": "agent_search_seed_only_not_bound",
+      "mesh_permission": "blocked_not_mesh"
+    }
+  ],
+  "rules": [
+    "These seeds are not geometry and may not create final wall cuts or component meshes.",
+    "Use original CAD source_entity_ids, dimension-line entities and validated detail crops only.",
+    "Text labels are preserved as metadata but ignored as geometry unless bound to a local component role.",
+    "The next generated review must show source CAD evidence clearly before user validation is requested."
+  ],
+  "mesh_permission": "blocked_not_mesh"
+}

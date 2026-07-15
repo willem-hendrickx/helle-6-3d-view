@@ -1,0 +1,378 @@
+{
+  "status": "material_assignment_preflight_ready_not_mesh",
+  "purpose": "Preflight for future photorealistic materials. CAD material/product notes are linked to future object families as metadata only; no render material is assigned until exact source-bound geometry exists.",
+  "source_files": {
+    "building_material_source_contract": "blender\\semantic_objects\\building_material_source_contract.json",
+    "downstream_object_identity_registry": "blender\\semantic_objects\\downstream_object_identity_registry.json",
+    "opening_popup_payload": "blender\\semantic_objects\\ground_floor_opening_popup_metadata_payload.json"
+  },
+  "material_slot_count": 6,
+  "opening_component_metadata_slot_count": 44,
+  "popup_opening_count": 17,
+  "geometry_assignment_ready_count": 0,
+  "render_assignment_ready_count": 0,
+  "render_assignment_permission_counts": {
+    "blocked_until_wall_roof_plinth_door_or_opening_subpart_mesh_is_exact_cad_bound": 6
+  },
+  "target_resolution_status_counts": {
+    "blocked_until_exact_target_geometry_object_and_surface_role_are_bound": 1,
+    "blocked_until_roof_plane_registry_exists": 1,
+    "blocked_until_plinth_or_sill_subsurface_is_separated_from_wall_mesh": 1,
+    "blocked_until_opening_subcomponent_meshes_exist": 3
+  },
+  "blocked_context_role_counts": {
+    "facade_material_context_not_opening_geometry": 2,
+    "gutter_end_detail_not_window_geometry": 7,
+    "hardstone_plinth_or_lintel_context_not_glass_geometry": 4,
+    "level_marker_context_not_material": 2,
+    "plinth_or_wall_base_context_not_window_geometry": 4,
+    "rainwater_pipe_base_context_not_window_geometry": 6,
+    "rainwater_pipe_context_not_window_geometry": 10,
+    "structural_context_not_opening_geometry": 4
+  },
+  "objects": [
+    {
+      "stable_object_id": "material_assignment_preflight:MAT-EXTERIOR-WALL-GEVELSTEEN",
+      "material_slot_id": "MAT-EXTERIOR-WALL-GEVELSTEEN",
+      "label": "exterior wall facing brick",
+      "target_slots": [
+        "exterior_wall_finish"
+      ],
+      "source_keywords_found": [
+        "gevelsteen"
+      ],
+      "source_entity_ids": [
+        "right_elevation:1871",
+        "right_elevation:1872",
+        "right_elevation:1875",
+        "left_elevation:1501",
+        "left_elevation:1503",
+        "ground_floor_plan:2837",
+        "roof_plan:2671",
+        "rear_elevation:1768",
+        "rear_elevation:1770",
+        "rear_elevation:1771",
+        "front_elevation:1698",
+        "front_elevation:1700",
+        "front_elevation:1701"
+      ],
+      "source_count": 13,
+      "semantic_titles": [
+        "Achtergevel",
+        "Gelijkvloers",
+        "Linker zijgevel",
+        "Rechter zijgevel",
+        "Voorgevel",
+        "Zolder / dakplan"
+      ],
+      "candidate_registry_target_count": 100,
+      "candidate_registry_target_names_sample": [
+        "H6_GF_WALL_W01_ground_floor_wall_extrusion_contract_w01",
+        "H6_GF_WALL_W02_ground_floor_wall_extrusion_contract_w02",
+        "H6_GF_WALL_W03_ground_floor_wall_extrusion_contract_w03",
+        "H6_GF_WALL_W04_ground_floor_wall_extrusion_contract_w04",
+        "H6_GF_WALL_W05_ground_floor_wall_extrusion_contract_w05",
+        "H6_GF_WALL_W06_ground_floor_wall_extrusion_contract_w06",
+        "H6_GF_WALL_W07_ground_floor_wall_extrusion_contract_w07",
+        "H6_GF_WALL_W08_ground_floor_wall_extrusion_contract_w08",
+        "H6_GF_WALL_W09_ground_floor_wall_extrusion_contract_w09",
+        "H6_GF_WALL_W10_ground_floor_wall_extrusion_contract_w10",
+        "H6_GF_WALL_W11_ground_floor_wall_extrusion_contract_w11",
+        "H6_GF_WALL_W12_ground_floor_wall_extrusion_contract_w12"
+      ],
+      "target_resolution_status": "blocked_until_exact_target_geometry_object_and_surface_role_are_bound",
+      "opening_component_role_link": {
+        "opening_count": 0,
+        "component_text_count": 0,
+        "openings": []
+      },
+      "editable_slot_permission": "may_create_selectable_material_slot_metadata_now",
+      "geometry_assignment_permission": "blocked_until_exact_target_geometry_object_and_surface_role_are_bound",
+      "render_assignment_permission": "blocked_until_wall_roof_plinth_door_or_opening_subpart_mesh_is_exact_cad_bound",
+      "mesh_permission": "blocked_not_mesh",
+      "material_assignment_permission": "metadata_only_no_render_assignment"
+    },
+    {
+      "stable_object_id": "material_assignment_preflight:MAT-ROOF-COVERING",
+      "material_slot_id": "MAT-ROOF-COVERING",
+      "label": "roof covering",
+      "target_slots": [
+        "roof_covering"
+      ],
+      "source_keywords_found": [
+        "dakbedekking"
+      ],
+      "source_entity_ids": [
+        "right_elevation:1868",
+        "right_elevation:1869",
+        "right_elevation:1870",
+        "left_elevation:1502",
+        "rear_elevation:1769",
+        "rear_elevation:1772",
+        "rear_elevation:1773",
+        "rear_elevation:1774"
+      ],
+      "source_count": 8,
+      "semantic_titles": [
+        "Linker zijgevel",
+        "Rechter zijgevel",
+        "Voorgevel"
+      ],
+      "candidate_registry_target_count": 0,
+      "candidate_registry_target_names_sample": [],
+      "target_resolution_status": "blocked_until_roof_plane_registry_exists",
+      "opening_component_role_link": {
+        "opening_count": 0,
+        "component_text_count": 0,
+        "openings": []
+      },
+      "editable_slot_permission": "may_create_selectable_material_slot_metadata_now",
+      "geometry_assignment_permission": "blocked_until_exact_target_geometry_object_and_surface_role_are_bound",
+      "render_assignment_permission": "blocked_until_wall_roof_plinth_door_or_opening_subpart_mesh_is_exact_cad_bound",
+      "mesh_permission": "blocked_not_mesh",
+      "material_assignment_permission": "metadata_only_no_render_assignment"
+    },
+    {
+      "stable_object_id": "material_assignment_preflight:MAT-PLINTH-HARDSTONE",
+      "material_slot_id": "MAT-PLINTH-HARDSTONE",
+      "label": "plinth / blue hardstone",
+      "target_slots": [
+        "plinth_or_sill_finish",
+        "wall_base_detail"
+      ],
+      "source_keywords_found": [
+        "plint",
+        "blauwe hardsteen"
+      ],
+      "source_entity_ids": [
+        "right_elevation:1873",
+        "left_elevation:1504",
+        "rear_elevation:1777",
+        "rear_elevation:1787",
+        "front_elevation:1699",
+        "rear_elevation:1785"
+      ],
+      "source_count": 6,
+      "semantic_titles": [
+        "Achtergevel",
+        "Linker zijgevel",
+        "Rechter zijgevel",
+        "Voorgevel"
+      ],
+      "candidate_registry_target_count": 100,
+      "candidate_registry_target_names_sample": [
+        "H6_GF_WALL_W01_ground_floor_wall_extrusion_contract_w01",
+        "H6_GF_WALL_W02_ground_floor_wall_extrusion_contract_w02",
+        "H6_GF_WALL_W03_ground_floor_wall_extrusion_contract_w03",
+        "H6_GF_WALL_W04_ground_floor_wall_extrusion_contract_w04",
+        "H6_GF_WALL_W05_ground_floor_wall_extrusion_contract_w05",
+        "H6_GF_WALL_W06_ground_floor_wall_extrusion_contract_w06",
+        "H6_GF_WALL_W07_ground_floor_wall_extrusion_contract_w07",
+        "H6_GF_WALL_W08_ground_floor_wall_extrusion_contract_w08"
+      ],
+      "target_resolution_status": "blocked_until_plinth_or_sill_subsurface_is_separated_from_wall_mesh",
+      "opening_component_role_link": {
+        "opening_count": 0,
+        "component_text_count": 0,
+        "openings": []
+      },
+      "editable_slot_permission": "may_create_selectable_material_slot_metadata_now",
+      "geometry_assignment_permission": "blocked_until_exact_target_geometry_object_and_surface_role_are_bound",
+      "render_assignment_permission": "blocked_until_wall_roof_plinth_door_or_opening_subpart_mesh_is_exact_cad_bound",
+      "mesh_permission": "blocked_not_mesh",
+      "material_assignment_permission": "metadata_only_no_render_assignment"
+    },
+    {
+      "stable_object_id": "material_assignment_preflight:MAT-WINDOW-VENTILATION-INVISIVENT",
+      "material_slot_id": "MAT-WINDOW-VENTILATION-INVISIVENT",
+      "label": "invisivent ventilation detail",
+      "target_slots": [
+        "window_ventilation_detail"
+      ],
+      "source_keywords_found": [
+        "invisivent"
+      ],
+      "source_entity_ids": [
+        "right_elevation:1905",
+        "right_elevation:1906",
+        "left_elevation:1550",
+        "rear_elevation:1836",
+        "rear_elevation:1837",
+        "rear_elevation:1838",
+        "rear_elevation:1839",
+        "front_elevation:1735",
+        "front_elevation:1736"
+      ],
+      "source_count": 9,
+      "semantic_titles": [
+        "Achtergevel",
+        "Linker zijgevel",
+        "Rechter zijgevel",
+        "Voorgevel"
+      ],
+      "candidate_registry_target_count": 141,
+      "candidate_registry_target_names_sample": [
+        "H6_GF_Y01_wall_cut_void",
+        "H6_GF_Y01_wall_reveals_and_returns",
+        "H6_GF_Y01_outer_frame",
+        "H6_GF_Y01_glass_panels",
+        "H6_GF_Y01_arched_or_curved_cut_profile",
+        "H6_GF_Y01_visual_subdivision_mullions_roedes_laths",
+        "H6_GF_Y01_kleinhouten_on_glass",
+        "H6_GF_Y01_frame_material_finish",
+        "H6_GF_Y01_cad_text_metadata",
+        "H6_GF_Y01_cad_text_metadata",
+        "H6_GF_Y01_cad_text_metadata",
+        "H6_GF_Y01_cad_text_metadata"
+      ],
+      "target_resolution_status": "blocked_until_opening_subcomponent_meshes_exist",
+      "opening_component_role_link": {
+        "opening_count": 4,
+        "component_text_count": 4,
+        "openings": [
+          {
+            "legend_id": "Y02",
+            "component_text_count": 1
+          },
+          {
+            "legend_id": "Y03",
+            "component_text_count": 1
+          },
+          {
+            "legend_id": "Y04",
+            "component_text_count": 1
+          },
+          {
+            "legend_id": "Y13",
+            "component_text_count": 1
+          }
+        ]
+      },
+      "editable_slot_permission": "may_create_selectable_material_slot_metadata_now",
+      "geometry_assignment_permission": "blocked_until_exact_target_geometry_object_and_surface_role_are_bound",
+      "render_assignment_permission": "blocked_until_wall_roof_plinth_door_or_opening_subpart_mesh_is_exact_cad_bound",
+      "mesh_permission": "blocked_not_mesh",
+      "material_assignment_permission": "metadata_only_no_render_assignment"
+    },
+    {
+      "stable_object_id": "material_assignment_preflight:MAT-FRAME-STYLE-STEELLOOK",
+      "material_slot_id": "MAT-FRAME-STYLE-STEELLOOK",
+      "label": "steellook frame/glazing detail",
+      "target_slots": [
+        "window_frame_style",
+        "glazing_bar_detail"
+      ],
+      "source_keywords_found": [
+        "steellook",
+        "hout"
+      ],
+      "source_entity_ids": [
+        "right_elevation:1903",
+        "front_elevation:1731",
+        "front_elevation:1734"
+      ],
+      "source_count": 3,
+      "semantic_titles": [
+        "Achtergevel",
+        "Linker zijgevel"
+      ],
+      "candidate_registry_target_count": 141,
+      "candidate_registry_target_names_sample": [
+        "H6_GF_Y01_wall_cut_void",
+        "H6_GF_Y01_wall_reveals_and_returns",
+        "H6_GF_Y01_outer_frame",
+        "H6_GF_Y01_glass_panels",
+        "H6_GF_Y01_arched_or_curved_cut_profile",
+        "H6_GF_Y01_visual_subdivision_mullions_roedes_laths",
+        "H6_GF_Y01_kleinhouten_on_glass",
+        "H6_GF_Y01_frame_material_finish",
+        "H6_GF_Y01_cad_text_metadata",
+        "H6_GF_Y01_cad_text_metadata",
+        "H6_GF_Y01_cad_text_metadata",
+        "H6_GF_Y01_cad_text_metadata"
+      ],
+      "target_resolution_status": "blocked_until_opening_subcomponent_meshes_exist",
+      "opening_component_role_link": {
+        "opening_count": 2,
+        "component_text_count": 3,
+        "openings": [
+          {
+            "legend_id": "Y01",
+            "component_text_count": 2
+          },
+          {
+            "legend_id": "Y05",
+            "component_text_count": 1
+          }
+        ]
+      },
+      "editable_slot_permission": "may_create_selectable_material_slot_metadata_now",
+      "geometry_assignment_permission": "blocked_until_exact_target_geometry_object_and_surface_role_are_bound",
+      "render_assignment_permission": "blocked_until_wall_roof_plinth_door_or_opening_subpart_mesh_is_exact_cad_bound",
+      "mesh_permission": "blocked_not_mesh",
+      "material_assignment_permission": "metadata_only_no_render_assignment"
+    },
+    {
+      "stable_object_id": "material_assignment_preflight:MAT-DOOR-NOTE",
+      "material_slot_id": "MAT-DOOR-NOTE",
+      "label": "door material/detail note",
+      "target_slots": [
+        "door_material_note"
+      ],
+      "source_keywords_found": [
+        "deur"
+      ],
+      "source_entity_ids": [
+        "ground_floor_plan:2842",
+        "rear_elevation:1776"
+      ],
+      "source_count": 2,
+      "semantic_titles": [
+        "Gelijkvloers",
+        "Rechter zijgevel"
+      ],
+      "candidate_registry_target_count": 141,
+      "candidate_registry_target_names_sample": [
+        "H6_GF_Y01_wall_cut_void",
+        "H6_GF_Y01_wall_reveals_and_returns",
+        "H6_GF_Y01_outer_frame",
+        "H6_GF_Y01_glass_panels",
+        "H6_GF_Y01_arched_or_curved_cut_profile",
+        "H6_GF_Y01_visual_subdivision_mullions_roedes_laths",
+        "H6_GF_Y01_kleinhouten_on_glass",
+        "H6_GF_Y01_frame_material_finish",
+        "H6_GF_Y01_cad_text_metadata",
+        "H6_GF_Y01_cad_text_metadata",
+        "H6_GF_Y01_cad_text_metadata",
+        "H6_GF_Y01_cad_text_metadata"
+      ],
+      "target_resolution_status": "blocked_until_opening_subcomponent_meshes_exist",
+      "opening_component_role_link": {
+        "opening_count": 2,
+        "component_text_count": 2,
+        "openings": [
+          {
+            "legend_id": "Y08",
+            "component_text_count": 1
+          },
+          {
+            "legend_id": "Y10",
+            "component_text_count": 1
+          }
+        ]
+      },
+      "editable_slot_permission": "may_create_selectable_material_slot_metadata_now",
+      "geometry_assignment_permission": "blocked_until_exact_target_geometry_object_and_surface_role_are_bound",
+      "render_assignment_permission": "blocked_until_wall_roof_plinth_door_or_opening_subpart_mesh_is_exact_cad_bound",
+      "mesh_permission": "blocked_not_mesh",
+      "material_assignment_permission": "metadata_only_no_render_assignment"
+    }
+  ],
+  "rules": [
+    "This preflight does not assign render materials to geometry.",
+    "Material text can become editable object metadata now, but final material surfaces require exact CAD-bound meshes.",
+    "Facade brick, roof cover, plinth/hardstone, Invisivent, steellook, flyscreens, screens and door notes must remain separated by object role.",
+    "Context notes such as rainwater pipes, gutters, level markers and floor/roof structure may not be used as opening or material geometry."
+  ],
+  "mesh_permission": "blocked_not_mesh"
+}

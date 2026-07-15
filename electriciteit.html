@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elektriciteitsplan - Helle 6</title>
+    <script type="module" crossorigin src="./assets/electriciteit-BaOsBVim.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill-CSRv37U6.js">
+    <link rel="stylesheet" crossorigin href="./assets/electriciteit-CrPjf2Sy.css">
+  </head>
+  <body>
+    <div id="app" class="planner-shell">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-mark">E</div>
+          <div>
+            <h1>Elektriciteitsplan</h1>
+            <p id="planStatus">Laad de PDF of een planbeeld om te starten.</p>
+          </div>
+        </div>
+
+        <div class="topbar-actions">
+          <label class="file-action">
+            <input id="planFileInput" type="file" accept="application/pdf,image/png,image/jpeg,image/webp" />
+            Plan laden
+          </label>
+          <button id="exportProjectButton" type="button">Project exporteren</button>
+          <label class="ghost-file-action">
+            <input id="importProjectInput" type="file" accept="application/json" />
+            Project importeren
+          </label>
+          <button id="undoButton" type="button" title="Ongedaan maken" disabled>Undo</button>
+          <button id="resetFloorButton" type="button" title="Reset actieve verdieping">Reset</button>
+          <button id="printButton" type="button" title="Print actieve verdieping">Print</button>
+          <button id="printDossierButton" type="button" title="Print alle ingevulde verdiepingen als dossier">Dossier</button>
+          <button id="pngButton" type="button">PNG</button>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <aside class="tools-panel" aria-label="Symbolen">
+          <section>
+            <h2>Verdiepingen</h2>
+            <div id="floorTabs" class="floor-tabs"></div>
+            <div class="floor-actions">
+              <button id="addFloorButton" type="button">Verdieping toevoegen</button>
+              <button id="cropModeButton" type="button">Uitsnede aanpassen</button>
+            </div>
+          </section>
+
+          <section>
+            <h2>Gereedschap</h2>
+            <div id="toolPalette" class="tool-palette"></div>
+          </section>
+
+          <section>
+            <h2>Weergave</h2>
+            <div class="view-actions">
+              <button id="fitButton" type="button">Passend</button>
+              <button id="zoomOutButton" type="button">-</button>
+              <button id="zoomInButton" type="button">+</button>
+            </div>
+            <label class="toggle-row">
+              <input id="gridToggle" type="checkbox" checked />
+              Raster
+            </label>
+            <label class="toggle-row">
+              <input id="snapToggle" type="checkbox" />
+              Vastklikken op raster
+            </label>
+          </section>
+
+          <section>
+            <h2>Zichtbare lagen</h2>
+            <div id="layerList" class="layer-list"></div>
+          </section>
+        </aside>
+
+        <section class="canvas-panel" aria-label="Tekenblad">
+          <canvas id="planCanvas"></canvas>
+          <div id="emptyState" class="empty-state">
+            <h2>Laad het uitvoeringsplan</h2>
+            <p>Kies de PDF “2421 Hendrickx_2026 05 22 - UITVplan 4.pdf” of een geëxporteerde PNG/JPG. Daarna kun je per verdieping symbolen plaatsen, verplaatsen, labelen en afdrukken.</p>
+          </div>
+          <div id="toast" class="toast" role="status" aria-live="polite"></div>
+        </section>
+
+        <aside class="inspector-panel" aria-label="Eigenschappen">
+          <section>
+            <h2>Actieve verdieping</h2>
+            <label class="field">
+              Naam
+              <input id="floorNameInput" type="text" />
+            </label>
+            <div class="crop-fields">
+              <label class="field">
+                Links %
+                <input id="cropXInput" type="number" min="0" max="100" step="0.1" />
+              </label>
+              <label class="field">
+                Boven %
+                <input id="cropYInput" type="number" min="0" max="100" step="0.1" />
+              </label>
+              <label class="field">
+                Breedte %
+                <input id="cropWInput" type="number" min="1" max="100" step="0.1" />
+              </label>
+              <label class="field">
+                Hoogte %
+                <input id="cropHInput" type="number" min="1" max="100" step="0.1" />
+              </label>
+            </div>
+            <div class="inspector-actions">
+              <button id="splitThreeButton" type="button">3 horizontale uitsnedes</button>
+              <button id="duplicateFloorButton" type="button">Verdieping kopiëren</button>
+            </div>
+          </section>
+
+          <section>
+            <h2>Backups</h2>
+            <div id="backupStatus" class="backup-status"></div>
+            <div class="inspector-actions">
+              <button id="downloadCurrentBackupButton" type="button">Backup downloaden</button>
+              <button id="externalBackupButton" type="button">Bestandsbackup activeren</button>
+            </div>
+            <div id="backupList" class="backup-list"></div>
+          </section>
+
+          <section>
+            <h2>Selectie</h2>
+            <div id="selectionEmpty" class="muted-box">Selecteer een symbool op het plan.</div>
+            <div id="selectionFields" class="selection-fields">
+              <label class="field">
+                Label
+                <input id="labelInput" type="text" placeholder="bv. S1, keuken, kring A" />
+              </label>
+              <label class="field">
+                Ruimte
+                <input id="roomInput" type="text" placeholder="bv. keuken, bureau, badkamer" />
+              </label>
+              <label class="field">
+                Kring
+                <input id="circuitInput" type="text" placeholder="bv. A, B, C" />
+              </label>
+              <label class="field">
+                Afmetingen / nota
+                <textarea id="noteInput" rows="3" placeholder="bv. kast 120 x 60 cm"></textarea>
+              </label>
+              <div id="applianceTemplateFields" class="appliance-template-fields">
+                <div class="template-title">Toesteltype</div>
+                <div id="applianceTemplateList" class="template-list"></div>
+              </div>
+              <div id="cabinetSizeFields" class="cabinet-size-fields">
+                <label class="field">
+                  Breedte
+                  <input id="cabinetWidthInput" type="range" min="0.012" max="0.18" step="0.001" />
+                </label>
+                <label class="field">
+                  Diepte
+                  <input id="cabinetHeightInput" type="range" min="0.012" max="0.18" step="0.001" />
+                </label>
+              </div>
+              <label id="sizeField" class="field">
+                Grootte
+                <input id="sizeInput" type="range" min="0.008" max="0.09" step="0.001" />
+              </label>
+              <label class="field">
+                Rotatie
+                <input id="rotationInput" type="range" min="0" max="359" step="1" />
+              </label>
+              <div class="inspector-actions">
+                <button id="duplicateItemButton" type="button">Kopiëren</button>
+                <button id="deleteItemButton" type="button">Verwijderen</button>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2>Legenda</h2>
+            <div id="legendList" class="legend-list"></div>
+          </section>
+
+          <section>
+            <h2>Kringoverzicht</h2>
+            <div id="circuitSummary" class="circuit-summary"></div>
+          </section>
+
+          <section>
+            <h2>Ruimteoverzicht</h2>
+            <div id="roomSummary" class="circuit-summary"></div>
+            <div class="inspector-actions">
+              <button id="autoRoomsButton" type="button">Ruimtes automatisch invullen</button>
+            </div>
+          </section>
+        </aside>
+      </main>
+    </div>
+
+    <img id="printSheet" alt="Printblad elektriciteitsplan" />
+    <div id="printSheets" class="print-sheets" aria-hidden="true"></div>
+
+  </body>
+</html>

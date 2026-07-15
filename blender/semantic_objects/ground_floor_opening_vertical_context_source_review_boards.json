@@ -1,0 +1,462 @@
+{
+  "status": "ground_floor_opening_vertical_context_source_review_boards_ready_not_mesh",
+  "purpose": "Exact CAD-linework review boards for risky vertical opening context. They keep plinth, terrain level, header and dimension evidence visible as source metadata without promoting any value to a wall cut or mesh.",
+  "source_files": {
+    "vertical_context_resolution": "blender\\semantic_objects\\ground_floor_opening_vertical_context_resolution_packets.json",
+    "detail_contract": "blender\\semantic_objects\\ground_floor_opening_component_detail_contract.json"
+  },
+  "board_count": 7,
+  "status_counts": {
+    "vertical_context_source_review_board_ready_not_final_not_mesh": 7
+  },
+  "slot_counts": {
+    "header_or_lintel_height_m": 3,
+    "sill_height_m": 1,
+    "threshold_level_m": 2,
+    "threshold_or_sill_level_m": 1
+  },
+  "user_validation_needed_now_count": 0,
+  "mesh_ready_count": 0,
+  "objects": [
+    {
+      "status": "vertical_context_source_review_board_ready_not_final_not_mesh",
+      "task_id": "Y02:header_or_lintel_height_m",
+      "legend_id": "Y02",
+      "label": "Raam Salon",
+      "opening_type": "window",
+      "slot": "header_or_lintel_height_m",
+      "facade_title": "Linker zijgevel",
+      "primary_cad_source": "right_elevation",
+      "selected_source_ref_count": 31,
+      "context_entity_count": 1905,
+      "svg": "assets/cad-truth/opening-vertical-context-review-boards/y02-header_or_lintel_height_m.svg",
+      "svg_url": "opening-vertical-context-review-boards/y02-header_or_lintel_height_m.svg",
+      "source_detail_image": "assets\\cad-truth\\building-detail-matches\\opening-cad-validation\\y02-elevation-cad-detail.png",
+      "source_detail_url": "building-detail-matches/opening-cad-validation/y02-elevation-cad-detail.png",
+      "risk_flags": [
+        "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold",
+        "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+        "lower_limit_value_below_5cm_needs_level_reference_review"
+      ],
+      "candidate_values": [
+        {
+          "slot": "header_or_lintel_height_m",
+          "value_label": "2.300 m m",
+          "value_m": 2.3,
+          "source_refs": [
+            "right_elevation:1842"
+          ],
+          "risk_flags": [
+            "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+            "lower_limit_value_below_5cm_needs_level_reference_review",
+            "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold"
+          ],
+          "status": "sill_header_pair_candidate_preserved_with_risk_not_bound_not_mesh"
+        },
+        {
+          "slot": "opening_height_m",
+          "subrole": "clear_opening_height",
+          "value_m": 2.3,
+          "numeric_text": "230",
+          "numeric_source_entity_id": "right_elevation:1842",
+          "dimension_line_source_entity_id": "right_elevation:1697",
+          "status": "source_dimension_chain_bound_to_metric_slot_candidate_not_mesh"
+        },
+        {
+          "slot": "plinth_threshold_or_small_context_height_candidate",
+          "value_m": 0.18,
+          "numeric_text": "18",
+          "numeric_source_entity_id": "right_elevation:1834",
+          "dimension_line_source_entity_id": "right_elevation:1657",
+          "status": "preserved_context_dimension_not_bound_as_opening_geometry"
+        },
+        {
+          "slot": "overall_or_header_context_height_candidate",
+          "value_m": 2.95,
+          "numeric_text": "295",
+          "numeric_source_entity_id": "right_elevation:1835",
+          "dimension_line_source_entity_id": "right_elevation:1661",
+          "status": "preserved_context_dimension_not_bound_as_opening_geometry"
+        }
+      ],
+      "resolution_tasks": [
+        "Bind Raam Salon upper cut to local header/lintel/frame top CAD linework.",
+        "Reject storey height, gutter/roof/plinth context and broad component envelope if they are not local to this opening.",
+        "Only promote after lower cut and upper cut are jointly consistent with the opening's elevation crop."
+      ],
+      "user_validation_needed_now": false,
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "status": "vertical_context_source_review_board_ready_not_final_not_mesh",
+      "task_id": "Y02:sill_height_m",
+      "legend_id": "Y02",
+      "label": "Raam Salon",
+      "opening_type": "window",
+      "slot": "sill_height_m",
+      "facade_title": "Linker zijgevel",
+      "primary_cad_source": "right_elevation",
+      "selected_source_ref_count": 31,
+      "context_entity_count": 1905,
+      "svg": "assets/cad-truth/opening-vertical-context-review-boards/y02-sill_height_m.svg",
+      "svg_url": "opening-vertical-context-review-boards/y02-sill_height_m.svg",
+      "source_detail_image": "assets\\cad-truth\\building-detail-matches\\opening-cad-validation\\y02-elevation-cad-detail.png",
+      "source_detail_url": "building-detail-matches/opening-cad-validation/y02-elevation-cad-detail.png",
+      "risk_flags": [
+        "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold",
+        "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+        "lower_limit_value_below_5cm_needs_level_reference_review"
+      ],
+      "candidate_values": [
+        {
+          "slot": "sill_height_m",
+          "value_label": "0.010 m m",
+          "value_m": 0.01,
+          "source_refs": [
+            "right_elevation:1859"
+          ],
+          "risk_flags": [
+            "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+            "lower_limit_value_below_5cm_needs_level_reference_review",
+            "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold"
+          ],
+          "status": "sill_header_pair_candidate_preserved_with_risk_not_bound_not_mesh"
+        },
+        {
+          "slot": "opening_height_m",
+          "subrole": "clear_opening_height",
+          "value_m": 2.3,
+          "numeric_text": "230",
+          "numeric_source_entity_id": "right_elevation:1842",
+          "dimension_line_source_entity_id": "right_elevation:1697",
+          "status": "source_dimension_chain_bound_to_metric_slot_candidate_not_mesh"
+        },
+        {
+          "slot": "plinth_threshold_or_small_context_height_candidate",
+          "value_m": 0.18,
+          "numeric_text": "18",
+          "numeric_source_entity_id": "right_elevation:1834",
+          "dimension_line_source_entity_id": "right_elevation:1657",
+          "status": "preserved_context_dimension_not_bound_as_opening_geometry"
+        },
+        {
+          "slot": "overall_or_header_context_height_candidate",
+          "value_m": 2.95,
+          "numeric_text": "295",
+          "numeric_source_entity_id": "right_elevation:1835",
+          "dimension_line_source_entity_id": "right_elevation:1661",
+          "status": "preserved_context_dimension_not_bound_as_opening_geometry"
+        }
+      ],
+      "resolution_tasks": [
+        "Bind Raam Salon lower cut to a local frame/threshold/sill CAD entity, not to plinth, blue hardstone, terrain or generic level text.",
+        "Check whether the candidate lower value is a floor/level marker or facade context before it can become a wall-cut limit.",
+        "Keep source_entity_ids and dimension-line ids attached; do not use preview height or component bbox."
+      ],
+      "user_validation_needed_now": false,
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "status": "vertical_context_source_review_board_ready_not_final_not_mesh",
+      "task_id": "Y05:threshold_or_sill_level_m",
+      "legend_id": "Y05",
+      "label": "boograam eetkamer",
+      "opening_type": "arched_window",
+      "slot": "threshold_or_sill_level_m",
+      "facade_title": "Linker zijgevel",
+      "primary_cad_source": "right_elevation",
+      "selected_source_ref_count": 29,
+      "context_entity_count": 1901,
+      "svg": "assets/cad-truth/opening-vertical-context-review-boards/y05-threshold_or_sill_level_m.svg",
+      "svg_url": "opening-vertical-context-review-boards/y05-threshold_or_sill_level_m.svg",
+      "source_detail_image": "assets\\cad-truth\\building-detail-matches\\opening-cad-validation\\y05-elevation-cad-detail.png",
+      "source_detail_url": "building-detail-matches/opening-cad-validation/y05-elevation-cad-detail.png",
+      "risk_flags": [
+        "header_candidate_may_be_overall_or_storey_context",
+        "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold",
+        "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+        "lower_limit_value_below_5cm_needs_level_reference_review"
+      ],
+      "candidate_values": [
+        {
+          "slot": "threshold_or_sill_level_m",
+          "value_label": "0.010 m m",
+          "value_m": 0.01,
+          "source_refs": [
+            "right_elevation:1859"
+          ],
+          "risk_flags": [
+            "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+            "lower_limit_value_below_5cm_needs_level_reference_review",
+            "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold",
+            "header_candidate_may_be_overall_or_storey_context"
+          ],
+          "status": "sill_header_pair_candidate_preserved_with_risk_not_bound_not_mesh"
+        },
+        {
+          "slot": "opening_height_m",
+          "subrole": "clear_opening_height",
+          "value_m": 2.66,
+          "numeric_text": "266",
+          "numeric_source_entity_id": "right_elevation:1841",
+          "dimension_line_source_entity_id": "right_elevation:1690",
+          "status": "source_dimension_chain_bound_to_metric_slot_candidate_not_mesh"
+        }
+      ],
+      "resolution_tasks": [
+        "Bind boograam eetkamer lower cut to a local frame/threshold/sill CAD entity, not to plinth, blue hardstone, terrain or generic level text.",
+        "Check whether the candidate lower value is a floor/level marker or facade context before it can become a wall-cut limit.",
+        "Keep source_entity_ids and dimension-line ids attached; do not use preview height or component bbox."
+      ],
+      "user_validation_needed_now": false,
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "status": "vertical_context_source_review_board_ready_not_final_not_mesh",
+      "task_id": "Y08:header_or_lintel_height_m",
+      "legend_id": "Y08",
+      "label": "voordeur",
+      "opening_type": "exterior_door",
+      "slot": "header_or_lintel_height_m",
+      "facade_title": "Rechter zijgevel",
+      "primary_cad_source": "rear_elevation",
+      "selected_source_ref_count": 39,
+      "context_entity_count": 1840,
+      "svg": "assets/cad-truth/opening-vertical-context-review-boards/y08-header_or_lintel_height_m.svg",
+      "svg_url": "opening-vertical-context-review-boards/y08-header_or_lintel_height_m.svg",
+      "source_detail_image": "assets\\cad-truth\\building-detail-matches\\opening-cad-validation\\y08-elevation-cad-detail.png",
+      "source_detail_url": "building-detail-matches/opening-cad-validation/y08-elevation-cad-detail.png",
+      "risk_flags": [
+        "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold",
+        "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+        "lower_limit_value_below_5cm_needs_level_reference_review"
+      ],
+      "candidate_values": [
+        {
+          "slot": "header_or_lintel_height_m",
+          "value_label": "2.100 m m",
+          "value_m": 2.1,
+          "source_refs": [
+            "rear_elevation:1756"
+          ],
+          "risk_flags": [
+            "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+            "lower_limit_value_below_5cm_needs_level_reference_review",
+            "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold"
+          ],
+          "status": "sill_header_pair_candidate_preserved_with_risk_not_bound_not_mesh"
+        },
+        {
+          "slot": "opening_height_m",
+          "subrole": "clear_opening_height",
+          "value_m": 2.1,
+          "numeric_text": "210",
+          "numeric_source_entity_id": "rear_elevation:1756",
+          "dimension_line_source_entity_id": "rear_elevation:1665",
+          "status": "source_dimension_chain_bound_to_metric_slot_candidate_not_mesh"
+        },
+        {
+          "slot": "plinth_threshold_or_small_context_height_candidate",
+          "value_m": 0.4,
+          "numeric_text": "40",
+          "numeric_source_entity_id": "rear_elevation:1757",
+          "dimension_line_source_entity_id": "rear_elevation:1669",
+          "status": "preserved_context_dimension_not_bound_as_opening_geometry"
+        },
+        {
+          "slot": "overall_or_header_context_height_candidate",
+          "value_m": 2.5,
+          "numeric_text": "250",
+          "numeric_source_entity_id": "rear_elevation:1762",
+          "dimension_line_source_entity_id": "rear_elevation:1697",
+          "status": "preserved_context_dimension_not_bound_as_opening_geometry"
+        }
+      ],
+      "resolution_tasks": [
+        "Bind voordeur upper cut to local header/lintel/frame top CAD linework.",
+        "Reject storey height, gutter/roof/plinth context and broad component envelope if they are not local to this opening.",
+        "Only promote after lower cut and upper cut are jointly consistent with the opening's elevation crop."
+      ],
+      "user_validation_needed_now": false,
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "status": "vertical_context_source_review_board_ready_not_final_not_mesh",
+      "task_id": "Y08:threshold_level_m",
+      "legend_id": "Y08",
+      "label": "voordeur",
+      "opening_type": "exterior_door",
+      "slot": "threshold_level_m",
+      "facade_title": "Rechter zijgevel",
+      "primary_cad_source": "rear_elevation",
+      "selected_source_ref_count": 39,
+      "context_entity_count": 1840,
+      "svg": "assets/cad-truth/opening-vertical-context-review-boards/y08-threshold_level_m.svg",
+      "svg_url": "opening-vertical-context-review-boards/y08-threshold_level_m.svg",
+      "source_detail_image": "assets\\cad-truth\\building-detail-matches\\opening-cad-validation\\y08-elevation-cad-detail.png",
+      "source_detail_url": "building-detail-matches/opening-cad-validation/y08-elevation-cad-detail.png",
+      "risk_flags": [
+        "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold",
+        "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+        "lower_limit_value_below_5cm_needs_level_reference_review"
+      ],
+      "candidate_values": [
+        {
+          "slot": "threshold_level_m",
+          "value_label": "0.010 m m",
+          "value_m": 0.01,
+          "source_refs": [
+            "rear_elevation:1744"
+          ],
+          "risk_flags": [
+            "lower_limit_text_contains_spacing_or_grouping_needs_locality_review",
+            "lower_limit_value_below_5cm_needs_level_reference_review",
+            "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold"
+          ],
+          "status": "sill_header_pair_candidate_preserved_with_risk_not_bound_not_mesh"
+        },
+        {
+          "slot": "opening_height_m",
+          "subrole": "clear_opening_height",
+          "value_m": 2.1,
+          "numeric_text": "210",
+          "numeric_source_entity_id": "rear_elevation:1756",
+          "dimension_line_source_entity_id": "rear_elevation:1665",
+          "status": "source_dimension_chain_bound_to_metric_slot_candidate_not_mesh"
+        },
+        {
+          "slot": "plinth_threshold_or_small_context_height_candidate",
+          "value_m": 0.4,
+          "numeric_text": "40",
+          "numeric_source_entity_id": "rear_elevation:1757",
+          "dimension_line_source_entity_id": "rear_elevation:1669",
+          "status": "preserved_context_dimension_not_bound_as_opening_geometry"
+        },
+        {
+          "slot": "overall_or_header_context_height_candidate",
+          "value_m": 2.5,
+          "numeric_text": "250",
+          "numeric_source_entity_id": "rear_elevation:1762",
+          "dimension_line_source_entity_id": "rear_elevation:1697",
+          "status": "preserved_context_dimension_not_bound_as_opening_geometry"
+        }
+      ],
+      "resolution_tasks": [
+        "Bind voordeur lower cut to a local frame/threshold/sill CAD entity, not to plinth, blue hardstone, terrain or generic level text.",
+        "Check whether the candidate lower value is a floor/level marker or facade context before it can become a wall-cut limit.",
+        "Keep source_entity_ids and dimension-line ids attached; do not use preview height or component bbox."
+      ],
+      "user_validation_needed_now": false,
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "status": "vertical_context_source_review_board_ready_not_final_not_mesh",
+      "task_id": "Y17:header_or_lintel_height_m",
+      "legend_id": "Y17",
+      "label": "erker inclusief raamdeur",
+      "opening_type": "bay_window_group_with_operable_door",
+      "slot": "header_or_lintel_height_m",
+      "facade_title": "Voorgevel",
+      "primary_cad_source": "left_elevation",
+      "selected_source_ref_count": 25,
+      "context_entity_count": 1551,
+      "svg": "assets/cad-truth/opening-vertical-context-review-boards/y17-header_or_lintel_height_m.svg",
+      "svg_url": "opening-vertical-context-review-boards/y17-header_or_lintel_height_m.svg",
+      "source_detail_image": "assets\\cad-truth\\building-detail-matches\\opening-cad-validation\\y17-elevation-cad-detail.png",
+      "source_detail_url": "building-detail-matches/opening-cad-validation/y17-elevation-cad-detail.png",
+      "risk_flags": [
+        "header_candidate_may_be_overall_or_storey_context",
+        "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold"
+      ],
+      "candidate_values": [
+        {
+          "slot": "header_or_lintel_height_m",
+          "value_label": "2.720 m m",
+          "value_m": 2.72,
+          "source_refs": [
+            "left_elevation:1470"
+          ],
+          "risk_flags": [
+            "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold",
+            "header_candidate_may_be_overall_or_storey_context"
+          ],
+          "status": "sill_header_pair_candidate_preserved_with_risk_not_bound_not_mesh"
+        },
+        {
+          "slot": "opening_height_m",
+          "subrole": "clear_opening_height",
+          "value_m": 2.55,
+          "numeric_text": "255",
+          "numeric_source_entity_id": "left_elevation:1495",
+          "dimension_line_source_entity_id": "left_elevation:1430",
+          "status": "source_dimension_chain_bound_to_metric_slot_candidate_not_mesh"
+        }
+      ],
+      "resolution_tasks": [
+        "Bind erker inclusief raamdeur upper cut to local header/lintel/frame top CAD linework.",
+        "Reject storey height, gutter/roof/plinth context and broad component envelope if they are not local to this opening.",
+        "Only promote after lower cut and upper cut are jointly consistent with the opening's elevation crop."
+      ],
+      "user_validation_needed_now": false,
+      "mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "status": "vertical_context_source_review_board_ready_not_final_not_mesh",
+      "task_id": "Y17:threshold_level_m",
+      "legend_id": "Y17",
+      "label": "erker inclusief raamdeur",
+      "opening_type": "bay_window_group_with_operable_door",
+      "slot": "threshold_level_m",
+      "facade_title": "Voorgevel",
+      "primary_cad_source": "left_elevation",
+      "selected_source_ref_count": 25,
+      "context_entity_count": 1551,
+      "svg": "assets/cad-truth/opening-vertical-context-review-boards/y17-threshold_level_m.svg",
+      "svg_url": "opening-vertical-context-review-boards/y17-threshold_level_m.svg",
+      "source_detail_image": "assets\\cad-truth\\building-detail-matches\\opening-cad-validation\\y17-elevation-cad-detail.png",
+      "source_detail_url": "building-detail-matches/opening-cad-validation/y17-elevation-cad-detail.png",
+      "risk_flags": [
+        "header_candidate_may_be_overall_or_storey_context",
+        "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold"
+      ],
+      "candidate_values": [
+        {
+          "slot": "threshold_level_m",
+          "value_label": "0.180 m m",
+          "value_m": 0.18,
+          "source_refs": [
+            "left_elevation:1472"
+          ],
+          "risk_flags": [
+            "lower_limit_may_be_plinth_or_level_context_not_final_sill_threshold",
+            "header_candidate_may_be_overall_or_storey_context"
+          ],
+          "status": "sill_header_pair_candidate_preserved_with_risk_not_bound_not_mesh"
+        },
+        {
+          "slot": "opening_height_m",
+          "subrole": "clear_opening_height",
+          "value_m": 2.55,
+          "numeric_text": "255",
+          "numeric_source_entity_id": "left_elevation:1495",
+          "dimension_line_source_entity_id": "left_elevation:1430",
+          "status": "source_dimension_chain_bound_to_metric_slot_candidate_not_mesh"
+        }
+      ],
+      "resolution_tasks": [
+        "Bind erker inclusief raamdeur lower cut to a local frame/threshold/sill CAD entity, not to plinth, blue hardstone, terrain or generic level text.",
+        "Check whether the candidate lower value is a floor/level marker or facade context before it can become a wall-cut limit.",
+        "Keep source_entity_ids and dimension-line ids attached; do not use preview height or component bbox."
+      ],
+      "user_validation_needed_now": false,
+      "mesh_permission": "blocked_not_mesh"
+    }
+  ],
+  "rules": [
+    "SVGs are generated from original CAD paths_m only.",
+    "Orange linework is selected CAD evidence for context resolution, not final opening geometry.",
+    "Plinth, blue hardstone, terrain level, rainwater/gutter and storey-context notes stay metadata until explicitly bound.",
+    "No high-level boxes, no wall cut, no frame, no glass and no mesh are created from these boards."
+  ],
+  "mesh_permission": "blocked_not_mesh"
+}

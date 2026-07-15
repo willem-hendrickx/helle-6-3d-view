@@ -1,0 +1,268 @@
+{
+  "status": "wall_height_stack_contract_ready_not_final_mesh",
+  "purpose": "Separates source-linked vertical height evidence from the already validated CAD footprint. This does not simplify walls into boxes and does not cut openings; it records which source levels should drive future wall, opening and roof mesh generation.",
+  "source_files": {
+    "bound_level_constraints": "blender\\semantic_objects\\ground_floor_bound_level_constraints.json",
+    "ground_floor_wall_mesh_preview": "blender\\site_mesh\\ground_floor_wall_mass_preview_mesh_gap_resolved_aligned.json",
+    "first_floor_wall_mesh_preview": "blender\\site_mesh\\first_floor_wall_mass_preview_mesh.json",
+    "roof_height_slope_evidence": "blender\\semantic_objects\\roof_height_slope_evidence_contract.json"
+  },
+  "height_stack": [
+    {
+      "id": "VH01",
+      "label": "Maaiveld/terrein buiten",
+      "from_level": {
+        "level_id": "L-EXT-GROUND-NEG018",
+        "role": "external_terrain_reference",
+        "value_m": -0.18,
+        "source_entity_ids": [
+          "right_elevation:1848",
+          "left_elevation:1481",
+          "rear_elevation:1751",
+          "rear_elevation:1758",
+          "front_elevation:1677",
+          "front_elevation:1681"
+        ],
+        "semantic_titles": [
+          "Achtergevel",
+          "Linker zijgevel",
+          "Rechter zijgevel",
+          "Voorgevel"
+        ],
+        "source_text_values": [],
+        "mesh_permission": "metadata_and_exterior_reference_only_until_terrain_surface_is_bound"
+      },
+      "to_level": {
+        "level_id": "L-GF-DATUM-000",
+        "role": "ground_floor_wall_base",
+        "value_m": 0.0,
+        "source_entity_ids": [
+          "right_elevation:1861",
+          "left_elevation:1482",
+          "rear_elevation:1752",
+          "front_elevation:1680"
+        ],
+        "semantic_titles": [
+          "Achtergevel",
+          "Linker zijgevel",
+          "Rechter zijgevel",
+          "Voorgevel"
+        ],
+        "source_text_values": [],
+        "mesh_permission": "may_be_used_as_reference_level_after_wall_and_opening_slots_are_bound"
+      },
+      "height_m": 0.18,
+      "mesh_role": "terrain_reference_only_not_wall_mesh",
+      "status": "source_bound_level_reference"
+    },
+    {
+      "id": "VH02",
+      "label": "Gelijkvloers muurplaat / buitenmuurhoogte",
+      "from_level": {
+        "level_id": "L-GF-DATUM-000",
+        "role": "ground_floor_wall_base",
+        "value_m": 0.0,
+        "source_entity_ids": [
+          "right_elevation:1861",
+          "left_elevation:1482",
+          "rear_elevation:1752",
+          "front_elevation:1680"
+        ],
+        "semantic_titles": [
+          "Achtergevel",
+          "Linker zijgevel",
+          "Rechter zijgevel",
+          "Voorgevel"
+        ],
+        "source_text_values": [],
+        "mesh_permission": "may_be_used_as_reference_level_after_wall_and_opening_slots_are_bound"
+      },
+      "to_level": {
+        "level_id": "L-GF-UPPER-295",
+        "role": "ground_floor_wall_top_candidate",
+        "value_m": 2.95,
+        "source_entity_ids": [
+          "right_elevation:1849",
+          "rear_elevation:1759",
+          "front_elevation:1678"
+        ],
+        "semantic_titles": [
+          "Achtergevel",
+          "Linker zijgevel",
+          "Rechter zijgevel"
+        ],
+        "source_text_values": [],
+        "mesh_permission": "candidate_for_wall_top_or_floor_structure_after_section_join"
+      },
+      "height_m": 2.95,
+      "mesh_role": "ground_floor_wall_extrusion_height_source",
+      "status": "source_bound_candidate_ready_for_opening_cuts"
+    },
+    {
+      "id": "VH03",
+      "label": "Verdieping muurzone tot lage dakreferentie",
+      "from_level": {
+        "level_id": "L-GF-UPPER-295",
+        "role": "ground_floor_wall_top_candidate",
+        "value_m": 2.95,
+        "source_entity_ids": [
+          "right_elevation:1849",
+          "rear_elevation:1759",
+          "front_elevation:1678"
+        ],
+        "semantic_titles": [
+          "Achtergevel",
+          "Linker zijgevel",
+          "Rechter zijgevel"
+        ],
+        "source_text_values": [],
+        "mesh_permission": "candidate_for_wall_top_or_floor_structure_after_section_join"
+      },
+      "to_level": {
+        "level_id": "L-ROOF-LOWER-567",
+        "role": "first_floor_wall_top_or_lower_roof_candidate",
+        "value_m": 5.67,
+        "source_entity_ids": [
+          "right_elevation:1850",
+          "rear_elevation:1760",
+          "front_elevation:1679"
+        ],
+        "semantic_titles": [
+          "Achtergevel",
+          "Linker zijgevel",
+          "Rechter zijgevel"
+        ],
+        "source_text_values": [],
+        "mesh_permission": "candidate_for_eave_or_roof_edge_after_roof_section_join"
+      },
+      "height_m": 2.72,
+      "mesh_role": "first_floor_wall_extrusion_candidate",
+      "status": "candidate_requires_first_floor_site_alignment_and_opening_cuts"
+    },
+    {
+      "id": "VH04",
+      "label": "Dakvoet/roof reference controleband",
+      "from_level": {
+        "level_id": "L-ROOF-LOWER-567",
+        "role": "first_floor_wall_top_or_lower_roof_candidate",
+        "value_m": 5.67,
+        "source_entity_ids": [
+          "right_elevation:1850",
+          "rear_elevation:1760",
+          "front_elevation:1679"
+        ],
+        "semantic_titles": [
+          "Achtergevel",
+          "Linker zijgevel",
+          "Rechter zijgevel"
+        ],
+        "source_text_values": [],
+        "mesh_permission": "candidate_for_eave_or_roof_edge_after_roof_section_join"
+      },
+      "to_level": {
+        "level_id": "L-ROOF-REF-582",
+        "role": "roof_reference_candidate",
+        "value_m": 5.82,
+        "source_entity_ids": [
+          "right_elevation:1851",
+          "left_elevation:1478",
+          "rear_elevation:1753",
+          "front_elevation:1682"
+        ],
+        "semantic_titles": [
+          "Achtergevel",
+          "Linker zijgevel",
+          "Rechter zijgevel",
+          "Voorgevel"
+        ],
+        "source_text_values": [],
+        "mesh_permission": "candidate_for_roof_edge_after_roof_plan_and_section_join"
+      },
+      "height_m": 0.15,
+      "mesh_role": "roof_join_control_band",
+      "status": "roof_join_not_mesh_ready"
+    },
+    {
+      "id": "VH05",
+      "label": "Dakvlak tot nok",
+      "from_level": {
+        "level_id": "L-ROOF-REF-582",
+        "role": "roof_reference_candidate",
+        "value_m": 5.82,
+        "source_entity_ids": [
+          "right_elevation:1851",
+          "left_elevation:1478",
+          "rear_elevation:1753",
+          "front_elevation:1682"
+        ],
+        "semantic_titles": [
+          "Achtergevel",
+          "Linker zijgevel",
+          "Rechter zijgevel",
+          "Voorgevel"
+        ],
+        "source_text_values": [],
+        "mesh_permission": "candidate_for_roof_edge_after_roof_plan_and_section_join"
+      },
+      "to_level": {
+        "level_id": "L-RIDGE-1055",
+        "role": "ridge_candidate",
+        "value_m": 10.55,
+        "source_entity_ids": [
+          "right_elevation:1852",
+          "left_elevation:1479",
+          "rear_elevation:1754"
+        ],
+        "semantic_titles": [
+          "Linker zijgevel",
+          "Rechter zijgevel",
+          "Voorgevel"
+        ],
+        "source_text_values": [],
+        "mesh_permission": "candidate_for_main_ridge_after_roof_section_join"
+      },
+      "height_m": 4.73,
+      "mesh_role": "roof_slope_height_candidate",
+      "status": "blocked_until_roof_planes_are_edge_bound"
+    }
+  ],
+  "ground_wall_preview_summary": {
+    "object_count": 107,
+    "total_faces": 1347,
+    "z_min_m": 0.0,
+    "z_max_m": 2.95,
+    "display_height_scale": 0.42,
+    "display_note": "Temporary QA display keeps exact CAD footprints but lowers visual wall plates until window/door cuts, floors, and roof joins are complete."
+  },
+  "first_floor_wall_preview_summary": {
+    "object_count": 84,
+    "total_faces": 906,
+    "z_min_m": 2.95,
+    "z_max_m": 5.67,
+    "display_height_scale": null,
+    "display_note": null
+  },
+  "roof_evidence_summary": {
+    "status": "roof_height_slope_evidence_contract_ready_not_mesh",
+    "source_count": 8,
+    "slope_candidate_count": 6,
+    "bound_roof_plane_edge_level_count": 0,
+    "mesh_ready_roof_plane_count": 0
+  },
+  "rules": [
+    "Footprint geometry remains the user-validated CAD polygon set; this contract changes no footprint source refs.",
+    "Ground-floor source height is +2.95 m from repeated elevation level refs, but browser wall plates may be shown at reduced QA height until openings are cut.",
+    "First-floor and roof heights are recorded as source-linked candidates, not final mesh permission.",
+    "Final wall mesh must cut each validated opening before it can be treated as visually realistic wall height."
+  ],
+  "next_required_steps": [
+    "Bind every ground-floor opening to vertical sill/header/arch levels before cutting the +2.95 m wall mesh.",
+    "Site-align the first-floor wall loops against the validated ground-floor footprint before stacking them above +2.95 m.",
+    "Bind roof-plan edges to elevation/section eave, verge, slope and ridge evidence before generating roof mesh."
+  ],
+  "outputs": {
+    "json": "blender\\semantic_objects\\wall_height_stack_contract.json",
+    "doc": "docs\\wall-height-stack-contract.md",
+    "svg": "assets\\cad-truth\\wall-height-stack-contract.svg"
+  }
+}

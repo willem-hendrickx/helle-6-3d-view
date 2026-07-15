@@ -1,0 +1,1717 @@
+{
+  "status": "ground_floor_opening_editable_component_schema_ready_not_mesh",
+  "purpose": "Per-opening component schema for future editable 3D objects. It keeps walls, cuts, frames, glass, doors, trim, screens, flyscreens and metadata as separate source-linked slots.",
+  "source_files": {
+    "detail_contract": "blender\\semantic_objects\\ground_floor_opening_component_detail_contract.json",
+    "readiness": "blender\\semantic_objects\\ground_floor_opening_current_readiness_rollup.json",
+    "profile_review": "blender\\semantic_objects\\ground_floor_opening_profile_review_candidates.json"
+  },
+  "opening_count": 17,
+  "slot_counts": {
+    "wall_cut_void": 17,
+    "wall_reveals_and_returns": 17,
+    "outer_frame": 17,
+    "glass_panels": 11,
+    "arched_or_curved_cut_profile": 3,
+    "visual_subdivision_mullions_roedes_laths": 12,
+    "kleinhouten_on_glass": 1,
+    "frame_material_finish": 2,
+    "cad_text_metadata": 32,
+    "invisivent_or_ventilation_strip": 4,
+    "door_or_operable_leaf": 7,
+    "flyscreen_or_insect_screen": 8,
+    "local_diagonal_or_curved_detail_split": 5,
+    "door_leaf_frame_hardware": 2,
+    "external_screen_or_shading": 2,
+    "free_opening_finish": 1
+  },
+  "mesh_ready_count": 0,
+  "objects": [
+    {
+      "legend_id": "Y01",
+      "label": "boograam achtergevel / panoramisch raam",
+      "opening_type": "fixed_or_operable_window",
+      "source_detail_image": "assets\\cad-truth\\building-detail-matches\\opening-cad-validation\\y01-elevation-cad-detail.png",
+      "facade_title": "Achtergevel",
+      "source_plan_bbox_m": {
+        "min_x_m": 7.0209,
+        "min_y_m": 17.9486,
+        "max_x_m": 9.7309,
+        "max_y_m": 17.9486,
+        "extent_x_m": 2.71,
+        "extent_y_m": 0.0
+      },
+      "candidate_elevation_source_entity_count": 409,
+      "candidate_plan_source_entity_count": 58,
+      "metric_slots_bound_or_candidate": [
+        "opening_width_m",
+        "opening_height_m",
+        "sill_height_m",
+        "header_or_lintel_height_m",
+        "arch_geometry",
+        "glazing_subdivision",
+        "opening_height_m:arched_opening_total_height_to_highest_point",
+        "glazing_subdivision:rectangular_lower_part_height_in_arched_opening",
+        "glazing_subdivision:arched_head_rise_or_upper_visual_part"
+      ],
+      "readiness_action": "promote_to_final_slot_binding_review_before_mesh",
+      "missing_slots": [],
+      "pending_slots": [],
+      "profile_review_status": "source_bound_profile_candidate_not_final_not_mesh",
+      "editable_component_slots": [
+        {
+          "slot": "wall_cut_void",
+          "future_editable_kind": "negative_wall_opening_cut",
+          "status": "blocked_until_exact_width_height_sill_header_and_wall_join_are_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "wall_reveals_and_returns",
+          "future_editable_kind": "inside_outside_reveals_returns_threshold_and_sill_context",
+          "status": "cad_plan_trace_available_role_split_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "outer_frame",
+          "future_editable_kind": "window_or_door_outer_frame",
+          "status": "cad_linework_available_depth_material_and_final_profile_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "glass_panels",
+          "future_editable_kind": "individual_glass_panes",
+          "status": "cad_linework_available_panel_split_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "arched_or_curved_cut_profile",
+          "future_editable_kind": "wall_cut_profile_and_visible_frame_curve",
+          "status": "source_bound_profile_pending_final_wall_context",
+          "source_family": "arched_or_curved_opening_shape",
+          "source_status": "cad_elevation_or_detail_contract_available",
+          "next_mesh_gate": "bind arch curve to wall cut and visible frame before final mesh",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "visual_subdivision_mullions_roedes_laths",
+          "future_editable_kind": "mullions_roedes_trim_or_decorative_laths",
+          "status": "cad_linework_available_true_component_split_pending",
+          "source_family": "visual_subdivision_mullions_roedes_or_decorative_laths",
+          "source_status": "cad_elevation_linework_available",
+          "next_mesh_gate": "separate true frame/mullion from decorative/context linework",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "kleinhouten_on_glass",
+          "future_editable_kind": "decorative_glazing_bars_on_glass",
+          "status": "source_text_and_linework_available_panel_assignment_pending",
+          "source_family": "kleinhouten_on_glass",
+          "source_status": "text_metadata_and_cad_linework_available",
+          "next_mesh_gate": "bind decorative bars to exact glass panels",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "frame_material_finish",
+          "future_editable_kind": "frame_finish_material_assignment",
+          "status": "source_text_metadata_available",
+          "source_family": "frame_style_or_finish",
+          "source_status": "source_text_metadata_available",
+          "next_mesh_gate": "bind material/style to exact frame objects",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "cad_text_metadata",
+          "future_editable_kind": "popup_metadata_or_material_hint_not_geometry",
+          "status": "metadata_preserved_not_geometry",
+          "text": "panoramisch raam",
+          "detected_roles": [],
+          "source_entity_id": "ground_floor_plan:2921",
+          "source_layer": "Info ALG",
+          "mesh_permission": "metadata_only_not_geometry"
+        },
+        {
+          "slot": "cad_text_metadata",
+          "future_editable_kind": "popup_metadata_or_material_hint_not_geometry",
+          "status": "metadata_preserved_not_geometry",
+          "text": "vast",
+          "detected_roles": [
+            "fixed_glazing_leaf_state"
+          ],
+          "source_entity_id": "front_elevation:1725",
+          "source_layer": "Info ALG",
+          "mesh_permission": "metadata_only_not_geometry"
+        },
+        {
+          "slot": "cad_text_metadata",
+          "future_editable_kind": "popup_metadata_or_material_hint_not_geometry",
+          "status": "metadata_preserved_not_geometry",
+          "text": "panoramisch raam steellook",
+          "detected_roles": [
+            "window_or_door_frame_style"
+          ],
+          "source_entity_id": "front_elevation:1731",
+          "source_layer": "Info ALG",
+          "mesh_permission": "metadata_only_not_geometry"
+        },
+        {
+          "slot": "cad_text_metadata",
+          "future_editable_kind": "popup_metadata_or_material_hint_not_geometry",
+          "status": "metadata_preserved_not_geometry",
+          "text": "kleinhouten op glas steellook",
+          "detected_roles": [
+            "decorative_glazing_bar_detail",
+            "glazing_detail",
+            "window_or_door_frame_style",
+            "wood_detail_requires_local_context"
+          ],
+          "source_entity_id": "front_elevation:1734",
+          "source_layer": "Info ALG",
+          "mesh_permission": "metadata_only_not_geometry"
+        }
+      ],
+      "final_mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "legend_id": "Y02",
+      "label": "Raam Salon",
+      "opening_type": "window",
+      "source_detail_image": "assets\\cad-truth\\building-detail-matches\\opening-cad-validation\\y02-elevation-cad-detail.png",
+      "facade_title": "Linker zijgevel",
+      "source_plan_bbox_m": {
+        "min_x_m": 5.8359,
+        "min_y_m": 16.6486,
+        "max_x_m": 5.8359,
+        "max_y_m": 17.5986,
+        "extent_x_m": 0.0,
+        "extent_y_m": 0.95
+      },
+      "candidate_elevation_source_entity_count": 119,
+      "candidate_plan_source_entity_count": 73,
+      "metric_slots_bound_or_candidate": [
+        "opening_width_m",
+        "opening_height_m",
+        "glazing_subdivision",
+        "opening_height_m:clear_opening_height"
+      ],
+      "readiness_action": "resolve_pending_slots_and_risk_flags_before_mesh",
+      "missing_slots": [],
+      "pending_slots": [
+        "header_or_lintel_height_m",
+        "sill_height_m"
+      ],
+      "profile_review_status": null,
+      "editable_component_slots": [
+        {
+          "slot": "wall_cut_void",
+          "future_editable_kind": "negative_wall_opening_cut",
+          "status": "blocked_until_exact_width_height_sill_header_and_wall_join_are_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "wall_reveals_and_returns",
+          "future_editable_kind": "inside_outside_reveals_returns_threshold_and_sill_context",
+          "status": "cad_plan_trace_available_role_split_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "outer_frame",
+          "future_editable_kind": "window_or_door_outer_frame",
+          "status": "cad_linework_available_depth_material_and_final_profile_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "glass_panels",
+          "future_editable_kind": "individual_glass_panes",
+          "status": "cad_linework_available_panel_split_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "visual_subdivision_mullions_roedes_laths",
+          "future_editable_kind": "mullions_roedes_trim_or_decorative_laths",
+          "status": "cad_linework_available_true_component_split_pending",
+          "source_family": "visual_subdivision_mullions_roedes_or_decorative_laths",
+          "source_status": "cad_elevation_linework_available",
+          "next_mesh_gate": "separate true frame/mullion from decorative/context linework",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "invisivent_or_ventilation_strip",
+          "future_editable_kind": "ventilation_grille_strip",
+          "status": "source_text_available_top_frame_binding_pending",
+          "source_family": "invisivent_or_window_ventilation",
+          "source_status": "source_text_metadata_available",
+          "next_mesh_gate": "bind vent grille strip to top frame detail",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "cad_text_metadata",
+          "future_editable_kind": "popup_metadata_or_material_hint_not_geometry",
+          "status": "metadata_preserved_not_geometry",
+          "text": "vast",
+          "detected_roles": [
+            "fixed_glazing_leaf_state"
+          ],
+          "source_entity_id": "right_elevation:1896",
+          "source_layer": "Info ALG",
+          "mesh_permission": "metadata_only_not_geometry"
+        },
+        {
+          "slot": "cad_text_metadata",
+          "future_editable_kind": "popup_metadata_or_material_hint_not_geometry",
+          "status": "metadata_preserved_not_geometry",
+          "text": "Invisivent Air Light 2Pa",
+          "detected_roles": [
+            "window_ventilation_detail"
+          ],
+          "source_entity_id": "right_elevation:1905",
+          "source_layer": "Info ALG",
+          "mesh_permission": "metadata_only_not_geometry"
+        }
+      ],
+      "final_mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "legend_id": "Y03",
+      "label": "schuifraam",
+      "opening_type": "sliding_glass_door",
+      "source_detail_image": "assets\\cad-truth\\building-detail-matches\\opening-cad-validation\\y03-elevation-cad-detail.png",
+      "facade_title": "Achtergevel",
+      "source_plan_bbox_m": {
+        "min_x_m": 2.3559,
+        "min_y_m": 14.7486,
+        "max_x_m": 5.0359,
+        "max_y_m": 14.7486,
+        "extent_x_m": 2.68,
+        "extent_y_m": 0.0
+      },
+      "candidate_elevation_source_entity_count": 34,
+      "candidate_plan_source_entity_count": 88,
+      "metric_slots_bound_or_candidate": [
+        "opening_width_m",
+        "opening_height_m",
+        "glazing_subdivision"
+      ],
+      "readiness_action": "bind_missing_slots_from_CAD_before_mesh",
+      "missing_slots": [
+        "threshold_level_m",
+        "header_or_lintel_height_m"
+      ],
+      "pending_slots": [],
+      "profile_review_status": null,
+      "editable_component_slots": [
+        {
+          "slot": "wall_cut_void",
+          "future_editable_kind": "negative_wall_opening_cut",
+          "status": "blocked_until_exact_width_height_sill_header_and_wall_join_are_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "wall_reveals_and_returns",
+          "future_editable_kind": "inside_outside_reveals_returns_threshold_and_sill_context",
+          "status": "cad_plan_trace_available_role_split_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "outer_frame",
+          "future_editable_kind": "window_or_door_outer_frame",
+          "status": "cad_linework_available_depth_material_and_final_profile_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "glass_panels",
+          "future_editable_kind": "individual_glass_panes",
+          "status": "cad_linework_available_panel_split_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "door_or_operable_leaf",
+          "future_editable_kind": "door_leaf_or_operable_panel",
+          "status": "cad_plan_or_text_available_operation_binding_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "visual_subdivision_mullions_roedes_laths",
+          "future_editable_kind": "mullions_roedes_trim_or_decorative_laths",
+          "status": "cad_linework_available_true_component_split_pending",
+          "source_family": "visual_subdivision_mullions_roedes_or_decorative_laths",
+          "source_status": "cad_elevation_linework_available",
+          "next_mesh_gate": "separate true frame/mullion from decorative/context linework",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "flyscreen_or_insect_screen",
+          "future_editable_kind": "flyscreen_leaf_or_sliding_screen",
+          "status": "source_text_available_leaf_assignment_pending",
+          "source_family": "flyscreen_or_insect_screen",
+          "source_status": "source_text_metadata_available",
+          "next_mesh_gate": "bind flyscreen to correct operable/sliding leaf",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "invisivent_or_ventilation_strip",
+          "future_editable_kind": "ventilation_grille_strip",
+          "status": "source_text_available_top_frame_binding_pending",
+          "source_family": "invisivent_or_window_ventilation",
+          "source_status": "source_text_metadata_available",
+          "next_mesh_gate": "bind vent grille strip to top frame detail",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "cad_text_metadata",
+          "future_editable_kind": "popup_metadata_or_material_hint_not_geometry",
+          "status": "metadata_preserved_not_geometry",
+          "text": "vast",
+          "detected_roles": [
+            "fixed_glazing_leaf_state"
+          ],
+          "source_entity_id": "front_elevation:1719",
+          "source_layer": "Info ALG",
+          "mesh_permission": "metadata_only_not_geometry"
+        },
+        {
+          "slot": "cad_text_metadata",
+          "future_editable_kind": "popup_metadata_or_material_hint_not_geometry",
+          "status": "metadata_preserved_not_geometry",
+          "text": "schuifvliegenraam",
+          "detected_roles": [
+            "insect_screen_or_flyscreen_detail"
+          ],
+          "source_entity_id": "front_elevation:1723",
+          "source_layer": "Info ALG",
+          "mesh_permission": "metadata_only_not_geometry"
+        },
+        {
+          "slot": "cad_text_metadata",
+          "future_editable_kind": "popup_metadata_or_material_hint_not_geometry",
+          "status": "metadata_preserved_not_geometry",
+          "text": "Invisivent Air Light 2Pa",
+          "detected_roles": [
+            "window_ventilation_detail"
+          ],
+          "source_entity_id": "front_elevation:1736",
+          "source_layer": "Info ALG",
+          "mesh_permission": "metadata_only_not_geometry"
+        }
+      ],
+      "final_mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "legend_id": "Y04",
+      "label": "Raam Hobbyruimte",
+      "opening_type": "window",
+      "source_detail_image": "assets\\cad-truth\\building-detail-matches\\opening-cad-validation\\y04-elevation-cad-detail.png",
+      "facade_title": "Rechter zijgevel",
+      "source_plan_bbox_m": {
+        "min_x_m": 10.8899,
+        "min_y_m": 12.8686,
+        "max_x_m": 10.8899,
+        "max_y_m": 14.0086,
+        "extent_x_m": 0.0,
+        "extent_y_m": 1.14
+      },
+      "candidate_elevation_source_entity_count": 69,
+      "candidate_plan_source_entity_count": 87,
+      "metric_slots_bound_or_candidate": [
+        "opening_width_m",
+        "glazing_subdivision"
+      ],
+      "readiness_action": "bind_missing_slots_from_CAD_before_mesh",
+      "missing_slots": [
+        "opening_height_m",
+        "sill_height_m",
+        "header_or_lintel_height_m"
+      ],
+      "pending_slots": [],
+      "profile_review_status": null,
+      "editable_component_slots": [
+        {
+          "slot": "wall_cut_void",
+          "future_editable_kind": "negative_wall_opening_cut",
+          "status": "blocked_until_exact_width_height_sill_header_and_wall_join_are_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "wall_reveals_and_returns",
+          "future_editable_kind": "inside_outside_reveals_returns_threshold_and_sill_context",
+          "status": "cad_plan_trace_available_role_split_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "outer_frame",
+          "future_editable_kind": "window_or_door_outer_frame",
+          "status": "cad_linework_available_depth_material_and_final_profile_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "glass_panels",
+          "future_editable_kind": "individual_glass_panes",
+          "status": "cad_linework_available_panel_split_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "local_diagonal_or_curved_detail_split",
+          "future_editable_kind": "detail_context_candidate_not_geometry_until_split",
+          "status": "source_preserved_role_split_required",
+          "source_family": "curved_or_diagonal_detail_candidates_need_role_split",
+          "source_status": "cad_elevation_linework_preserved_but_not_arch_opening",
+          "next_mesh_gate": "separate small diagonal/curved detail candidates from true opening geometry",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "visual_subdivision_mullions_roedes_laths",
+          "future_editable_kind": "mullions_roedes_trim_or_decorative_laths",
+          "status": "cad_linework_available_true_component_split_pending",
+          "source_family": "visual_subdivision_mullions_roedes_or_decorative_laths",
+          "source_status": "cad_elevation_linework_available",
+          "next_mesh_gate": "separate true frame/mullion from decorative/context linework",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "flyscreen_or_insect_screen",
+          "future_editable_kind": "flyscreen_leaf_or_sliding_screen",
+          "status": "source_text_available_leaf_assignment_pending",
+          "source_family": "flyscreen_or_insect_screen",
+          "source_status": "source_text_metadata_available",
+          "next_mesh_gate": "bind flyscreen to correct operable/sliding leaf",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "invisivent_or_ventilation_strip",
+          "future_editable_kind": "ventilation_grille_strip",
+          "status": "source_text_available_top_frame_binding_pending",
+          "source_family": "invisivent_or_window_ventilation",
+          "source_status": "source_text_metadata_available",
+          "next_mesh_gate": "bind vent grille strip to top frame detail",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "cad_text_metadata",
+          "future_editable_kind": "popup_metadata_or_material_hint_not_geometry",
+          "status": "metadata_preserved_not_geometry",
+          "text": "vast",
+          "detected_roles": [
+            "fixed_glazing_leaf_state"
+          ],
+          "source_entity_id": "rear_elevation:1822",
+          "source_layer": "Info ALG",
+          "mesh_permission": "metadata_only_not_geometry"
+        },
+        {
+          "slot": "cad_text_metadata",
+          "future_editable_kind": "popup_metadata_or_material_hint_not_geometry",
+          "status": "metadata_preserved_not_geometry",
+          "text": "vliegen- raam",
+          "detected_roles": [
+            "insect_screen_or_flyscreen_detail"
+          ],
+          "source_entity_id": "rear_elevation:1829",
+          "source_layer": "Info ALG",
+          "mesh_permission": "metadata_only_not_geometry"
+        },
+        {
+          "slot": "cad_text_metadata",
+          "future_editable_kind": "popup_metadata_or_material_hint_not_geometry",
+          "status": "metadata_preserved_not_geometry",
+          "text": "Invisivent Air Light 2Pa",
+          "detected_roles": [
+            "window_ventilation_detail"
+          ],
+          "source_entity_id": "rear_elevation:1838",
+          "source_layer": "Info ALG",
+          "mesh_permission": "metadata_only_not_geometry"
+        }
+      ],
+      "final_mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "legend_id": "Y05",
+      "label": "boograam eetkamer",
+      "opening_type": "arched_window",
+      "source_detail_image": "assets\\cad-truth\\building-detail-matches\\opening-cad-validation\\y05-elevation-cad-detail.png",
+      "facade_title": "Linker zijgevel",
+      "source_plan_bbox_m": {
+        "min_x_m": 1.8259,
+        "min_y_m": 11.3686,
+        "max_x_m": 1.8259,
+        "max_y_m": 13.6386,
+        "extent_x_m": 0.0,
+        "extent_y_m": 2.27
+      },
+      "candidate_elevation_source_entity_count": 351,
+      "candidate_plan_source_entity_count": 58,
+      "metric_slots_bound_or_candidate": [
+        "opening_width_m",
+        "opening_height_m:clear_opening_height"
+      ],
+      "readiness_action": "resolve_pending_slots_and_risk_flags_before_mesh",
+      "missing_slots": [],
+      "pending_slots": [
+        "arch_geometry",
+        "threshold_or_sill_level_m"
+      ],
+      "profile_review_status": null,
+      "editable_component_slots": [
+        {
+          "slot": "wall_cut_void",
+          "future_editable_kind": "negative_wall_opening_cut",
+          "status": "blocked_until_exact_width_height_sill_header_and_wall_join_are_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "wall_reveals_and_returns",
+          "future_editable_kind": "inside_outside_reveals_returns_threshold_and_sill_context",
+          "status": "cad_plan_trace_available_role_split_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "outer_frame",
+          "future_editable_kind": "window_or_door_outer_frame",
+          "status": "cad_linework_available_depth_material_and_final_profile_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "glass_panels",
+          "future_editable_kind": "individual_glass_panes",
+          "status": "cad_linework_available_panel_split_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "arched_or_curved_cut_profile",
+          "future_editable_kind": "wall_cut_profile_and_visible_frame_curve",
+          "status": "source_bound_profile_pending_final_wall_context",
+          "source_family": "arched_or_curved_opening_shape",
+          "source_status": "cad_elevation_or_detail_contract_available",
+          "next_mesh_gate": "bind arch curve to wall cut and visible frame before final mesh",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "visual_subdivision_mullions_roedes_laths",
+          "future_editable_kind": "mullions_roedes_trim_or_decorative_laths",
+          "status": "cad_linework_available_true_component_split_pending",
+          "source_family": "visual_subdivision_mullions_roedes_or_decorative_laths",
+          "source_status": "cad_elevation_linework_available",
+          "next_mesh_gate": "separate true frame/mullion from decorative/context linework",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "frame_material_finish",
+          "future_editable_kind": "frame_finish_material_assignment",
+          "status": "source_text_metadata_available",
+          "source_family": "frame_style_or_finish",
+          "source_status": "source_text_metadata_available",
+          "next_mesh_gate": "bind material/style to exact frame objects",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "cad_text_metadata",
+          "future_editable_kind": "popup_metadata_or_material_hint_not_geometry",
+          "status": "metadata_preserved_not_geometry",
+          "text": "panoramisch raam",
+          "detected_roles": [],
+          "source_entity_id": "ground_floor_plan:2920",
+          "source_layer": "Info ALG",
+          "mesh_permission": "metadata_only_not_geometry"
+        },
+        {
+          "slot": "cad_text_metadata",
+          "future_editable_kind": "popup_metadata_or_material_hint_not_geometry",
+          "status": "metadata_preserved_not_geometry",
+          "text": "vast",
+          "detected_roles": [
+            "fixed_glazing_leaf_state"
+          ],
+          "source_entity_id": "right_elevation:1891",
+          "source_layer": "Info ALG",
+          "mesh_permission": "metadata_only_not_geometry"
+        },
+        {
+          "slot": "cad_text_metadata",
+          "future_editable_kind": "popup_metadata_or_material_hint_not_geometry",
+          "status": "metadata_preserved_not_geometry",
+          "text": "steellook",
+          "detected_roles": [
+            "window_or_door_frame_style"
+          ],
+          "source_entity_id": "right_elevation:1903",
+          "source_layer": "Info ALG",
+          "mesh_permission": "metadata_only_not_geometry"
+        }
+      ],
+      "final_mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "legend_id": "Y06",
+      "label": "deur inkomhal",
+      "opening_type": "interior_door",
+      "source_detail_image": null,
+      "facade_title": null,
+      "source_plan_bbox_m": {
+        "min_x_m": 6.8859,
+        "min_y_m": 10.2817,
+        "max_x_m": 6.8859,
+        "max_y_m": 11.6717,
+        "extent_x_m": 0.0,
+        "extent_y_m": 1.39
+      },
+      "candidate_elevation_source_entity_count": 0,
+      "candidate_plan_source_entity_count": 40,
+      "metric_slots_bound_or_candidate": [
+        "opening_width_m"
+      ],
+      "readiness_action": "bind_missing_slots_from_CAD_before_mesh",
+      "missing_slots": [
+        "opening_height_m",
+        "threshold_level_m"
+      ],
+      "pending_slots": [],
+      "profile_review_status": null,
+      "editable_component_slots": [
+        {
+          "slot": "wall_cut_void",
+          "future_editable_kind": "negative_wall_opening_cut",
+          "status": "blocked_until_exact_width_height_sill_header_and_wall_join_are_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "wall_reveals_and_returns",
+          "future_editable_kind": "inside_outside_reveals_returns_threshold_and_sill_context",
+          "status": "cad_plan_trace_available_role_split_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "outer_frame",
+          "future_editable_kind": "window_or_door_outer_frame",
+          "status": "cad_linework_available_depth_material_and_final_profile_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "door_or_operable_leaf",
+          "future_editable_kind": "door_leaf_or_operable_panel",
+          "status": "cad_plan_or_text_available_operation_binding_pending",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "final_mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "legend_id": "Y07",
+      "label": "deur WC1",
+      "opening_type": "interior_door",
+      "source_detail_image": null,
+      "facade_title": null,
+      "source_plan_bbox_m": {
+        "min_x_m": 9.0259,
+        "min_y_m": 10.2786,
+        "max_x_m": 10.1759,
+        "max_y_m": 10.2786,
+        "extent_x_m": 1.15,
+        "extent_y_m": 0.0
+      },
+      "candidate_elevation_source_entity_count": 0,
+      "candidate_plan_source_entity_count": 67,
+      "metric_slots_bound_or_candidate": [],
+      "readiness_action": "bind_missing_slots_from_CAD_before_mesh",
+      "missing_slots": [
+        "opening_width_m",
+        "opening_height_m",
+        "threshold_level_m"
+      ],
+      "pending_slots": [],
+      "profile_review_status": null,
+      "editable_component_slots": [
+        {
+          "slot": "wall_cut_void",
+          "future_editable_kind": "negative_wall_opening_cut",
+          "status": "blocked_until_exact_width_height_sill_header_and_wall_join_are_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "wall_reveals_and_returns",
+          "future_editable_kind": "inside_outside_reveals_returns_threshold_and_sill_context",
+          "status": "cad_plan_trace_available_role_split_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "outer_frame",
+          "future_editable_kind": "window_or_door_outer_frame",
+          "status": "cad_linework_available_depth_material_and_final_profile_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "door_or_operable_leaf",
+          "future_editable_kind": "door_leaf_or_operable_panel",
+          "status": "cad_plan_or_text_available_operation_binding_pending",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "final_mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "legend_id": "Y08",
+      "label": "voordeur",
+      "opening_type": "exterior_door",
+      "source_detail_image": "assets\\cad-truth\\building-detail-matches\\opening-cad-validation\\y08-elevation-cad-detail.png",
+      "facade_title": "Rechter zijgevel",
+      "source_plan_bbox_m": {
+        "min_x_m": 10.3989,
+        "min_y_m": 10.3925,
+        "max_x_m": 10.3989,
+        "max_y_m": 11.4525,
+        "extent_x_m": 0.0,
+        "extent_y_m": 1.06
+      },
+      "candidate_elevation_source_entity_count": 62,
+      "candidate_plan_source_entity_count": 82,
+      "metric_slots_bound_or_candidate": [
+        "opening_height_m:clear_opening_height"
+      ],
+      "readiness_action": "bind_missing_slots_from_CAD_before_mesh",
+      "missing_slots": [
+        "opening_width_m"
+      ],
+      "pending_slots": [
+        "header_or_lintel_height_m",
+        "threshold_level_m"
+      ],
+      "profile_review_status": null,
+      "editable_component_slots": [
+        {
+          "slot": "wall_cut_void",
+          "future_editable_kind": "negative_wall_opening_cut",
+          "status": "blocked_until_exact_width_height_sill_header_and_wall_join_are_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "wall_reveals_and_returns",
+          "future_editable_kind": "inside_outside_reveals_returns_threshold_and_sill_context",
+          "status": "cad_plan_trace_available_role_split_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "outer_frame",
+          "future_editable_kind": "window_or_door_outer_frame",
+          "status": "cad_linework_available_depth_material_and_final_profile_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "door_or_operable_leaf",
+          "future_editable_kind": "door_leaf_or_operable_panel",
+          "status": "cad_plan_or_text_available_operation_binding_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "local_diagonal_or_curved_detail_split",
+          "future_editable_kind": "detail_context_candidate_not_geometry_until_split",
+          "status": "source_preserved_role_split_required",
+          "source_family": "curved_or_diagonal_detail_candidates_need_role_split",
+          "source_status": "cad_elevation_linework_preserved_but_not_arch_opening",
+          "next_mesh_gate": "separate small diagonal/curved detail candidates from true opening geometry",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "visual_subdivision_mullions_roedes_laths",
+          "future_editable_kind": "mullions_roedes_trim_or_decorative_laths",
+          "status": "cad_linework_available_true_component_split_pending",
+          "source_family": "visual_subdivision_mullions_roedes_or_decorative_laths",
+          "source_status": "cad_elevation_linework_available",
+          "next_mesh_gate": "separate true frame/mullion from decorative/context linework",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "flyscreen_or_insect_screen",
+          "future_editable_kind": "flyscreen_leaf_or_sliding_screen",
+          "status": "source_text_available_leaf_assignment_pending",
+          "source_family": "flyscreen_or_insect_screen",
+          "source_status": "source_text_metadata_available",
+          "next_mesh_gate": "bind flyscreen to correct operable/sliding leaf",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "door_leaf_frame_hardware",
+          "future_editable_kind": "door_leaf_frame_handle_threshold",
+          "status": "source_text_available_geometry_pending",
+          "source_family": "door_specific_components",
+          "source_status": "source_text_metadata_available",
+          "next_mesh_gate": "bind to exact door leaf/frame/hardware components",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "cad_text_metadata",
+          "future_editable_kind": "popup_metadata_or_material_hint_not_geometry",
+          "status": "metadata_preserved_not_geometry",
+          "text": "vast",
+          "detected_roles": [
+            "fixed_glazing_leaf_state"
+          ],
+          "source_entity_id": "rear_elevation:1823",
+          "source_layer": "Info ALG",
+          "mesh_permission": "metadata_only_not_geometry"
+        },
+        {
+          "slot": "cad_text_metadata",
+          "future_editable_kind": "popup_metadata_or_material_hint_not_geometry",
+          "status": "metadata_preserved_not_geometry",
+          "text": "vliegen- raam",
+          "detected_roles": [
+            "insect_screen_or_flyscreen_detail"
+          ],
+          "source_entity_id": "rear_elevation:1830",
+          "source_layer": "Info ALG",
+          "mesh_permission": "metadata_only_not_geometry"
+        },
+        {
+          "slot": "cad_text_metadata",
+          "future_editable_kind": "popup_metadata_or_material_hint_not_geometry",
+          "status": "metadata_preserved_not_geometry",
+          "text": "DEUR hout: Afrormosia",
+          "detected_roles": [
+            "door_component_detail_requires_local_context",
+            "wood_detail_requires_local_context"
+          ],
+          "source_entity_id": "rear_elevation:1776",
+          "source_layer": "0",
+          "mesh_permission": "metadata_only_not_geometry"
+        }
+      ],
+      "final_mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "legend_id": "Y09",
+      "label": "raam WC1",
+      "opening_type": "window",
+      "source_detail_image": "assets\\cad-truth\\building-detail-matches\\opening-cad-validation\\y09-elevation-cad-detail.png",
+      "facade_title": "Rechter zijgevel",
+      "source_plan_bbox_m": {
+        "min_x_m": 10.0289,
+        "min_y_m": 10.1786,
+        "max_x_m": 10.0289,
+        "max_y_m": 10.9946,
+        "extent_x_m": 0.0,
+        "extent_y_m": 0.816
+      },
+      "candidate_elevation_source_entity_count": 47,
+      "candidate_plan_source_entity_count": 89,
+      "metric_slots_bound_or_candidate": [
+        "glazing_subdivision",
+        "opening_width_m"
+      ],
+      "readiness_action": "bind_missing_slots_from_CAD_before_mesh",
+      "missing_slots": [
+        "opening_height_m",
+        "sill_height_m",
+        "header_or_lintel_height_m"
+      ],
+      "pending_slots": [],
+      "profile_review_status": null,
+      "editable_component_slots": [
+        {
+          "slot": "wall_cut_void",
+          "future_editable_kind": "negative_wall_opening_cut",
+          "status": "blocked_until_exact_width_height_sill_header_and_wall_join_are_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "wall_reveals_and_returns",
+          "future_editable_kind": "inside_outside_reveals_returns_threshold_and_sill_context",
+          "status": "cad_plan_trace_available_role_split_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "outer_frame",
+          "future_editable_kind": "window_or_door_outer_frame",
+          "status": "cad_linework_available_depth_material_and_final_profile_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "glass_panels",
+          "future_editable_kind": "individual_glass_panes",
+          "status": "cad_linework_available_panel_split_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "local_diagonal_or_curved_detail_split",
+          "future_editable_kind": "detail_context_candidate_not_geometry_until_split",
+          "status": "source_preserved_role_split_required",
+          "source_family": "curved_or_diagonal_detail_candidates_need_role_split",
+          "source_status": "cad_elevation_linework_preserved_but_not_arch_opening",
+          "next_mesh_gate": "separate small diagonal/curved detail candidates from true opening geometry",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "visual_subdivision_mullions_roedes_laths",
+          "future_editable_kind": "mullions_roedes_trim_or_decorative_laths",
+          "status": "cad_linework_available_true_component_split_pending",
+          "source_family": "visual_subdivision_mullions_roedes_or_decorative_laths",
+          "source_status": "cad_elevation_linework_available",
+          "next_mesh_gate": "separate true frame/mullion from decorative/context linework",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "flyscreen_or_insect_screen",
+          "future_editable_kind": "flyscreen_leaf_or_sliding_screen",
+          "status": "source_text_available_leaf_assignment_pending",
+          "source_family": "flyscreen_or_insect_screen",
+          "source_status": "source_text_metadata_available",
+          "next_mesh_gate": "bind flyscreen to correct operable/sliding leaf",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "cad_text_metadata",
+          "future_editable_kind": "popup_metadata_or_material_hint_not_geometry",
+          "status": "metadata_preserved_not_geometry",
+          "text": "vliegen- raam",
+          "detected_roles": [
+            "insect_screen_or_flyscreen_detail"
+          ],
+          "source_entity_id": "rear_elevation:1830",
+          "source_layer": "Info ALG",
+          "mesh_permission": "metadata_only_not_geometry"
+        }
+      ],
+      "final_mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "legend_id": "Y10",
+      "label": "kastdeur berging (ingebouwde kast)",
+      "opening_type": "built_in_cabinet_door",
+      "source_detail_image": null,
+      "facade_title": null,
+      "source_plan_bbox_m": {
+        "min_x_m": 6.7859,
+        "min_y_m": 8.1386,
+        "max_x_m": 6.9259,
+        "max_y_m": 8.4386,
+        "extent_x_m": 0.14,
+        "extent_y_m": 0.3
+      },
+      "candidate_elevation_source_entity_count": 0,
+      "candidate_plan_source_entity_count": 0,
+      "metric_slots_bound_or_candidate": [],
+      "readiness_action": "promote_to_final_slot_binding_review_before_mesh",
+      "missing_slots": [],
+      "pending_slots": [],
+      "profile_review_status": null,
+      "editable_component_slots": [
+        {
+          "slot": "wall_cut_void",
+          "future_editable_kind": "negative_wall_opening_cut",
+          "status": "blocked_until_exact_width_height_sill_header_and_wall_join_are_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "wall_reveals_and_returns",
+          "future_editable_kind": "inside_outside_reveals_returns_threshold_and_sill_context",
+          "status": "cad_plan_trace_available_role_split_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "outer_frame",
+          "future_editable_kind": "window_or_door_outer_frame",
+          "status": "cad_linework_available_depth_material_and_final_profile_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "door_or_operable_leaf",
+          "future_editable_kind": "door_leaf_or_operable_panel",
+          "status": "cad_plan_or_text_available_operation_binding_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "door_leaf_frame_hardware",
+          "future_editable_kind": "door_leaf_frame_handle_threshold",
+          "status": "source_text_available_geometry_pending",
+          "source_family": "door_specific_components",
+          "source_status": "source_text_metadata_available",
+          "next_mesh_gate": "bind to exact door leaf/frame/hardware components",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "cad_text_metadata",
+          "future_editable_kind": "popup_metadata_or_material_hint_not_geometry",
+          "status": "metadata_preserved_not_geometry",
+          "text": "deur dr keukenbouwer",
+          "detected_roles": [
+            "door_component_detail_requires_local_context"
+          ],
+          "source_entity_id": "ground_floor_plan:2842",
+          "source_layer": "Info ALG",
+          "mesh_permission": "metadata_only_not_geometry"
+        }
+      ],
+      "final_mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "legend_id": "Y11",
+      "label": "raam berging",
+      "opening_type": "window",
+      "source_detail_image": "assets\\cad-truth\\building-detail-matches\\opening-cad-validation\\y11-elevation-cad-detail.png",
+      "facade_title": "Rechter zijgevel",
+      "source_plan_bbox_m": {
+        "min_x_m": 10.3959,
+        "min_y_m": 7.2886,
+        "max_x_m": 10.3959,
+        "max_y_m": 7.9086,
+        "extent_x_m": 0.0,
+        "extent_y_m": 0.62
+      },
+      "candidate_elevation_source_entity_count": 34,
+      "candidate_plan_source_entity_count": 75,
+      "metric_slots_bound_or_candidate": [
+        "glazing_subdivision"
+      ],
+      "readiness_action": "bind_missing_slots_from_CAD_before_mesh",
+      "missing_slots": [
+        "opening_width_m",
+        "opening_height_m",
+        "sill_height_m",
+        "header_or_lintel_height_m"
+      ],
+      "pending_slots": [],
+      "profile_review_status": null,
+      "editable_component_slots": [
+        {
+          "slot": "wall_cut_void",
+          "future_editable_kind": "negative_wall_opening_cut",
+          "status": "blocked_until_exact_width_height_sill_header_and_wall_join_are_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "wall_reveals_and_returns",
+          "future_editable_kind": "inside_outside_reveals_returns_threshold_and_sill_context",
+          "status": "cad_plan_trace_available_role_split_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "outer_frame",
+          "future_editable_kind": "window_or_door_outer_frame",
+          "status": "cad_linework_available_depth_material_and_final_profile_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "glass_panels",
+          "future_editable_kind": "individual_glass_panes",
+          "status": "cad_linework_available_panel_split_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "visual_subdivision_mullions_roedes_laths",
+          "future_editable_kind": "mullions_roedes_trim_or_decorative_laths",
+          "status": "cad_linework_available_true_component_split_pending",
+          "source_family": "visual_subdivision_mullions_roedes_or_decorative_laths",
+          "source_status": "cad_elevation_linework_available",
+          "next_mesh_gate": "separate true frame/mullion from decorative/context linework",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "flyscreen_or_insect_screen",
+          "future_editable_kind": "flyscreen_leaf_or_sliding_screen",
+          "status": "source_text_available_leaf_assignment_pending",
+          "source_family": "flyscreen_or_insect_screen",
+          "source_status": "source_text_metadata_available",
+          "next_mesh_gate": "bind flyscreen to correct operable/sliding leaf",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "cad_text_metadata",
+          "future_editable_kind": "popup_metadata_or_material_hint_not_geometry",
+          "status": "metadata_preserved_not_geometry",
+          "text": "vliegen- raam",
+          "detected_roles": [
+            "insect_screen_or_flyscreen_detail"
+          ],
+          "source_entity_id": "rear_elevation:1833",
+          "source_layer": "Info ALG",
+          "mesh_permission": "metadata_only_not_geometry"
+        }
+      ],
+      "final_mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "legend_id": "Y12",
+      "label": "raam keuken",
+      "opening_type": "window",
+      "source_detail_image": "assets\\cad-truth\\building-detail-matches\\opening-cad-validation\\y12-elevation-cad-detail.png",
+      "facade_title": "Linker zijgevel",
+      "source_plan_bbox_m": {
+        "min_x_m": 1.7819,
+        "min_y_m": 6.0528,
+        "max_x_m": 1.7819,
+        "max_y_m": 7.5228,
+        "extent_x_m": 0.0,
+        "extent_y_m": 1.47
+      },
+      "candidate_elevation_source_entity_count": 70,
+      "candidate_plan_source_entity_count": 74,
+      "metric_slots_bound_or_candidate": [],
+      "readiness_action": "bind_missing_slots_from_CAD_before_mesh",
+      "missing_slots": [
+        "opening_height_m",
+        "sill_height_m",
+        "header_or_lintel_height_m"
+      ],
+      "pending_slots": [
+        "opening_width_m"
+      ],
+      "profile_review_status": null,
+      "editable_component_slots": [
+        {
+          "slot": "wall_cut_void",
+          "future_editable_kind": "negative_wall_opening_cut",
+          "status": "blocked_until_exact_width_height_sill_header_and_wall_join_are_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "wall_reveals_and_returns",
+          "future_editable_kind": "inside_outside_reveals_returns_threshold_and_sill_context",
+          "status": "cad_plan_trace_available_role_split_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "outer_frame",
+          "future_editable_kind": "window_or_door_outer_frame",
+          "status": "cad_linework_available_depth_material_and_final_profile_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "glass_panels",
+          "future_editable_kind": "individual_glass_panes",
+          "status": "cad_linework_available_panel_split_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "visual_subdivision_mullions_roedes_laths",
+          "future_editable_kind": "mullions_roedes_trim_or_decorative_laths",
+          "status": "cad_linework_available_true_component_split_pending",
+          "source_family": "visual_subdivision_mullions_roedes_or_decorative_laths",
+          "source_status": "cad_elevation_linework_available",
+          "next_mesh_gate": "separate true frame/mullion from decorative/context linework",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "flyscreen_or_insect_screen",
+          "future_editable_kind": "flyscreen_leaf_or_sliding_screen",
+          "status": "source_text_available_leaf_assignment_pending",
+          "source_family": "flyscreen_or_insect_screen",
+          "source_status": "source_text_metadata_available",
+          "next_mesh_gate": "bind flyscreen to correct operable/sliding leaf",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "external_screen_or_shading",
+          "future_editable_kind": "screen_cassette_side_guides_and_fabric",
+          "status": "source_text_available_exact_subpart_binding_pending",
+          "source_family": "external_screen_or_shading",
+          "source_status": "source_text_metadata_available",
+          "next_mesh_gate": "bind cassette/side-guide geometry to exact opening subparts",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "cad_text_metadata",
+          "future_editable_kind": "popup_metadata_or_material_hint_not_geometry",
+          "status": "metadata_preserved_not_geometry",
+          "text": "screen - bovenslag 20 type Sergé antraciet",
+          "detected_roles": [
+            "screen_or_shading_detail"
+          ],
+          "source_entity_id": "ground_floor_plan:2927",
+          "source_layer": "Info ALG",
+          "mesh_permission": "metadata_only_not_geometry"
+        },
+        {
+          "slot": "cad_text_metadata",
+          "future_editable_kind": "popup_metadata_or_material_hint_not_geometry",
+          "status": "metadata_preserved_not_geometry",
+          "text": "vast",
+          "detected_roles": [
+            "fixed_glazing_leaf_state"
+          ],
+          "source_entity_id": "right_elevation:1892",
+          "source_layer": "Info ALG",
+          "mesh_permission": "metadata_only_not_geometry"
+        },
+        {
+          "slot": "cad_text_metadata",
+          "future_editable_kind": "popup_metadata_or_material_hint_not_geometry",
+          "status": "metadata_preserved_not_geometry",
+          "text": "vliegenraam",
+          "detected_roles": [
+            "insect_screen_or_flyscreen_detail"
+          ],
+          "source_entity_id": "right_elevation:1900",
+          "source_layer": "Info ALG",
+          "mesh_permission": "metadata_only_not_geometry"
+        }
+      ],
+      "final_mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "legend_id": "Y13",
+      "label": "raam bureau Oost",
+      "opening_type": "window",
+      "source_detail_image": "assets\\cad-truth\\building-detail-matches\\opening-cad-validation\\y13-elevation-cad-detail.png",
+      "facade_title": "Rechter zijgevel",
+      "source_plan_bbox_m": {
+        "min_x_m": 10.8899,
+        "min_y_m": 4.8386,
+        "max_x_m": 10.8899,
+        "max_y_m": 5.9786,
+        "extent_x_m": 0.0,
+        "extent_y_m": 1.14
+      },
+      "candidate_elevation_source_entity_count": 69,
+      "candidate_plan_source_entity_count": 87,
+      "metric_slots_bound_or_candidate": [
+        "opening_width_m"
+      ],
+      "readiness_action": "bind_missing_slots_from_CAD_before_mesh",
+      "missing_slots": [
+        "opening_height_m",
+        "sill_height_m",
+        "header_or_lintel_height_m"
+      ],
+      "pending_slots": [],
+      "profile_review_status": null,
+      "editable_component_slots": [
+        {
+          "slot": "wall_cut_void",
+          "future_editable_kind": "negative_wall_opening_cut",
+          "status": "blocked_until_exact_width_height_sill_header_and_wall_join_are_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "wall_reveals_and_returns",
+          "future_editable_kind": "inside_outside_reveals_returns_threshold_and_sill_context",
+          "status": "cad_plan_trace_available_role_split_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "outer_frame",
+          "future_editable_kind": "window_or_door_outer_frame",
+          "status": "cad_linework_available_depth_material_and_final_profile_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "glass_panels",
+          "future_editable_kind": "individual_glass_panes",
+          "status": "cad_linework_available_panel_split_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "local_diagonal_or_curved_detail_split",
+          "future_editable_kind": "detail_context_candidate_not_geometry_until_split",
+          "status": "source_preserved_role_split_required",
+          "source_family": "curved_or_diagonal_detail_candidates_need_role_split",
+          "source_status": "cad_elevation_linework_preserved_but_not_arch_opening",
+          "next_mesh_gate": "separate small diagonal/curved detail candidates from true opening geometry",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "visual_subdivision_mullions_roedes_laths",
+          "future_editable_kind": "mullions_roedes_trim_or_decorative_laths",
+          "status": "cad_linework_available_true_component_split_pending",
+          "source_family": "visual_subdivision_mullions_roedes_or_decorative_laths",
+          "source_status": "cad_elevation_linework_available",
+          "next_mesh_gate": "separate true frame/mullion from decorative/context linework",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "flyscreen_or_insect_screen",
+          "future_editable_kind": "flyscreen_leaf_or_sliding_screen",
+          "status": "source_text_available_leaf_assignment_pending",
+          "source_family": "flyscreen_or_insect_screen",
+          "source_status": "source_text_metadata_available",
+          "next_mesh_gate": "bind flyscreen to correct operable/sliding leaf",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "invisivent_or_ventilation_strip",
+          "future_editable_kind": "ventilation_grille_strip",
+          "status": "source_text_available_top_frame_binding_pending",
+          "source_family": "invisivent_or_window_ventilation",
+          "source_status": "source_text_metadata_available",
+          "next_mesh_gate": "bind vent grille strip to top frame detail",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "cad_text_metadata",
+          "future_editable_kind": "popup_metadata_or_material_hint_not_geometry",
+          "status": "metadata_preserved_not_geometry",
+          "text": "vast",
+          "detected_roles": [
+            "fixed_glazing_leaf_state"
+          ],
+          "source_entity_id": "rear_elevation:1821",
+          "source_layer": "Info ALG",
+          "mesh_permission": "metadata_only_not_geometry"
+        },
+        {
+          "slot": "cad_text_metadata",
+          "future_editable_kind": "popup_metadata_or_material_hint_not_geometry",
+          "status": "metadata_preserved_not_geometry",
+          "text": "vliegen- raam",
+          "detected_roles": [
+            "insect_screen_or_flyscreen_detail"
+          ],
+          "source_entity_id": "rear_elevation:1832",
+          "source_layer": "Info ALG",
+          "mesh_permission": "metadata_only_not_geometry"
+        },
+        {
+          "slot": "cad_text_metadata",
+          "future_editable_kind": "popup_metadata_or_material_hint_not_geometry",
+          "status": "metadata_preserved_not_geometry",
+          "text": "Invisivent Air Light 2Pa",
+          "detected_roles": [
+            "window_ventilation_detail"
+          ],
+          "source_entity_id": "rear_elevation:1837",
+          "source_layer": "Info ALG",
+          "mesh_permission": "metadata_only_not_geometry"
+        }
+      ],
+      "final_mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "legend_id": "Y14",
+      "label": "deur bureau",
+      "opening_type": "interior_door",
+      "source_detail_image": null,
+      "facade_title": null,
+      "source_plan_bbox_m": {
+        "min_x_m": 6.7859,
+        "min_y_m": 4.2456,
+        "max_x_m": 7.7419,
+        "max_y_m": 4.2456,
+        "extent_x_m": 0.956,
+        "extent_y_m": 0.0
+      },
+      "candidate_elevation_source_entity_count": 0,
+      "candidate_plan_source_entity_count": 33,
+      "metric_slots_bound_or_candidate": [],
+      "readiness_action": "bind_missing_slots_from_CAD_before_mesh",
+      "missing_slots": [
+        "opening_width_m",
+        "opening_height_m",
+        "threshold_level_m"
+      ],
+      "pending_slots": [],
+      "profile_review_status": null,
+      "editable_component_slots": [
+        {
+          "slot": "wall_cut_void",
+          "future_editable_kind": "negative_wall_opening_cut",
+          "status": "blocked_until_exact_width_height_sill_header_and_wall_join_are_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "wall_reveals_and_returns",
+          "future_editable_kind": "inside_outside_reveals_returns_threshold_and_sill_context",
+          "status": "cad_plan_trace_available_role_split_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "outer_frame",
+          "future_editable_kind": "window_or_door_outer_frame",
+          "status": "cad_linework_available_depth_material_and_final_profile_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "door_or_operable_leaf",
+          "future_editable_kind": "door_leaf_or_operable_panel",
+          "status": "cad_plan_or_text_available_operation_binding_pending",
+          "mesh_permission": "blocked_not_mesh"
+        }
+      ],
+      "final_mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "legend_id": "Y15",
+      "label": "raam bureau Zuid",
+      "opening_type": "window",
+      "source_detail_image": "assets\\cad-truth\\building-detail-matches\\opening-cad-validation\\y15-elevation-cad-detail.png",
+      "facade_title": "Voorgevel",
+      "source_plan_bbox_m": {
+        "min_x_m": 7.8559,
+        "min_y_m": 3.8246,
+        "max_x_m": 8.9959,
+        "max_y_m": 3.8246,
+        "extent_x_m": 1.14,
+        "extent_y_m": 0.0
+      },
+      "candidate_elevation_source_entity_count": 68,
+      "candidate_plan_source_entity_count": 96,
+      "metric_slots_bound_or_candidate": [],
+      "readiness_action": "bind_missing_slots_from_CAD_before_mesh",
+      "missing_slots": [
+        "opening_height_m",
+        "sill_height_m",
+        "header_or_lintel_height_m"
+      ],
+      "pending_slots": [
+        "opening_width_m"
+      ],
+      "profile_review_status": null,
+      "editable_component_slots": [
+        {
+          "slot": "wall_cut_void",
+          "future_editable_kind": "negative_wall_opening_cut",
+          "status": "blocked_until_exact_width_height_sill_header_and_wall_join_are_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "wall_reveals_and_returns",
+          "future_editable_kind": "inside_outside_reveals_returns_threshold_and_sill_context",
+          "status": "cad_plan_trace_available_role_split_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "outer_frame",
+          "future_editable_kind": "window_or_door_outer_frame",
+          "status": "cad_linework_available_depth_material_and_final_profile_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "glass_panels",
+          "future_editable_kind": "individual_glass_panes",
+          "status": "cad_linework_available_panel_split_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "local_diagonal_or_curved_detail_split",
+          "future_editable_kind": "detail_context_candidate_not_geometry_until_split",
+          "status": "source_preserved_role_split_required",
+          "source_family": "curved_or_diagonal_detail_candidates_need_role_split",
+          "source_status": "cad_elevation_linework_preserved_but_not_arch_opening",
+          "next_mesh_gate": "separate small diagonal/curved detail candidates from true opening geometry",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "visual_subdivision_mullions_roedes_laths",
+          "future_editable_kind": "mullions_roedes_trim_or_decorative_laths",
+          "status": "cad_linework_available_true_component_split_pending",
+          "source_family": "visual_subdivision_mullions_roedes_or_decorative_laths",
+          "source_status": "cad_elevation_linework_available",
+          "next_mesh_gate": "separate true frame/mullion from decorative/context linework",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "flyscreen_or_insect_screen",
+          "future_editable_kind": "flyscreen_leaf_or_sliding_screen",
+          "status": "source_text_available_leaf_assignment_pending",
+          "source_family": "flyscreen_or_insect_screen",
+          "source_status": "source_text_metadata_available",
+          "next_mesh_gate": "bind flyscreen to correct operable/sliding leaf",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "external_screen_or_shading",
+          "future_editable_kind": "screen_cassette_side_guides_and_fabric",
+          "status": "source_text_available_exact_subpart_binding_pending",
+          "source_family": "external_screen_or_shading",
+          "source_status": "source_text_metadata_available",
+          "next_mesh_gate": "bind cassette/side-guide geometry to exact opening subparts",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "cad_text_metadata",
+          "future_editable_kind": "popup_metadata_or_material_hint_not_geometry",
+          "status": "metadata_preserved_not_geometry",
+          "text": "screen type Sergé antraciet bovenslag 20cm",
+          "detected_roles": [
+            "screen_or_shading_detail"
+          ],
+          "source_entity_id": "ground_floor_plan:2923",
+          "source_layer": "Info ALG",
+          "mesh_permission": "metadata_only_not_geometry"
+        },
+        {
+          "slot": "cad_text_metadata",
+          "future_editable_kind": "popup_metadata_or_material_hint_not_geometry",
+          "status": "metadata_preserved_not_geometry",
+          "text": "vast",
+          "detected_roles": [
+            "fixed_glazing_leaf_state"
+          ],
+          "source_entity_id": "left_elevation:1529",
+          "source_layer": "Info ALG",
+          "mesh_permission": "metadata_only_not_geometry"
+        },
+        {
+          "slot": "cad_text_metadata",
+          "future_editable_kind": "popup_metadata_or_material_hint_not_geometry",
+          "status": "metadata_preserved_not_geometry",
+          "text": "vliegen- raam",
+          "detected_roles": [
+            "insect_screen_or_flyscreen_detail"
+          ],
+          "source_entity_id": "left_elevation:1541",
+          "source_layer": "Info ALG",
+          "mesh_permission": "metadata_only_not_geometry"
+        }
+      ],
+      "final_mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "legend_id": "Y16",
+      "label": "rondboog",
+      "opening_type": "arched_free_opening",
+      "source_detail_image": null,
+      "facade_title": null,
+      "source_plan_bbox_m": {
+        "min_x_m": 2.8259,
+        "min_y_m": 5.4586,
+        "max_x_m": 6.0259,
+        "max_y_m": 5.5986,
+        "extent_x_m": 3.2,
+        "extent_y_m": 0.14
+      },
+      "candidate_elevation_source_entity_count": 0,
+      "candidate_plan_source_entity_count": 8,
+      "metric_slots_bound_or_candidate": [
+        "opening_height_m",
+        "arch_geometry",
+        "opening_width_m"
+      ],
+      "readiness_action": "promote_to_final_slot_binding_review_before_mesh",
+      "missing_slots": [],
+      "pending_slots": [],
+      "profile_review_status": "source_bound_profile_candidate_not_final_not_mesh",
+      "editable_component_slots": [
+        {
+          "slot": "wall_cut_void",
+          "future_editable_kind": "negative_wall_opening_cut",
+          "status": "blocked_until_exact_width_height_sill_header_and_wall_join_are_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "wall_reveals_and_returns",
+          "future_editable_kind": "inside_outside_reveals_returns_threshold_and_sill_context",
+          "status": "cad_plan_trace_available_role_split_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "outer_frame",
+          "future_editable_kind": "window_or_door_outer_frame",
+          "status": "cad_linework_available_depth_material_and_final_profile_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "free_opening_finish",
+          "future_editable_kind": "finished_arch_reveal_without_glass",
+          "status": "source_bound_profile_pending_final_wall_context",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "arched_or_curved_cut_profile",
+          "future_editable_kind": "wall_cut_profile_and_visible_frame_curve",
+          "status": "source_bound_profile_pending_final_wall_context",
+          "source_family": "arched_or_curved_opening_shape",
+          "source_status": "cad_elevation_or_detail_contract_available",
+          "next_mesh_gate": "bind arch curve to wall cut and visible frame before final mesh",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "cad_text_metadata",
+          "future_editable_kind": "popup_metadata_or_material_hint_not_geometry",
+          "status": "metadata_preserved_not_geometry",
+          "text": "rondboog: detail 3",
+          "detected_roles": [],
+          "source_entity_id": "ground_floor_plan:2902",
+          "source_layer": "Info ALG",
+          "mesh_permission": "metadata_only_not_geometry"
+        }
+      ],
+      "final_mesh_permission": "blocked_not_mesh"
+    },
+    {
+      "legend_id": "Y17",
+      "label": "erker inclusief raamdeur",
+      "opening_type": "bay_window_group_with_operable_door",
+      "source_detail_image": "assets\\cad-truth\\building-detail-matches\\opening-cad-validation\\y17-elevation-cad-detail.png",
+      "facade_title": "Voorgevel",
+      "source_plan_bbox_m": {
+        "min_x_m": 2.4457,
+        "min_y_m": 3.0587,
+        "max_x_m": 7.7419,
+        "max_y_m": 5.0616,
+        "extent_x_m": 5.2962,
+        "extent_y_m": 2.0029
+      },
+      "candidate_elevation_source_entity_count": 103,
+      "candidate_plan_source_entity_count": 118,
+      "metric_slots_bound_or_candidate": [
+        "bay_subsegment_geometry",
+        "opening_width_m",
+        "opening_height_m:clear_opening_height"
+      ],
+      "readiness_action": "resolve_pending_slots_and_risk_flags_before_mesh",
+      "missing_slots": [],
+      "pending_slots": [
+        "bay_subsegment_geometry",
+        "header_or_lintel_height_m",
+        "threshold_level_m"
+      ],
+      "profile_review_status": "source_bound_leaf_candidate_set_not_final_not_mesh",
+      "editable_component_slots": [
+        {
+          "slot": "wall_cut_void",
+          "future_editable_kind": "negative_wall_opening_cut",
+          "status": "blocked_until_exact_width_height_sill_header_and_wall_join_are_bound",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "wall_reveals_and_returns",
+          "future_editable_kind": "inside_outside_reveals_returns_threshold_and_sill_context",
+          "status": "cad_plan_trace_available_role_split_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "outer_frame",
+          "future_editable_kind": "window_or_door_outer_frame",
+          "status": "cad_linework_available_depth_material_and_final_profile_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "glass_panels",
+          "future_editable_kind": "individual_glass_panes",
+          "status": "cad_linework_available_panel_split_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "door_or_operable_leaf",
+          "future_editable_kind": "door_leaf_or_operable_panel",
+          "status": "cad_plan_or_text_available_operation_binding_pending",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "visual_subdivision_mullions_roedes_laths",
+          "future_editable_kind": "mullions_roedes_trim_or_decorative_laths",
+          "status": "cad_linework_available_true_component_split_pending",
+          "source_family": "visual_subdivision_mullions_roedes_or_decorative_laths",
+          "source_status": "cad_elevation_linework_available",
+          "next_mesh_gate": "separate true frame/mullion from decorative/context linework",
+          "mesh_permission": "blocked_not_mesh"
+        },
+        {
+          "slot": "cad_text_metadata",
+          "future_editable_kind": "popup_metadata_or_material_hint_not_geometry",
+          "status": "metadata_preserved_not_geometry",
+          "text": "vast",
+          "detected_roles": [
+            "fixed_glazing_leaf_state"
+          ],
+          "source_entity_id": "left_elevation:1532",
+          "source_layer": "Info ALG",
+          "mesh_permission": "metadata_only_not_geometry"
+        }
+      ],
+      "final_mesh_permission": "blocked_not_mesh"
+    }
+  ],
+  "rules": [
+    "This is a component schema, not a geometry generator.",
+    "Every future mesh object must retain its source CAD/PDF refs.",
+    "Do not merge windows, doors, frames, glass, screens, flyscreens or trim into the wall mesh.",
+    "CAD text labels are retained as metadata/popup/material hints, not geometry unless separately bound."
+  ]
+}

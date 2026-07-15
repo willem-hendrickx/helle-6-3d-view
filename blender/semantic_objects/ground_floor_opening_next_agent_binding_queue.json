@@ -1,0 +1,889 @@
+{
+  "status": "ground_floor_opening_next_agent_binding_queue_ready_not_mesh",
+  "purpose": "Agent-only next work queue for the ground-floor openings. It keeps the next pass CAD-bound and prevents preview panels, context notes, boxes or colored markup from becoming geometry.",
+  "source_files": {
+    "completion_pack": "blender\\semantic_objects\\ground_floor_opening_completion_pack.json",
+    "current_binding_workbench": "blender\\semantic_objects\\ground_floor_opening_current_binding_workbench.json",
+    "deeper_search_seeds": "blender\\semantic_objects\\ground_floor_opening_deeper_search_seeds.json",
+    "popup_metadata": "blender\\semantic_objects\\ground_floor_opening_popup_metadata_payload.json",
+    "text_metadata_quality_audit": "blender\\semantic_objects\\ground_floor_opening_text_metadata_quality_audit.json",
+    "downstream_safety_gate": "blender\\semantic_objects\\ground_floor_opening_downstream_safety_gate.json"
+  },
+  "opening_count": 17,
+  "workbench_task_count": 41,
+  "deeper_search_seed_count": 11,
+  "priority_counts": {
+    "P2_review_packaging": 3,
+    "P0_agent_deep_source_binding": 6,
+    "P1_agent_cad_binding": 8
+  },
+  "slot_counts": {
+    "header_or_lintel_height_m": 20,
+    "sill_height_m": 14,
+    "threshold_level_m": 12,
+    "opening_height_m": 18,
+    "arch_geometry": 2,
+    "threshold_or_sill_level_m": 2,
+    "opening_width_m": 12,
+    "bay_subsegment_geometry": 2
+  },
+  "action_counts": {
+    "Package as later user slot-review candidate; keep mesh export blocked.": 3,
+    "Use deeper source seeds to bind unresolved CAD slots before any mesh work.": 6,
+    "Bind missing slots from original CAD geometry and text evidence; do not infer from preview panels.": 8
+  },
+  "safety_gate_status": "ground_floor_opening_downstream_safety_gate_pass",
+  "user_validation_needed_now_count": 0,
+  "mesh_ready_count": 0,
+  "objects": [
+    {
+      "legend_id": "Y02",
+      "label": "Raam Salon",
+      "opening_type": "window",
+      "priority": "P0_agent_deep_source_binding",
+      "next_agent_action": "Use deeper source seeds to bind unresolved CAD slots before any mesh work.",
+      "readiness_action": "resolve_pending_slots_and_risk_flags_before_mesh",
+      "source_bound_slots": [
+        "glazing_subdivision",
+        "opening_height_m",
+        "opening_width_m"
+      ],
+      "pending_slots": [
+        "header_or_lintel_height_m",
+        "sill_height_m"
+      ],
+      "missing_slots": [],
+      "required_wall_cut_slots": [
+        "opening_width_m",
+        "opening_height_m",
+        "sill_height_m",
+        "header_or_lintel_height_m"
+      ],
+      "workbench_task_count": 2,
+      "workbench_task_slots": [
+        "header_or_lintel_height_m",
+        "sill_height_m"
+      ],
+      "deeper_search_seed_count": 2,
+      "deeper_search_seed_slots": [
+        "header_or_lintel_height_m",
+        "sill_height_m"
+      ],
+      "metric_source_ref_count": 39,
+      "visual_opening_detail_source_count": 67,
+      "wall_or_structure_source_count": 18,
+      "component_metadata_count": 2,
+      "popup_metadata_counts": {
+        "editable_slot_count": 8,
+        "cad_text_count": 0,
+        "source_ref_count": 0
+      },
+      "text_audit_counts": {
+        "metadata_text_count": 14,
+        "context_not_geometry_count": 5,
+        "dimension_text_candidate_count": 7,
+        "component_metadata_count": 2
+      },
+      "detail_board_link": "ground-floor-opening-component-detail-board.html#Y02",
+      "source_detail_image": "building-detail-matches/opening-cad-validation/y02-elevation-cad-detail.png",
+      "mesh_permission": "blocked_not_mesh",
+      "geometry_permission": "metadata_and_work_queue_only_no_geometry"
+    },
+    {
+      "legend_id": "Y05",
+      "label": "boograam eetkamer",
+      "opening_type": "arched_window",
+      "priority": "P0_agent_deep_source_binding",
+      "next_agent_action": "Use deeper source seeds to bind unresolved CAD slots before any mesh work.",
+      "readiness_action": "resolve_pending_slots_and_risk_flags_before_mesh",
+      "source_bound_slots": [
+        "opening_height_m",
+        "opening_width_m"
+      ],
+      "pending_slots": [
+        "arch_geometry",
+        "threshold_or_sill_level_m"
+      ],
+      "missing_slots": [],
+      "required_wall_cut_slots": [
+        "opening_width_m",
+        "opening_height_m",
+        "arch_geometry",
+        "threshold_or_sill_level_m"
+      ],
+      "workbench_task_count": 2,
+      "workbench_task_slots": [
+        "arch_geometry",
+        "threshold_or_sill_level_m"
+      ],
+      "deeper_search_seed_count": 2,
+      "deeper_search_seed_slots": [
+        "arch_geometry",
+        "threshold_or_sill_level_m"
+      ],
+      "metric_source_ref_count": 7,
+      "visual_opening_detail_source_count": 44,
+      "wall_or_structure_source_count": 20,
+      "component_metadata_count": 3,
+      "popup_metadata_counts": {
+        "editable_slot_count": 10,
+        "cad_text_count": 0,
+        "source_ref_count": 0
+      },
+      "text_audit_counts": {
+        "metadata_text_count": 10,
+        "context_not_geometry_count": 0,
+        "dimension_text_candidate_count": 3,
+        "component_metadata_count": 4
+      },
+      "detail_board_link": "ground-floor-opening-component-detail-board.html#Y05",
+      "source_detail_image": "building-detail-matches/opening-cad-validation/y05-elevation-cad-detail.png",
+      "mesh_permission": "blocked_not_mesh",
+      "geometry_permission": "metadata_and_work_queue_only_no_geometry"
+    },
+    {
+      "legend_id": "Y08",
+      "label": "voordeur",
+      "opening_type": "exterior_door",
+      "priority": "P0_agent_deep_source_binding",
+      "next_agent_action": "Use deeper source seeds to bind unresolved CAD slots before any mesh work.",
+      "readiness_action": "bind_missing_slots_from_CAD_before_mesh",
+      "source_bound_slots": [
+        "opening_height_m"
+      ],
+      "pending_slots": [
+        "header_or_lintel_height_m",
+        "threshold_level_m"
+      ],
+      "missing_slots": [
+        "opening_width_m"
+      ],
+      "required_wall_cut_slots": [
+        "opening_width_m",
+        "opening_height_m",
+        "threshold_level_m",
+        "header_or_lintel_height_m"
+      ],
+      "workbench_task_count": 3,
+      "workbench_task_slots": [
+        "header_or_lintel_height_m",
+        "opening_width_m",
+        "threshold_level_m"
+      ],
+      "deeper_search_seed_count": 2,
+      "deeper_search_seed_slots": [
+        "header_or_lintel_height_m",
+        "threshold_level_m"
+      ],
+      "metric_source_ref_count": 2,
+      "visual_opening_detail_source_count": 79,
+      "wall_or_structure_source_count": 24,
+      "component_metadata_count": 3,
+      "popup_metadata_counts": {
+        "editable_slot_count": 11,
+        "cad_text_count": 0,
+        "source_ref_count": 0
+      },
+      "text_audit_counts": {
+        "metadata_text_count": 26,
+        "context_not_geometry_count": 7,
+        "dimension_text_candidate_count": 7,
+        "component_metadata_count": 3
+      },
+      "detail_board_link": "ground-floor-opening-component-detail-board.html#Y08",
+      "source_detail_image": "building-detail-matches/opening-cad-validation/y08-elevation-cad-detail.png",
+      "mesh_permission": "blocked_not_mesh",
+      "geometry_permission": "metadata_and_work_queue_only_no_geometry"
+    },
+    {
+      "legend_id": "Y12",
+      "label": "raam keuken",
+      "opening_type": "window",
+      "priority": "P0_agent_deep_source_binding",
+      "next_agent_action": "Use deeper source seeds to bind unresolved CAD slots before any mesh work.",
+      "readiness_action": "bind_missing_slots_from_CAD_before_mesh",
+      "source_bound_slots": [],
+      "pending_slots": [
+        "opening_width_m"
+      ],
+      "missing_slots": [
+        "opening_height_m",
+        "sill_height_m",
+        "header_or_lintel_height_m"
+      ],
+      "required_wall_cut_slots": [
+        "opening_width_m",
+        "opening_height_m",
+        "sill_height_m",
+        "header_or_lintel_height_m"
+      ],
+      "workbench_task_count": 4,
+      "workbench_task_slots": [
+        "header_or_lintel_height_m",
+        "opening_height_m",
+        "opening_width_m",
+        "sill_height_m"
+      ],
+      "deeper_search_seed_count": 1,
+      "deeper_search_seed_slots": [
+        "opening_width_m"
+      ],
+      "metric_source_ref_count": 0,
+      "visual_opening_detail_source_count": 56,
+      "wall_or_structure_source_count": 24,
+      "component_metadata_count": 3,
+      "popup_metadata_counts": {
+        "editable_slot_count": 10,
+        "cad_text_count": 0,
+        "source_ref_count": 0
+      },
+      "text_audit_counts": {
+        "metadata_text_count": 11,
+        "context_not_geometry_count": 0,
+        "dimension_text_candidate_count": 5,
+        "component_metadata_count": 4
+      },
+      "detail_board_link": "ground-floor-opening-component-detail-board.html#Y12",
+      "source_detail_image": "building-detail-matches/opening-cad-validation/y12-elevation-cad-detail.png",
+      "mesh_permission": "blocked_not_mesh",
+      "geometry_permission": "metadata_and_work_queue_only_no_geometry"
+    },
+    {
+      "legend_id": "Y15",
+      "label": "raam bureau Zuid",
+      "opening_type": "window",
+      "priority": "P0_agent_deep_source_binding",
+      "next_agent_action": "Use deeper source seeds to bind unresolved CAD slots before any mesh work.",
+      "readiness_action": "bind_missing_slots_from_CAD_before_mesh",
+      "source_bound_slots": [],
+      "pending_slots": [
+        "opening_width_m"
+      ],
+      "missing_slots": [
+        "opening_height_m",
+        "sill_height_m",
+        "header_or_lintel_height_m"
+      ],
+      "required_wall_cut_slots": [
+        "opening_width_m",
+        "opening_height_m",
+        "sill_height_m",
+        "header_or_lintel_height_m"
+      ],
+      "workbench_task_count": 4,
+      "workbench_task_slots": [
+        "header_or_lintel_height_m",
+        "opening_height_m",
+        "opening_width_m",
+        "sill_height_m"
+      ],
+      "deeper_search_seed_count": 1,
+      "deeper_search_seed_slots": [
+        "opening_width_m"
+      ],
+      "metric_source_ref_count": 0,
+      "visual_opening_detail_source_count": 84,
+      "wall_or_structure_source_count": 18,
+      "component_metadata_count": 3,
+      "popup_metadata_counts": {
+        "editable_slot_count": 11,
+        "cad_text_count": 0,
+        "source_ref_count": 0
+      },
+      "text_audit_counts": {
+        "metadata_text_count": 8,
+        "context_not_geometry_count": 0,
+        "dimension_text_candidate_count": 1,
+        "component_metadata_count": 4
+      },
+      "detail_board_link": "ground-floor-opening-component-detail-board.html#Y15",
+      "source_detail_image": "building-detail-matches/opening-cad-validation/y15-elevation-cad-detail.png",
+      "mesh_permission": "blocked_not_mesh",
+      "geometry_permission": "metadata_and_work_queue_only_no_geometry"
+    },
+    {
+      "legend_id": "Y17",
+      "label": "erker inclusief raamdeur",
+      "opening_type": "bay_window_group_with_operable_door",
+      "priority": "P0_agent_deep_source_binding",
+      "next_agent_action": "Use deeper source seeds to bind unresolved CAD slots before any mesh work.",
+      "readiness_action": "resolve_pending_slots_and_risk_flags_before_mesh",
+      "source_bound_slots": [
+        "bay_subsegment_geometry",
+        "opening_height_m",
+        "opening_width_m"
+      ],
+      "pending_slots": [
+        "bay_subsegment_geometry",
+        "header_or_lintel_height_m",
+        "threshold_level_m"
+      ],
+      "missing_slots": [],
+      "required_wall_cut_slots": [
+        "opening_width_m",
+        "opening_height_m",
+        "threshold_level_m",
+        "bay_subsegment_geometry",
+        "header_or_lintel_height_m"
+      ],
+      "workbench_task_count": 3,
+      "workbench_task_slots": [
+        "bay_subsegment_geometry",
+        "header_or_lintel_height_m",
+        "threshold_level_m"
+      ],
+      "deeper_search_seed_count": 3,
+      "deeper_search_seed_slots": [
+        "bay_subsegment_geometry",
+        "header_or_lintel_height_m",
+        "threshold_level_m"
+      ],
+      "metric_source_ref_count": 71,
+      "visual_opening_detail_source_count": 111,
+      "wall_or_structure_source_count": 26,
+      "component_metadata_count": 1,
+      "popup_metadata_counts": {
+        "editable_slot_count": 7,
+        "cad_text_count": 0,
+        "source_ref_count": 0
+      },
+      "text_audit_counts": {
+        "metadata_text_count": 28,
+        "context_not_geometry_count": 4,
+        "dimension_text_candidate_count": 11,
+        "component_metadata_count": 9
+      },
+      "detail_board_link": "ground-floor-opening-component-detail-board.html#Y17",
+      "source_detail_image": "building-detail-matches/opening-cad-validation/y17-elevation-cad-detail.png",
+      "mesh_permission": "blocked_not_mesh",
+      "geometry_permission": "metadata_and_work_queue_only_no_geometry"
+    },
+    {
+      "legend_id": "Y03",
+      "label": "schuifraam",
+      "opening_type": "sliding_glass_door",
+      "priority": "P1_agent_cad_binding",
+      "next_agent_action": "Bind missing slots from original CAD geometry and text evidence; do not infer from preview panels.",
+      "readiness_action": "bind_missing_slots_from_CAD_before_mesh",
+      "source_bound_slots": [
+        "glazing_subdivision",
+        "opening_height_m",
+        "opening_width_m"
+      ],
+      "pending_slots": [],
+      "missing_slots": [
+        "threshold_level_m",
+        "header_or_lintel_height_m"
+      ],
+      "required_wall_cut_slots": [
+        "opening_width_m",
+        "opening_height_m",
+        "threshold_level_m",
+        "header_or_lintel_height_m"
+      ],
+      "workbench_task_count": 2,
+      "workbench_task_slots": [
+        "header_or_lintel_height_m",
+        "threshold_level_m"
+      ],
+      "deeper_search_seed_count": 0,
+      "deeper_search_seed_slots": [],
+      "metric_source_ref_count": 22,
+      "visual_opening_detail_source_count": 74,
+      "wall_or_structure_source_count": 20,
+      "component_metadata_count": 3,
+      "popup_metadata_counts": {
+        "editable_slot_count": 11,
+        "cad_text_count": 0,
+        "source_ref_count": 0
+      },
+      "text_audit_counts": {
+        "metadata_text_count": 11,
+        "context_not_geometry_count": 4,
+        "dimension_text_candidate_count": 1,
+        "component_metadata_count": 3
+      },
+      "detail_board_link": "ground-floor-opening-component-detail-board.html#Y03",
+      "source_detail_image": "building-detail-matches/opening-cad-validation/y03-elevation-cad-detail.png",
+      "mesh_permission": "blocked_not_mesh",
+      "geometry_permission": "metadata_and_work_queue_only_no_geometry"
+    },
+    {
+      "legend_id": "Y04",
+      "label": "Raam Hobbyruimte",
+      "opening_type": "window",
+      "priority": "P1_agent_cad_binding",
+      "next_agent_action": "Bind missing slots from original CAD geometry and text evidence; do not infer from preview panels.",
+      "readiness_action": "bind_missing_slots_from_CAD_before_mesh",
+      "source_bound_slots": [
+        "glazing_subdivision",
+        "opening_width_m"
+      ],
+      "pending_slots": [],
+      "missing_slots": [
+        "opening_height_m",
+        "sill_height_m",
+        "header_or_lintel_height_m"
+      ],
+      "required_wall_cut_slots": [
+        "opening_width_m",
+        "opening_height_m",
+        "sill_height_m",
+        "header_or_lintel_height_m"
+      ],
+      "workbench_task_count": 3,
+      "workbench_task_slots": [
+        "header_or_lintel_height_m",
+        "opening_height_m",
+        "sill_height_m"
+      ],
+      "deeper_search_seed_count": 0,
+      "deeper_search_seed_slots": [],
+      "metric_source_ref_count": 80,
+      "visual_opening_detail_source_count": 83,
+      "wall_or_structure_source_count": 10,
+      "component_metadata_count": 3,
+      "popup_metadata_counts": {
+        "editable_slot_count": 11,
+        "cad_text_count": 0,
+        "source_ref_count": 0
+      },
+      "text_audit_counts": {
+        "metadata_text_count": 11,
+        "context_not_geometry_count": 4,
+        "dimension_text_candidate_count": 2,
+        "component_metadata_count": 3
+      },
+      "detail_board_link": "ground-floor-opening-component-detail-board.html#Y04",
+      "source_detail_image": "building-detail-matches/opening-cad-validation/y04-elevation-cad-detail.png",
+      "mesh_permission": "blocked_not_mesh",
+      "geometry_permission": "metadata_and_work_queue_only_no_geometry"
+    },
+    {
+      "legend_id": "Y06",
+      "label": "deur inkomhal",
+      "opening_type": "interior_door",
+      "priority": "P1_agent_cad_binding",
+      "next_agent_action": "Bind missing slots from original CAD geometry and text evidence; do not infer from preview panels.",
+      "readiness_action": "bind_missing_slots_from_CAD_before_mesh",
+      "source_bound_slots": [
+        "opening_width_m"
+      ],
+      "pending_slots": [],
+      "missing_slots": [
+        "opening_height_m",
+        "threshold_level_m"
+      ],
+      "required_wall_cut_slots": [
+        "opening_width_m",
+        "opening_height_m",
+        "threshold_level_m"
+      ],
+      "workbench_task_count": 2,
+      "workbench_task_slots": [
+        "opening_height_m",
+        "threshold_level_m"
+      ],
+      "deeper_search_seed_count": 0,
+      "deeper_search_seed_slots": [],
+      "metric_source_ref_count": 4,
+      "visual_opening_detail_source_count": 36,
+      "wall_or_structure_source_count": 8,
+      "component_metadata_count": 0,
+      "popup_metadata_counts": {
+        "editable_slot_count": 4,
+        "cad_text_count": 0,
+        "source_ref_count": 0
+      },
+      "text_audit_counts": {
+        "metadata_text_count": 19,
+        "context_not_geometry_count": 2,
+        "dimension_text_candidate_count": 10,
+        "component_metadata_count": 0
+      },
+      "detail_board_link": "ground-floor-opening-component-detail-board.html#Y06",
+      "source_detail_image": "",
+      "mesh_permission": "blocked_not_mesh",
+      "geometry_permission": "metadata_and_work_queue_only_no_geometry"
+    },
+    {
+      "legend_id": "Y07",
+      "label": "deur WC1",
+      "opening_type": "interior_door",
+      "priority": "P1_agent_cad_binding",
+      "next_agent_action": "Bind missing slots from original CAD geometry and text evidence; do not infer from preview panels.",
+      "readiness_action": "bind_missing_slots_from_CAD_before_mesh",
+      "source_bound_slots": [],
+      "pending_slots": [],
+      "missing_slots": [
+        "opening_width_m",
+        "opening_height_m",
+        "threshold_level_m"
+      ],
+      "required_wall_cut_slots": [
+        "opening_width_m",
+        "opening_height_m",
+        "threshold_level_m"
+      ],
+      "workbench_task_count": 3,
+      "workbench_task_slots": [
+        "opening_height_m",
+        "opening_width_m",
+        "threshold_level_m"
+      ],
+      "deeper_search_seed_count": 0,
+      "deeper_search_seed_slots": [],
+      "metric_source_ref_count": 0,
+      "visual_opening_detail_source_count": 64,
+      "wall_or_structure_source_count": 14,
+      "component_metadata_count": 0,
+      "popup_metadata_counts": {
+        "editable_slot_count": 4,
+        "cad_text_count": 0,
+        "source_ref_count": 0
+      },
+      "text_audit_counts": {
+        "metadata_text_count": 21,
+        "context_not_geometry_count": 5,
+        "dimension_text_candidate_count": 9,
+        "component_metadata_count": 0
+      },
+      "detail_board_link": "ground-floor-opening-component-detail-board.html#Y07",
+      "source_detail_image": "",
+      "mesh_permission": "blocked_not_mesh",
+      "geometry_permission": "metadata_and_work_queue_only_no_geometry"
+    },
+    {
+      "legend_id": "Y09",
+      "label": "raam WC1",
+      "opening_type": "window",
+      "priority": "P1_agent_cad_binding",
+      "next_agent_action": "Bind missing slots from original CAD geometry and text evidence; do not infer from preview panels.",
+      "readiness_action": "bind_missing_slots_from_CAD_before_mesh",
+      "source_bound_slots": [
+        "glazing_subdivision",
+        "opening_width_m"
+      ],
+      "pending_slots": [],
+      "missing_slots": [
+        "opening_height_m",
+        "sill_height_m",
+        "header_or_lintel_height_m"
+      ],
+      "required_wall_cut_slots": [
+        "opening_width_m",
+        "opening_height_m",
+        "sill_height_m",
+        "header_or_lintel_height_m"
+      ],
+      "workbench_task_count": 3,
+      "workbench_task_slots": [
+        "header_or_lintel_height_m",
+        "opening_height_m",
+        "sill_height_m"
+      ],
+      "deeper_search_seed_count": 0,
+      "deeper_search_seed_slots": [],
+      "metric_source_ref_count": 30,
+      "visual_opening_detail_source_count": 84,
+      "wall_or_structure_source_count": 14,
+      "component_metadata_count": 1,
+      "popup_metadata_counts": {
+        "editable_slot_count": 8,
+        "cad_text_count": 0,
+        "source_ref_count": 0
+      },
+      "text_audit_counts": {
+        "metadata_text_count": 22,
+        "context_not_geometry_count": 4,
+        "dimension_text_candidate_count": 9,
+        "component_metadata_count": 1
+      },
+      "detail_board_link": "ground-floor-opening-component-detail-board.html#Y09",
+      "source_detail_image": "building-detail-matches/opening-cad-validation/y09-elevation-cad-detail.png",
+      "mesh_permission": "blocked_not_mesh",
+      "geometry_permission": "metadata_and_work_queue_only_no_geometry"
+    },
+    {
+      "legend_id": "Y11",
+      "label": "raam berging",
+      "opening_type": "window",
+      "priority": "P1_agent_cad_binding",
+      "next_agent_action": "Bind missing slots from original CAD geometry and text evidence; do not infer from preview panels.",
+      "readiness_action": "bind_missing_slots_from_CAD_before_mesh",
+      "source_bound_slots": [
+        "glazing_subdivision"
+      ],
+      "pending_slots": [],
+      "missing_slots": [
+        "opening_width_m",
+        "opening_height_m",
+        "sill_height_m",
+        "header_or_lintel_height_m"
+      ],
+      "required_wall_cut_slots": [
+        "opening_width_m",
+        "opening_height_m",
+        "sill_height_m",
+        "header_or_lintel_height_m"
+      ],
+      "workbench_task_count": 4,
+      "workbench_task_slots": [
+        "header_or_lintel_height_m",
+        "opening_height_m",
+        "opening_width_m",
+        "sill_height_m"
+      ],
+      "deeper_search_seed_count": 0,
+      "deeper_search_seed_slots": [],
+      "metric_source_ref_count": 25,
+      "visual_opening_detail_source_count": 70,
+      "wall_or_structure_source_count": 14,
+      "component_metadata_count": 1,
+      "popup_metadata_counts": {
+        "editable_slot_count": 7,
+        "cad_text_count": 0,
+        "source_ref_count": 0
+      },
+      "text_audit_counts": {
+        "metadata_text_count": 8,
+        "context_not_geometry_count": 0,
+        "dimension_text_candidate_count": 5,
+        "component_metadata_count": 1
+      },
+      "detail_board_link": "ground-floor-opening-component-detail-board.html#Y11",
+      "source_detail_image": "building-detail-matches/opening-cad-validation/y11-elevation-cad-detail.png",
+      "mesh_permission": "blocked_not_mesh",
+      "geometry_permission": "metadata_and_work_queue_only_no_geometry"
+    },
+    {
+      "legend_id": "Y13",
+      "label": "raam bureau Oost",
+      "opening_type": "window",
+      "priority": "P1_agent_cad_binding",
+      "next_agent_action": "Bind missing slots from original CAD geometry and text evidence; do not infer from preview panels.",
+      "readiness_action": "bind_missing_slots_from_CAD_before_mesh",
+      "source_bound_slots": [
+        "opening_width_m"
+      ],
+      "pending_slots": [],
+      "missing_slots": [
+        "opening_height_m",
+        "sill_height_m",
+        "header_or_lintel_height_m"
+      ],
+      "required_wall_cut_slots": [
+        "opening_width_m",
+        "opening_height_m",
+        "sill_height_m",
+        "header_or_lintel_height_m"
+      ],
+      "workbench_task_count": 3,
+      "workbench_task_slots": [
+        "header_or_lintel_height_m",
+        "opening_height_m",
+        "sill_height_m"
+      ],
+      "deeper_search_seed_count": 0,
+      "deeper_search_seed_slots": [],
+      "metric_source_ref_count": 12,
+      "visual_opening_detail_source_count": 83,
+      "wall_or_structure_source_count": 10,
+      "component_metadata_count": 3,
+      "popup_metadata_counts": {
+        "editable_slot_count": 11,
+        "cad_text_count": 0,
+        "source_ref_count": 0
+      },
+      "text_audit_counts": {
+        "metadata_text_count": 10,
+        "context_not_geometry_count": 1,
+        "dimension_text_candidate_count": 6,
+        "component_metadata_count": 3
+      },
+      "detail_board_link": "ground-floor-opening-component-detail-board.html#Y13",
+      "source_detail_image": "building-detail-matches/opening-cad-validation/y13-elevation-cad-detail.png",
+      "mesh_permission": "blocked_not_mesh",
+      "geometry_permission": "metadata_and_work_queue_only_no_geometry"
+    },
+    {
+      "legend_id": "Y14",
+      "label": "deur bureau",
+      "opening_type": "interior_door",
+      "priority": "P1_agent_cad_binding",
+      "next_agent_action": "Bind missing slots from original CAD geometry and text evidence; do not infer from preview panels.",
+      "readiness_action": "bind_missing_slots_from_CAD_before_mesh",
+      "source_bound_slots": [],
+      "pending_slots": [],
+      "missing_slots": [
+        "opening_width_m",
+        "opening_height_m",
+        "threshold_level_m"
+      ],
+      "required_wall_cut_slots": [
+        "opening_width_m",
+        "opening_height_m",
+        "threshold_level_m"
+      ],
+      "workbench_task_count": 3,
+      "workbench_task_slots": [
+        "opening_height_m",
+        "opening_width_m",
+        "threshold_level_m"
+      ],
+      "deeper_search_seed_count": 0,
+      "deeper_search_seed_slots": [],
+      "metric_source_ref_count": 0,
+      "visual_opening_detail_source_count": 30,
+      "wall_or_structure_source_count": 11,
+      "component_metadata_count": 0,
+      "popup_metadata_counts": {
+        "editable_slot_count": 4,
+        "cad_text_count": 0,
+        "source_ref_count": 0
+      },
+      "text_audit_counts": {
+        "metadata_text_count": 5,
+        "context_not_geometry_count": 0,
+        "dimension_text_candidate_count": 3,
+        "component_metadata_count": 0
+      },
+      "detail_board_link": "ground-floor-opening-component-detail-board.html#Y14",
+      "source_detail_image": "",
+      "mesh_permission": "blocked_not_mesh",
+      "geometry_permission": "metadata_and_work_queue_only_no_geometry"
+    },
+    {
+      "legend_id": "Y01",
+      "label": "boograam achtergevel / panoramisch raam",
+      "opening_type": "fixed_or_operable_window",
+      "priority": "P2_review_packaging",
+      "next_agent_action": "Package as later user slot-review candidate; keep mesh export blocked.",
+      "readiness_action": "promote_to_final_slot_binding_review_before_mesh",
+      "source_bound_slots": [
+        "arch_geometry",
+        "glazing_subdivision",
+        "header_or_lintel_height_m",
+        "opening_height_m",
+        "opening_width_m",
+        "sill_height_m"
+      ],
+      "pending_slots": [],
+      "missing_slots": [],
+      "required_wall_cut_slots": [
+        "opening_width_m",
+        "opening_height_m",
+        "sill_height_m",
+        "header_or_lintel_height_m"
+      ],
+      "workbench_task_count": 0,
+      "workbench_task_slots": [],
+      "deeper_search_seed_count": 0,
+      "deeper_search_seed_slots": [],
+      "metric_source_ref_count": 857,
+      "visual_opening_detail_source_count": 46,
+      "wall_or_structure_source_count": 18,
+      "component_metadata_count": 4,
+      "popup_metadata_counts": {
+        "editable_slot_count": 12,
+        "cad_text_count": 0,
+        "source_ref_count": 0
+      },
+      "text_audit_counts": {
+        "metadata_text_count": 17,
+        "context_not_geometry_count": 3,
+        "dimension_text_candidate_count": 8,
+        "component_metadata_count": 5
+      },
+      "detail_board_link": "ground-floor-opening-component-detail-board.html#Y01",
+      "source_detail_image": "building-detail-matches/opening-cad-validation/y01-elevation-cad-detail.png",
+      "mesh_permission": "blocked_not_mesh",
+      "geometry_permission": "metadata_and_work_queue_only_no_geometry"
+    },
+    {
+      "legend_id": "Y10",
+      "label": "kastdeur berging (ingebouwde kast)",
+      "opening_type": "built_in_cabinet_door",
+      "priority": "P2_review_packaging",
+      "next_agent_action": "Package as later user slot-review candidate; keep mesh export blocked.",
+      "readiness_action": "promote_to_final_slot_binding_review_before_mesh",
+      "source_bound_slots": [],
+      "pending_slots": [],
+      "missing_slots": [],
+      "required_wall_cut_slots": [],
+      "workbench_task_count": 0,
+      "workbench_task_slots": [],
+      "deeper_search_seed_count": 0,
+      "deeper_search_seed_slots": [],
+      "metric_source_ref_count": 0,
+      "visual_opening_detail_source_count": 0,
+      "wall_or_structure_source_count": 8,
+      "component_metadata_count": 1,
+      "popup_metadata_counts": {
+        "editable_slot_count": 6,
+        "cad_text_count": 0,
+        "source_ref_count": 0
+      },
+      "text_audit_counts": {
+        "metadata_text_count": 9,
+        "context_not_geometry_count": 0,
+        "dimension_text_candidate_count": 4,
+        "component_metadata_count": 1
+      },
+      "detail_board_link": "ground-floor-opening-component-detail-board.html#Y10",
+      "source_detail_image": "",
+      "mesh_permission": "blocked_not_mesh",
+      "geometry_permission": "metadata_and_work_queue_only_no_geometry"
+    },
+    {
+      "legend_id": "Y16",
+      "label": "rondboog",
+      "opening_type": "arched_free_opening",
+      "priority": "P2_review_packaging",
+      "next_agent_action": "Package as later user slot-review candidate; keep mesh export blocked.",
+      "readiness_action": "promote_to_final_slot_binding_review_before_mesh",
+      "source_bound_slots": [
+        "arch_geometry",
+        "opening_height_m",
+        "opening_width_m"
+      ],
+      "pending_slots": [],
+      "missing_slots": [],
+      "required_wall_cut_slots": [
+        "opening_width_m",
+        "opening_height_m",
+        "arch_geometry"
+      ],
+      "workbench_task_count": 0,
+      "workbench_task_slots": [],
+      "deeper_search_seed_count": 0,
+      "deeper_search_seed_slots": [],
+      "metric_source_ref_count": 9,
+      "visual_opening_detail_source_count": 8,
+      "wall_or_structure_source_count": 2,
+      "component_metadata_count": 1,
+      "popup_metadata_counts": {
+        "editable_slot_count": 6,
+        "cad_text_count": 0,
+        "source_ref_count": 0
+      },
+      "text_audit_counts": {
+        "metadata_text_count": 5,
+        "context_not_geometry_count": 1,
+        "dimension_text_candidate_count": 0,
+        "component_metadata_count": 0
+      },
+      "detail_board_link": "ground-floor-opening-component-detail-board.html#Y16",
+      "source_detail_image": "",
+      "mesh_permission": "blocked_not_mesh",
+      "geometry_permission": "metadata_and_work_queue_only_no_geometry"
+    }
+  ],
+  "rules": [
+    "This queue is not geometry.",
+    "Every opening remains blocked_not_mesh until exact CAD subparts, heights, wall plane and component roles are bound.",
+    "Context text such as plinth, rainwater pipe, gutter, level marker and material notes stays metadata only.",
+    "User validation is not required for CAD entity ids; the agent must resolve those from source files."
+  ],
+  "mesh_permission": "blocked_not_mesh"
+}
