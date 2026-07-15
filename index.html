@@ -13,9 +13,9 @@
         }
       }
     </script>
-    <script type="module" crossorigin src="./assets/main-BFw4oshv.js"></script>
+    <script type="module" crossorigin src="./assets/main-CGL-KIU4.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill-CSRv37U6.js">
-    <link rel="stylesheet" crossorigin href="./assets/main-j3kjvO8g.css">
+    <link rel="stylesheet" crossorigin href="./assets/main-DBj_3Rww.css">
   </head>
   <body>
     <main class="app-shell">
@@ -42,7 +42,7 @@
           <div class="view-actions" role="group" aria-label="View controls">
             <a class="qa-link" href="./assets/cad-truth/visible-site-mesh-preview.png" target="_blank" rel="noreferrer">Bronplan</a>
             <button id="walkModeButton" type="button" title="Rondlopen in het huis">Rondlopen</button>
-            <button id="detailsButton" type="button" aria-controls="validationDetails" aria-expanded="false">Details</button>
+            <button id="detailsButton" type="button" aria-controls="validationDetails" aria-expanded="false">Materialen</button>
             <button id="resetButton" type="button">Reset</button>
           </div>
           <div class="floor-tabs" role="group" aria-label="Floor selection">
@@ -66,6 +66,30 @@
       </section>
       <aside id="validationDetails" class="panel">
         <button id="detailsCloseButton" class="panel-close" type="button" title="Sluiten" aria-label="Details sluiten">&times;</button>
+        <div class="panel-block material-editor" aria-live="polite">
+          <h1>Materiaal aanpassen</h1>
+          <p id="materialSelectHint">Selecteer een zichtbaar onderdeel in de 3D-weergave.</p>
+          <div id="materialEditorControls" class="material-editor-controls" hidden>
+            <div class="selected-object-summary">
+              <strong id="selectedObjectName"></strong>
+              <span id="selectedMaterialName"></span>
+              <small id="selectedObjectSource"></small>
+            </div>
+            <label class="material-control-row" for="materialColorInput">
+              <span>Kleurtint</span>
+              <input id="materialColorInput" type="color" value="#ffffff" />
+            </label>
+            <label class="material-control-row" for="materialRoughnessInput">
+              <span>Mat / glanzend</span>
+              <input id="materialRoughnessInput" type="range" min="0" max="1" step="0.01" value="0.8" />
+              <output id="materialRoughnessValue" for="materialRoughnessInput">0.80</output>
+            </label>
+            <p class="material-scope-note">De wijziging geldt voor alle CAD-vlakken met hetzelfde materiaal.</p>
+            <button id="materialResetButton" class="material-reset-button" type="button">Origineel materiaal</button>
+          </div>
+        </div>
+        <details class="technical-panel-details">
+          <summary>Technische broninformatie</summary>
         <div class="panel-block">
           <h1>CAD-first reconstruction</h1>
           <p>
@@ -103,6 +127,7 @@
             attached to every selectable wall, opening, roof and interior object.
           </p>
         </div>
+        </details>
       </aside>
     </main>
 
