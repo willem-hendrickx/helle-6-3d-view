@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-15T08:05:41.967Z",
+  "generated_at": "2026-07-15T09:57:14.445Z",
   "files": [
     "assets/cad-truth/visible-site-mesh-preview.png",
     "assets/materials/web/beerse-klinker-rijnformaat-preview-albedo.jpg",
@@ -39,6 +39,7 @@
     "blender/semantic_objects/three_d_promotion_readiness_matrix.json",
     "blender/semantic_objects/visible_site_material_backlog.json",
     "blender/semantic_objects/wall_height_stack_contract.json",
+    "blender/site_mesh/attic_floor_mesh_aligned.json",
     "blender/site_mesh/first_floor_complete_preview_mesh_aligned.json",
     "blender/site_mesh/ground_floor_complete_preview_mesh_aligned.json",
     "blender/site_mesh/ground_floor_opening_exact_component_preview_mesh_aligned.json",
