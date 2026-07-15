@@ -26,8 +26,8 @@
       "label": "Wall below sill or above opening"
     },
     "cad_ground_floor_structural_source": {
-      "hex": "#57534b",
-      "label": "Exact concrete/structural CAD source"
+      "hex": "#dedbd3",
+      "label": "Exact concrete/structural CAD core with editable interior plaster finish"
     },
     "facade_brick_beerse_klinker": {
       "hex": "#704638",

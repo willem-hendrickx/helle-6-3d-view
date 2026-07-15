@@ -13,9 +13,9 @@
         }
       }
     </script>
-    <script type="module" crossorigin src="./assets/main-CGL-KIU4.js"></script>
+    <script type="module" crossorigin src="./assets/main-Bwh36x_O.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill-CSRv37U6.js">
-    <link rel="stylesheet" crossorigin href="./assets/main-DBj_3Rww.css">
+    <link rel="stylesheet" crossorigin href="./assets/main-C33qh65b.css">
   </head>
   <body>
     <main class="app-shell">
@@ -75,6 +75,10 @@
               <span id="selectedMaterialName"></span>
               <small id="selectedObjectSource"></small>
             </div>
+            <div class="material-scope-control" role="group" aria-label="Bereik van materiaalwijziging">
+              <button id="materialScopeObject" type="button" class="active" aria-pressed="true">Dit onderdeel</button>
+              <button id="materialScopeAll" type="button" aria-pressed="false">Alle gelijke</button>
+            </div>
             <label class="material-control-row" for="materialColorInput">
               <span>Kleurtint</span>
               <input id="materialColorInput" type="color" value="#ffffff" />
@@ -84,7 +88,7 @@
               <input id="materialRoughnessInput" type="range" min="0" max="1" step="0.01" value="0.8" />
               <output id="materialRoughnessValue" for="materialRoughnessInput">0.80</output>
             </label>
-            <p class="material-scope-note">De wijziging geldt voor alle CAD-vlakken met hetzelfde materiaal.</p>
+            <p id="materialScopeNote" class="material-scope-note">Alleen dit CAD-onderdeel wordt aangepast.</p>
             <button id="materialResetButton" class="material-reset-button" type="button">Origineel materiaal</button>
           </div>
         </div>

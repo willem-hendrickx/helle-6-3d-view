@@ -107,7 +107,7 @@
       "label": "Beerse klinker rijnformaat wildverband - PDF material slot"
     }
   },
-  "object_count": 326,
+  "object_count": 327,
   "object_type_counts": {
     "first_floor_site_aligned_cad_wall_mass_no_openings": 155,
     "first_floor_window_below_sill_exact_wall_leaf": 27,
@@ -120,12 +120,13 @@
     "first_floor_door_exact_header": 7,
     "first_floor_door_leaf_exact_cad_swing_plane": 7,
     "first_floor_structural_slab_exact_section_and_plan": 1,
+    "ground_floor_ceiling_finish_exact_cad_boundary": 1,
     "first_floor_slab_exterior_brick_fascia_exact_cad_outline": 1,
     "first_floor_room_floor_finish_exact_cad_boundary": 7,
     "first_floor_door_threshold_exact_plan_gap": 7,
     "first_to_attic_exact_CAD_tread_or_arrival": 15
   },
-  "total_vertices": 6638,
+  "total_vertices": 6704,
   "total_faces": 3414,
   "total_line_segments": 617,
   "window_count": 10,
@@ -62144,19 +62145,9 @@
       ],
       "faces": [
         [
-          2,
-          1,
-          0
-        ],
-        [
           3,
           4,
           5
-        ],
-        [
-          8,
-          7,
-          6
         ],
         [
           9,
@@ -62164,19 +62155,9 @@
           11
         ],
         [
-          14,
-          13,
-          12
-        ],
-        [
           15,
           16,
           17
-        ],
-        [
-          20,
-          19,
-          18
         ],
         [
           21,
@@ -62184,19 +62165,9 @@
           23
         ],
         [
-          26,
-          25,
-          24
-        ],
-        [
           27,
           28,
           29
-        ],
-        [
-          32,
-          31,
-          30
         ],
         [
           33,
@@ -62204,19 +62175,9 @@
           35
         ],
         [
-          38,
-          37,
-          36
-        ],
-        [
           39,
           40,
           41
-        ],
-        [
-          44,
-          43,
-          42
         ],
         [
           45,
@@ -62224,19 +62185,9 @@
           47
         ],
         [
-          50,
-          49,
-          48
-        ],
-        [
           51,
           52,
           53
-        ],
-        [
-          56,
-          55,
-          54
         ],
         [
           57,
@@ -62244,19 +62195,9 @@
           59
         ],
         [
-          62,
-          61,
-          60
-        ],
-        [
           63,
           64,
           65
-        ],
-        [
-          68,
-          67,
-          66
         ],
         [
           69,
@@ -62264,19 +62205,9 @@
           71
         ],
         [
-          74,
-          73,
-          72
-        ],
-        [
           75,
           76,
           77
-        ],
-        [
-          80,
-          79,
-          78
         ],
         [
           81,
@@ -62284,19 +62215,9 @@
           83
         ],
         [
-          86,
-          85,
-          84
-        ],
-        [
           87,
           88,
           89
-        ],
-        [
-          92,
-          91,
-          90
         ],
         [
           93,
@@ -62304,19 +62225,9 @@
           95
         ],
         [
-          98,
-          97,
-          96
-        ],
-        [
           99,
           100,
           101
-        ],
-        [
-          104,
-          103,
-          102
         ],
         [
           105,
@@ -62324,19 +62235,9 @@
           107
         ],
         [
-          110,
-          109,
-          108
-        ],
-        [
           111,
           112,
           113
-        ],
-        [
-          116,
-          115,
-          114
         ],
         [
           117,
@@ -62344,19 +62245,9 @@
           119
         ],
         [
-          122,
-          121,
-          120
-        ],
-        [
           123,
           124,
           125
-        ],
-        [
-          128,
-          127,
-          126
         ],
         [
           129,
@@ -62389,9 +62280,623 @@
         ]
       ],
       "vertex_count": 148,
-      "face_count": 48,
+      "face_count": 26,
       "mesh_status": "source_bound_first_floor_slab_exact_vertical_section_and_plan_outline",
       "mesh_permission": "technical_3d_preview_ready_layers_remain_separate_metadata_slots"
+    },
+    {
+      "validation_id": "GF-CEILING",
+      "stable_object_id": "ground_floor:ceiling:GF-CEILING",
+      "label": "Volledig plafond gelijkvloers met exact CAD-trapgat",
+      "object_type": "ground_floor_ceiling_finish_exact_cad_boundary",
+      "material_key": "ground_floor_ceiling_plaster",
+      "material": {
+        "hex": "#f1efe9",
+        "label": "Plafondpleister gelijkvloers"
+      },
+      "source_entity_ids": [
+        "first_floor_plan:0239",
+        "first_floor_plan:0261",
+        "first_floor_plan:0264",
+        "first_floor_plan:0276",
+        "first_floor_plan:0277",
+        "first_floor_plan:0327",
+        "first_floor_plan:0330",
+        "first_floor_plan:0333",
+        "first_floor_plan:0334",
+        "first_floor_plan:0337",
+        "first_floor_plan:0338",
+        "first_floor_plan:0639",
+        "first_floor_plan:0642",
+        "first_floor_plan:0644",
+        "first_floor_plan:0645",
+        "first_floor_plan:0849",
+        "first_floor_plan:0852",
+        "first_floor_plan:0855",
+        "first_floor_plan:0856",
+        "first_floor_plan:0857",
+        "first_floor_plan:0858",
+        "first_floor_plan:0975",
+        "first_floor_plan:1078",
+        "first_floor_plan:1240",
+        "first_floor_plan:1301",
+        "first_floor_plan:2301",
+        "first_floor_plan:2304",
+        "first_floor_plan:2307",
+        "first_floor_plan:2308",
+        "first_floor_plan:2310",
+        "first_floor_plan:2311",
+        "first_floor_plan:2476",
+        "first_floor_plan:2479",
+        "first_floor_plan:2480",
+        "first_floor_plan:2481",
+        "first_floor_plan:2616",
+        "first_floor_plan:2617",
+        "reference_15_drawing_16_15:0045",
+        "reference_15_drawing_16_15:0046",
+        "reference_15_drawing_16_15:0047",
+        "reference_15_drawing_16_15:0048",
+        "reference_15_drawing_16_15:0049",
+        "reference_15_drawing_16_15:0050",
+        "reference_15_drawing_16_15:0051",
+        "reference_15_drawing_16_15:0053",
+        "reference_15_drawing_16_15:0725",
+        "reference_15_drawing_16_15:0726",
+        "reference_15_drawing_16_15:0727",
+        "reference_15_drawing_16_15:0728",
+        "reference_15_drawing_16_15:0729",
+        "reference_15_drawing_16_15:0730",
+        "reference_15_drawing_16_15:0731",
+        "reference_15_drawing_16_15:0732",
+        "reference_15_drawing_16_15:0733",
+        "reference_15_drawing_16_15:0734",
+        "reference_15_drawing_16_15:0736",
+        "reference_15_drawing_16_15:0739",
+        "reference_15_drawing_16_15:0740",
+        "reference_15_drawing_16_15:0741",
+        "reference_15_drawing_16_15:0744"
+      ],
+      "source_entity_count": 60,
+      "source_polygon_rings_m": {
+        "exterior": [
+          [
+            6.1191,
+            2.2001
+          ],
+          [
+            6.1191,
+            13.2301
+          ],
+          [
+            6.2091,
+            13.3201
+          ],
+          [
+            15.3691,
+            13.3201
+          ],
+          [
+            15.4591,
+            13.2301
+          ],
+          [
+            15.4591,
+            10.2301
+          ],
+          [
+            15.3691,
+            10.2301
+          ],
+          [
+            15.3691,
+            10.1401
+          ],
+          [
+            15.0191,
+            10.1401
+          ],
+          [
+            15.0191,
+            5.4001
+          ],
+          [
+            15.3691,
+            5.4001
+          ],
+          [
+            15.3691,
+            5.3101
+          ],
+          [
+            15.4591,
+            5.3101
+          ],
+          [
+            15.4591,
+            2.2001
+          ],
+          [
+            15.3691,
+            2.1101
+          ],
+          [
+            6.2091,
+            2.1101
+          ]
+        ],
+        "holes": [
+          [
+            [
+              13.4791,
+              8.5781
+            ],
+            [
+              11.3791,
+              8.5781
+            ],
+            [
+              11.3791,
+              6.6401
+            ],
+            [
+              13.4791,
+              6.6401
+            ]
+          ]
+        ]
+      },
+      "area_m2": 98.5136,
+      "base_z_m": 2.7,
+      "top_z_m": 2.7,
+      "vertices": [
+        [
+          -2.56675,
+          1.27248,
+          2.7
+        ],
+        [
+          -2.56675,
+          -1.48503,
+          2.7
+        ],
+        [
+          -1.25175,
+          0.10947,
+          2.7
+        ],
+        [
+          -2.56675,
+          1.27248,
+          2.7
+        ],
+        [
+          -1.25175,
+          0.10947,
+          2.7
+        ],
+        [
+          -2.54425,
+          1.29497,
+          2.7
+        ],
+        [
+          -2.54425,
+          1.29497,
+          2.7
+        ],
+        [
+          -1.25175,
+          0.10947,
+          2.7
+        ],
+        [
+          -0.25425,
+          1.29497,
+          2.7
+        ],
+        [
+          -0.25425,
+          1.29497,
+          2.7
+        ],
+        [
+          -1.25175,
+          0.10947,
+          2.7
+        ],
+        [
+          -0.34175,
+          0.49997,
+          2.7
+        ],
+        [
+          -0.25425,
+          1.29497,
+          2.7
+        ],
+        [
+          -0.34175,
+          0.49997,
+          2.7
+        ],
+        [
+          -0.23175,
+          1.27248,
+          2.7
+        ],
+        [
+          -0.23175,
+          1.27248,
+          2.7
+        ],
+        [
+          -0.34175,
+          0.49997,
+          2.7
+        ],
+        [
+          -0.25425,
+          0.52248,
+          2.7
+        ],
+        [
+          -0.23175,
+          1.27248,
+          2.7
+        ],
+        [
+          -0.25425,
+          0.52248,
+          2.7
+        ],
+        [
+          -0.23175,
+          0.52248,
+          2.7
+        ],
+        [
+          -0.25425,
+          -1.50753,
+          2.7
+        ],
+        [
+          -0.23175,
+          -1.48503,
+          2.7
+        ],
+        [
+          -0.34175,
+          -0.68502,
+          2.7
+        ],
+        [
+          -0.25425,
+          -1.50753,
+          2.7
+        ],
+        [
+          -0.34175,
+          -0.68502,
+          2.7
+        ],
+        [
+          -1.25175,
+          -0.37503,
+          2.7
+        ],
+        [
+          -0.25425,
+          -1.50753,
+          2.7
+        ],
+        [
+          -1.25175,
+          -0.37503,
+          2.7
+        ],
+        [
+          -2.54425,
+          -1.50753,
+          2.7
+        ],
+        [
+          -2.54425,
+          -1.50753,
+          2.7
+        ],
+        [
+          -1.25175,
+          -0.37503,
+          2.7
+        ],
+        [
+          -2.56675,
+          -1.48503,
+          2.7
+        ],
+        [
+          -2.56675,
+          -1.48503,
+          2.7
+        ],
+        [
+          -1.25175,
+          -0.37503,
+          2.7
+        ],
+        [
+          -1.25175,
+          0.10947,
+          2.7
+        ],
+        [
+          -1.25175,
+          0.10947,
+          2.7
+        ],
+        [
+          -0.72675,
+          0.10947,
+          2.7
+        ],
+        [
+          -0.34175,
+          0.49997,
+          2.7
+        ],
+        [
+          -0.34175,
+          0.49997,
+          2.7
+        ],
+        [
+          -0.72675,
+          0.10947,
+          2.7
+        ],
+        [
+          -0.25425,
+          0.49997,
+          2.7
+        ],
+        [
+          -0.34175,
+          0.49997,
+          2.7
+        ],
+        [
+          -0.25425,
+          0.49997,
+          2.7
+        ],
+        [
+          -0.25425,
+          0.52248,
+          2.7
+        ],
+        [
+          -0.23175,
+          -0.70753,
+          2.7
+        ],
+        [
+          -0.25425,
+          -0.70753,
+          2.7
+        ],
+        [
+          -0.23175,
+          -1.48503,
+          2.7
+        ],
+        [
+          -0.23175,
+          -1.48503,
+          2.7
+        ],
+        [
+          -0.25425,
+          -0.70753,
+          2.7
+        ],
+        [
+          -0.34175,
+          -0.68502,
+          2.7
+        ],
+        [
+          -0.34175,
+          -0.68502,
+          2.7
+        ],
+        [
+          -0.25425,
+          -0.70753,
+          2.7
+        ],
+        [
+          -0.25425,
+          -0.68502,
+          2.7
+        ],
+        [
+          -0.34175,
+          -0.68502,
+          2.7
+        ],
+        [
+          -0.25425,
+          -0.68502,
+          2.7
+        ],
+        [
+          -0.72675,
+          -0.37503,
+          2.7
+        ],
+        [
+          -0.34175,
+          -0.68502,
+          2.7
+        ],
+        [
+          -0.72675,
+          -0.37503,
+          2.7
+        ],
+        [
+          -1.25175,
+          -0.37503,
+          2.7
+        ],
+        [
+          -0.72675,
+          0.10947,
+          2.7
+        ],
+        [
+          -0.72675,
+          -0.37503,
+          2.7
+        ],
+        [
+          -0.25425,
+          -0.68502,
+          2.7
+        ],
+        [
+          -0.72675,
+          0.10947,
+          2.7
+        ],
+        [
+          -0.25425,
+          -0.68502,
+          2.7
+        ],
+        [
+          -0.25425,
+          0.49997,
+          2.7
+        ]
+      ],
+      "faces": [
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          5,
+          4,
+          3
+        ],
+        [
+          8,
+          7,
+          6
+        ],
+        [
+          11,
+          10,
+          9
+        ],
+        [
+          14,
+          13,
+          12
+        ],
+        [
+          17,
+          16,
+          15
+        ],
+        [
+          20,
+          19,
+          18
+        ],
+        [
+          23,
+          22,
+          21
+        ],
+        [
+          26,
+          25,
+          24
+        ],
+        [
+          29,
+          28,
+          27
+        ],
+        [
+          32,
+          31,
+          30
+        ],
+        [
+          35,
+          34,
+          33
+        ],
+        [
+          38,
+          37,
+          36
+        ],
+        [
+          41,
+          40,
+          39
+        ],
+        [
+          44,
+          43,
+          42
+        ],
+        [
+          47,
+          46,
+          45
+        ],
+        [
+          50,
+          49,
+          48
+        ],
+        [
+          53,
+          52,
+          51
+        ],
+        [
+          56,
+          55,
+          54
+        ],
+        [
+          59,
+          58,
+          57
+        ],
+        [
+          62,
+          61,
+          60
+        ],
+        [
+          65,
+          64,
+          63
+        ]
+      ],
+      "vertex_count": 66,
+      "face_count": 22,
+      "stair_void_status": "exact_CAD_ground_to_first_opening_preserved_in_ceiling_finish",
+      "mesh_status": "source_bound_ground_floor_ceiling_exact_section_and_plan_outline",
+      "mesh_permission": "visual_3d_ready_editable_ceiling_material"
     },
     {
       "validation_id": "F1-SLAB-FACADE",
