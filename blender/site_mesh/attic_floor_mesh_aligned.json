@@ -1,7 +1,8 @@
 {
   "status": "attic_floor_exact_CAD_mesh_site_aligned",
-  "purpose": "Close the missing first-floor-to-attic floor stack using exact CAD plan limits, exact stair opening and section AB levels.",
+  "purpose": "Close the complete first-floor ceiling using the full aligned first-floor CAD outline, the separately aligned first-to-attic CAD stair opening and section AB levels.",
   "source_files": [
+    "blender\\site_mesh\\first_floor_room_floor_mesh_aligned.json",
     "blender\\semantic_objects\\attic_floor_boundary_analysis.json",
     "blender\\semantic_objects\\section_ab_vertical_stack_contract.json",
     "blender\\semantic_objects\\site_house_alignment_dimension_transform.json",
@@ -16,18 +17,38 @@
       "y": 9.1903
     }
   },
-  "alignment_transform": {
-    "scale": 0.25,
-    "rotation_deg": 0.0,
-    "translate_x": 3.6468249999999998,
-    "translate_y": 6.755625
+  "alignment_transforms": {
+    "first_floor_outer_boundary": {
+      "first_floor_drawing_sheet_offset_to_ground_floor_source_m": {
+        "x_m": -4.4532,
+        "y_m": 1.5985
+      },
+      "validated_site_house_transform": {
+        "scale": 0.25,
+        "rotation_deg": 0.0,
+        "translate_x": 3.6468249999999998,
+        "translate_y": 6.755625
+      },
+      "source_extent_crosscheck_deltas_m": {
+        "min_x_m": 0.0,
+        "min_y_m": 0.0,
+        "max_x_m": 0.0,
+        "max_y_m": 0.0
+      }
+    },
+    "roof_plan_stair_void": {
+      "scale": 0.25,
+      "rotation_deg": 0.0,
+      "translate_x": 3.6468249999999998,
+      "translate_y": 6.755625
+    }
   },
   "object_count": 1,
   "objects": [
     {
       "validation_id": "ATTIC-SLAB",
       "stable_object_id": "attic:structure:ATTIC-SLAB",
-      "label": "Exacte zoldervloer met CAD-trapgat",
+      "label": "Volledige zoldervloer / plafond eerste verdieping met exact CAD-trapgat",
       "object_type": "attic_structural_slab_exact_section_and_plan",
       "material_key": "attic_structural_slab",
       "material": {
@@ -35,6 +56,66 @@
         "label": "Zoldervloeropbouw - bewerkbare afwerking later te kiezen"
       },
       "source_entity_ids": [
+        "first_floor_plan:0239",
+        "first_floor_plan:0261",
+        "first_floor_plan:0264",
+        "first_floor_plan:0276",
+        "first_floor_plan:0277",
+        "first_floor_plan:0327",
+        "first_floor_plan:0330",
+        "first_floor_plan:0333",
+        "first_floor_plan:0334",
+        "first_floor_plan:0337",
+        "first_floor_plan:0338",
+        "first_floor_plan:0639",
+        "first_floor_plan:0642",
+        "first_floor_plan:0644",
+        "first_floor_plan:0645",
+        "first_floor_plan:0849",
+        "first_floor_plan:0852",
+        "first_floor_plan:0855",
+        "first_floor_plan:0856",
+        "first_floor_plan:0857",
+        "first_floor_plan:0858",
+        "first_floor_plan:0975",
+        "first_floor_plan:1078",
+        "first_floor_plan:1240",
+        "first_floor_plan:1301",
+        "first_floor_plan:2301",
+        "first_floor_plan:2304",
+        "first_floor_plan:2307",
+        "first_floor_plan:2308",
+        "first_floor_plan:2310",
+        "first_floor_plan:2311",
+        "first_floor_plan:2476",
+        "first_floor_plan:2479",
+        "first_floor_plan:2480",
+        "first_floor_plan:2481",
+        "first_floor_plan:2616",
+        "first_floor_plan:2617",
+        "reference_15_drawing_16_15:0045",
+        "reference_15_drawing_16_15:0046",
+        "reference_15_drawing_16_15:0047",
+        "reference_15_drawing_16_15:0048",
+        "reference_15_drawing_16_15:0049",
+        "reference_15_drawing_16_15:0050",
+        "reference_15_drawing_16_15:0051",
+        "reference_15_drawing_16_15:0053",
+        "reference_15_drawing_16_15:0725",
+        "reference_15_drawing_16_15:0726",
+        "reference_15_drawing_16_15:0727",
+        "reference_15_drawing_16_15:0728",
+        "reference_15_drawing_16_15:0729",
+        "reference_15_drawing_16_15:0730",
+        "reference_15_drawing_16_15:0731",
+        "reference_15_drawing_16_15:0732",
+        "reference_15_drawing_16_15:0733",
+        "reference_15_drawing_16_15:0734",
+        "reference_15_drawing_16_15:0736",
+        "reference_15_drawing_16_15:0739",
+        "reference_15_drawing_16_15:0740",
+        "reference_15_drawing_16_15:0741",
+        "reference_15_drawing_16_15:0744",
         "reference_15_drawing_16_15:0752",
         "reference_15_drawing_16_15:0754",
         "reference_15_drawing_16_15:0757",
@@ -44,10 +125,6 @@
         "reference_15_drawing_16_15:0778",
         "reference_15_drawing_16_15:1145",
         "reference_15_drawing_16_15:1433",
-        "roof_plan:0003",
-        "roof_plan:0011",
-        "roof_plan:0012",
-        "roof_plan:0013",
         "roof_plan:0114",
         "roof_plan:0115",
         "roof_plan:0116",
@@ -104,15 +181,6 @@
         "roof_plan:0167",
         "roof_plan:0168",
         "roof_plan:0169",
-        "roof_plan:0230",
-        "roof_plan:0231",
-        "roof_plan:0243",
-        "roof_plan:0860",
-        "roof_plan:0861",
-        "roof_plan:0862",
-        "roof_plan:0874",
-        "roof_plan:2651",
-        "roof_plan:2664",
         "roof_plan:2687",
         "roof_plan:2688",
         "roof_plan:2689",
@@ -129,86 +197,338 @@
         "roof_plan:2700",
         "roof_plan:2701"
       ],
-      "source_entity_count": 93,
-      "source_polygon_rings_m": {
+      "source_entity_count": 140,
+      "source_polygon_components": {
+        "outer_boundary": {
+          "drawing": "first_floor_plan",
+          "coordinate_frame": "first_floor_source_m",
+          "points_m": [
+            [
+              6.1191,
+              2.2001
+            ],
+            [
+              6.1191,
+              13.2301
+            ],
+            [
+              6.2091,
+              13.3201
+            ],
+            [
+              15.3691,
+              13.3201
+            ],
+            [
+              15.4591,
+              13.2301
+            ],
+            [
+              15.4591,
+              10.2301
+            ],
+            [
+              15.3691,
+              10.2301
+            ],
+            [
+              15.3691,
+              10.1401
+            ],
+            [
+              15.0191,
+              10.1401
+            ],
+            [
+              15.0191,
+              5.4001
+            ],
+            [
+              15.3691,
+              5.4001
+            ],
+            [
+              15.3691,
+              5.3101
+            ],
+            [
+              15.4591,
+              5.3101
+            ],
+            [
+              15.4591,
+              2.2001
+            ],
+            [
+              15.3691,
+              2.1101
+            ],
+            [
+              6.2091,
+              2.1101
+            ]
+          ],
+          "source_entity_ids": [
+            "first_floor_plan:0239",
+            "first_floor_plan:0261",
+            "first_floor_plan:0264",
+            "first_floor_plan:0276",
+            "first_floor_plan:0277",
+            "first_floor_plan:0327",
+            "first_floor_plan:0330",
+            "first_floor_plan:0333",
+            "first_floor_plan:0334",
+            "first_floor_plan:0337",
+            "first_floor_plan:0338",
+            "first_floor_plan:0639",
+            "first_floor_plan:0642",
+            "first_floor_plan:0644",
+            "first_floor_plan:0645",
+            "first_floor_plan:0849",
+            "first_floor_plan:0852",
+            "first_floor_plan:0855",
+            "first_floor_plan:0856",
+            "first_floor_plan:0857",
+            "first_floor_plan:0858",
+            "first_floor_plan:0975",
+            "first_floor_plan:1078",
+            "first_floor_plan:1240",
+            "first_floor_plan:1301",
+            "first_floor_plan:2301",
+            "first_floor_plan:2304",
+            "first_floor_plan:2307",
+            "first_floor_plan:2308",
+            "first_floor_plan:2310",
+            "first_floor_plan:2311",
+            "first_floor_plan:2476",
+            "first_floor_plan:2479",
+            "first_floor_plan:2480",
+            "first_floor_plan:2481",
+            "first_floor_plan:2616",
+            "first_floor_plan:2617",
+            "reference_15_drawing_16_15:0045",
+            "reference_15_drawing_16_15:0046",
+            "reference_15_drawing_16_15:0047",
+            "reference_15_drawing_16_15:0048",
+            "reference_15_drawing_16_15:0049",
+            "reference_15_drawing_16_15:0050",
+            "reference_15_drawing_16_15:0051",
+            "reference_15_drawing_16_15:0053",
+            "reference_15_drawing_16_15:0725",
+            "reference_15_drawing_16_15:0726",
+            "reference_15_drawing_16_15:0727",
+            "reference_15_drawing_16_15:0728",
+            "reference_15_drawing_16_15:0729",
+            "reference_15_drawing_16_15:0730",
+            "reference_15_drawing_16_15:0731",
+            "reference_15_drawing_16_15:0732",
+            "reference_15_drawing_16_15:0733",
+            "reference_15_drawing_16_15:0734",
+            "reference_15_drawing_16_15:0736",
+            "reference_15_drawing_16_15:0739",
+            "reference_15_drawing_16_15:0740",
+            "reference_15_drawing_16_15:0741",
+            "reference_15_drawing_16_15:0744"
+          ]
+        },
+        "stair_void": {
+          "drawing": "roof_plan",
+          "coordinate_frame": "ground_floor_aligned_source_m",
+          "points_m": [
+            [
+              6.9259,
+              6.6401
+            ],
+            [
+              9.0259,
+              6.6401
+            ],
+            [
+              9.0259,
+              8.5781
+            ],
+            [
+              6.9259,
+              8.5781
+            ]
+          ],
+          "source_entity_ids": [
+            "roof_plan:0114",
+            "roof_plan:0115",
+            "roof_plan:0116",
+            "roof_plan:0117",
+            "roof_plan:0118",
+            "roof_plan:0119",
+            "roof_plan:0120",
+            "roof_plan:0121",
+            "roof_plan:0122",
+            "roof_plan:0123",
+            "roof_plan:0124",
+            "roof_plan:0125",
+            "roof_plan:0126",
+            "roof_plan:0127",
+            "roof_plan:0128",
+            "roof_plan:0129",
+            "roof_plan:0130",
+            "roof_plan:0131",
+            "roof_plan:0132",
+            "roof_plan:0133",
+            "roof_plan:0134",
+            "roof_plan:0135",
+            "roof_plan:0136",
+            "roof_plan:0137",
+            "roof_plan:0138",
+            "roof_plan:0139",
+            "roof_plan:0140",
+            "roof_plan:0141",
+            "roof_plan:0142",
+            "roof_plan:0143",
+            "roof_plan:0144",
+            "roof_plan:0145",
+            "roof_plan:0146",
+            "roof_plan:0147",
+            "roof_plan:0148",
+            "roof_plan:0149",
+            "roof_plan:0150",
+            "roof_plan:0151",
+            "roof_plan:0152",
+            "roof_plan:0153",
+            "roof_plan:0154",
+            "roof_plan:0155",
+            "roof_plan:0156",
+            "roof_plan:0157",
+            "roof_plan:0158",
+            "roof_plan:0159",
+            "roof_plan:0160",
+            "roof_plan:0161",
+            "roof_plan:0162",
+            "roof_plan:0163",
+            "roof_plan:0164",
+            "roof_plan:0165",
+            "roof_plan:0166",
+            "roof_plan:0167",
+            "roof_plan:0168",
+            "roof_plan:0169",
+            "roof_plan:2687",
+            "roof_plan:2688",
+            "roof_plan:2689",
+            "roof_plan:2690",
+            "roof_plan:2691",
+            "roof_plan:2692",
+            "roof_plan:2693",
+            "roof_plan:2694",
+            "roof_plan:2695",
+            "roof_plan:2696",
+            "roof_plan:2697",
+            "roof_plan:2698",
+            "roof_plan:2699",
+            "roof_plan:2700",
+            "roof_plan:2701"
+          ]
+        }
+      },
+      "mesh_polygon_rings_m": {
         "exterior": [
           [
-            3.0749,
-            2.5001
+            -2.56675,
+            -1.48503
           ],
           [
-            3.0749,
-            12.9301
+            -2.56675,
+            1.27248
           ],
           [
-            9.597,
-            12.9301
+            -2.54425,
+            1.29497
           ],
           [
-            9.597,
-            2.5001
+            -0.25425,
+            1.29497
+          ],
+          [
+            -0.23175,
+            1.27248
+          ],
+          [
+            -0.23175,
+            0.52248
+          ],
+          [
+            -0.25425,
+            0.52248
+          ],
+          [
+            -0.25425,
+            0.49997
+          ],
+          [
+            -0.34175,
+            0.49997
+          ],
+          [
+            -0.34175,
+            -0.68502
+          ],
+          [
+            -0.25425,
+            -0.68502
+          ],
+          [
+            -0.25425,
+            -0.70753
+          ],
+          [
+            -0.23175,
+            -0.70753
+          ],
+          [
+            -0.23175,
+            -1.48503
+          ],
+          [
+            -0.25425,
+            -1.50753
+          ],
+          [
+            -2.54425,
+            -1.50753
           ]
         ],
         "holes": [
           [
             [
-              9.0259,
-              8.5781
+              -1.25175,
+              -0.77465
             ],
             [
-              6.9259,
-              8.5781
+              -0.72675,
+              -0.77465
             ],
             [
-              6.9259,
-              6.6401
+              -0.72675,
+              -0.29015
             ],
             [
-              9.0259,
-              6.6401
+              -1.25175,
+              -0.29015
             ]
           ]
         ]
       },
-      "area_m2": 63.9557,
+      "area_m2": 98.51361,
       "base_z_m": 5.57,
       "top_z_m": 5.87,
       "thickness_m": 0.3,
       "stair_void_status": "exact_CAD_first_to_attic_opening_subtracted_through_full_slab",
       "vertices": [
         [
-          -2.2145,
-          0.79785,
+          -2.56675,
+          1.27248,
           5.57
         ],
         [
-          -2.2145,
-          -1.80965,
-          5.57
-        ],
-        [
-          -1.25175,
-          -0.29015,
-          5.57
-        ],
-        [
-          -2.2145,
-          0.79785,
-          5.87
-        ],
-        [
-          -2.2145,
-          -1.80965,
-          5.87
-        ],
-        [
-          -1.25175,
-          -0.29015,
-          5.87
-        ],
-        [
-          -2.2145,
-          0.79785,
+          -2.56675,
+          -1.48503,
           5.57
         ],
         [
@@ -217,13 +537,13 @@
           5.57
         ],
         [
-          -0.58397,
-          0.79785,
-          5.57
+          -2.56675,
+          1.27248,
+          5.87
         ],
         [
-          -2.2145,
-          0.79785,
+          -2.56675,
+          -1.48503,
           5.87
         ],
         [
@@ -232,13 +552,8 @@
           5.87
         ],
         [
-          -0.58397,
-          0.79785,
-          5.87
-        ],
-        [
-          -0.58397,
-          0.79785,
+          -2.56675,
+          1.27248,
           5.57
         ],
         [
@@ -247,13 +562,13 @@
           5.57
         ],
         [
-          -0.72675,
-          -0.29015,
+          -2.54425,
+          1.29497,
           5.57
         ],
         [
-          -0.58397,
-          0.79785,
+          -2.56675,
+          1.27248,
           5.87
         ],
         [
@@ -262,138 +577,13 @@
           5.87
         ],
         [
-          -0.72675,
-          -0.29015,
+          -2.54425,
+          1.29497,
           5.87
         ],
         [
-          -0.58397,
-          0.79785,
-          5.57
-        ],
-        [
-          -0.72675,
-          -0.29015,
-          5.57
-        ],
-        [
-          -0.58397,
-          -1.80965,
-          5.57
-        ],
-        [
-          -0.58397,
-          0.79785,
-          5.87
-        ],
-        [
-          -0.72675,
-          -0.29015,
-          5.87
-        ],
-        [
-          -0.58397,
-          -1.80965,
-          5.87
-        ],
-        [
-          -0.58397,
-          -1.80965,
-          5.57
-        ],
-        [
-          -0.72675,
-          -0.29015,
-          5.57
-        ],
-        [
-          -0.72675,
-          -0.77465,
-          5.57
-        ],
-        [
-          -0.58397,
-          -1.80965,
-          5.87
-        ],
-        [
-          -0.72675,
-          -0.29015,
-          5.87
-        ],
-        [
-          -0.72675,
-          -0.77465,
-          5.87
-        ],
-        [
-          -0.58397,
-          -1.80965,
-          5.57
-        ],
-        [
-          -0.72675,
-          -0.77465,
-          5.57
-        ],
-        [
-          -1.25175,
-          -0.77465,
-          5.57
-        ],
-        [
-          -0.58397,
-          -1.80965,
-          5.87
-        ],
-        [
-          -0.72675,
-          -0.77465,
-          5.87
-        ],
-        [
-          -1.25175,
-          -0.77465,
-          5.87
-        ],
-        [
-          -0.58397,
-          -1.80965,
-          5.57
-        ],
-        [
-          -1.25175,
-          -0.77465,
-          5.57
-        ],
-        [
-          -2.2145,
-          -1.80965,
-          5.57
-        ],
-        [
-          -0.58397,
-          -1.80965,
-          5.87
-        ],
-        [
-          -1.25175,
-          -0.77465,
-          5.87
-        ],
-        [
-          -2.2145,
-          -1.80965,
-          5.87
-        ],
-        [
-          -2.2145,
-          -1.80965,
-          5.57
-        ],
-        [
-          -1.25175,
-          -0.77465,
+          -2.54425,
+          1.29497,
           5.57
         ],
         [
@@ -402,133 +592,13 @@
           5.57
         ],
         [
-          -2.2145,
-          -1.80965,
-          5.87
-        ],
-        [
-          -1.25175,
-          -0.77465,
-          5.87
-        ],
-        [
-          -1.25175,
-          -0.29015,
-          5.87
-        ],
-        [
-          -2.2145,
-          -1.80965,
+          -0.34175,
+          0.49997,
           5.57
         ],
         [
-          -2.2145,
-          0.79785,
-          5.57
-        ],
-        [
-          -2.2145,
-          0.79785,
-          5.87
-        ],
-        [
-          -2.2145,
-          -1.80965,
-          5.87
-        ],
-        [
-          -2.2145,
-          0.79785,
-          5.57
-        ],
-        [
-          -0.58397,
-          0.79785,
-          5.57
-        ],
-        [
-          -0.58397,
-          0.79785,
-          5.87
-        ],
-        [
-          -2.2145,
-          0.79785,
-          5.87
-        ],
-        [
-          -0.58397,
-          0.79785,
-          5.57
-        ],
-        [
-          -0.58397,
-          -1.80965,
-          5.57
-        ],
-        [
-          -0.58397,
-          -1.80965,
-          5.87
-        ],
-        [
-          -0.58397,
-          0.79785,
-          5.87
-        ],
-        [
-          -0.58397,
-          -1.80965,
-          5.57
-        ],
-        [
-          -2.2145,
-          -1.80965,
-          5.57
-        ],
-        [
-          -2.2145,
-          -1.80965,
-          5.87
-        ],
-        [
-          -0.58397,
-          -1.80965,
-          5.87
-        ],
-        [
-          -0.72675,
-          -0.29015,
-          5.57
-        ],
-        [
-          -1.25175,
-          -0.29015,
-          5.57
-        ],
-        [
-          -1.25175,
-          -0.29015,
-          5.87
-        ],
-        [
-          -0.72675,
-          -0.29015,
-          5.87
-        ],
-        [
-          -1.25175,
-          -0.29015,
-          5.57
-        ],
-        [
-          -1.25175,
-          -0.77465,
-          5.57
-        ],
-        [
-          -1.25175,
-          -0.77465,
+          -2.54425,
+          1.29497,
           5.87
         ],
         [
@@ -537,14 +607,179 @@
           5.87
         ],
         [
-          -1.25175,
-          -0.77465,
+          -0.34175,
+          0.49997,
+          5.87
+        ],
+        [
+          -2.54425,
+          1.29497,
+          5.57
+        ],
+        [
+          -0.34175,
+          0.49997,
+          5.57
+        ],
+        [
+          -0.25425,
+          1.29497,
+          5.57
+        ],
+        [
+          -2.54425,
+          1.29497,
+          5.87
+        ],
+        [
+          -0.34175,
+          0.49997,
+          5.87
+        ],
+        [
+          -0.25425,
+          1.29497,
+          5.87
+        ],
+        [
+          -0.25425,
+          1.29497,
+          5.57
+        ],
+        [
+          -0.34175,
+          0.49997,
+          5.57
+        ],
+        [
+          -0.23175,
+          1.27248,
+          5.57
+        ],
+        [
+          -0.25425,
+          1.29497,
+          5.87
+        ],
+        [
+          -0.34175,
+          0.49997,
+          5.87
+        ],
+        [
+          -0.23175,
+          1.27248,
+          5.87
+        ],
+        [
+          -0.23175,
+          1.27248,
+          5.57
+        ],
+        [
+          -0.34175,
+          0.49997,
+          5.57
+        ],
+        [
+          -0.25425,
+          0.52248,
+          5.57
+        ],
+        [
+          -0.23175,
+          1.27248,
+          5.87
+        ],
+        [
+          -0.34175,
+          0.49997,
+          5.87
+        ],
+        [
+          -0.25425,
+          0.52248,
+          5.87
+        ],
+        [
+          -0.23175,
+          1.27248,
+          5.57
+        ],
+        [
+          -0.25425,
+          0.52248,
+          5.57
+        ],
+        [
+          -0.23175,
+          0.52248,
+          5.57
+        ],
+        [
+          -0.23175,
+          1.27248,
+          5.87
+        ],
+        [
+          -0.25425,
+          0.52248,
+          5.87
+        ],
+        [
+          -0.23175,
+          0.52248,
+          5.87
+        ],
+        [
+          -0.25425,
+          -1.50753,
+          5.57
+        ],
+        [
+          -0.23175,
+          -1.48503,
           5.57
         ],
         [
           -0.72675,
           -0.77465,
           5.57
+        ],
+        [
+          -0.25425,
+          -1.50753,
+          5.87
+        ],
+        [
+          -0.23175,
+          -1.48503,
+          5.87
+        ],
+        [
+          -0.72675,
+          -0.77465,
+          5.87
+        ],
+        [
+          -0.25425,
+          -1.50753,
+          5.57
+        ],
+        [
+          -0.72675,
+          -0.77465,
+          5.57
+        ],
+        [
+          -1.25175,
+          -0.77465,
+          5.57
+        ],
+        [
+          -0.25425,
+          -1.50753,
+          5.87
         ],
         [
           -0.72675,
@@ -557,6 +792,416 @@
           5.87
         ],
         [
+          -0.25425,
+          -1.50753,
+          5.57
+        ],
+        [
+          -1.25175,
+          -0.77465,
+          5.57
+        ],
+        [
+          -2.54425,
+          -1.50753,
+          5.57
+        ],
+        [
+          -0.25425,
+          -1.50753,
+          5.87
+        ],
+        [
+          -1.25175,
+          -0.77465,
+          5.87
+        ],
+        [
+          -2.54425,
+          -1.50753,
+          5.87
+        ],
+        [
+          -2.54425,
+          -1.50753,
+          5.57
+        ],
+        [
+          -1.25175,
+          -0.77465,
+          5.57
+        ],
+        [
+          -2.56675,
+          -1.48503,
+          5.57
+        ],
+        [
+          -2.54425,
+          -1.50753,
+          5.87
+        ],
+        [
+          -1.25175,
+          -0.77465,
+          5.87
+        ],
+        [
+          -2.56675,
+          -1.48503,
+          5.87
+        ],
+        [
+          -2.56675,
+          -1.48503,
+          5.57
+        ],
+        [
+          -1.25175,
+          -0.77465,
+          5.57
+        ],
+        [
+          -1.25175,
+          -0.29015,
+          5.57
+        ],
+        [
+          -2.56675,
+          -1.48503,
+          5.87
+        ],
+        [
+          -1.25175,
+          -0.77465,
+          5.87
+        ],
+        [
+          -1.25175,
+          -0.29015,
+          5.87
+        ],
+        [
+          -1.25175,
+          -0.29015,
+          5.57
+        ],
+        [
+          -0.72675,
+          -0.29015,
+          5.57
+        ],
+        [
+          -0.34175,
+          0.49997,
+          5.57
+        ],
+        [
+          -1.25175,
+          -0.29015,
+          5.87
+        ],
+        [
+          -0.72675,
+          -0.29015,
+          5.87
+        ],
+        [
+          -0.34175,
+          0.49997,
+          5.87
+        ],
+        [
+          -0.34175,
+          0.49997,
+          5.57
+        ],
+        [
+          -0.72675,
+          -0.29015,
+          5.57
+        ],
+        [
+          -0.25425,
+          0.49997,
+          5.57
+        ],
+        [
+          -0.34175,
+          0.49997,
+          5.87
+        ],
+        [
+          -0.72675,
+          -0.29015,
+          5.87
+        ],
+        [
+          -0.25425,
+          0.49997,
+          5.87
+        ],
+        [
+          -0.34175,
+          0.49997,
+          5.57
+        ],
+        [
+          -0.25425,
+          0.49997,
+          5.57
+        ],
+        [
+          -0.25425,
+          0.52248,
+          5.57
+        ],
+        [
+          -0.34175,
+          0.49997,
+          5.87
+        ],
+        [
+          -0.25425,
+          0.49997,
+          5.87
+        ],
+        [
+          -0.25425,
+          0.52248,
+          5.87
+        ],
+        [
+          -0.23175,
+          -0.70753,
+          5.57
+        ],
+        [
+          -0.25425,
+          -0.70753,
+          5.57
+        ],
+        [
+          -0.23175,
+          -1.48503,
+          5.57
+        ],
+        [
+          -0.23175,
+          -0.70753,
+          5.87
+        ],
+        [
+          -0.25425,
+          -0.70753,
+          5.87
+        ],
+        [
+          -0.23175,
+          -1.48503,
+          5.87
+        ],
+        [
+          -0.23175,
+          -1.48503,
+          5.57
+        ],
+        [
+          -0.25425,
+          -0.70753,
+          5.57
+        ],
+        [
+          -0.34175,
+          -0.68502,
+          5.57
+        ],
+        [
+          -0.23175,
+          -1.48503,
+          5.87
+        ],
+        [
+          -0.25425,
+          -0.70753,
+          5.87
+        ],
+        [
+          -0.34175,
+          -0.68502,
+          5.87
+        ],
+        [
+          -0.23175,
+          -1.48503,
+          5.57
+        ],
+        [
+          -0.34175,
+          -0.68502,
+          5.57
+        ],
+        [
+          -0.72675,
+          -0.77465,
+          5.57
+        ],
+        [
+          -0.23175,
+          -1.48503,
+          5.87
+        ],
+        [
+          -0.34175,
+          -0.68502,
+          5.87
+        ],
+        [
+          -0.72675,
+          -0.77465,
+          5.87
+        ],
+        [
+          -0.72675,
+          -0.77465,
+          5.57
+        ],
+        [
+          -0.34175,
+          -0.68502,
+          5.57
+        ],
+        [
+          -0.72675,
+          -0.29015,
+          5.57
+        ],
+        [
+          -0.72675,
+          -0.77465,
+          5.87
+        ],
+        [
+          -0.34175,
+          -0.68502,
+          5.87
+        ],
+        [
+          -0.72675,
+          -0.29015,
+          5.87
+        ],
+        [
+          -0.72675,
+          -0.29015,
+          5.57
+        ],
+        [
+          -0.34175,
+          -0.68502,
+          5.57
+        ],
+        [
+          -0.25425,
+          -0.68502,
+          5.57
+        ],
+        [
+          -0.72675,
+          -0.29015,
+          5.87
+        ],
+        [
+          -0.34175,
+          -0.68502,
+          5.87
+        ],
+        [
+          -0.25425,
+          -0.68502,
+          5.87
+        ],
+        [
+          -0.72675,
+          -0.29015,
+          5.57
+        ],
+        [
+          -0.25425,
+          -0.68502,
+          5.57
+        ],
+        [
+          -0.25425,
+          0.49997,
+          5.57
+        ],
+        [
+          -0.72675,
+          -0.29015,
+          5.87
+        ],
+        [
+          -0.25425,
+          -0.68502,
+          5.87
+        ],
+        [
+          -0.25425,
+          0.49997,
+          5.87
+        ],
+        [
+          -0.25425,
+          -0.68502,
+          5.57
+        ],
+        [
+          -0.34175,
+          -0.68502,
+          5.57
+        ],
+        [
+          -0.25425,
+          -0.70753,
+          5.57
+        ],
+        [
+          -0.25425,
+          -0.68502,
+          5.87
+        ],
+        [
+          -0.34175,
+          -0.68502,
+          5.87
+        ],
+        [
+          -0.25425,
+          -0.70753,
+          5.87
+        ],
+        [
+          -1.25175,
+          -0.77465,
+          5.57
+        ],
+        [
+          -0.72675,
+          -0.77465,
+          5.57
+        ],
+        [
+          -0.72675,
+          -0.77465,
+          5.87
+        ],
+        [
+          -1.25175,
+          -0.77465,
+          5.87
+        ],
+        [
           -0.72675,
           -0.77465,
           5.57
@@ -574,6 +1219,46 @@
         [
           -0.72675,
           -0.77465,
+          5.87
+        ],
+        [
+          -0.72675,
+          -0.29015,
+          5.57
+        ],
+        [
+          -1.25175,
+          -0.29015,
+          5.57
+        ],
+        [
+          -1.25175,
+          -0.29015,
+          5.87
+        ],
+        [
+          -0.72675,
+          -0.29015,
+          5.87
+        ],
+        [
+          -1.25175,
+          -0.29015,
+          5.57
+        ],
+        [
+          -1.25175,
+          -0.77465,
+          5.57
+        ],
+        [
+          -1.25175,
+          -0.77465,
+          5.87
+        ],
+        [
+          -1.25175,
+          -0.29015,
           5.87
         ]
       ],
@@ -659,63 +1344,183 @@
           47
         ],
         [
-          48,
-          49,
           50,
-          51
+          49,
+          48
         ],
         [
+          51,
           52,
-          53,
-          54,
-          55
+          53
         ],
         [
           56,
+          55,
+          54
+        ],
+        [
           57,
           58,
           59
         ],
         [
-          60,
-          61,
           62,
-          63
+          61,
+          60
         ],
         [
+          63,
           64,
-          65,
-          66,
-          67
+          65
         ],
         [
           68,
+          67,
+          66
+        ],
+        [
           69,
           70,
           71
         ],
         [
-          72,
-          73,
           74,
-          75
+          73,
+          72
         ],
         [
+          75,
           76,
-          77,
-          78,
-          79
+          77
+        ],
+        [
+          80,
+          79,
+          78
+        ],
+        [
+          81,
+          82,
+          83
+        ],
+        [
+          86,
+          85,
+          84
+        ],
+        [
+          87,
+          88,
+          89
+        ],
+        [
+          92,
+          91,
+          90
+        ],
+        [
+          93,
+          94,
+          95
+        ],
+        [
+          98,
+          97,
+          96
+        ],
+        [
+          99,
+          100,
+          101
+        ],
+        [
+          104,
+          103,
+          102
+        ],
+        [
+          105,
+          106,
+          107
+        ],
+        [
+          110,
+          109,
+          108
+        ],
+        [
+          111,
+          112,
+          113
+        ],
+        [
+          116,
+          115,
+          114
+        ],
+        [
+          117,
+          118,
+          119
+        ],
+        [
+          122,
+          121,
+          120
+        ],
+        [
+          123,
+          124,
+          125
+        ],
+        [
+          128,
+          127,
+          126
+        ],
+        [
+          129,
+          130,
+          131
+        ],
+        [
+          132,
+          133,
+          134,
+          135
+        ],
+        [
+          136,
+          137,
+          138,
+          139
+        ],
+        [
+          140,
+          141,
+          142,
+          143
+        ],
+        [
+          144,
+          145,
+          146,
+          147
         ]
       ],
-      "vertex_count": 80,
-      "face_count": 24,
-      "mesh_status": "source_bound_attic_floor_exact_vertical_section_and_plan_outline",
+      "vertex_count": 148,
+      "face_count": 48,
+      "outer_edge_render_status": "hidden_behind_continuous_facade_masonry_no_exposed_structural_band",
+      "mesh_status": "source_bound_full_first_floor_ceiling_exact_vertical_section_and_multi_plan_alignment",
       "mesh_permission": "technical_3d_ready_finish_remains_editable"
     }
   ],
   "rules": [
+    "The slab outer boundary is the complete exact first-floor CAD outer outline, not the narrower attic usable-space rectangle.",
+    "The first-to-attic opening is transformed from its own roof-plan coordinate frame before subtraction.",
     "No inferred attic rooms or partition walls are added.",
     "The slab occupies the exact section AB interval +5.57 m to +5.87 m.",
-    "The exact first-to-attic stair opening remains a true hole."
+    "The exact first-to-attic stair opening remains a true hole.",
+    "Structural slab edges are not rendered through the continuous exterior masonry skin."
   ]
 }
